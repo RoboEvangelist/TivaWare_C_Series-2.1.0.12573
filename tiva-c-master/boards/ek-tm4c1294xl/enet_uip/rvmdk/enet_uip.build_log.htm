@@ -1,0 +1,38 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\ti\TivaWare_C_Series-2.1.0.12573\tiva-c-master\boards\ek-tm4c1294xl\enet_uip\enet_uip.uvproj
+Project File Date:  08/08/2014
+
+<h2>Output:</h2>
+Rebuild target 'enet_uip'
+compiling dhcpc.c...
+..\..\..\..\third_party\uip-1.0\apps\dhcpc\dhcpc.c(350): warning: C4017W: ipaddr may be used before being set
+  u16_t ipaddr[2];
+..\..\..\..\third_party\uip-1.0\apps\dhcpc\dhcpc.c: 1 warning, 0 errors
+compiling enet_uip.c...
+enet_uip.c(555): warning: C4017W: sIPAddr may be used before being set
+    uip_ipaddr_t sIPAddr;
+enet_uip.c: 1 warning, 0 errors
+compiling httpd.c...
+compiling pinout.c...
+assembling startup_rvmdk.S...
+compiling uartstdio.c...
+compiling uip.c...
+compiling uip_arp.c...
+compiling uip_timer.c...
+compiling ustdlib.c...
+linking...
+Program Size: Code=10500 RO-data=1632 RW-data=124 ZI-data=5908  
+After Build - User command #1: fromelf --bin --output .\rvmdk\enet_uip.bin .\rvmdk\enet_uip.axf
+".\rvmdk\enet_uip.axf" - 0 Error(s), 2 Warning(s).
+Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\tiva-c-master\\boards\\ek-tm4c1294xl\\enet_uip\\rvmdk\\enet_uip.axf" 
+Connecting: Mode=JTAG, Speed=3000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
+</pre>
+</body>
+</html>

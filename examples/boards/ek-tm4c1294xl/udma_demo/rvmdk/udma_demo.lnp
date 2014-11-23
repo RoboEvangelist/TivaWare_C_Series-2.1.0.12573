@@ -1,0 +1,12 @@
+--cpu Cortex-M4.fp
+".\rvmdk\cpu_usage.o"
+".\rvmdk\startup_rvmdk.o"
+".\rvmdk\uartstdio.o"
+".\rvmdk\udma_demo.o"
+".\rvmdk\ustdlib.o"
+"..\..\..\..\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --strict --scatter "udma_demo.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\rvmdk\udma_demo.map" -o .\rvmdk\udma_demo.axf

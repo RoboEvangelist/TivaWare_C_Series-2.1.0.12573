@@ -1,0 +1,17 @@
+.\rvmdk\io.o: io.c
+.\rvmdk\io.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\rvmdk\io.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\rvmdk\io.o: ..\..\..\..\inc/hw_ints.h
+.\rvmdk\io.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\io.o: ..\..\..\..\inc/hw_pwm.h
+.\rvmdk\io.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/pwm.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/timer.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/interrupt.h
+.\rvmdk\io.o: ..\..\..\..\driverlib/rom.h
+.\rvmdk\io.o: ..\..\..\..\utils/ustdlib.h
+.\rvmdk\io.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
+.\rvmdk\io.o: C:\Keil\ARM\ARMCC\bin\..\include\time.h
+.\rvmdk\io.o: io.h

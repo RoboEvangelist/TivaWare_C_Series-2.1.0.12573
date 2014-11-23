@@ -1,0 +1,17 @@
+--cpu Cortex-M4.fp
+".\rvmdk\dhcpc.o"
+".\rvmdk\enet_uip.o"
+".\rvmdk\httpd.o"
+".\rvmdk\pinout.o"
+".\rvmdk\startup_rvmdk.o"
+".\rvmdk\uartstdio.o"
+".\rvmdk\uip.o"
+".\rvmdk\uip_arp.o"
+".\rvmdk\uip_timer.o"
+".\rvmdk\ustdlib.o"
+"..\..\..\..\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --strict --scatter "enet_uip.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\rvmdk\enet_uip.map" -o .\rvmdk\enet_uip.axf

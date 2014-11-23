@@ -1,0 +1,15 @@
+--cpu Cortex-M4.fp
+".\rvmdk\board.o"
+".\rvmdk\cc3000_basic_wifi_application.o"
+".\rvmdk\cc3000lib.o"
+".\rvmdk\cmdline.o"
+".\rvmdk\startup_rvmdk.o"
+".\rvmdk\uartstdio.o"
+".\rvmdk\ustdlib.o"
+".\rvmdk\pwm_10-30.o"
+"..\..\..\..\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --strict --scatter "cc3000_basic_wifi_application.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\rvmdk\cc3000_basic_wifi_application.map" -o .\rvmdk\cc3000_basic_wifi_application.axf

@@ -1,0 +1,14 @@
+.\rvmdk\hello.o: hello.c
+.\rvmdk\hello.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\rvmdk\hello.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\rvmdk\hello.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\hello.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/gpio.h
+.\rvmdk\hello.o: ..\drivers/pinout.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/pin_map.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/rom.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/rom_map.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\hello.o: ..\..\..\..\driverlib/uart.h
+.\rvmdk\hello.o: ..\..\..\..\utils/uartstdio.h
+.\rvmdk\hello.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h

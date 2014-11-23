@@ -1,0 +1,13 @@
+--cpu Cortex-M4.fp
+".\rvmdk\board.o"
+".\rvmdk\cc3000_ssid_scan.o"
+".\rvmdk\cc3000lib.o"
+".\rvmdk\pinout.o"
+".\rvmdk\startup_rvmdk.o"
+".\rvmdk\uartstdio.o"
+"..\..\..\..\driverlib\rvmdk\driverlib.lib"
+--library_type=microlib --strict --scatter "cc3000_ssid_scan.sct"
+
+--entry Reset_Handler --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\rvmdk\cc3000_ssid_scan.map" -o .\rvmdk\cc3000_ssid_scan.axf

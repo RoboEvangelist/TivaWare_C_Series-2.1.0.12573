@@ -1,0 +1,11 @@
+.\rvmdk\pwm.o: pwm.c
+.\rvmdk\pwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\rvmdk\pwm.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\rvmdk\pwm.o: pwm.h
+.\rvmdk\pwm.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\pwm.o: ..\..\..\..\inc/hw_memmap.h
+.\rvmdk\pwm.o: ..\..\..\..\inc/hw_gpio.h
+.\rvmdk\pwm.o: ..\..\..\..\driverlib/sysctl.h
+.\rvmdk\pwm.o: ..\..\..\..\driverlib/pin_map.h
+.\rvmdk\pwm.o: ..\..\..\..\driverlib/rom_map.h
+.\rvmdk\pwm.o: ..\..\..\..\driverlib/gpio.h

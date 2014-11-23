@@ -1,0 +1,52 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\ti\TivaWare_C_Series-2.1.0.12573\examples\boards\ek-tm4c1294xl\enet_lwip\enet_lwip.uvproj
+Project File Date:  10/23/2014
+
+<h2>Output:</h2>
+Rebuild target 'enet_lwip'
+compiling enet_fs.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+enet_fs.c: 1 warning, 0 errors
+compiling enet_lwip.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+enet_lwip.c: 1 warning, 0 errors
+compiling ff.c...
+compiling httpd.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\third_party\lwip-1.4.1\apps\httpserver_raw\httpd.c: 1 warning, 0 errors
+compiling locator.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\utils\locator.c: 1 warning, 0 errors
+compiling lwiplib.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\third_party/lwip-1.4.1/src/core/tcp_out.c(845): warning:  #550-D: variable "tcphdr" was set but never used
+    struct tcp_hdr *tcphdr;
+..\..\..\..\third_party/lwip-1.4.1/src/core/tcp_out.c(1367): warning:  #550-D: variable "tcphdr" was set but never used
+    struct tcp_hdr *tcphdr;
+..\..\..\..\utils\lwiplib.c: 3 warnings, 0 errors
+compiling mmc-ek-tm4c1294xl.c...
+compiling pinout.c...
+assembling startup_rvmdk.S...
+compiling uartstdio.c...
+compiling ustdlib.c...
+linking...
+.\rvmdk\enet_lwip.axf: error: L6050U: The code size of this image (34152 bytes) exceeds the maximum allowed for this version of the linker.
+Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
+".\rvmdk\enet_lwip.axf" - 1 Error(s), 7 Warning(s).
+Target not created
+Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl\\enet_lwip\\rvmdk\\enet_lwip.axf" 
+_____^
+*** error 56: cannot open file
+Error: Flash Download failed  -  Could not load file 'C:\ti\TivaWare_C_Series-2.1.0.12573\examples\boards\ek-tm4c1294xl\enet_lwip\rvmdk\enet_lwip.axf'
+</pre>
+</body>
+</html>

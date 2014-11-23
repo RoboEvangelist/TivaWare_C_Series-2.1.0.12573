@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+C:\ti\TivaWare_C_Series-2.1.0.12573\examples\boards\ek-tm4c1294xl\enet_io\enet_io.uvproj
+Project File Date:  10/23/2014
+
+<h2>Output:</h2>
+Rebuild target 'enet_io'
+compiling cgifuncs.c...
+compiling enet_io.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+enet_io.c(478): warning:  #177-D: variable "ui32Idx" was declared but never referenced
+      uint32_t ui32Idx, ui32NewIPAddress;
+enet_io.c: 2 warnings, 0 errors
+compiling httpd.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\third_party\lwip-1.4.1\apps\httpserver_raw\httpd.c: 1 warning, 0 errors
+compiling io.c...
+compiling io_fs.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+io_fs.c: 1 warning, 0 errors
+compiling locator.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\utils\locator.c: 1 warning, 0 errors
+compiling lwiplib.c...
+..\..\..\..\third_party\lwip-1.4.1\src\include\lwip/pbuf.h(140): warning:  #1295-D: Deprecated declaration pbuf_free_ooseq - give arg types
+  void pbuf_free_ooseq();
+..\..\..\..\utils\lwiplib.c: 1 warning, 0 errors
+compiling pinout.c...
+assembling startup_rvmdk.S...
+compiling uartstdio.c...
+compiling ustdlib.c...
+linking...
+.\rvmdk\enet_io.axf: error: L6050U: The code size of this image (32772 bytes) exceeds the maximum allowed for this version of the linker.
+Finished: 0 information, 0 warning, 0 error and 1 fatal error messages.
+".\rvmdk\enet_io.axf" - 1 Error(s), 6 Warning(s).
+Target not created
+</pre>
+</body>
+</html>
