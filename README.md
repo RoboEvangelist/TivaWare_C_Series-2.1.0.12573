@@ -5,8 +5,9 @@ HASC project Repocitory
 
 ## Prerequisites:
 
-> 1) Kivy
-> 2) launchad drivers for the Tiva C Launchpad 1294
+1) Kivy
+
+2) launchad drivers for the Tiva C Launchpad 1294
 
 ## There are two options to run the program on the 1294 launchpads
 > 1) After you've installed Keil microvision, and the Tiva launchpad, you can download this repository, and replace this
