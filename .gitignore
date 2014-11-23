@@ -42,6 +42,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+# Temporary files
+*.txt~
+*.py~
+*.md~
+*~
+
 # ignored files/folders from Tiva
 \docs
 \exmples\boards\dk-tm4c123*
