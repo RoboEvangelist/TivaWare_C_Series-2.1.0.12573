@@ -29,7 +29,7 @@ HASC project Repocitory
 ## GUI (Graphical User Interface)
 > the main GUI file (br_gui.py) is located in 
 >
-> TivaWare_C_Series-2.1.0.12573/gui.
+>      TivaWare_C_Series-2.1.0.12573/gui.
 >
 > When you run the GUI make sure your computer and the Tiva C Launchpad are connected to the same network, and that you know
 > the IP address of your cc3000 boosterpack after it has connected to the internet
