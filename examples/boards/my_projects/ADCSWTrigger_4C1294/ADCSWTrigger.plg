@@ -1,0 +1,20 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\Dropbox\ArmBook\Connected_LaunchPad\ADCSWTrigger_4C1294\ADCSWTrigger.uvproj
+Project File Date:  05/28/2014
+
+<h2>Output:</h2>
+Load "E:\\Dropbox\\ArmBook\\Connected_LaunchPad\\ADCSWTrigger_4C1294\\ADCSWTrigger.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Connection failed!, error code=&d
+Load "E:\\Dropbox\\ArmBook\\Connected_LaunchPad\\ADCSWTrigger_4C1294\\ADCSWTrigger.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Connection failed!, error code=&d
+Load "E:\\Dropbox\\ArmBook\\Connected_LaunchPad\\ADCSWTrigger_4C1294\\ADCSWTrigger.axf" 
+Connecting: Mode=JTAG, Speed=1000000Hz
+Erase Done.
+Programming Done.
+Verify OK.
