@@ -1501,14 +1501,17 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							sensor_reading = ADC0_InSeq3();
-							if (sensor_reading < 24)       // if less than 24cm
+							if (sensor_reading < 15)       // if less than 24cm
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", sensor_reading);
 								LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
  							}
 							else
+							{
+								RForward1();
 								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
+							}
 							// append/convert sensor in data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
