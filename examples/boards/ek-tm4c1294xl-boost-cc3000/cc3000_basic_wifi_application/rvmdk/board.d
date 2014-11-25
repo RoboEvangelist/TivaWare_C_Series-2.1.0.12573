@@ -35,4 +35,3 @@
 .\rvmdk\board.o: ..\..\..\..\driverlib/udma.h
 .\rvmdk\board.o: ..\..\..\..\cc3000\src\spi\spi_version.h
 .\rvmdk\board.o: ..\..\..\..\cc3000\drivers\ek-tm4c129\board.h
-.\rvmdk\board.o: ..\..\..\..\cc3000\src\PWM_10-30.h

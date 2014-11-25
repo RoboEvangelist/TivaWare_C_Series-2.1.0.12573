@@ -45,7 +45,6 @@
 #include "dispatcher.h"
 #include "spi_version.h"
 #include "board.h"
-#include "PWM_10-30.h"
 
 //*****************************************************************************
 //
@@ -436,20 +435,3 @@ void turnLedOff(tBoardLED eLED)
     }
 }
 
-//*****************************************************************************
-//
-// Function to make robot turn to avoid obstacles.
-//
-//*****************************************************************************
-/*void avoidObstacle(unsigned long sensor_data){
-	int BUFFER_SIZE = 100;
-	char send_data[BUFFER_SIZE];   // send data with this
-	
-	if sensor_data < 24
-		
-	
-	UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
-	// append/convert sensor integer data to char
-	snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", sensor_reading);
-	CmdLineProcess(send_data);
-*/
