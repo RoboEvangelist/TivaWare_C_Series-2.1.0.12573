@@ -47,6 +47,8 @@ Temporary Items
 *.py~
 *.md~
 *~
+*.bak
+*.build_log.htm
 
 # ignored files/folders from Tiva
 docs
