@@ -83,16 +83,6 @@
           <Path>DATASHTS\Luminary\TM4C1230C3PM.PDF</Path>
         </Book>
       </Books>
-      <DllOpt>
-        <SimDllName>SARMCM3.DLL</SimDllName>
-        <SimDllArguments>-MPU</SimDllArguments>
-        <SimDlgDllName>DCM.DLL</SimDlgDllName>
-        <SimDlgDllArguments>-pCM4</SimDlgDllArguments>
-        <TargetDllName>SARMCM3.DLL</TargetDllName>
-        <TargetDllArguments>-MPU</TargetDllArguments>
-        <TargetDlgDllName>TCM.DLL</TargetDlgDllName>
-        <TargetDlgDllArguments>-pCM4</TargetDlgDllArguments>
-      </DllOpt>
       <DebugOpt>
         <uSim>1</uSim>
         <uTrg>0</uTrg>
@@ -104,12 +94,16 @@
         <sRfunc>1</sRfunc>
         <sRbox>1</sRbox>
         <tLdApp>1</tLdApp>
-        <tGomain>0</tGomain>
+        <tGomain>1</tGomain>
         <tRbreak>1</tRbreak>
         <tRwatch>1</tRwatch>
         <tRmem>1</tRmem>
         <tRfunc>0</tRfunc>
         <tRbox>1</tRbox>
+        <tRtrace>0</tRtrace>
+        <sRSysVw>1</sRSysVw>
+        <tRSysVw>1</tRSysVw>
+        <tPdscDbg>1</tPdscDbg>
         <sRunDeb>0</sRunDeb>
         <sLrtime>0</sLrtime>
         <nTsel>3</nTsel>
@@ -128,10 +122,19 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>UL2CM3</Key>
+          <Name>UL2CM3(-O207 -S0 -C0 -FO7 -FD20000000 -FC800 -FN1 -FF0TM4C123_32 -FS00 -FL08000)</Name>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>lmidk-agdi</Key>
           <Name>-O4622 -S3 -FO29</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+      <Breakpoint/>
+      <Tracepoint>
+        <THDelay>0</THDelay>
+      </Tracepoint>
       <DebugFlag>
         <trace>0</trace>
         <periodic>1</periodic>
@@ -168,6 +171,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>1</GroupNumber>
       <FileNumber>1</FileNumber>
@@ -181,6 +185,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbbuffer.c</PathWithFileName>
       <FilenameWithoutPath>usbbuffer.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -195,6 +201,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdaudio.c</PathWithFileName>
       <FilenameWithoutPath>usbdaudio.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -209,6 +217,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdbulk.c</PathWithFileName>
       <FilenameWithoutPath>usbdbulk.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -223,6 +233,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdcdc.c</PathWithFileName>
       <FilenameWithoutPath>usbdcdc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -237,6 +249,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdcdesc.c</PathWithFileName>
       <FilenameWithoutPath>usbdcdesc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -251,6 +265,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdcomp.c</PathWithFileName>
       <FilenameWithoutPath>usbdcomp.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -265,6 +281,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdconfig.c</PathWithFileName>
       <FilenameWithoutPath>usbdconfig.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -279,6 +297,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbddfu-rt.c</PathWithFileName>
       <FilenameWithoutPath>usbddfu-rt.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -293,6 +313,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdenum.c</PathWithFileName>
       <FilenameWithoutPath>usbdenum.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -307,6 +329,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbdesc.c</PathWithFileName>
       <FilenameWithoutPath>usbdesc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -321,6 +345,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdhandler.c</PathWithFileName>
       <FilenameWithoutPath>usbdhandler.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -335,6 +361,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdhid.c</PathWithFileName>
       <FilenameWithoutPath>usbdhid.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -349,6 +377,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdhidgamepad.c</PathWithFileName>
       <FilenameWithoutPath>usbdhidgamepad.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -363,6 +393,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdhidkeyb.c</PathWithFileName>
       <FilenameWithoutPath>usbdhidkeyb.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -377,6 +409,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdhidmouse.c</PathWithFileName>
       <FilenameWithoutPath>usbdhidmouse.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -391,6 +425,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbdma.c</PathWithFileName>
       <FilenameWithoutPath>usbdma.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -405,6 +441,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\device\usbdmsc.c</PathWithFileName>
       <FilenameWithoutPath>usbdmsc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -419,6 +457,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhaudio.c</PathWithFileName>
       <FilenameWithoutPath>usbhaudio.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -433,6 +473,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhhid.c</PathWithFileName>
       <FilenameWithoutPath>usbhhid.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -447,6 +489,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhhidkeyboard.c</PathWithFileName>
       <FilenameWithoutPath>usbhhidkeyboard.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -461,6 +505,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhhidmouse.c</PathWithFileName>
       <FilenameWithoutPath>usbhhidmouse.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -475,6 +521,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhhub.c</PathWithFileName>
       <FilenameWithoutPath>usbhhub.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -489,6 +537,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhmsc.c</PathWithFileName>
       <FilenameWithoutPath>usbhmsc.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -503,6 +553,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhostenum.c</PathWithFileName>
       <FilenameWithoutPath>usbhostenum.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -517,6 +569,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\host\usbhscsi.c</PathWithFileName>
       <FilenameWithoutPath>usbhscsi.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -531,6 +585,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbkeyboardmap.c</PathWithFileName>
       <FilenameWithoutPath>usbkeyboardmap.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -545,6 +601,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbmode.c</PathWithFileName>
       <FilenameWithoutPath>usbmode.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -559,6 +617,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbringbuf.c</PathWithFileName>
       <FilenameWithoutPath>usbringbuf.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -573,6 +633,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbtick.c</PathWithFileName>
       <FilenameWithoutPath>usbtick.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>1</GroupNumber>
@@ -587,6 +649,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\usbulpi.c</PathWithFileName>
       <FilenameWithoutPath>usbulpi.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
     </File>
   </Group>
 
@@ -595,6 +659,7 @@
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
+    <RteFlg>0</RteFlg>
     <File>
       <GroupNumber>2</GroupNumber>
       <FileNumber>31</FileNumber>
@@ -608,6 +673,8 @@
       <bDave2>0</bDave2>
       <PathWithFileName>.\readme.txt</PathWithFileName>
       <FilenameWithoutPath>readme.txt</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
       <WindowPosition>
         <length>44</length>
         <flags>0</flags>
@@ -629,22 +696,5 @@
       </WindowPosition>
     </File>
   </Group>
-
-  <MDIGroups>
-    <Orientation>1</Orientation>
-    <ActiveMDIGroup>0</ActiveMDIGroup>
-    <MDIGroup>
-      <Size>100</Size>
-      <ActiveTab>0</ActiveTab>
-      <Documents>
-        <Doc>
-          <Name>.\readme.txt</Name>
-          <ColumnNumber>0</ColumnNumber>
-          <TopLine>1</TopLine>
-          <CurrentLine>1</CurrentLine>
-        </Doc>
-      </Documents>
-    </MDIGroup>
-  </MDIGroups>
 
 </ProjectOpt>

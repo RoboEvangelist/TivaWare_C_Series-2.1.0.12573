@@ -144,7 +144,7 @@
             <UsePdscDebugDescription>1</UsePdscDebugDescription>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>4</TargetSelection>
+          <TargetSelection>3</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -362,7 +362,7 @@
               <MiscControls>--c99</MiscControls>
               <Define>rvmdk PART_TM4C1294NCPDT TARGET_IS_TM4C129_RA0 UART_BUFFERED _POSIX_SOURCE CC3000_TM4C129_SPI CC3000_USE_BOOSTERPACK2</Define>
               <Undefine></Undefine>
-              <IncludePath>..;..\..\..\..;..\..\..\..\cc3000;..\..\..\..\cc3000\src\host_driver\core_driver;..\..\..\..\cc3000\drivers\ek-tm4c129;..\..\..\..\cc3000\src\host_driver;..\..\..\..\cc3000\src\host_driver\include;..\..\..\..\cc3000\src\spi;..\..\..\..\cc3000\src\;..\..\..\..\cc3000\src\uart;</IncludePath>
+              <IncludePath>..;..\..\..\..;..\..\..\..\cc3000;..\..\..\..\cc3000\src\host_driver\core_driver;..\..\..\..\cc3000\drivers\ek-tm4c129;..\..\..\..\cc3000\src\host_driver;..\..\..\..\cc3000\src\host_driver\include;..\..\..\..\cc3000\src\spi;..\..\..\..\cc3000\src\;..\..\..\..\cc3000\src\uart</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

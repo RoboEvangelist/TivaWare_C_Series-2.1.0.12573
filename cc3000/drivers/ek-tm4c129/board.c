@@ -45,6 +45,7 @@
 #include "dispatcher.h"
 #include "spi_version.h"
 #include "board.h"
+#include "PWM_10-30.h"
 
 //*****************************************************************************
 //
@@ -434,4 +435,3 @@ void turnLedOff(tBoardLED eLED)
         }
     }
 }
-

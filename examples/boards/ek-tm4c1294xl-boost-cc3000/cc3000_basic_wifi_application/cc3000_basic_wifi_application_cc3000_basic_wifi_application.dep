@@ -1,188 +1,189 @@
 Dependencies for Project 'cc3000_basic_wifi_application', Target 'cc3000_basic_wifi_application': (DO NOT MODIFY !)
-F (..\..\..\..\cc3000\drivers\ek-tm4c129\board.c)(0x5431A03A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\board.o --omf_browse .\rvmdk\board.crf --depend .\rvmdk\board.d)
+F (..\..\..\..\cc3000\drivers\ek-tm4c129\board.c)(0x5474070D)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\board.o --omf_browse .\rvmdk\board.crf --depend .\rvmdk\board.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
-I (..\..\..\..\inc/hw_types.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_memmap.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/timer.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/systick.h)(0x5431A03A)
-I (..\..\..\..\driverlib/fpu.h)(0x5431A03A)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\utils/uartstdio.h)(0x5431A0E0)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\driverlib/timer.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/systick.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/fpu.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\utils/uartstdio.h)(0x5471A37A)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C88A34)
-I (..\..\..\..\driverlib/uart.h)(0x5431A03A)
-I (..\..\..\..\driverlib/ssi.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\wlan.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5431A03A)
+I (..\..\..\..\driverlib/uart.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/ssi.h)(0x5471A1D8)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\wlan.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\errno.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C88A34)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\evnt_handler.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\hci.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\socket.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\nvmem.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\netapp.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\spi\spi.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\uart\dispatcher.h)(0x5431A03A)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\evnt_handler.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\hci.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\socket.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\nvmem.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\netapp.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\spi\spi.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\uart\dispatcher.h)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
-I (..\..\..\..\inc/hw_ints.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_nvic.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_uart.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/gpio.h)(0x5431A03A)
-I (..\..\..\..\driverlib/interrupt.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom.h)(0x5431A03A)
-I (..\..\..\..\driverlib/sysctl.h)(0x5431A03A)
-I (..\..\..\..\driverlib/udma.h)(0x5431A03B)
-I (..\..\..\..\cc3000\src\spi\spi_version.h)(0x5431A03A)
-I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5431A03A)
-F (.\cc3000_basic_wifi_application.c)(0x54703F8D)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000_basic_wifi_application.o --omf_browse .\rvmdk\cc3000_basic_wifi_application.crf --depend .\rvmdk\cc3000_basic_wifi_application.d)
+I (..\..\..\..\inc/hw_ints.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_nvic.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_uart.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/gpio.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/udma.h)(0x5471A1D9)
+I (..\..\..\..\cc3000\src\spi\spi_version.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x5471A1D5)
+F (.\cc3000_basic_wifi_application.c)(0x547405B4)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000_basic_wifi_application.o --omf_browse .\rvmdk\cc3000_basic_wifi_application.crf --depend .\rvmdk\cc3000_basic_wifi_application.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C88A34)
-I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x545419AB)
-I (..\..\..\..\inc/hw_types.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/timer.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/systick.h)(0x5431A03A)
-I (..\..\..\..\driverlib/fpu.h)(0x5431A03A)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\utils/ustdlib.h)(0x5431A0E0)
+I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x5471A1D5)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/timer.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/rom.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/systick.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/fpu.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\utils/ustdlib.h)(0x5471A37A)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C88A34)
-I (..\..\..\..\utils/uartstdio.h)(0x5431A0E0)
-I (..\..\..\..\utils/cmdline.h)(0x5431A0DF)
-I (..\..\..\..\driverlib/uart.h)(0x5431A03A)
-I (..\..\..\..\driverlib/ssi.h)(0x5431A03A)
-I (..\..\..\..\inc/hw_memmap.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_gpio.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/sysctl.h)(0x5431A03A)
-I (..\..\..\..\driverlib/pin_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/gpio.h)(0x5431A03A)
-I (..\..\..\..\driverlib/pwm.h)(0x5431A03A)
-I (..\..\..\..\inc/tm4c1294ncpdt.h)(0x5431A0AA)
-I (..\..\..\..\driverlib/interrupt.h)(0x5431A03A)
-I (..\..\..\..\driverlib/adc.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\wlan.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5431A03A)
+I (..\..\..\..\utils/uartstdio.h)(0x5471A37A)
+I (..\..\..\..\utils/cmdline.h)(0x5471A37A)
+I (..\..\..\..\driverlib/uart.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/ssi.h)(0x5471A1D8)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_gpio.h)(0x5471A2A9)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/pin_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/gpio.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/pwm.h)(0x5471A1D6)
+I (..\..\..\..\inc/tm4c1294ncpdt.h)(0x5471A2B3)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/adc.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\wlan.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\errno.h)(0x51C88A34)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\evnt_handler.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\hci.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\socket.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\nvmem.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\netapp.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\spi\spi.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\uart\dispatcher.h)(0x5431A03A)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\evnt_handler.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\hci.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\socket.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\nvmem.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\netapp.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\spi\spi.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\uart\dispatcher.h)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
-I (..\..\..\..\inc/hw_ints.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_nvic.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_uart.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/udma.h)(0x5431A03B)
-I (..\..\..\..\cc3000\src\spi\spi_version.h)(0x5431A03A)
-I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5431A03A)
-I (application_version.h)(0x5431A09A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\host_driver_version.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\core_driver\security.h)(0x5431A03A)
-I (application_commands.h)(0x54580B13)
-F (..\..\..\..\cc3000\src\cc3000lib.c)(0x5431A03A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000lib.o --omf_browse .\rvmdk\cc3000lib.crf --depend .\rvmdk\cc3000lib.d)
+I (..\..\..\..\inc/hw_ints.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_nvic.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_uart.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/udma.h)(0x5471A1D9)
+I (..\..\..\..\cc3000\src\spi\spi_version.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5471A1D5)
+I (application_version.h)(0x5471A268)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\host_driver_version.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\core_driver\security.h)(0x5471A1D5)
+I (application_commands.h)(0x5471A268)
+F (..\..\..\..\cc3000\src\cc3000lib.c)(0x5471A1D5)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000lib.o --omf_browse .\rvmdk\cc3000lib.crf --depend .\rvmdk\cc3000lib.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
-I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/cc3000_common.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/wlan.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5431A03A)
+I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/cc3000_common.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/wlan.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\stdlib.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\errno.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C88A34)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/evnt_handler.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/hci.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/socket.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/evnt_handler.c)(0x5431A03A)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/evnt_handler.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/hci.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/socket.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/evnt_handler.c)(0x5471A1D5)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/netapp.h)(0x5431A03A)
-I (..\..\..\..\cc3000\src\spi\spi.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/hci.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/netapp.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/nvmem.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/nvmem.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/security.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/security.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/socket.c)(0x546F1489)
-I (..\..\..\..\cc3000/src/host_driver/core_driver/wlan.c)(0x5431A03A)
-I (..\..\..\..\cc3000/src/spi/spi-tm4c129.c)(0x545D7CC3)
-I (..\..\..\..\inc/hw_types.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_memmap.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_ints.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_nvic.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_sysctl.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_ssi.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/gpio.h)(0x5431A03A)
-I (..\..\..\..\driverlib/interrupt.h)(0x5431A03A)
-I (..\..\..\..\driverlib/sysctl.h)(0x5431A03A)
-I (..\..\..\..\driverlib/pin_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/ssi.h)(0x5431A03A)
-I (..\..\..\..\driverlib/udma.h)(0x5431A03B)
-I (..\..\..\..\cc3000/src/spi/spi_version.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/uart/dispatcher.c)(0x5431A03A)
-I (..\..\..\..\driverlib/systick.h)(0x5431A03A)
-I (..\..\..\..\utils/uartstdio.h)(0x5431A0E0)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/netapp.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\spi\spi.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/hci.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/netapp.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/nvmem.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/nvmem.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/security.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/security.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/socket.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/host_driver/core_driver/wlan.c)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/spi/spi-tm4c129.c)(0x5471A1D5)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_ints.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_nvic.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_sysctl.h)(0x5471A2AA)
+I (..\..\..\..\inc/hw_ssi.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\driverlib/rom.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/gpio.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/pin_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/ssi.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/udma.h)(0x5471A1D9)
+I (..\..\..\..\cc3000/src/spi/spi_version.h)(0x5471A1D5)
+I (..\..\..\..\cc3000/src/uart/dispatcher.c)(0x5471A1D5)
+I (..\..\..\..\driverlib/systick.h)(0x5471A1D8)
+I (..\..\..\..\utils/uartstdio.h)(0x5471A37A)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C88A34)
-I (..\..\..\..\driverlib/uart.h)(0x5431A03A)
-I (..\..\..\..\cc3000/src/uart/dispatcher.h)(0x5431A03A)
-I (..\..\..\..\inc/hw_uart.h)(0x5431A0A6)
-F (..\..\..\..\utils\cmdline.c)(0x5431A0DF)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cmdline.o --omf_browse .\rvmdk\cmdline.crf --depend .\rvmdk\cmdline.d)
+I (..\..\..\..\driverlib/uart.h)(0x5471A1D8)
+I (..\..\..\..\cc3000/src/uart/dispatcher.h)(0x5471A1D5)
+I (..\..\..\..\inc/hw_uart.h)(0x5471A2AA)
+F (..\..\..\..\utils\cmdline.c)(0x5471A37A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cmdline.o --omf_browse .\rvmdk\cmdline.crf --depend .\rvmdk\cmdline.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\string.h)(0x51C88A34)
-I (..\..\..\..\utils/cmdline.h)(0x5431A0DF)
-F (.\startup_rvmdk.S)(0x547039C5)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
-F (..\..\..\..\utils\uartstdio.c)(0x5431A0E0)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\uartstdio.o --omf_browse .\rvmdk\uartstdio.crf --depend .\rvmdk\uartstdio.d)
+I (..\..\..\..\utils/cmdline.h)(0x5471A37A)
+F (.\startup_rvmdk.S)(0x5471A269)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork --pd "__MICROLIB SETA 1"-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-o .\rvmdk\startup_rvmdk.o --depend .\rvmdk\startup_rvmdk.d)
+F (..\..\..\..\utils\uartstdio.c)(0x5471A37A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\uartstdio.o --omf_browse .\rvmdk\uartstdio.crf --depend .\rvmdk\uartstdio.d)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C88A34)
-I (..\..\..\..\inc/hw_ints.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_memmap.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_types.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_uart.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\driverlib/interrupt.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/sysctl.h)(0x5431A03A)
-I (..\..\..\..\driverlib/uart.h)(0x5431A03A)
-I (..\..\..\..\utils/uartstdio.h)(0x5431A0E0)
-F (..\..\..\..\utils\ustdlib.c)(0x5431A0E0)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\ustdlib.o --omf_browse .\rvmdk\ustdlib.crf --depend .\rvmdk\ustdlib.d)
+I (..\..\..\..\inc/hw_ints.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\inc/hw_uart.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/uart.h)(0x5471A1D8)
+I (..\..\..\..\utils/uartstdio.h)(0x5471A37A)
+F (..\..\..\..\utils\ustdlib.c)(0x5471A37A)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\ustdlib.o --omf_browse .\rvmdk\ustdlib.crf --depend .\rvmdk\ustdlib.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\utils/ustdlib.h)(0x5431A0E0)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\utils/ustdlib.h)(0x5471A37A)
 I (C:\Keil\ARM\ARMCC\include\stdarg.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\time.h)(0x51C88A34)
-F (..\..\..\..\cc3000\src\PWM_10-30.c)(0x54703D88)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\pwm_10-30.o --omf_browse .\rvmdk\pwm_10-30.crf --depend .\rvmdk\pwm_10-30.d)
+F (..\..\..\..\cc3000\src\PWM_10-30.c)(0x5471A1D5)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\pwm_10-30.o --omf_browse .\rvmdk\pwm_10-30.crf --depend .\rvmdk\pwm_10-30.d)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C88A34)
-I (..\..\..\..\cc3000\src\pwm.h)(0x5458787C)
-I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x545419AB)
-I (..\..\..\..\inc/hw_types.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/fpu.h)(0x5431A03A)
-I (..\..\..\..\inc/hw_memmap.h)(0x5431A0A6)
-I (..\..\..\..\inc/hw_gpio.h)(0x5431A0A6)
-I (..\..\..\..\driverlib/sysctl.h)(0x5431A03A)
-I (..\..\..\..\driverlib/pin_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/rom_map.h)(0x5431A03A)
-I (..\..\..\..\driverlib/gpio.h)(0x5431A03A)
-I (..\..\..\..\driverlib/debug.h)(0x5431A03A)
-I (..\..\..\..\driverlib/pwm.h)(0x5431A03A)
-I (..\..\..\..\inc/tm4c1294ncpdt.h)(0x5431A0AA)
-I (..\..\..\..\driverlib/uart.h)(0x5431A03A)
-I (..\..\..\..\driverlib/timer.h)(0x5431A03A)
-I (..\..\..\..\driverlib/interrupt.h)(0x5431A03A)
-F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x545D5E8A)()
-F (.\readme.txt)(0x5431A09A)()
+I (..\..\..\..\cc3000\src\pwm.h)(0x5471A1D5)
+I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x5471A1D5)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\driverlib/fpu.h)(0x5471A1D6)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_gpio.h)(0x5471A2A9)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/pin_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/gpio.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/debug.h)(0x5471A1D5)
+I (..\..\..\..\driverlib/pwm.h)(0x5471A1D6)
+I (..\..\..\..\inc/tm4c1294ncpdt.h)(0x5471A2B3)
+I (..\..\..\..\driverlib/uart.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/timer.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x547405B4)()
+F (.\readme.txt)(0x5471A268)()
