@@ -209,6 +209,7 @@
       <tvExp>0</tvExp>
       <Focus>0</Focus>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1486</TopLine>
@@ -218,6 +219,12 @@
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>1474</TopLine>
       <CurrentLine>1508</CurrentLine>
+>>>>>>> master
+=======
+      <ColumnNumber>40</ColumnNumber>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <TopLine>1485</TopLine>
+      <CurrentLine>1501</CurrentLine>
 >>>>>>> master
       <bDave2>0</bDave2>
       <PathWithFileName>.\cc3000_basic_wifi_application.c</PathWithFileName>
