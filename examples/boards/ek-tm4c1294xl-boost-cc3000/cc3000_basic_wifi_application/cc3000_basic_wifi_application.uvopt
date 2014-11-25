@@ -188,10 +188,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>14</ColumnNumber>
+      <ColumnNumber>2</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>431</TopLine>
-      <CurrentLine>452</CurrentLine>
+      <TopLine>432</TopLine>
+      <CurrentLine>455</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\cc3000\drivers\ek-tm4c129\board.c</PathWithFileName>
       <FilenameWithoutPath>board.c</FilenameWithoutPath>
@@ -204,10 +204,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>103</ColumnNumber>
+      <ColumnNumber>38</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1492</TopLine>
-      <CurrentLine>1511</CurrentLine>
+      <TopLine>1494</TopLine>
+      <CurrentLine>1510</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\cc3000_basic_wifi_application.c</PathWithFileName>
       <FilenameWithoutPath>cc3000_basic_wifi_application.c</FilenameWithoutPath>

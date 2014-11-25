@@ -1502,11 +1502,10 @@ CMD_receiveData(int argc, char **argv)
 						{
 							//get distance in cm from IR sensor
 							sensor_reading = ADC0_InSeq3();
-							UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
+							UARTprintf("\n\nSensor Value: %d cm\n\n    ", sensor_reading);
 							if (sensor_reading < 24)       // if less than 24cm
 							{
-								strcpy(send_data, "senddata 192.168.1.142 5005 object_closed_to_robot");
-								CmdLineProcess(send_data);
+								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n\n    ", sensor_reading);
 							}
 							// append/convert sensor integer data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", sensor_reading);
