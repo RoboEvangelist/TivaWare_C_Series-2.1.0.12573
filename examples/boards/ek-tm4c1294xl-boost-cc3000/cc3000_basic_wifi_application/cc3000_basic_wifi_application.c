@@ -39,7 +39,7 @@
 #include "driverlib/uart.h"
 #include "driverlib/ssi.h"
 #include "inc/hw_types.h"
-#include	"driverlib/fpu.h"
+#include "driverlib/fpu.h"
 #include "inc/hw_memmap.h"
 #include "inc/hw_gpio.h"
 #include "driverlib/sysctl.h"
@@ -353,7 +353,7 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
   ADC0_ACTSS_R |= ADC_ACTSS_ASEN3;// 18) enable sample sequencer 3
 }
 
-unsigned long ADC0_InSeq3(void){  
+  unsigned long ADC0_InSeq3(void){  
 	unsigned long result;
   ADC0_PSSI_R = 0x0008;            // 1) initiate SS3
   while((ADC0_RIS_R&0x08)==0){};   // 2) wait for conversion done
@@ -1311,6 +1311,7 @@ CMD_receiveData(int argc, char **argv)
     bool bRunOnce = true;
 		int BUFFER_SIZE = 100;
 		char send_data[BUFFER_SIZE];
+	  unsigned long sensor_reading = 0;
 
     //
     // Validate Input.
@@ -1499,9 +1500,16 @@ CMD_receiveData(int argc, char **argv)
 						}
 						else
 						{
-							UARTprintf("\n\nSensor Value: %d cm\n\n    '", ADC0_InSeq3());
-							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", ADC0_InSeq3());
+							//get distance in cm from IR sensor
+							sensor_reading = ADC0_InSeq3();
+							UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
+							if (sensor_reading < 24)       // if less than 24cm
+							{
+								strcpy(send_data, "senddata 192.168.1.142 5005 object_closed_to_robot");
+								CmdLineProcess(send_data);
+							}
+							// append/convert sensor integer data to char
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;

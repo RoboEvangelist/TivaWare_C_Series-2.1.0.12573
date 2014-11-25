@@ -4,11 +4,18 @@
 <h1>µVision Build Log</h1>
 <h2>Project:</h2>
 C:\ti\TivaWare_C_Series-2.1.0.12573\examples\boards\ek-tm4c1294xl-boost-cc3000\cc3000_basic_wifi_application\cc3000_basic_wifi_application.uvproj
-Project File Date:  11/03/2014
+Project File Date:  11/24/2014
 
 <h2>Output:</h2>
 Rebuild target 'cc3000_basic_wifi_application'
 compiling board.c...
+..\..\..\..\cc3000\src\PWM_10-30.h(38): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifndef __PWM_10-30_H__
+..\..\..\..\cc3000\src\PWM_10-30.h(39): warning:  #2775-D: white space is required between the macro name "__PWM_10" and its replacement text
+  #define __PWM_10-30_H__
+..\..\..\..\cc3000\drivers\ek-tm4c129\board.c(455): warning:  #1-D: last line of file ends without a newline
+  */
+..\..\..\..\cc3000\drivers\ek-tm4c129\board.c: 3 warnings, 0 errors
 compiling cc3000_basic_wifi_application.c...
 ..\..\..\..\cc3000\src\PWM_10-30.h(38): warning:  #14-D: extra text after expected end of preprocessing directive
   #ifndef __PWM_10-30_H__
@@ -212,33 +219,33 @@ cc3000_basic_wifi_application.c(367): warning:  #1035-D: single-precision operan
         return (1.0/(powf(7.0, -5)*result*1.0 - 0.0022));
 cc3000_basic_wifi_application.c(529): warning:  #68-D: integer conversion resulted in a change of sign
           if(psPingData->min_round_time == -1)
-cc3000_basic_wifi_application.c(1367): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1368): warning:  #223-D: function "STOP" declared implicitly
                                                                 STOP();
-cc3000_basic_wifi_application.c(1376): warning:  #223-D: function "LForward1" declared implicitly
+cc3000_basic_wifi_application.c(1377): warning:  #223-D: function "LForward1" declared implicitly
                                                                 LForward1();
-cc3000_basic_wifi_application.c(1382): warning:  #223-D: function "LForward2" declared implicitly
+cc3000_basic_wifi_application.c(1383): warning:  #223-D: function "LForward2" declared implicitly
                                                                 LForward2();
-cc3000_basic_wifi_application.c(1388): warning:  #223-D: function "LBackward1" declared implicitly
+cc3000_basic_wifi_application.c(1389): warning:  #223-D: function "LBackward1" declared implicitly
                                                                 LBackward1();
-cc3000_basic_wifi_application.c(1394): warning:  #223-D: function "LBackward2" declared implicitly
+cc3000_basic_wifi_application.c(1395): warning:  #223-D: function "LBackward2" declared implicitly
                                                                 LBackward2();
-cc3000_basic_wifi_application.c(1400): warning:  #223-D: function "RForward1" declared implicitly
+cc3000_basic_wifi_application.c(1401): warning:  #223-D: function "RForward1" declared implicitly
                                                                 RForward1();
-cc3000_basic_wifi_application.c(1406): warning:  #223-D: function "RForward2" declared implicitly
+cc3000_basic_wifi_application.c(1407): warning:  #223-D: function "RForward2" declared implicitly
                                                                 RForward2();
-cc3000_basic_wifi_application.c(1412): warning:  #223-D: function "RBackward1" declared implicitly
+cc3000_basic_wifi_application.c(1413): warning:  #223-D: function "RBackward1" declared implicitly
                                                                 RBackward1();
-cc3000_basic_wifi_application.c(1418): warning:  #223-D: function "RBackward2" declared implicitly
+cc3000_basic_wifi_application.c(1419): warning:  #223-D: function "RBackward2" declared implicitly
                                                                 RBackward2();
-cc3000_basic_wifi_application.c(1426): warning:  #223-D: function "Forward1" declared implicitly
+cc3000_basic_wifi_application.c(1427): warning:  #223-D: function "Forward1" declared implicitly
                                                                 Forward1();
-cc3000_basic_wifi_application.c(1432): warning:  #223-D: function "Forward2" declared implicitly
+cc3000_basic_wifi_application.c(1433): warning:  #223-D: function "Forward2" declared implicitly
                                                                 Forward2();
-cc3000_basic_wifi_application.c(1437): warning:  #223-D: function "Backward1" declared implicitly
+cc3000_basic_wifi_application.c(1438): warning:  #223-D: function "Backward1" declared implicitly
                                                                 Backward1();
-cc3000_basic_wifi_application.c(1442): warning:  #223-D: function "Backward2" declared implicitly
+cc3000_basic_wifi_application.c(1443): warning:  #223-D: function "Backward2" declared implicitly
                                                                 Backward2();
-cc3000_basic_wifi_application.c(1448): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1449): warning:  #223-D: function "STOP" declared implicitly
                                                         STOP(); 
 cc3000_basic_wifi_application.c(1309): warning:  #177-D: variable "tRxPacketLength" was declared but never referenced
       socklen_t tRxPacketLength;
@@ -246,11 +253,11 @@ cc3000_basic_wifi_application.c(1310): warning:  #177-D: variable "ui32x" was de
       uint32_t ui32x = 0, ui32Count = 0;
 cc3000_basic_wifi_application.c(1310): warning:  #177-D: variable "ui32Count" was declared but never referenced
       uint32_t ui32x = 0, ui32Count = 0;
-cc3000_basic_wifi_application.c(2038): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
+cc3000_basic_wifi_application.c(2046): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
         int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2070): warning:  #550-D: variable "i32CommandStatus" was set but never used
+cc3000_basic_wifi_application.c(2078): warning:  #550-D: variable "i32CommandStatus" was set but never used
       int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2081): warning:  #177-D: variable "sample" was declared but never referenced
+cc3000_basic_wifi_application.c(2089): warning:  #177-D: variable "sample" was declared but never referenced
           int32_t sample[CC3000_APP_BUFFER_SIZE +
 cc3000_basic_wifi_application.c(260): warning:  #177-D: variable "g_cInput" was declared but never referenced
   static char g_cInput[MAX_COMMAND_SIZE];
@@ -270,14 +277,27 @@ compiling PWM_10-30.c...
   #define __PWM_10-30_H__
 ..\..\..\..\cc3000\src\PWM_10-30.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=22872 RO-data=3588 RW-data=304 ZI-data=22904  
+Program Size: Code=22960 RO-data=3588 RW-data=304 ZI-data=22904  
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
-".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 125 Warning(s).
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=3000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-</pre>
-</body>
-</html>
+".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 128 Warning(s).
+but never referenced
+          int32_t sample[CC3000_APP_BUFFER_SIZE +
+cc3000_basic_wifi_application.c(260): warning:  #177-D: variable "g_cInput" was declared but never referenced
+  static char g_cInput[MAX_COMMAND_SIZE];
+cc3000_basic_wifi_application.c: 122 warnings, 0 errors
+compiling cc3000lib.c...
+..\..\..\..\cc3000/src/host_driver/core_driver/socket.c(1021): warning:  #177-D: variable "tSocketSendEvent" was declared but never referenced
+      tBsdReadReturnParams tSocketSendEvent;
+..\..\..\..\cc3000\src\cc3000lib.c: 1 warning, 0 errors
+compiling cmdline.c...
+assembling startup_rvmdk.S...
+compiling uartstdio.c...
+compiling ustdlib.c...
+compiling PWM_10-30.c...
+..\..\..\..\cc3000\src\PWM_10-30.h(38): warning:  #14-D: extra text after expected end of preprocessing directive
+  #ifndef __PWM_10-30_H__
+..\..\..\..\cc3000\src\PWM_10-30.h(39): warning:  #2775-D: white space is required between the macro name "__PWM_10" and its replacement text
+  #define __PWM_10-30_H__
+..\..\..\..\cc3000\src\PWM_10-30.c: 2 warnings, 0 errors
+".\rvmdk\cc3000_basic_wifi_application.axf" - 4 Error(s), 132 Warning(s).
+Target not created

@@ -445,11 +445,6 @@
               <FileType>1</FileType>
               <FilePath>..\..\..\..\cc3000\src\PWM_10-30.c</FilePath>
             </File>
-            <File>
-              <FileName>pwm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\pwm.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
