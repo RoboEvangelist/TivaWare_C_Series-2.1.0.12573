@@ -1312,6 +1312,7 @@ CMD_receiveData(int argc, char **argv)
 		int BUFFER_SIZE = 100;
 		char send_data[BUFFER_SIZE];
 		unsigned long sensor_reading = 0;
+		bool obstacleInFront = false;
 
     //
     // Validate Input.
@@ -1357,6 +1358,7 @@ CMD_receiveData(int argc, char **argv)
 							{
 								UARTprintf(" \n autonomous mode of...\n");
 								autonomousMode = false;
+								STOP();    // stop the robot and center the wheels in the front
 							}
 						}
 						else if(i32ReturnValue == 4)
@@ -1501,19 +1503,30 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							sensor_reading = ADC0_InSeq3();
-							if (sensor_reading < 15)       // if less than 24cm
+							if (sensor_reading < 25)       // if less than 24cm
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", sensor_reading);
+								if (!obstacleInFront)
+								{
+									STOP();
+									ROM_SysCtlDelay(10000000);
+								}
 								LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
+								obstacleInFront = true;
  							}
 							else
 							{
-								RForward1();
+								if (obstacleInFront)
+								{
+									STOP();
+									obstacleInFront = false;
+								}
+								Forward1();
 								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
 							}
 							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.142 5005 %d", sensor_reading);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.103 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
@@ -2123,7 +2136,7 @@ main(void)
     // Loop forever waiting  for commands from PC...
     //
 		
-		//char send_data[] = "senddata 192.168.1.110 5005 h";
+		//char send_data[] = "senddata 192.168.1.103 5005 h";
     while(1)
     {
 			
@@ -2156,7 +2169,7 @@ main(void)
         //
         //i32CommandStatus = CmdLineProcess(g_cInput);
 				//UARTprintf("%c\n\n", send_data);
-//				char send_data[] = "senddata 192.168.1.110 5005 h";
+//				char send_data[] = "senddata 192.168.1.103 5005 h";
 //				i32CommandStatus = CmdLineProcess(send_data);
 				// first command makes board connect to wifi (automatic)
 				// and then we creat the socket
