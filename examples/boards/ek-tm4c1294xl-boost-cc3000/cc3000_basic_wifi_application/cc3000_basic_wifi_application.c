@@ -317,9 +317,10 @@ uint8_t g_pui8CC3000_Rx_Buffer[CC3000_APP_BUFFER_SIZE +
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 #endif
 
-// variables for the left and right sensors
-volatile uint32_t ui32AccX;
-volatile uint32_t ui32AccY;
+// variables for the left and right IR sensors
+volatile uint32_t ui32LeftSensor;      // PE3
+volatile uint32_t ui32RightSensor;     // PE4
+//volatile uint32_t ui32FrontSensor;     // PE5
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	//
