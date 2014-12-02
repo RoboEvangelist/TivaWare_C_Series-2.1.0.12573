@@ -317,12 +317,33 @@ uint8_t g_pui8CC3000_Rx_Buffer[CC3000_APP_BUFFER_SIZE +
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 #endif
 
+// variables for the left and right IR sensors
+uint32_t ui32IRValues[2];              // each value represents a sensor data
+volatile uint32_t ui32LeftSensor;      // PE3
+volatile uint32_t ui32RightSensor;     // PE4
+//volatile uint32_t ui32FrontSensor;     // PE5
+
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	//
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
                                   // allow time for clock to stabilize
   while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
-  GPIO_PORTE_AHB_AFSEL_R |= 0x08;     // 2) enable alternate function on PE3
+	/*	
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // Enable ADC0
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // Enable PE ports
+	
+	// Enable PE3 PE4 PE5 as analog	
+	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
+	// use ADC0, SS1 (4 samples max), processor trigger, priority 1
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH3);
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH2);
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
+	ADCSequenceEnable(ADC0_BASE, 1);
+	*/
+		
+  
+	GPIO_PORTE_AHB_AFSEL_R |= 0x08;     // 2) enable alternate function on PE3
   GPIO_PORTE_AHB_DEN_R &= ~0x08;      // 3) disable digital I/O on PE3
   GPIO_PORTE_AHB_AMSEL_R |= 0x08;     // 4) enable analog functionality on PE3
                                   // 5) activate clock for ADC0
@@ -351,6 +372,7 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
   ADC0_SSCTL3_R = 0x0006;         // 16) no TS0 D0, yes IE0 END0
   ADC0_IM_R &= ~ADC_IM_MASK3;     // 17) disable SS3 interrupts
   ADC0_ACTSS_R |= ADC_ACTSS_ASEN3;// 18) enable sample sequencer 3
+	
 }
 
 unsigned long ADC0_InSeq3(void){  
@@ -1526,7 +1548,7 @@ CMD_receiveData(int argc, char **argv)
 								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
 							}
 							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.103 5005 %d", sensor_reading);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
