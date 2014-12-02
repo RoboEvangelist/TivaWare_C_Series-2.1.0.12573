@@ -317,6 +317,10 @@ uint8_t g_pui8CC3000_Rx_Buffer[CC3000_APP_BUFFER_SIZE +
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 #endif
 
+// variables for the left and right sensors
+volatile uint32_t ui32AccX;
+volatile uint32_t ui32AccY;
+
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	//
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
@@ -1526,7 +1530,7 @@ CMD_receiveData(int argc, char **argv)
 								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
 							}
 							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", sensor_reading);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.101 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
