@@ -342,39 +342,6 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8
 	ADCSequenceEnable(ADC0_BASE, 1);
-	
-		
-  /*
-	GPIO_PORTE_AHB_AFSEL_R |= 0x08;     // 2) enable alternate function on PE3
-  GPIO_PORTE_AHB_DEN_R &= ~0x08;      // 3) disable digital I/O on PE3
-  GPIO_PORTE_AHB_AMSEL_R |= 0x08;     // 4) enable analog functionality on PE3
-                                  // 5) activate clock for ADC0
-  SYSCTL_RCGCADC_R |= SYSCTL_RCGCADC_R0;
-                                  // allow time for clock to stabilize
-  while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
-                                  // 6) configure ADC clock source as PLL VCO / 15 = 32 MHz
-  ADC0_CC_R = ((ADC0_CC_R&~ADC_CC_CLKDIV_M)+(14<<ADC_CC_CLKDIV_S)) |
-              ((ADC0_CC_R&~ADC_CC_CS_M)+ADC_CC_CS_SYSPLL);
-  ADC0_SSPRI_R = 0x0123;          // 7) sequencer 3 is highest priority
-                                  // 8) disable sample sequencer 3
-  ADC0_ACTSS_R &= ~ADC_ACTSS_ASEN3;
-                                  // 9) configure seq3 for software trigger (default)
-  ADC0_EMUX_R = (ADC0_EMUX_R&~ADC_EMUX_EM3_M)+ADC_EMUX_EM3_PROCESSOR;
-                                  // 10) configure for no hardware oversampling (default)
-  ADC0_SAC_R = (ADC0_SAC_R&~ADC_SAC_AVG_M)+ADC_SAC_AVG_OFF;
-                                  // 11) configure for internal reference (default)
-  ADC0_CTL_R = (ADC0_CTL_R&~ADC_CTL_VREF_M)+ADC_CTL_VREF_INTERNAL;
-                                  // 12) configure for ADC result saved to FIFO (default)
-  ADC0_SSOP3_R &= ~ADC_SSOP3_S0DCOP;
-                                  // 13) configure for 4 ADC clock period S&H (default)
-  ADC0_SSTSH3_R = (ADC0_SSTSH3_R&~ADC_SSTSH3_TSH0_M)+0;
-                                  // 14) set channel
-  ADC0_SSMUX3_R = (ADC0_SSMUX3_R&~0x000F)+0;
-  ADC0_SSEMUX3_R &= ~0x01;        // 15) SS3 in range 0:15
-  ADC0_SSCTL3_R = 0x0006;         // 16) no TS0 D0, yes IE0 END0
-  ADC0_IM_R &= ~ADC_IM_MASK3;     // 17) disable SS3 interrupts
-  ADC0_ACTSS_R |= ADC_ACTSS_ASEN3;// 18) enable sample sequencer 3
-	*/
 }
 
 unsigned long ADC0_InSeq3(void){  
