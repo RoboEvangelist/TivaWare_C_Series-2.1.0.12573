@@ -83,7 +83,7 @@ class ControlClass(FloatLayout):
 #        rospy.init_node('br_gui')
 #        self._im_string = ''      # image string
         self._im_string = []      # image string
-        self._tcp_ip = '192.168.1.102'   # robot's IP address
+        self._tcp_ip = '192.168.1.134'   # robot's IP address
         self._tcp_port = 5005   
         self._rec_ip = '192.168.1.110'   # computer's IP address
         self._rec_port = 5006   
