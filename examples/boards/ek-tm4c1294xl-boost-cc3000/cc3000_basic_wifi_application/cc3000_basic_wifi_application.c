@@ -1526,7 +1526,7 @@ CMD_receiveData(int argc, char **argv)
 								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
 							}
 							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.103 5005 %d", sensor_reading);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", sensor_reading);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
