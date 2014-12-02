@@ -39,11 +39,21 @@ Section Cross References
     board.o(i.turnLedOff) refers to board.o(.constdata) for .constdata
     board.o(i.turnLedOn) refers to gpio.o(i.GPIOPinWrite) for GPIOPinWrite
     board.o(i.turnLedOn) refers to board.o(.constdata) for .constdata
+    cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to adc.o(i.ADCIntClear) for ADCIntClear
+    cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to adc.o(i.ADCProcessorTrigger) for ADCProcessorTrigger
+    cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to adc.o(i.ADCIntStatus) for ADCIntStatus
+    cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to adc.o(i.ADCSequenceDataGet) for ADCSequenceDataGet
     cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to powf.o(i.__hardfp_powf) for __hardfp_powf
     cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to f2d.o(.text) for __aeabi_f2d
     cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to dadd.o(.text) for __aeabi_dsub
     cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to ddiv.o(.text) for __aeabi_ddiv
     cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to dfixui.o(.text) for __aeabi_d2uiz
+    cc3000_basic_wifi_application.o(i.ADC0_InSeq3) refers to cc3000_basic_wifi_application.o(.data) for .data
+    cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9) refers to sysctl.o(i.SysCtlPeripheralEnable) for SysCtlPeripheralEnable
+    cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9) refers to gpio.o(i.GPIOPinTypeADC) for GPIOPinTypeADC
+    cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9) refers to adc.o(i.ADCSequenceConfigure) for ADCSequenceConfigure
+    cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9) refers to adc.o(i.ADCSequenceStepConfigure) for ADCSequenceStepConfigure
+    cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9) refers to adc.o(i.ADCSequenceEnable) for ADCSequenceEnable
     cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback) refers to uartstdio.o(i.UARTprintf) for UARTprintf
     cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback) refers to board.o(i.turnLedOff) for turnLedOff
     cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback) refers to board.o(i.turnLedOn) for turnLedOn
@@ -557,6 +567,13 @@ Section Cross References
     pwm_10-30.o(i.RForward1) refers to pwm.o(i.PWMPulseWidthSet) for PWMPulseWidthSet
     pwm_10-30.o(i.RForward2) refers to pwm.o(i.PWMPulseWidthSet) for PWMPulseWidthSet
     pwm_10-30.o(i.STOP) refers to pwm.o(i.PWMPulseWidthSet) for PWMPulseWidthSet
+    adc.o(i.ADCIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
+    adc.o(i.ADCIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
+    adc.o(i.ADCIntUnregister) refers to interrupt.o(i.IntDisable) for IntDisable
+    adc.o(i.ADCIntUnregister) refers to interrupt.o(i.IntUnregister) for IntUnregister
+    adc.o(i.ADCSoftwareOversampleConfigure) refers to adc.o(.data) for .data
+    adc.o(i.ADCSoftwareOversampleDataGet) refers to adc.o(.data) for .data
+    adc.o(i.ADCSoftwareOversampleStepConfigure) refers to adc.o(.data) for .data
     gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntRegister) for IntRegister
     gpio.o(i.GPIOIntRegister) refers to interrupt.o(i.IntEnable) for IntEnable
     gpio.o(i.GPIOIntRegister) refers to gpio.o(.constdata) for .constdata
@@ -1003,9 +1020,6 @@ Section Cross References
 
 Removing Unused input sections from the image.
 
-    Removing cc3000_basic_wifi_application.o(.data), (8 bytes).
-    Removing cc3000_basic_wifi_application.o(.data), (4 bytes).
-    Removing cc3000_basic_wifi_application.o(.data), (4 bytes).
     Removing cc3000lib.o(i.DispatcherUartSendPacket), (32 bytes).
     Removing cc3000lib.o(i.accept), (96 bytes).
     Removing cc3000lib.o(i.aes_encr), (916 bytes).
@@ -1060,6 +1074,40 @@ Removing Unused input sections from the image.
     Removing ustdlib.o(.data), (4 bytes).
     Removing pwm_10-30.o(i.PWMINIT), (116 bytes).
     Removing pwm_10-30.o(.data), (1 bytes).
+    Removing adc.o(i.ADCBusy), (8 bytes).
+    Removing adc.o(i.ADCClockConfigGet), (24 bytes).
+    Removing adc.o(i.ADCClockConfigSet), (28 bytes).
+    Removing adc.o(i.ADCComparatorConfigure), (10 bytes).
+    Removing adc.o(i.ADCComparatorIntClear), (4 bytes).
+    Removing adc.o(i.ADCComparatorIntDisable), (18 bytes).
+    Removing adc.o(i.ADCComparatorIntEnable), (16 bytes).
+    Removing adc.o(i.ADCComparatorIntStatus), (4 bytes).
+    Removing adc.o(i.ADCComparatorRegionSet), (14 bytes).
+    Removing adc.o(i.ADCComparatorReset), (40 bytes).
+    Removing adc.o(i.ADCHardwareOversampleConfigure), (14 bytes).
+    Removing adc.o(i.ADCIntClearEx), (8 bytes).
+    Removing adc.o(i.ADCIntDisable), (16 bytes).
+    Removing adc.o(i.ADCIntDisableEx), (10 bytes).
+    Removing adc.o(i.ADCIntEnable), (16 bytes).
+    Removing adc.o(i.ADCIntEnableEx), (8 bytes).
+    Removing adc.o(i.ADCIntRegister), (92 bytes).
+    Removing adc.o(i.ADCIntStatusEx), (22 bytes).
+    Removing adc.o(i.ADCIntUnregister), (88 bytes).
+    Removing adc.o(i.ADCPhaseDelayGet), (4 bytes).
+    Removing adc.o(i.ADCPhaseDelaySet), (4 bytes).
+    Removing adc.o(i.ADCReferenceGet), (8 bytes).
+    Removing adc.o(i.ADCReferenceSet), (12 bytes).
+    Removing adc.o(i.ADCSequenceDMADisable), (18 bytes).
+    Removing adc.o(i.ADCSequenceDMAEnable), (16 bytes).
+    Removing adc.o(i.ADCSequenceDisable), (16 bytes).
+    Removing adc.o(i.ADCSequenceOverflow), (12 bytes).
+    Removing adc.o(i.ADCSequenceOverflowClear), (10 bytes).
+    Removing adc.o(i.ADCSequenceUnderflow), (12 bytes).
+    Removing adc.o(i.ADCSequenceUnderflowClear), (10 bytes).
+    Removing adc.o(i.ADCSoftwareOversampleConfigure), (24 bytes).
+    Removing adc.o(i.ADCSoftwareOversampleDataGet), (72 bytes).
+    Removing adc.o(i.ADCSoftwareOversampleStepConfigure), (148 bytes).
+    Removing adc.o(.data), (3 bytes).
     Removing fpu.o(i.FPUDisable), (16 bytes).
     Removing fpu.o(i.FPUFlushToZeroModeSet), (20 bytes).
     Removing fpu.o(i.FPUHalfPrecisionModeSet), (20 bytes).
@@ -1078,7 +1126,6 @@ Removing Unused input sections from the image.
     Removing gpio.o(i.GPIOIntTypeGet), (68 bytes).
     Removing gpio.o(i.GPIOIntUnregister), (88 bytes).
     Removing gpio.o(i.GPIOPadConfigGet), (204 bytes).
-    Removing gpio.o(i.GPIOPinTypeADC), (28 bytes).
     Removing gpio.o(i.GPIOPinTypeCAN), (28 bytes).
     Removing gpio.o(i.GPIOPinTypeCIR), (28 bytes).
     Removing gpio.o(i.GPIOPinTypeComparator), (28 bytes).
@@ -1282,7 +1329,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (40 bytes).
     Removing fpstat.o(.text), (4 bytes).
 
-278 unused section(s) (total 13322 bytes) removed from the image.
+308 unused section(s) (total 14087 bytes) removed from the image.
 
 ==============================================================================
 
@@ -1294,47 +1341,47 @@ Image Symbol Table
 
     RESET                                    0x00000000   Section      540  startup_rvmdk.o(RESET)
     ../clib/../cmprslib/zerorunl2.c          0x00000000   Number         0  __dczerorl2.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
     ../clib/microlib/errno.c                 0x00000000   Number         0  errno.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloc.o ABSOLUTE
-    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
     ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocr.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  malloca.o ABSOLUTE
+    ../clib/microlib/malloc/malloc.c         0x00000000   Number         0  mallocra.o ABSOLUTE
     ../clib/microlib/malloc/mvars.c          0x00000000   Number         0  mvars.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
     ../clib/microlib/stdio/streams.c         0x00000000   Number         0  stdout.o ABSOLUTE
-    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
+    ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/strcmp.c         0x00000000   Number         0  strcmp.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
@@ -1343,8 +1390,8 @@ Image Symbol Table
     ../fplib/microlib/f2d.c                  0x00000000   Number         0  f2d.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
-    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  fepilogue.o ABSOLUTE
+    ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixui.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
@@ -1359,6 +1406,7 @@ Image Symbol Table
     ..\..\..\..\utils\cmdline.c              0x00000000   Number         0  cmdline.o ABSOLUTE
     ..\..\..\..\utils\uartstdio.c            0x00000000   Number         0  uartstdio.o ABSOLUTE
     ..\..\..\..\utils\ustdlib.c              0x00000000   Number         0  ustdlib.o ABSOLUTE
+    adc.c                                    0x00000000   Number         0  adc.o ABSOLUTE
     cc3000_basic_wifi_application.c          0x00000000   Number         0  cc3000_basic_wifi_application.o ABSOLUTE
     cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
     cpu.c                                    0x00000000   Number         0  cpu.o ABSOLUTE
@@ -1403,255 +1451,263 @@ Image Symbol Table
     .text                                    0x00000534   Section        0  llshl.o(.text)
     .text                                    0x00000552   Section        0  llushr.o(.text)
     .text                                    0x00000572   Section        0  llsshr.o(.text)
-    .text                                    0x00000596   Section        0  iusefp.o(.text)
     .text                                    0x00000596   Section        0  depilogue.o(.text)
+    .text                                    0x00000596   Section        0  iusefp.o(.text)
     .text                                    0x00000654   Section        0  d2f.o(.text)
     .text                                    0x0000068c   Section       36  init.o(.text)
     .text                                    0x000006b0   Section        0  fepilogue.o(.text)
     .text                                    0x0000071c   Section        0  __dczerorl2.o(.text)
     i.ADC0_InSeq3                            0x00000778   Section        0  cc3000_basic_wifi_application.o(i.ADC0_InSeq3)
-    i.ADC0_InitSWTriggerSeq3_Ch9             0x000007ec   Section        0  cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9)
-    i.Backward1                              0x000008d0   Section        0  pwm_10-30.o(i.Backward1)
-    i.Backward2                              0x000008f4   Section        0  pwm_10-30.o(i.Backward2)
-    i.CC3000_UsynchCallback                  0x00000918   Section        0  cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback)
-    i.CMD_bind                               0x00000a68   Section        0  cc3000_basic_wifi_application.o(i.CMD_bind)
-    i.CMD_cc3000reset                        0x00000b2c   Section        0  cc3000_basic_wifi_application.o(i.CMD_cc3000reset)
-    i.CMD_connect                            0x00000b6c   Section        0  cc3000_basic_wifi_application.o(i.CMD_connect)
-    i.CMD_deletePolicy                       0x00000c90   Section        0  cc3000_basic_wifi_application.o(i.CMD_deletePolicy)
-    i.CMD_disconnect                         0x00000d08   Section        0  cc3000_basic_wifi_application.o(i.CMD_disconnect)
-    i.CMD_help                               0x00000d70   Section        0  cc3000_basic_wifi_application.o(i.CMD_help)
-    i.CMD_ipConfig                           0x00000de8   Section        0  cc3000_basic_wifi_application.o(i.CMD_ipConfig)
-    i.CMD_mdnsadvertise                      0x00000fc0   Section        0  cc3000_basic_wifi_application.o(i.CMD_mdnsadvertise)
-    i.CMD_ping                               0x0000103c   Section        0  cc3000_basic_wifi_application.o(i.CMD_ping)
-    i.CMD_receiveData                        0x0000119c   Section        0  cc3000_basic_wifi_application.o(i.CMD_receiveData)
-    i.CMD_sendData                           0x00001614   Section        0  cc3000_basic_wifi_application.o(i.CMD_sendData)
-    i.CMD_smartConfig                        0x0000186c   Section        0  cc3000_basic_wifi_application.o(i.CMD_smartConfig)
-    i.CMD_socketClose                        0x00001878   Section        0  cc3000_basic_wifi_application.o(i.CMD_socketClose)
-    i.CMD_socketOpen                         0x000018e4   Section        0  cc3000_basic_wifi_application.o(i.CMD_socketOpen)
-    i.CmdLineProcess                         0x00001a9c   Section        0  cmdline.o(i.CmdLineProcess)
-    i.DispatcherUARTConfigure                0x00001b00   Section        0  cc3000lib.o(i.DispatcherUARTConfigure)
-    i.DotDecimalDecoder                      0x00001ba8   Section        0  cc3000_basic_wifi_application.o(i.DotDecimalDecoder)
-    i.FPUEnable                              0x00001c40   Section        0  fpu.o(i.FPUEnable)
-    i.FPULazyStackingEnable                  0x00001c50   Section        0  fpu.o(i.FPULazyStackingEnable)
-    i.Forward1                               0x00001c60   Section        0  pwm_10-30.o(i.Forward1)
-    i.Forward2                               0x00001c84   Section        0  pwm_10-30.o(i.Forward2)
-    i.GPIODirModeSet                         0x00001ca8   Section        0  gpio.o(i.GPIODirModeSet)
-    i.GPIOIntDisable                         0x00001cd0   Section        0  gpio.o(i.GPIOIntDisable)
-    i.GPIOIntEnable                          0x00001cde   Section        0  gpio.o(i.GPIOIntEnable)
-    i.GPIOIntTypeSet                         0x00001cec   Section        0  gpio.o(i.GPIOIntTypeSet)
-    i.GPIOPadConfigSet                       0x00001d3c   Section        0  gpio.o(i.GPIOPadConfigSet)
-    i.GPIOPinConfigure                       0x00001e78   Section        0  gpio.o(i.GPIOPinConfigure)
-    i.GPIOPinRead                            0x00001ec0   Section        0  gpio.o(i.GPIOPinRead)
-    i.GPIOPinTypeGPIOInput                   0x00001ec6   Section        0  gpio.o(i.GPIOPinTypeGPIOInput)
-    i.GPIOPinTypeGPIOOutput                  0x00001ee2   Section        0  gpio.o(i.GPIOPinTypeGPIOOutput)
-    i.GPIOPinTypePWM                         0x00001efe   Section        0  gpio.o(i.GPIOPinTypePWM)
-    i.GPIOPinWrite                           0x00001f1a   Section        0  gpio.o(i.GPIOPinWrite)
-    i.GPIOPortJ_Handler                      0x00001f20   Section        0  cc3000_basic_wifi_application.o(i.GPIOPortJ_Handler)
-    i.InitSysTick                            0x00001fa4   Section        0  board.o(i.InitSysTick)
-    i.IntEnable                              0x00001fc4   Section        0  interrupt.o(i.IntEnable)
-    i.IntPrioritySet                         0x00002028   Section        0  interrupt.o(i.IntPrioritySet)
-    i.IntSpiGPIOHandler                      0x00002050   Section        0  cc3000lib.o(i.IntSpiGPIOHandler)
-    i.Interrupt_Init                         0x000020a8   Section        0  cc3000_basic_wifi_application.o(i.Interrupt_Init)
-    i.IsBufferEmpty                          0x0000210c   Section        0  uartstdio.o(i.IsBufferEmpty)
-    IsBufferEmpty                            0x0000210d   Thumb Code    16  uartstdio.o(i.IsBufferEmpty)
-    i.IsBufferFull                           0x0000211c   Section        0  uartstdio.o(i.IsBufferFull)
-    IsBufferFull                             0x0000211d   Thumb Code    26  uartstdio.o(i.IsBufferFull)
-    i.LBackward1                             0x00002138   Section        0  pwm_10-30.o(i.LBackward1)
-    i.LBackward2                             0x00002174   Section        0  pwm_10-30.o(i.LBackward2)
-    i.LForward1                              0x000021b0   Section        0  pwm_10-30.o(i.LForward1)
-    i.LForward2                              0x000021ec   Section        0  pwm_10-30.o(i.LForward2)
-    i.PWMGenConfigure                        0x00002228   Section        0  pwm.o(i.PWMGenConfigure)
-    i.PWMGenEnable                           0x0000224e   Section        0  pwm.o(i.PWMGenEnable)
-    i.PWMGenPeriodSet                        0x00002258   Section        0  pwm.o(i.PWMGenPeriodSet)
-    i.PWMOutputState                         0x0000226a   Section        0  pwm.o(i.PWMOutputState)
-    i.PWMPulseWidthSet                       0x0000227a   Section        0  pwm.o(i.PWMPulseWidthSet)
-    i.PortFunctionInit                       0x0000229c   Section        0  pwm_10-30.o(i.PortFunctionInit)
-    i.RBackward1                             0x00002310   Section        0  pwm_10-30.o(i.RBackward1)
-    i.RBackward2                             0x0000234c   Section        0  pwm_10-30.o(i.RBackward2)
-    i.RForward1                              0x00002388   Section        0  pwm_10-30.o(i.RForward1)
-    i.RForward2                              0x000023c4   Section        0  pwm_10-30.o(i.RForward2)
-    i.ReadWlanInterruptPin                   0x00002400   Section        0  board.o(i.ReadWlanInterruptPin)
-    i.SSIBusy                                0x0000240c   Section        0  ssi.o(i.SSIBusy)
-    i.SSIDMADisable                          0x00002414   Section        0  ssi.o(i.SSIDMADisable)
-    i.SSIIntClear                            0x0000241e   Section        0  ssi.o(i.SSIIntClear)
-    i.STOP                                   0x00002424   Section        0  pwm_10-30.o(i.STOP)
-    i.STREAM_TO_UINT16_f                     0x0000245c   Section        0  cc3000lib.o(i.STREAM_TO_UINT16_f)
-    i.STREAM_TO_UINT32_f                     0x0000246a   Section        0  cc3000lib.o(i.STREAM_TO_UINT32_f)
-    i.SimpleLinkWaitData                     0x00002484   Section        0  cc3000lib.o(i.SimpleLinkWaitData)
-    i.SimpleLinkWaitEvent                    0x00002498   Section        0  cc3000lib.o(i.SimpleLinkWaitEvent)
-    i.SpiCleanGPIOISR                        0x000024ac   Section        0  cc3000lib.o(i.SpiCleanGPIOISR)
-    i.SpiClose                               0x000024d8   Section        0  cc3000lib.o(i.SpiClose)
-    i.SpiConfigure                           0x00002508   Section        0  cc3000lib.o(i.SpiConfigure)
-    SpiConfigure                             0x00002509   Thumb Code   232  cc3000lib.o(i.SpiConfigure)
-    i.SpiConfigureHwMapping                  0x00002608   Section        0  cc3000lib.o(i.SpiConfigureHwMapping)
-    i.SpiDisableSSIDMAChannels               0x0000265c   Section        0  cc3000lib.o(i.SpiDisableSSIDMAChannels)
-    SpiDisableSSIDMAChannels                 0x0000265d   Thumb Code    38  cc3000lib.o(i.SpiDisableSSIDMAChannels)
-    i.SpiEnableSSIDMAChannels                0x00002688   Section        0  cc3000lib.o(i.SpiEnableSSIDMAChannels)
-    SpiEnableSSIDMAChannels                  0x00002689   Thumb Code    48  cc3000lib.o(i.SpiEnableSSIDMAChannels)
-    i.SpiFirstWrite                          0x000026bc   Section        0  cc3000lib.o(i.SpiFirstWrite)
-    i.SpiIntHandler                          0x00002734   Section        0  cc3000lib.o(i.SpiIntHandler)
-    i.SpiOpen                                0x000027f4   Section        0  cc3000lib.o(i.SpiOpen)
-    i.SpiReadData                            0x00002834   Section        0  cc3000lib.o(i.SpiReadData)
-    SpiReadData                              0x00002835   Thumb Code   114  cc3000lib.o(i.SpiReadData)
-    i.SpiReadDataCont                        0x000028b8   Section        0  cc3000lib.o(i.SpiReadDataCont)
-    i.SpiReceiveHandler                      0x00002940   Section        0  cc3000lib.o(i.SpiReceiveHandler)
-    i.SpiResumeSpi                           0x00002950   Section        0  cc3000lib.o(i.SpiResumeSpi)
-    i.SpiTriggerRxProcessing                 0x0000297c   Section        0  cc3000lib.o(i.SpiTriggerRxProcessing)
-    i.SpiWrite                               0x000029e0   Section        0  cc3000lib.o(i.SpiWrite)
-    i.SpiWriteAsync                          0x00002a4c   Section        0  cc3000lib.o(i.SpiWriteAsync)
-    SpiWriteAsync                            0x00002a4d   Thumb Code   104  cc3000lib.o(i.SpiWriteAsync)
-    i.SpiWriteDataSynchronous                0x00002ac0   Section        0  cc3000lib.o(i.SpiWriteDataSynchronous)
-    SpiWriteDataSynchronous                  0x00002ac1   Thumb Code    98  cc3000lib.o(i.SpiWriteDataSynchronous)
-    i.StartSmartConfig                       0x00002b2c   Section        0  cc3000_basic_wifi_application.o(i.StartSmartConfig)
-    i.SysCtlClockFreqSet                     0x00002c5c   Section        0  sysctl.o(i.SysCtlClockFreqSet)
-    i.SysCtlPeripheralEnable                 0x00002f24   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
-    i.SysTickEnable                          0x00002f4c   Section        0  systick.o(i.SysTickEnable)
-    i.SysTickHandler                         0x00002f5c   Section        0  board.o(i.SysTickHandler)
-    i.SysTickIntEnable                       0x00002f78   Section        0  systick.o(i.SysTickIntEnable)
-    i.SysTickPeriodSet                       0x00002f86   Section        0  systick.o(i.SysTickPeriodSet)
-    i.UARTClockSourceSet                     0x00002f90   Section        0  uart.o(i.UARTClockSourceSet)
-    i.UARTFIFOLevelSet                       0x00002f96   Section        0  uart.o(i.UARTFIFOLevelSet)
-    i.UARTFlushRx                            0x00002f9c   Section        0  uartstdio.o(i.UARTFlushRx)
-    i.UARTFlushTx                            0x00002fc4   Section        0  uartstdio.o(i.UARTFlushTx)
-    i.UARTPrimeTransmit                      0x00002ffc   Section        0  uartstdio.o(i.UARTPrimeTransmit)
-    UARTPrimeTransmit                        0x00002ffd   Thumb Code   108  uartstdio.o(i.UARTPrimeTransmit)
-    i.UARTStdioConfig                        0x00003074   Section        0  uartstdio.o(i.UARTStdioConfig)
-    i.UARTStdioIntHandler                    0x0000310c   Section        0  uartstdio.o(i.UARTStdioIntHandler)
-    i.UARTprintf                             0x00003214   Section        0  uartstdio.o(i.UARTprintf)
-    i.UARTvprintf                            0x00003228   Section        0  uartstdio.o(i.UARTvprintf)
-    i.UARTwrite                              0x000033dc   Section        0  uartstdio.o(i.UARTwrite)
-    i.UINT16_TO_STREAM_f                     0x0000346c   Section        0  cc3000lib.o(i.UINT16_TO_STREAM_f)
-    i.UINT32_TO_STREAM_f                     0x00003476   Section        0  cc3000lib.o(i.UINT32_TO_STREAM_f)
-    i.WlanInterruptDisable                   0x00003488   Section        0  board.o(i.WlanInterruptDisable)
-    i.WlanInterruptEnable                    0x00003494   Section        0  board.o(i.WlanInterruptEnable)
-    i.WriteWlanPin                           0x000034a0   Section        0  board.o(i.WriteWlanPin)
-    i.__0snprintf$1                          0x000034b8   Section        0  printf1.o(i.__0snprintf$1)
-    i.__ARM_fpclassifyf                      0x000034e0   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
-    i.__aeabi_errno_addr                     0x00003508   Section        0  errno.o(i.__aeabi_errno_addr)
-    i.__hardfp_powf                          0x00003510   Section        0  powf.o(i.__hardfp_powf)
-    i.__mathlib_flt_underflow                0x00003b44   Section        0  funder.o(i.__mathlib_flt_underflow)
-    i.__scatterload_copy                     0x00003b54   Section       14  handlers.o(i.__scatterload_copy)
-    i.__scatterload_null                     0x00003b62   Section        2  handlers.o(i.__scatterload_null)
-    i.__scatterload_zeroinit                 0x00003b64   Section       14  handlers.o(i.__scatterload_zeroinit)
-    i.__set_errno                            0x00003b74   Section        0  errno.o(i.__set_errno)
-    i._printf_core                           0x00003b80   Section        0  printf1.o(i._printf_core)
-    _printf_core                             0x00003b81   Thumb Code   334  printf1.o(i._printf_core)
-    i._snputc                                0x00003cd4   Section        0  printf1.o(i._snputc)
-    _snputc                                  0x00003cd5   Thumb Code    22  printf1.o(i._snputc)
-    i.aes_decr                               0x00003cec   Section        0  cc3000lib.o(i.aes_decr)
-    aes_decr                                 0x00003ced   Thumb Code  1240  cc3000lib.o(i.aes_decr)
-    i.aes_decrypt                            0x000041c4   Section        0  cc3000lib.o(i.aes_decrypt)
-    i.aes_read_key                           0x000041e0   Section        0  cc3000lib.o(i.aes_read_key)
-    i.aes_write_key                          0x000041ec   Section        0  cc3000lib.o(i.aes_write_key)
-    i.bind                                   0x000041f8   Section        0  cc3000lib.o(i.bind)
-    i.closesocket                            0x00004254   Section        0  cc3000lib.o(i.closesocket)
-    i.expandKey                              0x0000429c   Section        0  cc3000lib.o(i.expandKey)
-    expandKey                                0x0000429d   Thumb Code   210  cc3000lib.o(i.expandKey)
-    i.free                                   0x00004378   Section        0  malloc.o(i.free)
-    i.galois_mul2                            0x000043c8   Section        0  cc3000lib.o(i.galois_mul2)
-    galois_mul2                              0x000043c9   Thumb Code    18  cc3000lib.o(i.galois_mul2)
-    i.get_socket_active_status               0x000043dc   Section        0  cc3000lib.o(i.get_socket_active_status)
-    i.hci_command_send                       0x000043f8   Section        0  cc3000lib.o(i.hci_command_send)
-    i.hci_data_command_send                  0x00004416   Section        0  cc3000lib.o(i.hci_data_command_send)
-    i.hci_data_send                          0x0000443e   Section        0  cc3000lib.o(i.hci_data_send)
-    i.hci_event_handler                      0x0000446c   Section        0  cc3000lib.o(i.hci_event_handler)
-    i.hci_patch_send                         0x00004780   Section        0  cc3000lib.o(i.hci_patch_send)
-    i.hci_unsol_event_handler                0x00004840   Section        0  cc3000lib.o(i.hci_unsol_event_handler)
-    i.hci_unsol_handle_patch_request         0x00004a0c   Section        0  cc3000lib.o(i.hci_unsol_handle_patch_request)
-    i.hci_unsolicited_event_handler          0x00004a8c   Section        0  cc3000lib.o(i.hci_unsolicited_event_handler)
-    i.initClk                                0x00004ab8   Section        0  board.o(i.initClk)
-    i.initDriver                             0x00004ad4   Section        0  cc3000_basic_wifi_application.o(i.initDriver)
-    i.initLEDs                               0x00004be4   Section        0  board.o(i.initLEDs)
-    i.init_spi                               0x00004c1c   Section        0  cc3000lib.o(i.init_spi)
-    i.main                                   0x00004c34   Section        0  cc3000_basic_wifi_application.o(i.main)
-    i.malloc                                 0x00004d88   Section        0  malloc.o(i.malloc)
-    i.mdnsAdvertiser                         0x00004df4   Section        0  cc3000lib.o(i.mdnsAdvertiser)
-    i.netapp_dhcp                            0x00004e50   Section        0  cc3000lib.o(i.netapp_dhcp)
-    i.netapp_ping_send                       0x00004ecc   Section        0  cc3000lib.o(i.netapp_ping_send)
-    i.nvmem_create_entry                     0x00004f1c   Section        0  cc3000lib.o(i.nvmem_create_entry)
-    i.nvmem_read                             0x00004f54   Section        0  cc3000lib.o(i.nvmem_read)
-    i.nvmem_write                            0x00004fa8   Section        0  cc3000lib.o(i.nvmem_write)
-    i.pio_init                               0x00005000   Section        0  board.o(i.pio_init)
-    i.recv                                   0x000050c8   Section        0  cc3000lib.o(i.recv)
-    i.send                                   0x000050dc   Section        0  cc3000lib.o(i.send)
-    i.sendBootLoaderPatch                    0x000050ee   Section        0  cc3000_basic_wifi_application.o(i.sendBootLoaderPatch)
-    i.sendDriverPatch                        0x000050f6   Section        0  cc3000_basic_wifi_application.o(i.sendDriverPatch)
-    i.sendWLFWPatch                          0x000050fe   Section        0  cc3000_basic_wifi_application.o(i.sendWLFWPatch)
-    i.sendto                                 0x00005106   Section        0  cc3000lib.o(i.sendto)
-    i.set_socket_active_status               0x00005118   Section        0  cc3000lib.o(i.set_socket_active_status)
-    i.simple_link_recv                       0x0000513c   Section        0  cc3000lib.o(i.simple_link_recv)
-    simple_link_recv                         0x0000513d   Thumb Code    90  cc3000lib.o(i.simple_link_recv)
-    i.simple_link_send                       0x0000519c   Section        0  cc3000lib.o(i.simple_link_send)
-    simple_link_send                         0x0000519d   Thumb Code   246  cc3000lib.o(i.simple_link_send)
-    i.socket                                 0x00005298   Section        0  cc3000lib.o(i.socket)
-    i.turnLedOff                             0x000052ec   Section        0  board.o(i.turnLedOff)
-    i.turnLedOn                              0x0000531c   Section        0  board.o(i.turnLedOn)
-    i.ustrlen                                0x0000534c   Section        0  ustdlib.o(i.ustrlen)
-    i.ustrncmp                               0x0000535c   Section        0  ustdlib.o(i.ustrncmp)
-    i.ustrstr                                0x0000538a   Section        0  ustdlib.o(i.ustrstr)
-    i.ustrtoul                               0x000053b4   Section        0  ustdlib.o(i.ustrtoul)
-    i.wlan_add_profile                       0x00005450   Section        0  cc3000lib.o(i.wlan_add_profile)
-    i.wlan_connect                           0x0000561c   Section        0  cc3000lib.o(i.wlan_connect)
-    i.wlan_disconnect                        0x000056dc   Section        0  cc3000lib.o(i.wlan_disconnect)
-    i.wlan_init                              0x00005708   Section        0  cc3000lib.o(i.wlan_init)
-    i.wlan_ioctl_del_profile                 0x00005730   Section        0  cc3000lib.o(i.wlan_ioctl_del_profile)
-    i.wlan_ioctl_set_connection_policy       0x00005760   Section        0  cc3000lib.o(i.wlan_ioctl_set_connection_policy)
-    i.wlan_set_event_mask                    0x000057a0   Section        0  cc3000lib.o(i.wlan_set_event_mask)
-    i.wlan_smart_config_process              0x000057f8   Section        0  cc3000lib.o(i.wlan_smart_config_process)
-    i.wlan_smart_config_set_prefix           0x000058d0   Section        0  cc3000lib.o(i.wlan_smart_config_set_prefix)
-    i.wlan_smart_config_start                0x00005918   Section        0  cc3000lib.o(i.wlan_smart_config_start)
-    i.wlan_start                             0x0000594c   Section        0  cc3000lib.o(i.wlan_start)
-    i.wlan_stop                              0x000059e0   Section        0  cc3000lib.o(i.wlan_stop)
-    .constdata                               0x00005a08   Section       64  board.o(.constdata)
-    .constdata                               0x00005a48   Section      331  cc3000_basic_wifi_application.o(.constdata)
-    .constdata                               0x00005b93   Section      523  cc3000lib.o(.constdata)
-    .constdata                               0x00005da0   Section       40  uartstdio.o(.constdata)
-    g_pcHex                                  0x00005da0   Data           4  uartstdio.o(.constdata)
-    g_ui32UARTBase                           0x00005da4   Data          12  uartstdio.o(.constdata)
-    g_ui32UARTInt                            0x00005db0   Data          12  uartstdio.o(.constdata)
-    g_ui32UARTPeriph                         0x00005dbc   Data          12  uartstdio.o(.constdata)
-    .constdata                               0x00005dc8   Section      528  gpio.o(.constdata)
-    g_ppui32GPIOIntMapBlizzard               0x00005dc8   Data         192  gpio.o(.constdata)
-    g_ppui32GPIOIntMapSnowflake              0x00005e88   Data         192  gpio.o(.constdata)
-    g_pui32GPIOBaseAddrs                     0x00005f48   Data         144  gpio.o(.constdata)
-    .constdata                               0x00005fd8   Section      268  interrupt.o(.constdata)
-    g_pui32Priority                          0x00005fd8   Data          32  interrupt.o(.constdata)
-    g_pui32Regs                              0x00005ff8   Data         156  interrupt.o(.constdata)
-    g_pui32EnRegs                            0x00006094   Data          20  interrupt.o(.constdata)
-    g_pui32Dii16Regs                         0x000060a8   Data          20  interrupt.o(.constdata)
-    g_pui32PendRegs                          0x000060bc   Data          20  interrupt.o(.constdata)
-    g_pui32UnpendRegs                        0x000060d0   Data          20  interrupt.o(.constdata)
-    .constdata                               0x000060e4   Section      452  sysctl.o(.constdata)
-    g_pui32VCOFrequencies                    0x000060e4   Data           8  sysctl.o(.constdata)
-    g_pui32Xtals                             0x000060ec   Data         108  sysctl.o(.constdata)
-    g_pppui32XTALtoVCO                       0x00006158   Data         288  sysctl.o(.constdata)
-    g_sXTALtoMEMTIM                          0x00006278   Data          48  sysctl.o(.constdata)
-    .constdata                               0x000062a8   Section      320  powf.o(.constdata)
-    table                                    0x000062a8   Data         128  powf.o(.constdata)
-    powersof2to1over16top                    0x00006328   Data          64  powf.o(.constdata)
-    powersof2to1over16bot                    0x00006368   Data          64  powf.o(.constdata)
-    powersof2to1over16all                    0x000063a8   Data          64  powf.o(.constdata)
-    .conststring                             0x000063e8   Section     1009  cc3000_basic_wifi_application.o(.conststring)
-    .conststring                             0x000067d9   Section       17  uartstdio.o(.conststring)
+    i.ADC0_InitSWTriggerSeq3_Ch9             0x00000814   Section        0  cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9)
+    i.ADCIntClear                            0x00000888   Section        0  adc.o(i.ADCIntClear)
+    i.ADCIntStatus                           0x00000892   Section        0  adc.o(i.ADCIntStatus)
+    i.ADCProcessorTrigger                    0x000008c6   Section        0  adc.o(i.ADCProcessorTrigger)
+    i.ADCSequenceConfigure                   0x000008e0   Section        0  adc.o(i.ADCSequenceConfigure)
+    i.ADCSequenceDataGet                     0x0000092e   Section        0  adc.o(i.ADCSequenceDataGet)
+    i.ADCSequenceEnable                      0x00000952   Section        0  adc.o(i.ADCSequenceEnable)
+    i.ADCSequenceStepConfigure               0x00000960   Section        0  adc.o(i.ADCSequenceStepConfigure)
+    i.Backward1                              0x000009fc   Section        0  pwm_10-30.o(i.Backward1)
+    i.Backward2                              0x00000a20   Section        0  pwm_10-30.o(i.Backward2)
+    i.CC3000_UsynchCallback                  0x00000a44   Section        0  cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback)
+    i.CMD_bind                               0x00000b94   Section        0  cc3000_basic_wifi_application.o(i.CMD_bind)
+    i.CMD_cc3000reset                        0x00000c58   Section        0  cc3000_basic_wifi_application.o(i.CMD_cc3000reset)
+    i.CMD_connect                            0x00000c98   Section        0  cc3000_basic_wifi_application.o(i.CMD_connect)
+    i.CMD_deletePolicy                       0x00000dbc   Section        0  cc3000_basic_wifi_application.o(i.CMD_deletePolicy)
+    i.CMD_disconnect                         0x00000e34   Section        0  cc3000_basic_wifi_application.o(i.CMD_disconnect)
+    i.CMD_help                               0x00000e9c   Section        0  cc3000_basic_wifi_application.o(i.CMD_help)
+    i.CMD_ipConfig                           0x00000f14   Section        0  cc3000_basic_wifi_application.o(i.CMD_ipConfig)
+    i.CMD_mdnsadvertise                      0x000010ec   Section        0  cc3000_basic_wifi_application.o(i.CMD_mdnsadvertise)
+    i.CMD_ping                               0x00001168   Section        0  cc3000_basic_wifi_application.o(i.CMD_ping)
+    i.CMD_receiveData                        0x000012c8   Section        0  cc3000_basic_wifi_application.o(i.CMD_receiveData)
+    i.CMD_sendData                           0x00001740   Section        0  cc3000_basic_wifi_application.o(i.CMD_sendData)
+    i.CMD_smartConfig                        0x00001998   Section        0  cc3000_basic_wifi_application.o(i.CMD_smartConfig)
+    i.CMD_socketClose                        0x000019a4   Section        0  cc3000_basic_wifi_application.o(i.CMD_socketClose)
+    i.CMD_socketOpen                         0x00001a10   Section        0  cc3000_basic_wifi_application.o(i.CMD_socketOpen)
+    i.CmdLineProcess                         0x00001bc8   Section        0  cmdline.o(i.CmdLineProcess)
+    i.DispatcherUARTConfigure                0x00001c2c   Section        0  cc3000lib.o(i.DispatcherUARTConfigure)
+    i.DotDecimalDecoder                      0x00001cd4   Section        0  cc3000_basic_wifi_application.o(i.DotDecimalDecoder)
+    i.FPUEnable                              0x00001d6c   Section        0  fpu.o(i.FPUEnable)
+    i.FPULazyStackingEnable                  0x00001d7c   Section        0  fpu.o(i.FPULazyStackingEnable)
+    i.Forward1                               0x00001d8c   Section        0  pwm_10-30.o(i.Forward1)
+    i.Forward2                               0x00001db0   Section        0  pwm_10-30.o(i.Forward2)
+    i.GPIODirModeSet                         0x00001dd4   Section        0  gpio.o(i.GPIODirModeSet)
+    i.GPIOIntDisable                         0x00001dfc   Section        0  gpio.o(i.GPIOIntDisable)
+    i.GPIOIntEnable                          0x00001e0a   Section        0  gpio.o(i.GPIOIntEnable)
+    i.GPIOIntTypeSet                         0x00001e18   Section        0  gpio.o(i.GPIOIntTypeSet)
+    i.GPIOPadConfigSet                       0x00001e68   Section        0  gpio.o(i.GPIOPadConfigSet)
+    i.GPIOPinConfigure                       0x00001fa4   Section        0  gpio.o(i.GPIOPinConfigure)
+    i.GPIOPinRead                            0x00001fec   Section        0  gpio.o(i.GPIOPinRead)
+    i.GPIOPinTypeADC                         0x00001ff2   Section        0  gpio.o(i.GPIOPinTypeADC)
+    i.GPIOPinTypeGPIOInput                   0x0000200e   Section        0  gpio.o(i.GPIOPinTypeGPIOInput)
+    i.GPIOPinTypeGPIOOutput                  0x0000202a   Section        0  gpio.o(i.GPIOPinTypeGPIOOutput)
+    i.GPIOPinTypePWM                         0x00002046   Section        0  gpio.o(i.GPIOPinTypePWM)
+    i.GPIOPinWrite                           0x00002062   Section        0  gpio.o(i.GPIOPinWrite)
+    i.GPIOPortJ_Handler                      0x00002068   Section        0  cc3000_basic_wifi_application.o(i.GPIOPortJ_Handler)
+    i.InitSysTick                            0x000020ec   Section        0  board.o(i.InitSysTick)
+    i.IntEnable                              0x0000210c   Section        0  interrupt.o(i.IntEnable)
+    i.IntPrioritySet                         0x00002170   Section        0  interrupt.o(i.IntPrioritySet)
+    i.IntSpiGPIOHandler                      0x00002198   Section        0  cc3000lib.o(i.IntSpiGPIOHandler)
+    i.Interrupt_Init                         0x000021f0   Section        0  cc3000_basic_wifi_application.o(i.Interrupt_Init)
+    i.IsBufferEmpty                          0x00002254   Section        0  uartstdio.o(i.IsBufferEmpty)
+    IsBufferEmpty                            0x00002255   Thumb Code    16  uartstdio.o(i.IsBufferEmpty)
+    i.IsBufferFull                           0x00002264   Section        0  uartstdio.o(i.IsBufferFull)
+    IsBufferFull                             0x00002265   Thumb Code    26  uartstdio.o(i.IsBufferFull)
+    i.LBackward1                             0x00002280   Section        0  pwm_10-30.o(i.LBackward1)
+    i.LBackward2                             0x000022bc   Section        0  pwm_10-30.o(i.LBackward2)
+    i.LForward1                              0x000022f8   Section        0  pwm_10-30.o(i.LForward1)
+    i.LForward2                              0x00002334   Section        0  pwm_10-30.o(i.LForward2)
+    i.PWMGenConfigure                        0x00002370   Section        0  pwm.o(i.PWMGenConfigure)
+    i.PWMGenEnable                           0x00002396   Section        0  pwm.o(i.PWMGenEnable)
+    i.PWMGenPeriodSet                        0x000023a0   Section        0  pwm.o(i.PWMGenPeriodSet)
+    i.PWMOutputState                         0x000023b2   Section        0  pwm.o(i.PWMOutputState)
+    i.PWMPulseWidthSet                       0x000023c2   Section        0  pwm.o(i.PWMPulseWidthSet)
+    i.PortFunctionInit                       0x000023e4   Section        0  pwm_10-30.o(i.PortFunctionInit)
+    i.RBackward1                             0x00002458   Section        0  pwm_10-30.o(i.RBackward1)
+    i.RBackward2                             0x00002494   Section        0  pwm_10-30.o(i.RBackward2)
+    i.RForward1                              0x000024d0   Section        0  pwm_10-30.o(i.RForward1)
+    i.RForward2                              0x0000250c   Section        0  pwm_10-30.o(i.RForward2)
+    i.ReadWlanInterruptPin                   0x00002548   Section        0  board.o(i.ReadWlanInterruptPin)
+    i.SSIBusy                                0x00002554   Section        0  ssi.o(i.SSIBusy)
+    i.SSIDMADisable                          0x0000255c   Section        0  ssi.o(i.SSIDMADisable)
+    i.SSIIntClear                            0x00002566   Section        0  ssi.o(i.SSIIntClear)
+    i.STOP                                   0x0000256c   Section        0  pwm_10-30.o(i.STOP)
+    i.STREAM_TO_UINT16_f                     0x000025a4   Section        0  cc3000lib.o(i.STREAM_TO_UINT16_f)
+    i.STREAM_TO_UINT32_f                     0x000025b2   Section        0  cc3000lib.o(i.STREAM_TO_UINT32_f)
+    i.SimpleLinkWaitData                     0x000025cc   Section        0  cc3000lib.o(i.SimpleLinkWaitData)
+    i.SimpleLinkWaitEvent                    0x000025e0   Section        0  cc3000lib.o(i.SimpleLinkWaitEvent)
+    i.SpiCleanGPIOISR                        0x000025f4   Section        0  cc3000lib.o(i.SpiCleanGPIOISR)
+    i.SpiClose                               0x00002620   Section        0  cc3000lib.o(i.SpiClose)
+    i.SpiConfigure                           0x00002650   Section        0  cc3000lib.o(i.SpiConfigure)
+    SpiConfigure                             0x00002651   Thumb Code   232  cc3000lib.o(i.SpiConfigure)
+    i.SpiConfigureHwMapping                  0x00002750   Section        0  cc3000lib.o(i.SpiConfigureHwMapping)
+    i.SpiDisableSSIDMAChannels               0x000027a4   Section        0  cc3000lib.o(i.SpiDisableSSIDMAChannels)
+    SpiDisableSSIDMAChannels                 0x000027a5   Thumb Code    38  cc3000lib.o(i.SpiDisableSSIDMAChannels)
+    i.SpiEnableSSIDMAChannels                0x000027d0   Section        0  cc3000lib.o(i.SpiEnableSSIDMAChannels)
+    SpiEnableSSIDMAChannels                  0x000027d1   Thumb Code    48  cc3000lib.o(i.SpiEnableSSIDMAChannels)
+    i.SpiFirstWrite                          0x00002804   Section        0  cc3000lib.o(i.SpiFirstWrite)
+    i.SpiIntHandler                          0x0000287c   Section        0  cc3000lib.o(i.SpiIntHandler)
+    i.SpiOpen                                0x0000293c   Section        0  cc3000lib.o(i.SpiOpen)
+    i.SpiReadData                            0x0000297c   Section        0  cc3000lib.o(i.SpiReadData)
+    SpiReadData                              0x0000297d   Thumb Code   114  cc3000lib.o(i.SpiReadData)
+    i.SpiReadDataCont                        0x00002a00   Section        0  cc3000lib.o(i.SpiReadDataCont)
+    i.SpiReceiveHandler                      0x00002a88   Section        0  cc3000lib.o(i.SpiReceiveHandler)
+    i.SpiResumeSpi                           0x00002a98   Section        0  cc3000lib.o(i.SpiResumeSpi)
+    i.SpiTriggerRxProcessing                 0x00002ac4   Section        0  cc3000lib.o(i.SpiTriggerRxProcessing)
+    i.SpiWrite                               0x00002b28   Section        0  cc3000lib.o(i.SpiWrite)
+    i.SpiWriteAsync                          0x00002b94   Section        0  cc3000lib.o(i.SpiWriteAsync)
+    SpiWriteAsync                            0x00002b95   Thumb Code   104  cc3000lib.o(i.SpiWriteAsync)
+    i.SpiWriteDataSynchronous                0x00002c08   Section        0  cc3000lib.o(i.SpiWriteDataSynchronous)
+    SpiWriteDataSynchronous                  0x00002c09   Thumb Code    98  cc3000lib.o(i.SpiWriteDataSynchronous)
+    i.StartSmartConfig                       0x00002c74   Section        0  cc3000_basic_wifi_application.o(i.StartSmartConfig)
+    i.SysCtlClockFreqSet                     0x00002da4   Section        0  sysctl.o(i.SysCtlClockFreqSet)
+    i.SysCtlPeripheralEnable                 0x0000306c   Section        0  sysctl.o(i.SysCtlPeripheralEnable)
+    i.SysTickEnable                          0x00003094   Section        0  systick.o(i.SysTickEnable)
+    i.SysTickHandler                         0x000030a4   Section        0  board.o(i.SysTickHandler)
+    i.SysTickIntEnable                       0x000030c0   Section        0  systick.o(i.SysTickIntEnable)
+    i.SysTickPeriodSet                       0x000030ce   Section        0  systick.o(i.SysTickPeriodSet)
+    i.UARTClockSourceSet                     0x000030d8   Section        0  uart.o(i.UARTClockSourceSet)
+    i.UARTFIFOLevelSet                       0x000030de   Section        0  uart.o(i.UARTFIFOLevelSet)
+    i.UARTFlushRx                            0x000030e4   Section        0  uartstdio.o(i.UARTFlushRx)
+    i.UARTFlushTx                            0x0000310c   Section        0  uartstdio.o(i.UARTFlushTx)
+    i.UARTPrimeTransmit                      0x00003144   Section        0  uartstdio.o(i.UARTPrimeTransmit)
+    UARTPrimeTransmit                        0x00003145   Thumb Code   108  uartstdio.o(i.UARTPrimeTransmit)
+    i.UARTStdioConfig                        0x000031bc   Section        0  uartstdio.o(i.UARTStdioConfig)
+    i.UARTStdioIntHandler                    0x00003254   Section        0  uartstdio.o(i.UARTStdioIntHandler)
+    i.UARTprintf                             0x0000335c   Section        0  uartstdio.o(i.UARTprintf)
+    i.UARTvprintf                            0x00003370   Section        0  uartstdio.o(i.UARTvprintf)
+    i.UARTwrite                              0x00003524   Section        0  uartstdio.o(i.UARTwrite)
+    i.UINT16_TO_STREAM_f                     0x000035b4   Section        0  cc3000lib.o(i.UINT16_TO_STREAM_f)
+    i.UINT32_TO_STREAM_f                     0x000035be   Section        0  cc3000lib.o(i.UINT32_TO_STREAM_f)
+    i.WlanInterruptDisable                   0x000035d0   Section        0  board.o(i.WlanInterruptDisable)
+    i.WlanInterruptEnable                    0x000035dc   Section        0  board.o(i.WlanInterruptEnable)
+    i.WriteWlanPin                           0x000035e8   Section        0  board.o(i.WriteWlanPin)
+    i.__0snprintf$1                          0x00003600   Section        0  printf1.o(i.__0snprintf$1)
+    i.__ARM_fpclassifyf                      0x00003628   Section        0  fpclassifyf.o(i.__ARM_fpclassifyf)
+    i.__aeabi_errno_addr                     0x00003650   Section        0  errno.o(i.__aeabi_errno_addr)
+    i.__hardfp_powf                          0x00003658   Section        0  powf.o(i.__hardfp_powf)
+    i.__mathlib_flt_underflow                0x00003c8c   Section        0  funder.o(i.__mathlib_flt_underflow)
+    i.__scatterload_copy                     0x00003c9c   Section       14  handlers.o(i.__scatterload_copy)
+    i.__scatterload_null                     0x00003caa   Section        2  handlers.o(i.__scatterload_null)
+    i.__scatterload_zeroinit                 0x00003cac   Section       14  handlers.o(i.__scatterload_zeroinit)
+    i.__set_errno                            0x00003cbc   Section        0  errno.o(i.__set_errno)
+    i._printf_core                           0x00003cc8   Section        0  printf1.o(i._printf_core)
+    _printf_core                             0x00003cc9   Thumb Code   334  printf1.o(i._printf_core)
+    i._snputc                                0x00003e1c   Section        0  printf1.o(i._snputc)
+    _snputc                                  0x00003e1d   Thumb Code    22  printf1.o(i._snputc)
+    i.aes_decr                               0x00003e34   Section        0  cc3000lib.o(i.aes_decr)
+    aes_decr                                 0x00003e35   Thumb Code  1240  cc3000lib.o(i.aes_decr)
+    i.aes_decrypt                            0x0000430c   Section        0  cc3000lib.o(i.aes_decrypt)
+    i.aes_read_key                           0x00004328   Section        0  cc3000lib.o(i.aes_read_key)
+    i.aes_write_key                          0x00004334   Section        0  cc3000lib.o(i.aes_write_key)
+    i.bind                                   0x00004340   Section        0  cc3000lib.o(i.bind)
+    i.closesocket                            0x0000439c   Section        0  cc3000lib.o(i.closesocket)
+    i.expandKey                              0x000043e4   Section        0  cc3000lib.o(i.expandKey)
+    expandKey                                0x000043e5   Thumb Code   210  cc3000lib.o(i.expandKey)
+    i.free                                   0x000044c0   Section        0  malloc.o(i.free)
+    i.galois_mul2                            0x00004510   Section        0  cc3000lib.o(i.galois_mul2)
+    galois_mul2                              0x00004511   Thumb Code    18  cc3000lib.o(i.galois_mul2)
+    i.get_socket_active_status               0x00004524   Section        0  cc3000lib.o(i.get_socket_active_status)
+    i.hci_command_send                       0x00004540   Section        0  cc3000lib.o(i.hci_command_send)
+    i.hci_data_command_send                  0x0000455e   Section        0  cc3000lib.o(i.hci_data_command_send)
+    i.hci_data_send                          0x00004586   Section        0  cc3000lib.o(i.hci_data_send)
+    i.hci_event_handler                      0x000045b4   Section        0  cc3000lib.o(i.hci_event_handler)
+    i.hci_patch_send                         0x000048c8   Section        0  cc3000lib.o(i.hci_patch_send)
+    i.hci_unsol_event_handler                0x00004988   Section        0  cc3000lib.o(i.hci_unsol_event_handler)
+    i.hci_unsol_handle_patch_request         0x00004b54   Section        0  cc3000lib.o(i.hci_unsol_handle_patch_request)
+    i.hci_unsolicited_event_handler          0x00004bd4   Section        0  cc3000lib.o(i.hci_unsolicited_event_handler)
+    i.initClk                                0x00004c00   Section        0  board.o(i.initClk)
+    i.initDriver                             0x00004c1c   Section        0  cc3000_basic_wifi_application.o(i.initDriver)
+    i.initLEDs                               0x00004d2c   Section        0  board.o(i.initLEDs)
+    i.init_spi                               0x00004d64   Section        0  cc3000lib.o(i.init_spi)
+    i.main                                   0x00004d7c   Section        0  cc3000_basic_wifi_application.o(i.main)
+    i.malloc                                 0x00004ed0   Section        0  malloc.o(i.malloc)
+    i.mdnsAdvertiser                         0x00004f3c   Section        0  cc3000lib.o(i.mdnsAdvertiser)
+    i.netapp_dhcp                            0x00004f98   Section        0  cc3000lib.o(i.netapp_dhcp)
+    i.netapp_ping_send                       0x00005014   Section        0  cc3000lib.o(i.netapp_ping_send)
+    i.nvmem_create_entry                     0x00005064   Section        0  cc3000lib.o(i.nvmem_create_entry)
+    i.nvmem_read                             0x0000509c   Section        0  cc3000lib.o(i.nvmem_read)
+    i.nvmem_write                            0x000050f0   Section        0  cc3000lib.o(i.nvmem_write)
+    i.pio_init                               0x00005148   Section        0  board.o(i.pio_init)
+    i.recv                                   0x00005210   Section        0  cc3000lib.o(i.recv)
+    i.send                                   0x00005224   Section        0  cc3000lib.o(i.send)
+    i.sendBootLoaderPatch                    0x00005236   Section        0  cc3000_basic_wifi_application.o(i.sendBootLoaderPatch)
+    i.sendDriverPatch                        0x0000523e   Section        0  cc3000_basic_wifi_application.o(i.sendDriverPatch)
+    i.sendWLFWPatch                          0x00005246   Section        0  cc3000_basic_wifi_application.o(i.sendWLFWPatch)
+    i.sendto                                 0x0000524e   Section        0  cc3000lib.o(i.sendto)
+    i.set_socket_active_status               0x00005260   Section        0  cc3000lib.o(i.set_socket_active_status)
+    i.simple_link_recv                       0x00005284   Section        0  cc3000lib.o(i.simple_link_recv)
+    simple_link_recv                         0x00005285   Thumb Code    90  cc3000lib.o(i.simple_link_recv)
+    i.simple_link_send                       0x000052e4   Section        0  cc3000lib.o(i.simple_link_send)
+    simple_link_send                         0x000052e5   Thumb Code   246  cc3000lib.o(i.simple_link_send)
+    i.socket                                 0x000053e0   Section        0  cc3000lib.o(i.socket)
+    i.turnLedOff                             0x00005434   Section        0  board.o(i.turnLedOff)
+    i.turnLedOn                              0x00005464   Section        0  board.o(i.turnLedOn)
+    i.ustrlen                                0x00005494   Section        0  ustdlib.o(i.ustrlen)
+    i.ustrncmp                               0x000054a4   Section        0  ustdlib.o(i.ustrncmp)
+    i.ustrstr                                0x000054d2   Section        0  ustdlib.o(i.ustrstr)
+    i.ustrtoul                               0x000054fc   Section        0  ustdlib.o(i.ustrtoul)
+    i.wlan_add_profile                       0x00005598   Section        0  cc3000lib.o(i.wlan_add_profile)
+    i.wlan_connect                           0x00005764   Section        0  cc3000lib.o(i.wlan_connect)
+    i.wlan_disconnect                        0x00005824   Section        0  cc3000lib.o(i.wlan_disconnect)
+    i.wlan_init                              0x00005850   Section        0  cc3000lib.o(i.wlan_init)
+    i.wlan_ioctl_del_profile                 0x00005878   Section        0  cc3000lib.o(i.wlan_ioctl_del_profile)
+    i.wlan_ioctl_set_connection_policy       0x000058a8   Section        0  cc3000lib.o(i.wlan_ioctl_set_connection_policy)
+    i.wlan_set_event_mask                    0x000058e8   Section        0  cc3000lib.o(i.wlan_set_event_mask)
+    i.wlan_smart_config_process              0x00005940   Section        0  cc3000lib.o(i.wlan_smart_config_process)
+    i.wlan_smart_config_set_prefix           0x00005a18   Section        0  cc3000lib.o(i.wlan_smart_config_set_prefix)
+    i.wlan_smart_config_start                0x00005a60   Section        0  cc3000lib.o(i.wlan_smart_config_start)
+    i.wlan_start                             0x00005a94   Section        0  cc3000lib.o(i.wlan_start)
+    i.wlan_stop                              0x00005b28   Section        0  cc3000lib.o(i.wlan_stop)
+    .constdata                               0x00005b50   Section       64  board.o(.constdata)
+    .constdata                               0x00005b90   Section      331  cc3000_basic_wifi_application.o(.constdata)
+    .constdata                               0x00005cdb   Section      523  cc3000lib.o(.constdata)
+    .constdata                               0x00005ee8   Section       40  uartstdio.o(.constdata)
+    g_pcHex                                  0x00005ee8   Data           4  uartstdio.o(.constdata)
+    g_ui32UARTBase                           0x00005eec   Data          12  uartstdio.o(.constdata)
+    g_ui32UARTInt                            0x00005ef8   Data          12  uartstdio.o(.constdata)
+    g_ui32UARTPeriph                         0x00005f04   Data          12  uartstdio.o(.constdata)
+    .constdata                               0x00005f10   Section      528  gpio.o(.constdata)
+    g_ppui32GPIOIntMapBlizzard               0x00005f10   Data         192  gpio.o(.constdata)
+    g_ppui32GPIOIntMapSnowflake              0x00005fd0   Data         192  gpio.o(.constdata)
+    g_pui32GPIOBaseAddrs                     0x00006090   Data         144  gpio.o(.constdata)
+    .constdata                               0x00006120   Section      268  interrupt.o(.constdata)
+    g_pui32Priority                          0x00006120   Data          32  interrupt.o(.constdata)
+    g_pui32Regs                              0x00006140   Data         156  interrupt.o(.constdata)
+    g_pui32EnRegs                            0x000061dc   Data          20  interrupt.o(.constdata)
+    g_pui32Dii16Regs                         0x000061f0   Data          20  interrupt.o(.constdata)
+    g_pui32PendRegs                          0x00006204   Data          20  interrupt.o(.constdata)
+    g_pui32UnpendRegs                        0x00006218   Data          20  interrupt.o(.constdata)
+    .constdata                               0x0000622c   Section      452  sysctl.o(.constdata)
+    g_pui32VCOFrequencies                    0x0000622c   Data           8  sysctl.o(.constdata)
+    g_pui32Xtals                             0x00006234   Data         108  sysctl.o(.constdata)
+    g_pppui32XTALtoVCO                       0x000062a0   Data         288  sysctl.o(.constdata)
+    g_sXTALtoMEMTIM                          0x000063c0   Data          48  sysctl.o(.constdata)
+    .constdata                               0x000063f0   Section      320  powf.o(.constdata)
+    table                                    0x000063f0   Data         128  powf.o(.constdata)
+    powersof2to1over16top                    0x00006470   Data          64  powf.o(.constdata)
+    powersof2to1over16bot                    0x000064b0   Data          64  powf.o(.constdata)
+    powersof2to1over16all                    0x000064f0   Data          64  powf.o(.constdata)
+    .conststring                             0x00006530   Section     1009  cc3000_basic_wifi_application.o(.conststring)
+    .conststring                             0x00006921   Section       17  uartstdio.o(.conststring)
     .data                                    0x20000000   Section        8  board.o(.data)
     ulTickCount                              0x20000000   Data           4  board.o(.data)
-    .data                                    0x20000008   Section      236  cc3000_basic_wifi_application.o(.data)
+    .data                                    0x20000008   Section      252  cc3000_basic_wifi_application.o(.data)
     autonomousMode                           0x20000009   Data           1  cc3000_basic_wifi_application.o(.data)
-    .data                                    0x200000f4   Section       18  cc3000lib.o(.data)
-    .data                                    0x20000108   Section       28  uartstdio.o(.data)
-    bLastWasCR                               0x20000108   Data           1  uartstdio.o(.data)
-    g_bDisableEcho                           0x20000109   Data           1  uartstdio.o(.data)
-    g_ui32UARTTxWriteIndex                   0x2000010c   Data           4  uartstdio.o(.data)
-    g_ui32UARTTxReadIndex                    0x20000110   Data           4  uartstdio.o(.data)
-    g_ui32UARTRxWriteIndex                   0x20000114   Data           4  uartstdio.o(.data)
-    g_ui32UARTRxReadIndex                    0x20000118   Data           4  uartstdio.o(.data)
-    g_ui32Base                               0x2000011c   Data           4  uartstdio.o(.data)
-    g_ui32PortNum                            0x20000120   Data           4  uartstdio.o(.data)
-    .data                                    0x20000124   Section        4  errno.o(.data)
-    _errno                                   0x20000124   Data           4  errno.o(.data)
-    .data                                    0x20000128   Section        4  mvars.o(.data)
-    .data                                    0x2000012c   Section        4  mvars.o(.data)
-    .bss                                     0x20000130   Section      291  cc3000_basic_wifi_application.o(.bss)
+    .data                                    0x20000104   Section       18  cc3000lib.o(.data)
+    .data                                    0x20000118   Section       28  uartstdio.o(.data)
+    bLastWasCR                               0x20000118   Data           1  uartstdio.o(.data)
+    g_bDisableEcho                           0x20000119   Data           1  uartstdio.o(.data)
+    g_ui32UARTTxWriteIndex                   0x2000011c   Data           4  uartstdio.o(.data)
+    g_ui32UARTTxReadIndex                    0x20000120   Data           4  uartstdio.o(.data)
+    g_ui32UARTRxWriteIndex                   0x20000124   Data           4  uartstdio.o(.data)
+    g_ui32UARTRxReadIndex                    0x20000128   Data           4  uartstdio.o(.data)
+    g_ui32Base                               0x2000012c   Data           4  uartstdio.o(.data)
+    g_ui32PortNum                            0x20000130   Data           4  uartstdio.o(.data)
+    .data                                    0x20000134   Section        4  errno.o(.data)
+    _errno                                   0x20000134   Data           4  errno.o(.data)
+    .data                                    0x20000138   Section        4  mvars.o(.data)
+    .data                                    0x2000013c   Section        4  mvars.o(.data)
+    .bss                                     0x20000140   Section      291  cc3000_basic_wifi_application.o(.bss)
     .bss                                     0x20000400   Section     4608  cc3000lib.o(.bss)
     ucDMAChannelControlStructure             0x20001400   Data         512  cc3000lib.o(.bss)
     .bss                                     0x20001600   Section       36  cmdline.o(.bss)
@@ -1755,178 +1811,186 @@ Image Symbol Table
     _float_epilogue                          0x000006c3   Thumb Code    90  fepilogue.o(.text)
     __decompress                             0x0000071d   Thumb Code     0  __dczerorl2.o(.text)
     __decompress1                            0x0000071d   Thumb Code    92  __dczerorl2.o(.text)
-    ADC0_InSeq3                              0x00000779   Thumb Code    96  cc3000_basic_wifi_application.o(i.ADC0_InSeq3)
-    ADC0_InitSWTriggerSeq3_Ch9               0x000007ed   Thumb Code   204  cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9)
-    Backward1                                0x000008d1   Thumb Code    30  pwm_10-30.o(i.Backward1)
-    Backward2                                0x000008f5   Thumb Code    32  pwm_10-30.o(i.Backward2)
-    CC3000_UsynchCallback                    0x00000919   Thumb Code   178  cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback)
-    CMD_bind                                 0x00000a69   Thumb Code    80  cc3000_basic_wifi_application.o(i.CMD_bind)
-    CMD_cc3000reset                          0x00000b2d   Thumb Code    54  cc3000_basic_wifi_application.o(i.CMD_cc3000reset)
-    CMD_connect                              0x00000b6d   Thumb Code   134  cc3000_basic_wifi_application.o(i.CMD_connect)
-    CMD_deletePolicy                         0x00000c91   Thumb Code    34  cc3000_basic_wifi_application.o(i.CMD_deletePolicy)
-    CMD_disconnect                           0x00000d09   Thumb Code    28  cc3000_basic_wifi_application.o(i.CMD_disconnect)
-    CMD_help                                 0x00000d71   Thumb Code    56  cc3000_basic_wifi_application.o(i.CMD_help)
-    CMD_ipConfig                             0x00000de9   Thumb Code   290  cc3000_basic_wifi_application.o(i.CMD_ipConfig)
-    CMD_mdnsadvertise                        0x00000fc1   Thumb Code    48  cc3000_basic_wifi_application.o(i.CMD_mdnsadvertise)
-    CMD_ping                                 0x0000103d   Thumb Code   194  cc3000_basic_wifi_application.o(i.CMD_ping)
-    CMD_receiveData                          0x0000119d   Thumb Code   584  cc3000_basic_wifi_application.o(i.CMD_receiveData)
-    CMD_sendData                             0x00001615   Thumb Code   264  cc3000_basic_wifi_application.o(i.CMD_sendData)
-    CMD_smartConfig                          0x0000186d   Thumb Code    10  cc3000_basic_wifi_application.o(i.CMD_smartConfig)
-    CMD_socketClose                          0x00001879   Thumb Code    40  cc3000_basic_wifi_application.o(i.CMD_socketClose)
-    CMD_socketOpen                           0x000018e5   Thumb Code   182  cc3000_basic_wifi_application.o(i.CMD_socketOpen)
-    CmdLineProcess                           0x00001a9d   Thumb Code    90  cmdline.o(i.CmdLineProcess)
-    DispatcherUARTConfigure                  0x00001b01   Thumb Code   152  cc3000lib.o(i.DispatcherUARTConfigure)
-    DotDecimalDecoder                        0x00001ba9   Thumb Code   148  cc3000_basic_wifi_application.o(i.DotDecimalDecoder)
-    FPUEnable                                0x00001c41   Thumb Code    12  fpu.o(i.FPUEnable)
-    FPULazyStackingEnable                    0x00001c51   Thumb Code    12  fpu.o(i.FPULazyStackingEnable)
-    Forward1                                 0x00001c61   Thumb Code    30  pwm_10-30.o(i.Forward1)
-    Forward2                                 0x00001c85   Thumb Code    32  pwm_10-30.o(i.Forward2)
-    GPIODirModeSet                           0x00001ca9   Thumb Code    40  gpio.o(i.GPIODirModeSet)
-    GPIOIntDisable                           0x00001cd1   Thumb Code    14  gpio.o(i.GPIOIntDisable)
-    GPIOIntEnable                            0x00001cdf   Thumb Code    14  gpio.o(i.GPIOIntEnable)
-    GPIOIntTypeSet                           0x00001ced   Thumb Code    80  gpio.o(i.GPIOIntTypeSet)
-    GPIOPadConfigSet                         0x00001d3d   Thumb Code   314  gpio.o(i.GPIOPadConfigSet)
-    GPIOPinConfigure                         0x00001e79   Thumb Code    64  gpio.o(i.GPIOPinConfigure)
-    GPIOPinRead                              0x00001ec1   Thumb Code     6  gpio.o(i.GPIOPinRead)
-    GPIOPinTypeGPIOInput                     0x00001ec7   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOInput)
-    GPIOPinTypeGPIOOutput                    0x00001ee3   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOOutput)
-    GPIOPinTypePWM                           0x00001eff   Thumb Code    28  gpio.o(i.GPIOPinTypePWM)
-    GPIOPinWrite                             0x00001f1b   Thumb Code     6  gpio.o(i.GPIOPinWrite)
-    GPIOPortJ_Handler                        0x00001f21   Thumb Code    74  cc3000_basic_wifi_application.o(i.GPIOPortJ_Handler)
-    InitSysTick                              0x00001fa5   Thumb Code    28  board.o(i.InitSysTick)
-    IntEnable                                0x00001fc5   Thumb Code    92  interrupt.o(i.IntEnable)
-    IntPrioritySet                           0x00002029   Thumb Code    36  interrupt.o(i.IntPrioritySet)
-    IntSpiGPIOHandler                        0x00002051   Thumb Code    80  cc3000lib.o(i.IntSpiGPIOHandler)
-    Interrupt_Init                           0x000020a9   Thumb Code    84  cc3000_basic_wifi_application.o(i.Interrupt_Init)
-    LBackward1                               0x00002139   Thumb Code    54  pwm_10-30.o(i.LBackward1)
-    LBackward2                               0x00002175   Thumb Code    54  pwm_10-30.o(i.LBackward2)
-    LForward1                                0x000021b1   Thumb Code    54  pwm_10-30.o(i.LForward1)
-    LForward2                                0x000021ed   Thumb Code    56  pwm_10-30.o(i.LForward2)
-    PWMGenConfigure                          0x00002229   Thumb Code    38  pwm.o(i.PWMGenConfigure)
-    PWMGenEnable                             0x0000224f   Thumb Code    10  pwm.o(i.PWMGenEnable)
-    PWMGenPeriodSet                          0x00002259   Thumb Code    18  pwm.o(i.PWMGenPeriodSet)
-    PWMOutputState                           0x0000226b   Thumb Code    16  pwm.o(i.PWMOutputState)
-    PWMPulseWidthSet                         0x0000227b   Thumb Code    32  pwm.o(i.PWMPulseWidthSet)
-    PortFunctionInit                         0x0000229d   Thumb Code    88  pwm_10-30.o(i.PortFunctionInit)
-    RBackward1                               0x00002311   Thumb Code    54  pwm_10-30.o(i.RBackward1)
-    RBackward2                               0x0000234d   Thumb Code    54  pwm_10-30.o(i.RBackward2)
-    RForward1                                0x00002389   Thumb Code    54  pwm_10-30.o(i.RForward1)
-    RForward2                                0x000023c5   Thumb Code    56  pwm_10-30.o(i.RForward2)
-    ReadWlanInterruptPin                     0x00002401   Thumb Code     8  board.o(i.ReadWlanInterruptPin)
-    SSIBusy                                  0x0000240d   Thumb Code     8  ssi.o(i.SSIBusy)
-    SSIDMADisable                            0x00002415   Thumb Code    10  ssi.o(i.SSIDMADisable)
-    SSIIntClear                              0x0000241f   Thumb Code     4  ssi.o(i.SSIIntClear)
-    STOP                                     0x00002425   Thumb Code    52  pwm_10-30.o(i.STOP)
-    STREAM_TO_UINT16_f                       0x0000245d   Thumb Code    14  cc3000lib.o(i.STREAM_TO_UINT16_f)
-    STREAM_TO_UINT32_f                       0x0000246b   Thumb Code    24  cc3000lib.o(i.STREAM_TO_UINT32_f)
-    SimpleLinkWaitData                       0x00002485   Thumb Code    14  cc3000lib.o(i.SimpleLinkWaitData)
-    SimpleLinkWaitEvent                      0x00002499   Thumb Code    16  cc3000lib.o(i.SimpleLinkWaitEvent)
-    SpiCleanGPIOISR                          0x000024ad   Thumb Code    38  cc3000lib.o(i.SpiCleanGPIOISR)
-    SpiClose                                 0x000024d9   Thumb Code    44  cc3000lib.o(i.SpiClose)
-    SpiConfigureHwMapping                    0x00002609   Thumb Code    56  cc3000lib.o(i.SpiConfigureHwMapping)
-    SpiFirstWrite                            0x000026bd   Thumb Code   108  cc3000lib.o(i.SpiFirstWrite)
-    SpiIntHandler                            0x00002735   Thumb Code   184  cc3000lib.o(i.SpiIntHandler)
-    SpiOpen                                  0x000027f5   Thumb Code    60  cc3000lib.o(i.SpiOpen)
-    SpiReadDataCont                          0x000028b9   Thumb Code   132  cc3000lib.o(i.SpiReadDataCont)
-    SpiReceiveHandler                        0x00002941   Thumb Code    12  cc3000lib.o(i.SpiReceiveHandler)
-    SpiResumeSpi                             0x00002951   Thumb Code    38  cc3000lib.o(i.SpiResumeSpi)
-    SpiTriggerRxProcessing                   0x0000297d   Thumb Code    86  cc3000lib.o(i.SpiTriggerRxProcessing)
-    SpiWrite                                 0x000029e1   Thumb Code    98  cc3000lib.o(i.SpiWrite)
-    StartSmartConfig                         0x00002b2d   Thumb Code   216  cc3000_basic_wifi_application.o(i.StartSmartConfig)
-    SysCtlClockFreqSet                       0x00002c5d   Thumb Code   672  sysctl.o(i.SysCtlClockFreqSet)
-    SysCtlPeripheralEnable                   0x00002f25   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
-    SysTickEnable                            0x00002f4d   Thumb Code    14  systick.o(i.SysTickEnable)
-    SysTickHandler                           0x00002f5d   Thumb Code    24  board.o(i.SysTickHandler)
-    SysTickIntEnable                         0x00002f79   Thumb Code    14  systick.o(i.SysTickIntEnable)
-    SysTickPeriodSet                         0x00002f87   Thumb Code    10  systick.o(i.SysTickPeriodSet)
-    UARTClockSourceSet                       0x00002f91   Thumb Code     6  uart.o(i.UARTClockSourceSet)
-    UARTFIFOLevelSet                         0x00002f97   Thumb Code     6  uart.o(i.UARTFIFOLevelSet)
-    UARTFlushRx                              0x00002f9d   Thumb Code    36  uartstdio.o(i.UARTFlushRx)
-    UARTFlushTx                              0x00002fc5   Thumb Code    52  uartstdio.o(i.UARTFlushTx)
-    UARTStdioConfig                          0x00003075   Thumb Code   142  uartstdio.o(i.UARTStdioConfig)
-    UARTStdioIntHandler                      0x0000310d   Thumb Code   248  uartstdio.o(i.UARTStdioIntHandler)
-    UARTprintf                               0x00003215   Thumb Code    18  uartstdio.o(i.UARTprintf)
-    UARTvprintf                              0x00003229   Thumb Code   420  uartstdio.o(i.UARTvprintf)
-    UARTwrite                                0x000033dd   Thumb Code   134  uartstdio.o(i.UARTwrite)
-    UINT16_TO_STREAM_f                       0x0000346d   Thumb Code    10  cc3000lib.o(i.UINT16_TO_STREAM_f)
-    UINT32_TO_STREAM_f                       0x00003477   Thumb Code    18  cc3000lib.o(i.UINT32_TO_STREAM_f)
-    WlanInterruptDisable                     0x00003489   Thumb Code     8  board.o(i.WlanInterruptDisable)
-    WlanInterruptEnable                      0x00003495   Thumb Code     8  board.o(i.WlanInterruptEnable)
-    WriteWlanPin                             0x000034a1   Thumb Code    18  board.o(i.WriteWlanPin)
-    __0snprintf$1                            0x000034b9   Thumb Code    36  printf1.o(i.__0snprintf$1)
-    __1snprintf$1                            0x000034b9   Thumb Code     0  printf1.o(i.__0snprintf$1)
-    __2snprintf                              0x000034b9   Thumb Code     0  printf1.o(i.__0snprintf$1)
-    __ARM_fpclassifyf                        0x000034e1   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
-    __aeabi_errno_addr                       0x00003509   Thumb Code     4  errno.o(i.__aeabi_errno_addr)
-    __rt_errno_addr                          0x00003509   Thumb Code     0  errno.o(i.__aeabi_errno_addr)
-    __hardfp_powf                            0x00003511   Thumb Code  1550  powf.o(i.__hardfp_powf)
-    __mathlib_powf                           0x00003511   Thumb Code     0  powf.o(i.__hardfp_powf)
-    __mathlib_flt_underflow                  0x00003b45   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
-    __scatterload_copy                       0x00003b55   Thumb Code    14  handlers.o(i.__scatterload_copy)
-    __scatterload_null                       0x00003b63   Thumb Code     2  handlers.o(i.__scatterload_null)
-    __scatterload_zeroinit                   0x00003b65   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
-    __set_errno                              0x00003b75   Thumb Code     6  errno.o(i.__set_errno)
-    aes_decrypt                              0x000041c5   Thumb Code    22  cc3000lib.o(i.aes_decrypt)
-    aes_read_key                             0x000041e1   Thumb Code    12  cc3000lib.o(i.aes_read_key)
-    aes_write_key                            0x000041ed   Thumb Code    12  cc3000lib.o(i.aes_write_key)
-    bind                                     0x000041f9   Thumb Code    88  cc3000lib.o(i.bind)
-    closesocket                              0x00004255   Thumb Code    66  cc3000lib.o(i.closesocket)
-    free                                     0x00004379   Thumb Code    76  malloc.o(i.free)
-    get_socket_active_status                 0x000043dd   Thumb Code    24  cc3000lib.o(i.get_socket_active_status)
-    hci_command_send                         0x000043f9   Thumb Code    30  cc3000lib.o(i.hci_command_send)
-    hci_data_command_send                    0x00004417   Thumb Code    40  cc3000lib.o(i.hci_data_command_send)
-    hci_data_send                            0x0000443f   Thumb Code    44  cc3000lib.o(i.hci_data_send)
-    hci_event_handler                        0x0000446d   Thumb Code   782  cc3000lib.o(i.hci_event_handler)
-    hci_patch_send                           0x00004781   Thumb Code   190  cc3000lib.o(i.hci_patch_send)
-    hci_unsol_event_handler                  0x00004841   Thumb Code   454  cc3000lib.o(i.hci_unsol_event_handler)
-    hci_unsol_handle_patch_request           0x00004a0d   Thumb Code   122  cc3000lib.o(i.hci_unsol_handle_patch_request)
-    hci_unsolicited_event_handler            0x00004a8d   Thumb Code    40  cc3000lib.o(i.hci_unsolicited_event_handler)
-    initClk                                  0x00004ab9   Thumb Code    16  board.o(i.initClk)
-    initDriver                               0x00004ad5   Thumb Code   126  cc3000_basic_wifi_application.o(i.initDriver)
-    initLEDs                                 0x00004be5   Thumb Code    50  board.o(i.initLEDs)
-    init_spi                                 0x00004c1d   Thumb Code    22  cc3000lib.o(i.init_spi)
-    main                                     0x00004c35   Thumb Code   280  cc3000_basic_wifi_application.o(i.main)
-    malloc                                   0x00004d89   Thumb Code    92  malloc.o(i.malloc)
-    mdnsAdvertiser                           0x00004df5   Thumb Code    88  cc3000lib.o(i.mdnsAdvertiser)
-    netapp_dhcp                              0x00004e51   Thumb Code   118  cc3000lib.o(i.netapp_dhcp)
-    netapp_ping_send                         0x00004ecd   Thumb Code    74  cc3000lib.o(i.netapp_ping_send)
-    nvmem_create_entry                       0x00004f1d   Thumb Code    52  cc3000lib.o(i.nvmem_create_entry)
-    nvmem_read                               0x00004f55   Thumb Code    78  cc3000lib.o(i.nvmem_read)
-    nvmem_write                              0x00004fa9   Thumb Code    82  cc3000lib.o(i.nvmem_write)
-    pio_init                                 0x00005001   Thumb Code   180  board.o(i.pio_init)
-    recv                                     0x000050c9   Thumb Code    20  cc3000lib.o(i.recv)
-    send                                     0x000050dd   Thumb Code    18  cc3000lib.o(i.send)
-    sendBootLoaderPatch                      0x000050ef   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendBootLoaderPatch)
-    sendDriverPatch                          0x000050f7   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendDriverPatch)
-    sendWLFWPatch                            0x000050ff   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendWLFWPatch)
-    sendto                                   0x00005107   Thumb Code    18  cc3000lib.o(i.sendto)
-    set_socket_active_status                 0x00005119   Thumb Code    30  cc3000lib.o(i.set_socket_active_status)
-    socket                                   0x00005299   Thumb Code    80  cc3000lib.o(i.socket)
-    turnLedOff                               0x000052ed   Thumb Code    44  board.o(i.turnLedOff)
-    turnLedOn                                0x0000531d   Thumb Code    44  board.o(i.turnLedOn)
-    ustrlen                                  0x0000534d   Thumb Code    16  ustdlib.o(i.ustrlen)
-    ustrncmp                                 0x0000535d   Thumb Code    46  ustdlib.o(i.ustrncmp)
-    ustrstr                                  0x0000538b   Thumb Code    42  ustdlib.o(i.ustrstr)
-    ustrtoul                                 0x000053b5   Thumb Code   154  ustdlib.o(i.ustrtoul)
-    wlan_add_profile                         0x00005451   Thumb Code   456  cc3000lib.o(i.wlan_add_profile)
-    wlan_connect                             0x0000561d   Thumb Code   186  cc3000lib.o(i.wlan_connect)
-    wlan_disconnect                          0x000056dd   Thumb Code    40  cc3000lib.o(i.wlan_disconnect)
-    wlan_init                                0x00005709   Thumb Code    36  cc3000lib.o(i.wlan_init)
-    wlan_ioctl_del_profile                   0x00005731   Thumb Code    44  cc3000lib.o(i.wlan_ioctl_del_profile)
-    wlan_ioctl_set_connection_policy         0x00005761   Thumb Code    60  cc3000lib.o(i.wlan_ioctl_set_connection_policy)
-    wlan_set_event_mask                      0x000057a1   Thumb Code    84  cc3000lib.o(i.wlan_set_event_mask)
-    wlan_smart_config_process                0x000057f9   Thumb Code   212  cc3000lib.o(i.wlan_smart_config_process)
-    wlan_smart_config_set_prefix             0x000058d1   Thumb Code    66  cc3000lib.o(i.wlan_smart_config_set_prefix)
-    wlan_smart_config_start                  0x00005919   Thumb Code    46  cc3000lib.o(i.wlan_smart_config_start)
-    wlan_start                               0x0000594d   Thumb Code   140  cc3000lib.o(i.wlan_start)
-    wlan_stop                                0x000059e1   Thumb Code    34  cc3000lib.o(i.wlan_stop)
-    g_psLEDs                                 0x00005a08   Data          64  board.o(.constdata)
-    g_pui8smartconfigkey                     0x00005a48   Data          16  cc3000_basic_wifi_application.o(.constdata)
-    sbox                                     0x00005b93   Data         256  cc3000lib.o(.constdata)
-    rsbox                                    0x00005c93   Data         256  cc3000lib.o(.constdata)
-    Rcon                                     0x00005d93   Data          11  cc3000lib.o(.constdata)
-    Region$$Table$$Base                      0x000067ec   Number         0  anon$$obj.o(Region$$Table)
-    Region$$Table$$Limit                     0x0000680c   Number         0  anon$$obj.o(Region$$Table)
+    ADC0_InSeq3                              0x00000779   Thumb Code   132  cc3000_basic_wifi_application.o(i.ADC0_InSeq3)
+    ADC0_InitSWTriggerSeq3_Ch9               0x00000815   Thumb Code    90  cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9)
+    ADCIntClear                              0x00000889   Thumb Code    10  adc.o(i.ADCIntClear)
+    ADCIntStatus                             0x00000893   Thumb Code    52  adc.o(i.ADCIntStatus)
+    ADCProcessorTrigger                      0x000008c7   Thumb Code    26  adc.o(i.ADCProcessorTrigger)
+    ADCSequenceConfigure                     0x000008e1   Thumb Code    78  adc.o(i.ADCSequenceConfigure)
+    ADCSequenceDataGet                       0x0000092f   Thumb Code    36  adc.o(i.ADCSequenceDataGet)
+    ADCSequenceEnable                        0x00000953   Thumb Code    14  adc.o(i.ADCSequenceEnable)
+    ADCSequenceStepConfigure                 0x00000961   Thumb Code   154  adc.o(i.ADCSequenceStepConfigure)
+    Backward1                                0x000009fd   Thumb Code    30  pwm_10-30.o(i.Backward1)
+    Backward2                                0x00000a21   Thumb Code    32  pwm_10-30.o(i.Backward2)
+    CC3000_UsynchCallback                    0x00000a45   Thumb Code   178  cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback)
+    CMD_bind                                 0x00000b95   Thumb Code    80  cc3000_basic_wifi_application.o(i.CMD_bind)
+    CMD_cc3000reset                          0x00000c59   Thumb Code    54  cc3000_basic_wifi_application.o(i.CMD_cc3000reset)
+    CMD_connect                              0x00000c99   Thumb Code   134  cc3000_basic_wifi_application.o(i.CMD_connect)
+    CMD_deletePolicy                         0x00000dbd   Thumb Code    34  cc3000_basic_wifi_application.o(i.CMD_deletePolicy)
+    CMD_disconnect                           0x00000e35   Thumb Code    28  cc3000_basic_wifi_application.o(i.CMD_disconnect)
+    CMD_help                                 0x00000e9d   Thumb Code    56  cc3000_basic_wifi_application.o(i.CMD_help)
+    CMD_ipConfig                             0x00000f15   Thumb Code   290  cc3000_basic_wifi_application.o(i.CMD_ipConfig)
+    CMD_mdnsadvertise                        0x000010ed   Thumb Code    48  cc3000_basic_wifi_application.o(i.CMD_mdnsadvertise)
+    CMD_ping                                 0x00001169   Thumb Code   194  cc3000_basic_wifi_application.o(i.CMD_ping)
+    CMD_receiveData                          0x000012c9   Thumb Code   584  cc3000_basic_wifi_application.o(i.CMD_receiveData)
+    CMD_sendData                             0x00001741   Thumb Code   264  cc3000_basic_wifi_application.o(i.CMD_sendData)
+    CMD_smartConfig                          0x00001999   Thumb Code    10  cc3000_basic_wifi_application.o(i.CMD_smartConfig)
+    CMD_socketClose                          0x000019a5   Thumb Code    40  cc3000_basic_wifi_application.o(i.CMD_socketClose)
+    CMD_socketOpen                           0x00001a11   Thumb Code   182  cc3000_basic_wifi_application.o(i.CMD_socketOpen)
+    CmdLineProcess                           0x00001bc9   Thumb Code    90  cmdline.o(i.CmdLineProcess)
+    DispatcherUARTConfigure                  0x00001c2d   Thumb Code   152  cc3000lib.o(i.DispatcherUARTConfigure)
+    DotDecimalDecoder                        0x00001cd5   Thumb Code   148  cc3000_basic_wifi_application.o(i.DotDecimalDecoder)
+    FPUEnable                                0x00001d6d   Thumb Code    12  fpu.o(i.FPUEnable)
+    FPULazyStackingEnable                    0x00001d7d   Thumb Code    12  fpu.o(i.FPULazyStackingEnable)
+    Forward1                                 0x00001d8d   Thumb Code    30  pwm_10-30.o(i.Forward1)
+    Forward2                                 0x00001db1   Thumb Code    32  pwm_10-30.o(i.Forward2)
+    GPIODirModeSet                           0x00001dd5   Thumb Code    40  gpio.o(i.GPIODirModeSet)
+    GPIOIntDisable                           0x00001dfd   Thumb Code    14  gpio.o(i.GPIOIntDisable)
+    GPIOIntEnable                            0x00001e0b   Thumb Code    14  gpio.o(i.GPIOIntEnable)
+    GPIOIntTypeSet                           0x00001e19   Thumb Code    80  gpio.o(i.GPIOIntTypeSet)
+    GPIOPadConfigSet                         0x00001e69   Thumb Code   314  gpio.o(i.GPIOPadConfigSet)
+    GPIOPinConfigure                         0x00001fa5   Thumb Code    64  gpio.o(i.GPIOPinConfigure)
+    GPIOPinRead                              0x00001fed   Thumb Code     6  gpio.o(i.GPIOPinRead)
+    GPIOPinTypeADC                           0x00001ff3   Thumb Code    28  gpio.o(i.GPIOPinTypeADC)
+    GPIOPinTypeGPIOInput                     0x0000200f   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOInput)
+    GPIOPinTypeGPIOOutput                    0x0000202b   Thumb Code    28  gpio.o(i.GPIOPinTypeGPIOOutput)
+    GPIOPinTypePWM                           0x00002047   Thumb Code    28  gpio.o(i.GPIOPinTypePWM)
+    GPIOPinWrite                             0x00002063   Thumb Code     6  gpio.o(i.GPIOPinWrite)
+    GPIOPortJ_Handler                        0x00002069   Thumb Code    74  cc3000_basic_wifi_application.o(i.GPIOPortJ_Handler)
+    InitSysTick                              0x000020ed   Thumb Code    28  board.o(i.InitSysTick)
+    IntEnable                                0x0000210d   Thumb Code    92  interrupt.o(i.IntEnable)
+    IntPrioritySet                           0x00002171   Thumb Code    36  interrupt.o(i.IntPrioritySet)
+    IntSpiGPIOHandler                        0x00002199   Thumb Code    80  cc3000lib.o(i.IntSpiGPIOHandler)
+    Interrupt_Init                           0x000021f1   Thumb Code    84  cc3000_basic_wifi_application.o(i.Interrupt_Init)
+    LBackward1                               0x00002281   Thumb Code    54  pwm_10-30.o(i.LBackward1)
+    LBackward2                               0x000022bd   Thumb Code    54  pwm_10-30.o(i.LBackward2)
+    LForward1                                0x000022f9   Thumb Code    54  pwm_10-30.o(i.LForward1)
+    LForward2                                0x00002335   Thumb Code    56  pwm_10-30.o(i.LForward2)
+    PWMGenConfigure                          0x00002371   Thumb Code    38  pwm.o(i.PWMGenConfigure)
+    PWMGenEnable                             0x00002397   Thumb Code    10  pwm.o(i.PWMGenEnable)
+    PWMGenPeriodSet                          0x000023a1   Thumb Code    18  pwm.o(i.PWMGenPeriodSet)
+    PWMOutputState                           0x000023b3   Thumb Code    16  pwm.o(i.PWMOutputState)
+    PWMPulseWidthSet                         0x000023c3   Thumb Code    32  pwm.o(i.PWMPulseWidthSet)
+    PortFunctionInit                         0x000023e5   Thumb Code    88  pwm_10-30.o(i.PortFunctionInit)
+    RBackward1                               0x00002459   Thumb Code    54  pwm_10-30.o(i.RBackward1)
+    RBackward2                               0x00002495   Thumb Code    54  pwm_10-30.o(i.RBackward2)
+    RForward1                                0x000024d1   Thumb Code    54  pwm_10-30.o(i.RForward1)
+    RForward2                                0x0000250d   Thumb Code    56  pwm_10-30.o(i.RForward2)
+    ReadWlanInterruptPin                     0x00002549   Thumb Code     8  board.o(i.ReadWlanInterruptPin)
+    SSIBusy                                  0x00002555   Thumb Code     8  ssi.o(i.SSIBusy)
+    SSIDMADisable                            0x0000255d   Thumb Code    10  ssi.o(i.SSIDMADisable)
+    SSIIntClear                              0x00002567   Thumb Code     4  ssi.o(i.SSIIntClear)
+    STOP                                     0x0000256d   Thumb Code    52  pwm_10-30.o(i.STOP)
+    STREAM_TO_UINT16_f                       0x000025a5   Thumb Code    14  cc3000lib.o(i.STREAM_TO_UINT16_f)
+    STREAM_TO_UINT32_f                       0x000025b3   Thumb Code    24  cc3000lib.o(i.STREAM_TO_UINT32_f)
+    SimpleLinkWaitData                       0x000025cd   Thumb Code    14  cc3000lib.o(i.SimpleLinkWaitData)
+    SimpleLinkWaitEvent                      0x000025e1   Thumb Code    16  cc3000lib.o(i.SimpleLinkWaitEvent)
+    SpiCleanGPIOISR                          0x000025f5   Thumb Code    38  cc3000lib.o(i.SpiCleanGPIOISR)
+    SpiClose                                 0x00002621   Thumb Code    44  cc3000lib.o(i.SpiClose)
+    SpiConfigureHwMapping                    0x00002751   Thumb Code    56  cc3000lib.o(i.SpiConfigureHwMapping)
+    SpiFirstWrite                            0x00002805   Thumb Code   108  cc3000lib.o(i.SpiFirstWrite)
+    SpiIntHandler                            0x0000287d   Thumb Code   184  cc3000lib.o(i.SpiIntHandler)
+    SpiOpen                                  0x0000293d   Thumb Code    60  cc3000lib.o(i.SpiOpen)
+    SpiReadDataCont                          0x00002a01   Thumb Code   132  cc3000lib.o(i.SpiReadDataCont)
+    SpiReceiveHandler                        0x00002a89   Thumb Code    12  cc3000lib.o(i.SpiReceiveHandler)
+    SpiResumeSpi                             0x00002a99   Thumb Code    38  cc3000lib.o(i.SpiResumeSpi)
+    SpiTriggerRxProcessing                   0x00002ac5   Thumb Code    86  cc3000lib.o(i.SpiTriggerRxProcessing)
+    SpiWrite                                 0x00002b29   Thumb Code    98  cc3000lib.o(i.SpiWrite)
+    StartSmartConfig                         0x00002c75   Thumb Code   216  cc3000_basic_wifi_application.o(i.StartSmartConfig)
+    SysCtlClockFreqSet                       0x00002da5   Thumb Code   672  sysctl.o(i.SysCtlClockFreqSet)
+    SysCtlPeripheralEnable                   0x0000306d   Thumb Code    36  sysctl.o(i.SysCtlPeripheralEnable)
+    SysTickEnable                            0x00003095   Thumb Code    14  systick.o(i.SysTickEnable)
+    SysTickHandler                           0x000030a5   Thumb Code    24  board.o(i.SysTickHandler)
+    SysTickIntEnable                         0x000030c1   Thumb Code    14  systick.o(i.SysTickIntEnable)
+    SysTickPeriodSet                         0x000030cf   Thumb Code    10  systick.o(i.SysTickPeriodSet)
+    UARTClockSourceSet                       0x000030d9   Thumb Code     6  uart.o(i.UARTClockSourceSet)
+    UARTFIFOLevelSet                         0x000030df   Thumb Code     6  uart.o(i.UARTFIFOLevelSet)
+    UARTFlushRx                              0x000030e5   Thumb Code    36  uartstdio.o(i.UARTFlushRx)
+    UARTFlushTx                              0x0000310d   Thumb Code    52  uartstdio.o(i.UARTFlushTx)
+    UARTStdioConfig                          0x000031bd   Thumb Code   142  uartstdio.o(i.UARTStdioConfig)
+    UARTStdioIntHandler                      0x00003255   Thumb Code   248  uartstdio.o(i.UARTStdioIntHandler)
+    UARTprintf                               0x0000335d   Thumb Code    18  uartstdio.o(i.UARTprintf)
+    UARTvprintf                              0x00003371   Thumb Code   420  uartstdio.o(i.UARTvprintf)
+    UARTwrite                                0x00003525   Thumb Code   134  uartstdio.o(i.UARTwrite)
+    UINT16_TO_STREAM_f                       0x000035b5   Thumb Code    10  cc3000lib.o(i.UINT16_TO_STREAM_f)
+    UINT32_TO_STREAM_f                       0x000035bf   Thumb Code    18  cc3000lib.o(i.UINT32_TO_STREAM_f)
+    WlanInterruptDisable                     0x000035d1   Thumb Code     8  board.o(i.WlanInterruptDisable)
+    WlanInterruptEnable                      0x000035dd   Thumb Code     8  board.o(i.WlanInterruptEnable)
+    WriteWlanPin                             0x000035e9   Thumb Code    18  board.o(i.WriteWlanPin)
+    __0snprintf$1                            0x00003601   Thumb Code    36  printf1.o(i.__0snprintf$1)
+    __1snprintf$1                            0x00003601   Thumb Code     0  printf1.o(i.__0snprintf$1)
+    __2snprintf                              0x00003601   Thumb Code     0  printf1.o(i.__0snprintf$1)
+    __ARM_fpclassifyf                        0x00003629   Thumb Code    38  fpclassifyf.o(i.__ARM_fpclassifyf)
+    __aeabi_errno_addr                       0x00003651   Thumb Code     4  errno.o(i.__aeabi_errno_addr)
+    __rt_errno_addr                          0x00003651   Thumb Code     0  errno.o(i.__aeabi_errno_addr)
+    __hardfp_powf                            0x00003659   Thumb Code  1550  powf.o(i.__hardfp_powf)
+    __mathlib_powf                           0x00003659   Thumb Code     0  powf.o(i.__hardfp_powf)
+    __mathlib_flt_underflow                  0x00003c8d   Thumb Code    10  funder.o(i.__mathlib_flt_underflow)
+    __scatterload_copy                       0x00003c9d   Thumb Code    14  handlers.o(i.__scatterload_copy)
+    __scatterload_null                       0x00003cab   Thumb Code     2  handlers.o(i.__scatterload_null)
+    __scatterload_zeroinit                   0x00003cad   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
+    __set_errno                              0x00003cbd   Thumb Code     6  errno.o(i.__set_errno)
+    aes_decrypt                              0x0000430d   Thumb Code    22  cc3000lib.o(i.aes_decrypt)
+    aes_read_key                             0x00004329   Thumb Code    12  cc3000lib.o(i.aes_read_key)
+    aes_write_key                            0x00004335   Thumb Code    12  cc3000lib.o(i.aes_write_key)
+    bind                                     0x00004341   Thumb Code    88  cc3000lib.o(i.bind)
+    closesocket                              0x0000439d   Thumb Code    66  cc3000lib.o(i.closesocket)
+    free                                     0x000044c1   Thumb Code    76  malloc.o(i.free)
+    get_socket_active_status                 0x00004525   Thumb Code    24  cc3000lib.o(i.get_socket_active_status)
+    hci_command_send                         0x00004541   Thumb Code    30  cc3000lib.o(i.hci_command_send)
+    hci_data_command_send                    0x0000455f   Thumb Code    40  cc3000lib.o(i.hci_data_command_send)
+    hci_data_send                            0x00004587   Thumb Code    44  cc3000lib.o(i.hci_data_send)
+    hci_event_handler                        0x000045b5   Thumb Code   782  cc3000lib.o(i.hci_event_handler)
+    hci_patch_send                           0x000048c9   Thumb Code   190  cc3000lib.o(i.hci_patch_send)
+    hci_unsol_event_handler                  0x00004989   Thumb Code   454  cc3000lib.o(i.hci_unsol_event_handler)
+    hci_unsol_handle_patch_request           0x00004b55   Thumb Code   122  cc3000lib.o(i.hci_unsol_handle_patch_request)
+    hci_unsolicited_event_handler            0x00004bd5   Thumb Code    40  cc3000lib.o(i.hci_unsolicited_event_handler)
+    initClk                                  0x00004c01   Thumb Code    16  board.o(i.initClk)
+    initDriver                               0x00004c1d   Thumb Code   126  cc3000_basic_wifi_application.o(i.initDriver)
+    initLEDs                                 0x00004d2d   Thumb Code    50  board.o(i.initLEDs)
+    init_spi                                 0x00004d65   Thumb Code    22  cc3000lib.o(i.init_spi)
+    main                                     0x00004d7d   Thumb Code   280  cc3000_basic_wifi_application.o(i.main)
+    malloc                                   0x00004ed1   Thumb Code    92  malloc.o(i.malloc)
+    mdnsAdvertiser                           0x00004f3d   Thumb Code    88  cc3000lib.o(i.mdnsAdvertiser)
+    netapp_dhcp                              0x00004f99   Thumb Code   118  cc3000lib.o(i.netapp_dhcp)
+    netapp_ping_send                         0x00005015   Thumb Code    74  cc3000lib.o(i.netapp_ping_send)
+    nvmem_create_entry                       0x00005065   Thumb Code    52  cc3000lib.o(i.nvmem_create_entry)
+    nvmem_read                               0x0000509d   Thumb Code    78  cc3000lib.o(i.nvmem_read)
+    nvmem_write                              0x000050f1   Thumb Code    82  cc3000lib.o(i.nvmem_write)
+    pio_init                                 0x00005149   Thumb Code   180  board.o(i.pio_init)
+    recv                                     0x00005211   Thumb Code    20  cc3000lib.o(i.recv)
+    send                                     0x00005225   Thumb Code    18  cc3000lib.o(i.send)
+    sendBootLoaderPatch                      0x00005237   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendBootLoaderPatch)
+    sendDriverPatch                          0x0000523f   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendDriverPatch)
+    sendWLFWPatch                            0x00005247   Thumb Code     8  cc3000_basic_wifi_application.o(i.sendWLFWPatch)
+    sendto                                   0x0000524f   Thumb Code    18  cc3000lib.o(i.sendto)
+    set_socket_active_status                 0x00005261   Thumb Code    30  cc3000lib.o(i.set_socket_active_status)
+    socket                                   0x000053e1   Thumb Code    80  cc3000lib.o(i.socket)
+    turnLedOff                               0x00005435   Thumb Code    44  board.o(i.turnLedOff)
+    turnLedOn                                0x00005465   Thumb Code    44  board.o(i.turnLedOn)
+    ustrlen                                  0x00005495   Thumb Code    16  ustdlib.o(i.ustrlen)
+    ustrncmp                                 0x000054a5   Thumb Code    46  ustdlib.o(i.ustrncmp)
+    ustrstr                                  0x000054d3   Thumb Code    42  ustdlib.o(i.ustrstr)
+    ustrtoul                                 0x000054fd   Thumb Code   154  ustdlib.o(i.ustrtoul)
+    wlan_add_profile                         0x00005599   Thumb Code   456  cc3000lib.o(i.wlan_add_profile)
+    wlan_connect                             0x00005765   Thumb Code   186  cc3000lib.o(i.wlan_connect)
+    wlan_disconnect                          0x00005825   Thumb Code    40  cc3000lib.o(i.wlan_disconnect)
+    wlan_init                                0x00005851   Thumb Code    36  cc3000lib.o(i.wlan_init)
+    wlan_ioctl_del_profile                   0x00005879   Thumb Code    44  cc3000lib.o(i.wlan_ioctl_del_profile)
+    wlan_ioctl_set_connection_policy         0x000058a9   Thumb Code    60  cc3000lib.o(i.wlan_ioctl_set_connection_policy)
+    wlan_set_event_mask                      0x000058e9   Thumb Code    84  cc3000lib.o(i.wlan_set_event_mask)
+    wlan_smart_config_process                0x00005941   Thumb Code   212  cc3000lib.o(i.wlan_smart_config_process)
+    wlan_smart_config_set_prefix             0x00005a19   Thumb Code    66  cc3000lib.o(i.wlan_smart_config_set_prefix)
+    wlan_smart_config_start                  0x00005a61   Thumb Code    46  cc3000lib.o(i.wlan_smart_config_start)
+    wlan_start                               0x00005a95   Thumb Code   140  cc3000lib.o(i.wlan_start)
+    wlan_stop                                0x00005b29   Thumb Code    34  cc3000lib.o(i.wlan_stop)
+    g_psLEDs                                 0x00005b50   Data          64  board.o(.constdata)
+    g_pui8smartconfigkey                     0x00005b90   Data          16  cc3000_basic_wifi_application.o(.constdata)
+    sbox                                     0x00005cdb   Data         256  cc3000lib.o(.constdata)
+    rsbox                                    0x00005ddb   Data         256  cc3000lib.o(.constdata)
+    Rcon                                     0x00005edb   Data          11  cc3000lib.o(.constdata)
+    Region$$Table$$Base                      0x00006934   Number         0  anon$$obj.o(Region$$Table)
+    Region$$Table$$Limit                     0x00006954   Number         0  anon$$obj.o(Region$$Table)
     g_ui32SysClock                           0x20000004   Data           4  board.o(.data)
     g_bSocketConnected                       0x20000008   Data           1  cc3000_basic_wifi_application.o(.data)
     socket_opened                            0x2000000a   Data           1  cc3000_basic_wifi_application.o(.data)
@@ -1940,15 +2004,18 @@ Image Symbol Table
     g_ui32CC3000DHCP                         0x20000024   Data           4  cc3000_basic_wifi_application.o(.data)
     g_ui32OkToDoShutDown                     0x20000028   Data           4  cc3000_basic_wifi_application.o(.data)
     g_ui32CC3000DHCP_configured              0x2000002c   Data           4  cc3000_basic_wifi_application.o(.data)
-    g_pcdevice_name                          0x20000030   Data          15  cc3000_basic_wifi_application.o(.data)
-    g_psCmdTable                             0x20000040   Data         180  cc3000_basic_wifi_application.o(.data)
-    g_pui8Dummy                              0x200000f4   Data           2  cc3000lib.o(.data)
-    socket_active_status                     0x200000f8   Data           4  cc3000lib.o(.data)
-    tSpiReadHeader                           0x200000fc   Data          10  cc3000lib.o(.data)
-    __microlib_freelist                      0x20000128   Data           4  mvars.o(.data)
-    __microlib_freelist_initialised          0x2000012c   Data           4  mvars.o(.data)
-    g_tSocketAddr                            0x20000130   Data          16  cc3000_basic_wifi_application.o(.bss)
-    g_pui8CC3000_Rx_Buffer                   0x20000140   Data         275  cc3000_basic_wifi_application.o(.bss)
+    ui32LeftSensor                           0x20000030   Data           4  cc3000_basic_wifi_application.o(.data)
+    ui32RightSensor                          0x20000034   Data           4  cc3000_basic_wifi_application.o(.data)
+    ui32IRValues                             0x20000038   Data           8  cc3000_basic_wifi_application.o(.data)
+    g_pcdevice_name                          0x20000040   Data          15  cc3000_basic_wifi_application.o(.data)
+    g_psCmdTable                             0x20000050   Data         180  cc3000_basic_wifi_application.o(.data)
+    g_pui8Dummy                              0x20000104   Data           2  cc3000lib.o(.data)
+    socket_active_status                     0x20000108   Data           4  cc3000lib.o(.data)
+    tSpiReadHeader                           0x2000010c   Data          10  cc3000lib.o(.data)
+    __microlib_freelist                      0x20000138   Data           4  mvars.o(.data)
+    __microlib_freelist_initialised          0x2000013c   Data           4  mvars.o(.data)
+    g_tSocketAddr                            0x20000140   Data          16  cc3000_basic_wifi_application.o(.bss)
+    g_pui8CC3000_Rx_Buffer                   0x20000150   Data         275  cc3000_basic_wifi_application.o(.bss)
     expandedKey                              0x20000400   Data         176  cc3000lib.o(.bss)
     tSLInformation                           0x200004b0   Data          68  cc3000lib.o(.bss)
     key                                      0x200004f4   Data          16  cc3000lib.o(.bss)
@@ -1968,246 +2035,255 @@ Memory Map of the image
 
   Image Entry point : 0x00000201
 
-  Load Region LR_IROM (Base: 0x00000000, Size: 0x0000693c, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x000068b0])
+  Load Region LR_IROM (Base: 0x00000000, Size: 0x00006a94, Max: 0x00100000, ABSOLUTE, COMPRESSED[0x000069f8])
 
-    Execution Region ER_IROM (Base: 0x00000000, Size: 0x0000680c, Max: 0x00100000, ABSOLUTE)
+    Execution Region ER_IROM (Base: 0x00000000, Size: 0x00006954, Max: 0x00100000, ABSOLUTE)
 
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00000000   0x0000021c   Code   RO         1089  * RESET               startup_rvmdk.o
-    0x0000021c   0x00000000   Code   RO         3024  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x0000021c   0x00000004   Code   RO         3343    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x00000220   0x00000004   Code   RO         3346    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x00000224   0x00000000   Code   RO         3348    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x00000224   0x00000000   Code   RO         3350    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x00000224   0x00000008   Code   RO         3351    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x0000022c   0x00000000   Code   RO         3353    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x0000022c   0x00000000   Code   RO         3355    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x0000022c   0x00000004   Code   RO         3344    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x00000230   0x00000006   Code   RO         2306    .emb_text           driverlib.lib(sysctl.o)
-    0x00000236   0x00000024   Code   RO         3027    .text               mc_w.l(memcpya.o)
-    0x0000025a   0x0000000e   Code   RO         3029    .text               mc_w.l(strlen.o)
-    0x00000268   0x0000001c   Code   RO         3031    .text               mc_w.l(strcmp.o)
-    0x00000284   0x0000014e   Code   RO         3331    .text               mf_w.l(dadd.o)
-    0x000003d2   0x000000de   Code   RO         3333    .text               mf_w.l(ddiv.o)
-    0x000004b0   0x00000032   Code   RO         3335    .text               mf_w.l(dfixui.o)
-    0x000004e2   0x00000026   Code   RO         3337    .text               mf_w.l(f2d.o)
-    0x00000508   0x0000002c   Code   RO         3360    .text               mc_w.l(uidiv.o)
-    0x00000534   0x0000001e   Code   RO         3364    .text               mc_w.l(llshl.o)
-    0x00000552   0x00000020   Code   RO         3366    .text               mc_w.l(llushr.o)
-    0x00000572   0x00000024   Code   RO         3368    .text               mc_w.l(llsshr.o)
-    0x00000596   0x00000000   Code   RO         3372    .text               mc_w.l(iusefp.o)
-    0x00000596   0x000000be   Code   RO         3373    .text               mf_w.l(depilogue.o)
-    0x00000654   0x00000038   Code   RO         3381    .text               mf_w.l(d2f.o)
-    0x0000068c   0x00000024   Code   RO         3385    .text               mc_w.l(init.o)
-    0x000006b0   0x0000006c   Code   RO         3389    .text               mf_w.l(fepilogue.o)
-    0x0000071c   0x0000005c   Code   RO         3399    .text               mc_w.l(__dczerorl2.o)
-    0x00000778   0x00000074   Code   RO          194    i.ADC0_InSeq3       cc3000_basic_wifi_application.o
-    0x000007ec   0x000000e4   Code   RO          195    i.ADC0_InitSWTriggerSeq3_Ch9  cc3000_basic_wifi_application.o
-    0x000008d0   0x00000024   Code   RO         1316    i.Backward1         pwm_10-30.o
-    0x000008f4   0x00000024   Code   RO         1317    i.Backward2         pwm_10-30.o
-    0x00000918   0x00000150   Code   RO          196    i.CC3000_UsynchCallback  cc3000_basic_wifi_application.o
-    0x00000a68   0x000000c4   Code   RO          197    i.CMD_bind          cc3000_basic_wifi_application.o
-    0x00000b2c   0x00000040   Code   RO          198    i.CMD_cc3000reset   cc3000_basic_wifi_application.o
-    0x00000b6c   0x00000124   Code   RO          199    i.CMD_connect       cc3000_basic_wifi_application.o
-    0x00000c90   0x00000078   Code   RO          200    i.CMD_deletePolicy  cc3000_basic_wifi_application.o
-    0x00000d08   0x00000068   Code   RO          201    i.CMD_disconnect    cc3000_basic_wifi_application.o
-    0x00000d70   0x00000078   Code   RO          202    i.CMD_help          cc3000_basic_wifi_application.o
-    0x00000de8   0x000001d8   Code   RO          203    i.CMD_ipConfig      cc3000_basic_wifi_application.o
-    0x00000fc0   0x0000007c   Code   RO          204    i.CMD_mdnsadvertise  cc3000_basic_wifi_application.o
-    0x0000103c   0x00000160   Code   RO          205    i.CMD_ping          cc3000_basic_wifi_application.o
-    0x0000119c   0x00000478   Code   RO          206    i.CMD_receiveData   cc3000_basic_wifi_application.o
-    0x00001614   0x00000258   Code   RO          207    i.CMD_sendData      cc3000_basic_wifi_application.o
-    0x0000186c   0x0000000a   Code   RO          208    i.CMD_smartConfig   cc3000_basic_wifi_application.o
-    0x00001876   0x00000002   PAD
-    0x00001878   0x0000006c   Code   RO          209    i.CMD_socketClose   cc3000_basic_wifi_application.o
-    0x000018e4   0x000001b8   Code   RO          210    i.CMD_socketOpen    cc3000_basic_wifi_application.o
-    0x00001a9c   0x00000064   Code   RO         1066    i.CmdLineProcess    cmdline.o
-    0x00001b00   0x000000a8   Code   RO          434    i.DispatcherUARTConfigure  cc3000lib.o
-    0x00001ba8   0x00000098   Code   RO          211    i.DotDecimalDecoder  cc3000_basic_wifi_application.o
-    0x00001c40   0x00000010   Code   RO         1423    i.FPUEnable         driverlib.lib(fpu.o)
-    0x00001c50   0x00000010   Code   RO         1426    i.FPULazyStackingEnable  driverlib.lib(fpu.o)
-    0x00001c60   0x00000024   Code   RO         1318    i.Forward1          pwm_10-30.o
-    0x00001c84   0x00000024   Code   RO         1319    i.Forward2          pwm_10-30.o
-    0x00001ca8   0x00000028   Code   RO         1496    i.GPIODirModeSet    driverlib.lib(gpio.o)
-    0x00001cd0   0x0000000e   Code   RO         1498    i.GPIOIntDisable    driverlib.lib(gpio.o)
-    0x00001cde   0x0000000e   Code   RO         1499    i.GPIOIntEnable     driverlib.lib(gpio.o)
-    0x00001cec   0x00000050   Code   RO         1503    i.GPIOIntTypeSet    driverlib.lib(gpio.o)
-    0x00001d3c   0x0000013a   Code   RO         1506    i.GPIOPadConfigSet  driverlib.lib(gpio.o)
-    0x00001e76   0x00000002   PAD
-    0x00001e78   0x00000048   Code   RO         1507    i.GPIOPinConfigure  driverlib.lib(gpio.o)
-    0x00001ec0   0x00000006   Code   RO         1508    i.GPIOPinRead       driverlib.lib(gpio.o)
-    0x00001ec6   0x0000001c   Code   RO         1516    i.GPIOPinTypeGPIOInput  driverlib.lib(gpio.o)
-    0x00001ee2   0x0000001c   Code   RO         1517    i.GPIOPinTypeGPIOOutput  driverlib.lib(gpio.o)
-    0x00001efe   0x0000001c   Code   RO         1528    i.GPIOPinTypePWM    driverlib.lib(gpio.o)
-    0x00001f1a   0x00000006   Code   RO         1538    i.GPIOPinWrite      driverlib.lib(gpio.o)
-    0x00001f20   0x00000084   Code   RO          212    i.GPIOPortJ_Handler  cc3000_basic_wifi_application.o
-    0x00001fa4   0x00000020   Code   RO            1    i.InitSysTick       board.o
-    0x00001fc4   0x00000064   Code   RO         1809    i.IntEnable         driverlib.lib(interrupt.o)
-    0x00002028   0x00000028   Code   RO         1820    i.IntPrioritySet    driverlib.lib(interrupt.o)
-    0x00002050   0x00000058   Code   RO          436    i.IntSpiGPIOHandler  cc3000lib.o
-    0x000020a8   0x00000064   Code   RO          213    i.Interrupt_Init    cc3000_basic_wifi_application.o
-    0x0000210c   0x00000010   Code   RO         1095    i.IsBufferEmpty     uartstdio.o
-    0x0000211c   0x0000001a   Code   RO         1096    i.IsBufferFull      uartstdio.o
-    0x00002136   0x00000002   PAD
-    0x00002138   0x0000003c   Code   RO         1320    i.LBackward1        pwm_10-30.o
-    0x00002174   0x0000003c   Code   RO         1321    i.LBackward2        pwm_10-30.o
-    0x000021b0   0x0000003c   Code   RO         1322    i.LForward1         pwm_10-30.o
-    0x000021ec   0x0000003c   Code   RO         1323    i.LForward2         pwm_10-30.o
-    0x00002228   0x00000026   Code   RO         1929    i.PWMGenConfigure   driverlib.lib(pwm.o)
-    0x0000224e   0x0000000a   Code   RO         1931    i.PWMGenEnable      driverlib.lib(pwm.o)
-    0x00002258   0x00000012   Code   RO         1944    i.PWMGenPeriodSet   driverlib.lib(pwm.o)
-    0x0000226a   0x00000010   Code   RO         1951    i.PWMOutputState    driverlib.lib(pwm.o)
-    0x0000227a   0x00000020   Code   RO         1954    i.PWMPulseWidthSet  driverlib.lib(pwm.o)
-    0x0000229a   0x00000002   PAD
-    0x0000229c   0x00000074   Code   RO         1325    i.PortFunctionInit  pwm_10-30.o
-    0x00002310   0x0000003c   Code   RO         1326    i.RBackward1        pwm_10-30.o
-    0x0000234c   0x0000003c   Code   RO         1327    i.RBackward2        pwm_10-30.o
-    0x00002388   0x0000003c   Code   RO         1328    i.RForward1         pwm_10-30.o
-    0x000023c4   0x0000003c   Code   RO         1329    i.RForward2         pwm_10-30.o
-    0x00002400   0x0000000c   Code   RO            2    i.ReadWlanInterruptPin  board.o
-    0x0000240c   0x00000008   Code   RO         2159    i.SSIBusy           driverlib.lib(ssi.o)
-    0x00002414   0x0000000a   Code   RO         2163    i.SSIDMADisable     driverlib.lib(ssi.o)
-    0x0000241e   0x00000004   Code   RO         2171    i.SSIIntClear       driverlib.lib(ssi.o)
-    0x00002422   0x00000002   PAD
-    0x00002424   0x00000038   Code   RO         1330    i.STOP              pwm_10-30.o
-    0x0000245c   0x0000000e   Code   RO          437    i.STREAM_TO_UINT16_f  cc3000lib.o
-    0x0000246a   0x00000018   Code   RO          438    i.STREAM_TO_UINT32_f  cc3000lib.o
-    0x00002482   0x00000002   PAD
-    0x00002484   0x00000014   Code   RO          439    i.SimpleLinkWaitData  cc3000lib.o
-    0x00002498   0x00000014   Code   RO          440    i.SimpleLinkWaitEvent  cc3000lib.o
-    0x000024ac   0x0000002c   Code   RO          441    i.SpiCleanGPIOISR   cc3000lib.o
-    0x000024d8   0x00000030   Code   RO          442    i.SpiClose          cc3000lib.o
-    0x00002508   0x00000100   Code   RO          443    i.SpiConfigure      cc3000lib.o
-    0x00002608   0x00000054   Code   RO          444    i.SpiConfigureHwMapping  cc3000lib.o
-    0x0000265c   0x0000002c   Code   RO          445    i.SpiDisableSSIDMAChannels  cc3000lib.o
-    0x00002688   0x00000034   Code   RO          446    i.SpiEnableSSIDMAChannels  cc3000lib.o
-    0x000026bc   0x00000078   Code   RO          447    i.SpiFirstWrite     cc3000lib.o
-    0x00002734   0x000000c0   Code   RO          448    i.SpiIntHandler     cc3000lib.o
-    0x000027f4   0x00000040   Code   RO          449    i.SpiOpen           cc3000lib.o
-    0x00002834   0x00000084   Code   RO          450    i.SpiReadData       cc3000lib.o
-    0x000028b8   0x00000088   Code   RO          451    i.SpiReadDataCont   cc3000lib.o
-    0x00002940   0x00000010   Code   RO          452    i.SpiReceiveHandler  cc3000lib.o
-    0x00002950   0x0000002c   Code   RO          453    i.SpiResumeSpi      cc3000lib.o
-    0x0000297c   0x00000064   Code   RO          454    i.SpiTriggerRxProcessing  cc3000lib.o
-    0x000029e0   0x0000006c   Code   RO          455    i.SpiWrite          cc3000lib.o
-    0x00002a4c   0x00000074   Code   RO          456    i.SpiWriteAsync     cc3000lib.o
-    0x00002ac0   0x0000006c   Code   RO          457    i.SpiWriteDataSynchronous  cc3000lib.o
-    0x00002b2c   0x00000130   Code   RO          214    i.StartSmartConfig  cc3000_basic_wifi_application.o
-    0x00002c5c   0x000002c8   Code   RO         2308    i.SysCtlClockFreqSet  driverlib.lib(sysctl.o)
-    0x00002f24   0x00000028   Code   RO         2340    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
-    0x00002f4c   0x0000000e   Code   RO         2649    i.SysTickEnable     driverlib.lib(systick.o)
-    0x00002f5a   0x00000002   PAD
-    0x00002f5c   0x0000001c   Code   RO            3    i.SysTickHandler    board.o
-    0x00002f78   0x0000000e   Code   RO         2651    i.SysTickIntEnable  driverlib.lib(systick.o)
-    0x00002f86   0x0000000a   Code   RO         2655    i.SysTickPeriodSet  driverlib.lib(systick.o)
-    0x00002f90   0x00000006   Code   RO         2723    i.UARTClockSourceSet  driverlib.lib(uart.o)
-    0x00002f96   0x00000006   Code   RO         2735    i.UARTFIFOLevelSet  driverlib.lib(uart.o)
-    0x00002f9c   0x00000028   Code   RO         1098    i.UARTFlushRx       uartstdio.o
-    0x00002fc4   0x00000038   Code   RO         1099    i.UARTFlushTx       uartstdio.o
-    0x00002ffc   0x00000078   Code   RO         1101    i.UARTPrimeTransmit  uartstdio.o
-    0x00003074   0x00000098   Code   RO         1103    i.UARTStdioConfig   uartstdio.o
-    0x0000310c   0x00000108   Code   RO         1104    i.UARTStdioIntHandler  uartstdio.o
-    0x00003214   0x00000012   Code   RO         1108    i.UARTprintf        uartstdio.o
-    0x00003226   0x00000002   PAD
-    0x00003228   0x000001b4   Code   RO         1109    i.UARTvprintf       uartstdio.o
-    0x000033dc   0x00000090   Code   RO         1110    i.UARTwrite         uartstdio.o
-    0x0000346c   0x0000000a   Code   RO          458    i.UINT16_TO_STREAM_f  cc3000lib.o
-    0x00003476   0x00000012   Code   RO          459    i.UINT32_TO_STREAM_f  cc3000lib.o
-    0x00003488   0x0000000c   Code   RO            4    i.WlanInterruptDisable  board.o
-    0x00003494   0x0000000c   Code   RO            5    i.WlanInterruptEnable  board.o
-    0x000034a0   0x00000018   Code   RO            6    i.WriteWlanPin      board.o
-    0x000034b8   0x00000028   Code   RO         3081    i.__0snprintf$1     mc_w.l(printf1.o)
-    0x000034e0   0x00000026   Code   RO         3339    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
-    0x00003506   0x00000002   PAD
-    0x00003508   0x00000008   Code   RO         3324    i.__aeabi_errno_addr  mc_w.l(errno.o)
-    0x00003510   0x00000634   Code   RO         3010    i.__hardfp_powf     m_wm.l(powf.o)
-    0x00003b44   0x00000010   Code   RO         3341    i.__mathlib_flt_underflow  m_wm.l(funder.o)
-    0x00003b54   0x0000000e   Code   RO         3393    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x00003b62   0x00000002   Code   RO         3394    i.__scatterload_null  mc_w.l(handlers.o)
-    0x00003b64   0x0000000e   Code   RO         3395    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x00003b72   0x00000002   PAD
-    0x00003b74   0x0000000c   Code   RO         3326    i.__set_errno       mc_w.l(errno.o)
-    0x00003b80   0x00000154   Code   RO         3087    i._printf_core      mc_w.l(printf1.o)
-    0x00003cd4   0x00000016   Code   RO         3088    i._snputc           mc_w.l(printf1.o)
-    0x00003cea   0x00000002   PAD
-    0x00003cec   0x000004d8   Code   RO          461    i.aes_decr          cc3000lib.o
-    0x000041c4   0x0000001c   Code   RO          462    i.aes_decrypt       cc3000lib.o
-    0x000041e0   0x0000000c   Code   RO          465    i.aes_read_key      cc3000lib.o
-    0x000041ec   0x0000000c   Code   RO          466    i.aes_write_key     cc3000lib.o
-    0x000041f8   0x0000005c   Code   RO          467    i.bind              cc3000lib.o
-    0x00004254   0x00000048   Code   RO          468    i.closesocket       cc3000lib.o
-    0x0000429c   0x000000dc   Code   RO          470    i.expandKey         cc3000lib.o
-    0x00004378   0x00000050   Code   RO         3296    i.free              mc_w.l(malloc.o)
-    0x000043c8   0x00000012   Code   RO          471    i.galois_mul2       cc3000lib.o
-    0x000043da   0x00000002   PAD
-    0x000043dc   0x0000001c   Code   RO          472    i.get_socket_active_status  cc3000lib.o
-    0x000043f8   0x0000001e   Code   RO          475    i.hci_command_send  cc3000lib.o
-    0x00004416   0x00000028   Code   RO          476    i.hci_data_command_send  cc3000lib.o
-    0x0000443e   0x0000002c   Code   RO          477    i.hci_data_send     cc3000lib.o
-    0x0000446a   0x00000002   PAD
-    0x0000446c   0x00000314   Code   RO          478    i.hci_event_handler  cc3000lib.o
-    0x00004780   0x000000be   Code   RO          479    i.hci_patch_send    cc3000lib.o
-    0x0000483e   0x00000002   PAD
-    0x00004840   0x000001cc   Code   RO          480    i.hci_unsol_event_handler  cc3000lib.o
-    0x00004a0c   0x00000080   Code   RO          481    i.hci_unsol_handle_patch_request  cc3000lib.o
-    0x00004a8c   0x0000002c   Code   RO          482    i.hci_unsolicited_event_handler  cc3000lib.o
-    0x00004ab8   0x0000001c   Code   RO            7    i.initClk           board.o
-    0x00004ad4   0x00000110   Code   RO          215    i.initDriver        cc3000_basic_wifi_application.o
-    0x00004be4   0x00000038   Code   RO            8    i.initLEDs          board.o
-    0x00004c1c   0x00000016   Code   RO          483    i.init_spi          cc3000lib.o
-    0x00004c32   0x00000002   PAD
-    0x00004c34   0x00000154   Code   RO          216    i.main              cc3000_basic_wifi_application.o
-    0x00004d88   0x0000006c   Code   RO         3297    i.malloc            mc_w.l(malloc.o)
-    0x00004df4   0x0000005c   Code   RO          485    i.mdnsAdvertiser    cc3000lib.o
-    0x00004e50   0x0000007c   Code   RO          488    i.netapp_dhcp       cc3000lib.o
-    0x00004ecc   0x00000050   Code   RO          491    i.netapp_ping_send  cc3000lib.o
-    0x00004f1c   0x00000038   Code   RO          495    i.nvmem_create_entry  cc3000lib.o
-    0x00004f54   0x00000054   Code   RO          497    i.nvmem_read        cc3000lib.o
-    0x00004fa8   0x00000058   Code   RO          500    i.nvmem_write       cc3000lib.o
-    0x00005000   0x000000c8   Code   RO            9    i.pio_init          board.o
-    0x000050c8   0x00000014   Code   RO          502    i.recv              cc3000lib.o
-    0x000050dc   0x00000012   Code   RO          505    i.send              cc3000lib.o
-    0x000050ee   0x00000008   Code   RO          217    i.sendBootLoaderPatch  cc3000_basic_wifi_application.o
-    0x000050f6   0x00000008   Code   RO          218    i.sendDriverPatch   cc3000_basic_wifi_application.o
-    0x000050fe   0x00000008   Code   RO          219    i.sendWLFWPatch     cc3000_basic_wifi_application.o
-    0x00005106   0x00000012   Code   RO          506    i.sendto            cc3000lib.o
-    0x00005118   0x00000024   Code   RO          507    i.set_socket_active_status  cc3000lib.o
-    0x0000513c   0x00000060   Code   RO          509    i.simple_link_recv  cc3000lib.o
-    0x0000519c   0x000000fc   Code   RO          510    i.simple_link_send  cc3000lib.o
-    0x00005298   0x00000054   Code   RO          511    i.socket            cc3000lib.o
-    0x000052ec   0x00000030   Code   RO           10    i.turnLedOff        board.o
-    0x0000531c   0x00000030   Code   RO           11    i.turnLedOn         board.o
-    0x0000534c   0x00000010   Code   RO         1212    i.ustrlen           ustdlib.o
-    0x0000535c   0x0000002e   Code   RO         1214    i.ustrncmp          ustdlib.o
-    0x0000538a   0x0000002a   Code   RO         1216    i.ustrstr           ustdlib.o
-    0x000053b4   0x0000009a   Code   RO         1218    i.ustrtoul          ustdlib.o
-    0x0000544e   0x00000002   PAD
-    0x00005450   0x000001cc   Code   RO          512    i.wlan_add_profile  cc3000lib.o
-    0x0000561c   0x000000c0   Code   RO          513    i.wlan_connect      cc3000lib.o
-    0x000056dc   0x0000002c   Code   RO          514    i.wlan_disconnect   cc3000lib.o
-    0x00005708   0x00000028   Code   RO          515    i.wlan_init         cc3000lib.o
-    0x00005730   0x00000030   Code   RO          516    i.wlan_ioctl_del_profile  cc3000lib.o
-    0x00005760   0x00000040   Code   RO          518    i.wlan_ioctl_set_connection_policy  cc3000lib.o
-    0x000057a0   0x00000058   Code   RO          521    i.wlan_set_event_mask  cc3000lib.o
-    0x000057f8   0x000000d8   Code   RO          522    i.wlan_smart_config_process  cc3000lib.o
-    0x000058d0   0x00000048   Code   RO          523    i.wlan_smart_config_set_prefix  cc3000lib.o
-    0x00005918   0x00000034   Code   RO          524    i.wlan_smart_config_start  cc3000lib.o
-    0x0000594c   0x00000094   Code   RO          526    i.wlan_start        cc3000lib.o
-    0x000059e0   0x00000028   Code   RO          527    i.wlan_stop         cc3000lib.o
-    0x00005a08   0x00000040   Data   RO           12    .constdata          board.o
-    0x00005a48   0x0000014b   Data   RO          221    .constdata          cc3000_basic_wifi_application.o
-    0x00005b93   0x0000020b   Data   RO          530    .constdata          cc3000lib.o
-    0x00005d9e   0x00000002   PAD
-    0x00005da0   0x00000028   Data   RO         1112    .constdata          uartstdio.o
-    0x00005dc8   0x00000210   Data   RO         1539    .constdata          driverlib.lib(gpio.o)
-    0x00005fd8   0x0000010c   Data   RO         1825    .constdata          driverlib.lib(interrupt.o)
-    0x000060e4   0x000001c4   Data   RO         2361    .constdata          driverlib.lib(sysctl.o)
-    0x000062a8   0x00000140   Data   RO         3013    .constdata          m_wm.l(powf.o)
-    0x000063e8   0x000003f1   Data   RO          222    .conststring        cc3000_basic_wifi_application.o
-    0x000067d9   0x00000011   Data   RO         1113    .conststring        uartstdio.o
-    0x000067ea   0x00000002   PAD
-    0x000067ec   0x00000020   Data   RO         3391    Region$$Table       anon$$obj.o
+    0x00000000   0x0000021c   Code   RO         1086  * RESET               startup_rvmdk.o
+    0x0000021c   0x00000000   Code   RO         3275  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x0000021c   0x00000004   Code   RO         3594    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x00000220   0x00000004   Code   RO         3597    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x00000224   0x00000000   Code   RO         3599    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x00000224   0x00000000   Code   RO         3601    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x00000224   0x00000008   Code   RO         3602    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x0000022c   0x00000000   Code   RO         3604    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x0000022c   0x00000000   Code   RO         3606    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x0000022c   0x00000004   Code   RO         3595    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x00000230   0x00000006   Code   RO         2557    .emb_text           driverlib.lib(sysctl.o)
+    0x00000236   0x00000024   Code   RO         3278    .text               mc_w.l(memcpya.o)
+    0x0000025a   0x0000000e   Code   RO         3280    .text               mc_w.l(strlen.o)
+    0x00000268   0x0000001c   Code   RO         3282    .text               mc_w.l(strcmp.o)
+    0x00000284   0x0000014e   Code   RO         3582    .text               mf_w.l(dadd.o)
+    0x000003d2   0x000000de   Code   RO         3584    .text               mf_w.l(ddiv.o)
+    0x000004b0   0x00000032   Code   RO         3586    .text               mf_w.l(dfixui.o)
+    0x000004e2   0x00000026   Code   RO         3588    .text               mf_w.l(f2d.o)
+    0x00000508   0x0000002c   Code   RO         3611    .text               mc_w.l(uidiv.o)
+    0x00000534   0x0000001e   Code   RO         3615    .text               mc_w.l(llshl.o)
+    0x00000552   0x00000020   Code   RO         3617    .text               mc_w.l(llushr.o)
+    0x00000572   0x00000024   Code   RO         3619    .text               mc_w.l(llsshr.o)
+    0x00000596   0x00000000   Code   RO         3623    .text               mc_w.l(iusefp.o)
+    0x00000596   0x000000be   Code   RO         3624    .text               mf_w.l(depilogue.o)
+    0x00000654   0x00000038   Code   RO         3632    .text               mf_w.l(d2f.o)
+    0x0000068c   0x00000024   Code   RO         3636    .text               mc_w.l(init.o)
+    0x000006b0   0x0000006c   Code   RO         3640    .text               mf_w.l(fepilogue.o)
+    0x0000071c   0x0000005c   Code   RO         3650    .text               mc_w.l(__dczerorl2.o)
+    0x00000778   0x0000009c   Code   RO          194    i.ADC0_InSeq3       cc3000_basic_wifi_application.o
+    0x00000814   0x00000074   Code   RO          195    i.ADC0_InitSWTriggerSeq3_Ch9  cc3000_basic_wifi_application.o
+    0x00000888   0x0000000a   Code   RO         1430    i.ADCIntClear       driverlib.lib(adc.o)
+    0x00000892   0x00000034   Code   RO         1437    i.ADCIntStatus      driverlib.lib(adc.o)
+    0x000008c6   0x0000001a   Code   RO         1442    i.ADCProcessorTrigger  driverlib.lib(adc.o)
+    0x000008e0   0x0000004e   Code   RO         1445    i.ADCSequenceConfigure  driverlib.lib(adc.o)
+    0x0000092e   0x00000024   Code   RO         1448    i.ADCSequenceDataGet  driverlib.lib(adc.o)
+    0x00000952   0x0000000e   Code   RO         1450    i.ADCSequenceEnable  driverlib.lib(adc.o)
+    0x00000960   0x0000009a   Code   RO         1453    i.ADCSequenceStepConfigure  driverlib.lib(adc.o)
+    0x000009fa   0x00000002   PAD
+    0x000009fc   0x00000024   Code   RO         1313    i.Backward1         pwm_10-30.o
+    0x00000a20   0x00000024   Code   RO         1314    i.Backward2         pwm_10-30.o
+    0x00000a44   0x00000150   Code   RO          196    i.CC3000_UsynchCallback  cc3000_basic_wifi_application.o
+    0x00000b94   0x000000c4   Code   RO          197    i.CMD_bind          cc3000_basic_wifi_application.o
+    0x00000c58   0x00000040   Code   RO          198    i.CMD_cc3000reset   cc3000_basic_wifi_application.o
+    0x00000c98   0x00000124   Code   RO          199    i.CMD_connect       cc3000_basic_wifi_application.o
+    0x00000dbc   0x00000078   Code   RO          200    i.CMD_deletePolicy  cc3000_basic_wifi_application.o
+    0x00000e34   0x00000068   Code   RO          201    i.CMD_disconnect    cc3000_basic_wifi_application.o
+    0x00000e9c   0x00000078   Code   RO          202    i.CMD_help          cc3000_basic_wifi_application.o
+    0x00000f14   0x000001d8   Code   RO          203    i.CMD_ipConfig      cc3000_basic_wifi_application.o
+    0x000010ec   0x0000007c   Code   RO          204    i.CMD_mdnsadvertise  cc3000_basic_wifi_application.o
+    0x00001168   0x00000160   Code   RO          205    i.CMD_ping          cc3000_basic_wifi_application.o
+    0x000012c8   0x00000478   Code   RO          206    i.CMD_receiveData   cc3000_basic_wifi_application.o
+    0x00001740   0x00000258   Code   RO          207    i.CMD_sendData      cc3000_basic_wifi_application.o
+    0x00001998   0x0000000a   Code   RO          208    i.CMD_smartConfig   cc3000_basic_wifi_application.o
+    0x000019a2   0x00000002   PAD
+    0x000019a4   0x0000006c   Code   RO          209    i.CMD_socketClose   cc3000_basic_wifi_application.o
+    0x00001a10   0x000001b8   Code   RO          210    i.CMD_socketOpen    cc3000_basic_wifi_application.o
+    0x00001bc8   0x00000064   Code   RO         1063    i.CmdLineProcess    cmdline.o
+    0x00001c2c   0x000000a8   Code   RO          431    i.DispatcherUARTConfigure  cc3000lib.o
+    0x00001cd4   0x00000098   Code   RO          211    i.DotDecimalDecoder  cc3000_basic_wifi_application.o
+    0x00001d6c   0x00000010   Code   RO         1692    i.FPUEnable         driverlib.lib(fpu.o)
+    0x00001d7c   0x00000010   Code   RO         1695    i.FPULazyStackingEnable  driverlib.lib(fpu.o)
+    0x00001d8c   0x00000024   Code   RO         1315    i.Forward1          pwm_10-30.o
+    0x00001db0   0x00000024   Code   RO         1316    i.Forward2          pwm_10-30.o
+    0x00001dd4   0x00000028   Code   RO         1762    i.GPIODirModeSet    driverlib.lib(gpio.o)
+    0x00001dfc   0x0000000e   Code   RO         1764    i.GPIOIntDisable    driverlib.lib(gpio.o)
+    0x00001e0a   0x0000000e   Code   RO         1765    i.GPIOIntEnable     driverlib.lib(gpio.o)
+    0x00001e18   0x00000050   Code   RO         1769    i.GPIOIntTypeSet    driverlib.lib(gpio.o)
+    0x00001e68   0x0000013a   Code   RO         1772    i.GPIOPadConfigSet  driverlib.lib(gpio.o)
+    0x00001fa2   0x00000002   PAD
+    0x00001fa4   0x00000048   Code   RO         1773    i.GPIOPinConfigure  driverlib.lib(gpio.o)
+    0x00001fec   0x00000006   Code   RO         1774    i.GPIOPinRead       driverlib.lib(gpio.o)
+    0x00001ff2   0x0000001c   Code   RO         1775    i.GPIOPinTypeADC    driverlib.lib(gpio.o)
+    0x0000200e   0x0000001c   Code   RO         1782    i.GPIOPinTypeGPIOInput  driverlib.lib(gpio.o)
+    0x0000202a   0x0000001c   Code   RO         1783    i.GPIOPinTypeGPIOOutput  driverlib.lib(gpio.o)
+    0x00002046   0x0000001c   Code   RO         1794    i.GPIOPinTypePWM    driverlib.lib(gpio.o)
+    0x00002062   0x00000006   Code   RO         1804    i.GPIOPinWrite      driverlib.lib(gpio.o)
+    0x00002068   0x00000084   Code   RO          212    i.GPIOPortJ_Handler  cc3000_basic_wifi_application.o
+    0x000020ec   0x00000020   Code   RO            1    i.InitSysTick       board.o
+    0x0000210c   0x00000064   Code   RO         2060    i.IntEnable         driverlib.lib(interrupt.o)
+    0x00002170   0x00000028   Code   RO         2071    i.IntPrioritySet    driverlib.lib(interrupt.o)
+    0x00002198   0x00000058   Code   RO          433    i.IntSpiGPIOHandler  cc3000lib.o
+    0x000021f0   0x00000064   Code   RO          213    i.Interrupt_Init    cc3000_basic_wifi_application.o
+    0x00002254   0x00000010   Code   RO         1092    i.IsBufferEmpty     uartstdio.o
+    0x00002264   0x0000001a   Code   RO         1093    i.IsBufferFull      uartstdio.o
+    0x0000227e   0x00000002   PAD
+    0x00002280   0x0000003c   Code   RO         1317    i.LBackward1        pwm_10-30.o
+    0x000022bc   0x0000003c   Code   RO         1318    i.LBackward2        pwm_10-30.o
+    0x000022f8   0x0000003c   Code   RO         1319    i.LForward1         pwm_10-30.o
+    0x00002334   0x0000003c   Code   RO         1320    i.LForward2         pwm_10-30.o
+    0x00002370   0x00000026   Code   RO         2180    i.PWMGenConfigure   driverlib.lib(pwm.o)
+    0x00002396   0x0000000a   Code   RO         2182    i.PWMGenEnable      driverlib.lib(pwm.o)
+    0x000023a0   0x00000012   Code   RO         2195    i.PWMGenPeriodSet   driverlib.lib(pwm.o)
+    0x000023b2   0x00000010   Code   RO         2202    i.PWMOutputState    driverlib.lib(pwm.o)
+    0x000023c2   0x00000020   Code   RO         2205    i.PWMPulseWidthSet  driverlib.lib(pwm.o)
+    0x000023e2   0x00000002   PAD
+    0x000023e4   0x00000074   Code   RO         1322    i.PortFunctionInit  pwm_10-30.o
+    0x00002458   0x0000003c   Code   RO         1323    i.RBackward1        pwm_10-30.o
+    0x00002494   0x0000003c   Code   RO         1324    i.RBackward2        pwm_10-30.o
+    0x000024d0   0x0000003c   Code   RO         1325    i.RForward1         pwm_10-30.o
+    0x0000250c   0x0000003c   Code   RO         1326    i.RForward2         pwm_10-30.o
+    0x00002548   0x0000000c   Code   RO            2    i.ReadWlanInterruptPin  board.o
+    0x00002554   0x00000008   Code   RO         2410    i.SSIBusy           driverlib.lib(ssi.o)
+    0x0000255c   0x0000000a   Code   RO         2414    i.SSIDMADisable     driverlib.lib(ssi.o)
+    0x00002566   0x00000004   Code   RO         2422    i.SSIIntClear       driverlib.lib(ssi.o)
+    0x0000256a   0x00000002   PAD
+    0x0000256c   0x00000038   Code   RO         1327    i.STOP              pwm_10-30.o
+    0x000025a4   0x0000000e   Code   RO          434    i.STREAM_TO_UINT16_f  cc3000lib.o
+    0x000025b2   0x00000018   Code   RO          435    i.STREAM_TO_UINT32_f  cc3000lib.o
+    0x000025ca   0x00000002   PAD
+    0x000025cc   0x00000014   Code   RO          436    i.SimpleLinkWaitData  cc3000lib.o
+    0x000025e0   0x00000014   Code   RO          437    i.SimpleLinkWaitEvent  cc3000lib.o
+    0x000025f4   0x0000002c   Code   RO          438    i.SpiCleanGPIOISR   cc3000lib.o
+    0x00002620   0x00000030   Code   RO          439    i.SpiClose          cc3000lib.o
+    0x00002650   0x00000100   Code   RO          440    i.SpiConfigure      cc3000lib.o
+    0x00002750   0x00000054   Code   RO          441    i.SpiConfigureHwMapping  cc3000lib.o
+    0x000027a4   0x0000002c   Code   RO          442    i.SpiDisableSSIDMAChannels  cc3000lib.o
+    0x000027d0   0x00000034   Code   RO          443    i.SpiEnableSSIDMAChannels  cc3000lib.o
+    0x00002804   0x00000078   Code   RO          444    i.SpiFirstWrite     cc3000lib.o
+    0x0000287c   0x000000c0   Code   RO          445    i.SpiIntHandler     cc3000lib.o
+    0x0000293c   0x00000040   Code   RO          446    i.SpiOpen           cc3000lib.o
+    0x0000297c   0x00000084   Code   RO          447    i.SpiReadData       cc3000lib.o
+    0x00002a00   0x00000088   Code   RO          448    i.SpiReadDataCont   cc3000lib.o
+    0x00002a88   0x00000010   Code   RO          449    i.SpiReceiveHandler  cc3000lib.o
+    0x00002a98   0x0000002c   Code   RO          450    i.SpiResumeSpi      cc3000lib.o
+    0x00002ac4   0x00000064   Code   RO          451    i.SpiTriggerRxProcessing  cc3000lib.o
+    0x00002b28   0x0000006c   Code   RO          452    i.SpiWrite          cc3000lib.o
+    0x00002b94   0x00000074   Code   RO          453    i.SpiWriteAsync     cc3000lib.o
+    0x00002c08   0x0000006c   Code   RO          454    i.SpiWriteDataSynchronous  cc3000lib.o
+    0x00002c74   0x00000130   Code   RO          214    i.StartSmartConfig  cc3000_basic_wifi_application.o
+    0x00002da4   0x000002c8   Code   RO         2559    i.SysCtlClockFreqSet  driverlib.lib(sysctl.o)
+    0x0000306c   0x00000028   Code   RO         2591    i.SysCtlPeripheralEnable  driverlib.lib(sysctl.o)
+    0x00003094   0x0000000e   Code   RO         2900    i.SysTickEnable     driverlib.lib(systick.o)
+    0x000030a2   0x00000002   PAD
+    0x000030a4   0x0000001c   Code   RO            3    i.SysTickHandler    board.o
+    0x000030c0   0x0000000e   Code   RO         2902    i.SysTickIntEnable  driverlib.lib(systick.o)
+    0x000030ce   0x0000000a   Code   RO         2906    i.SysTickPeriodSet  driverlib.lib(systick.o)
+    0x000030d8   0x00000006   Code   RO         2974    i.UARTClockSourceSet  driverlib.lib(uart.o)
+    0x000030de   0x00000006   Code   RO         2986    i.UARTFIFOLevelSet  driverlib.lib(uart.o)
+    0x000030e4   0x00000028   Code   RO         1095    i.UARTFlushRx       uartstdio.o
+    0x0000310c   0x00000038   Code   RO         1096    i.UARTFlushTx       uartstdio.o
+    0x00003144   0x00000078   Code   RO         1098    i.UARTPrimeTransmit  uartstdio.o
+    0x000031bc   0x00000098   Code   RO         1100    i.UARTStdioConfig   uartstdio.o
+    0x00003254   0x00000108   Code   RO         1101    i.UARTStdioIntHandler  uartstdio.o
+    0x0000335c   0x00000012   Code   RO         1105    i.UARTprintf        uartstdio.o
+    0x0000336e   0x00000002   PAD
+    0x00003370   0x000001b4   Code   RO         1106    i.UARTvprintf       uartstdio.o
+    0x00003524   0x00000090   Code   RO         1107    i.UARTwrite         uartstdio.o
+    0x000035b4   0x0000000a   Code   RO          455    i.UINT16_TO_STREAM_f  cc3000lib.o
+    0x000035be   0x00000012   Code   RO          456    i.UINT32_TO_STREAM_f  cc3000lib.o
+    0x000035d0   0x0000000c   Code   RO            4    i.WlanInterruptDisable  board.o
+    0x000035dc   0x0000000c   Code   RO            5    i.WlanInterruptEnable  board.o
+    0x000035e8   0x00000018   Code   RO            6    i.WriteWlanPin      board.o
+    0x00003600   0x00000028   Code   RO         3332    i.__0snprintf$1     mc_w.l(printf1.o)
+    0x00003628   0x00000026   Code   RO         3590    i.__ARM_fpclassifyf  m_wm.l(fpclassifyf.o)
+    0x0000364e   0x00000002   PAD
+    0x00003650   0x00000008   Code   RO         3575    i.__aeabi_errno_addr  mc_w.l(errno.o)
+    0x00003658   0x00000634   Code   RO         3261    i.__hardfp_powf     m_wm.l(powf.o)
+    0x00003c8c   0x00000010   Code   RO         3592    i.__mathlib_flt_underflow  m_wm.l(funder.o)
+    0x00003c9c   0x0000000e   Code   RO         3644    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x00003caa   0x00000002   Code   RO         3645    i.__scatterload_null  mc_w.l(handlers.o)
+    0x00003cac   0x0000000e   Code   RO         3646    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x00003cba   0x00000002   PAD
+    0x00003cbc   0x0000000c   Code   RO         3577    i.__set_errno       mc_w.l(errno.o)
+    0x00003cc8   0x00000154   Code   RO         3338    i._printf_core      mc_w.l(printf1.o)
+    0x00003e1c   0x00000016   Code   RO         3339    i._snputc           mc_w.l(printf1.o)
+    0x00003e32   0x00000002   PAD
+    0x00003e34   0x000004d8   Code   RO          458    i.aes_decr          cc3000lib.o
+    0x0000430c   0x0000001c   Code   RO          459    i.aes_decrypt       cc3000lib.o
+    0x00004328   0x0000000c   Code   RO          462    i.aes_read_key      cc3000lib.o
+    0x00004334   0x0000000c   Code   RO          463    i.aes_write_key     cc3000lib.o
+    0x00004340   0x0000005c   Code   RO          464    i.bind              cc3000lib.o
+    0x0000439c   0x00000048   Code   RO          465    i.closesocket       cc3000lib.o
+    0x000043e4   0x000000dc   Code   RO          467    i.expandKey         cc3000lib.o
+    0x000044c0   0x00000050   Code   RO         3547    i.free              mc_w.l(malloc.o)
+    0x00004510   0x00000012   Code   RO          468    i.galois_mul2       cc3000lib.o
+    0x00004522   0x00000002   PAD
+    0x00004524   0x0000001c   Code   RO          469    i.get_socket_active_status  cc3000lib.o
+    0x00004540   0x0000001e   Code   RO          472    i.hci_command_send  cc3000lib.o
+    0x0000455e   0x00000028   Code   RO          473    i.hci_data_command_send  cc3000lib.o
+    0x00004586   0x0000002c   Code   RO          474    i.hci_data_send     cc3000lib.o
+    0x000045b2   0x00000002   PAD
+    0x000045b4   0x00000314   Code   RO          475    i.hci_event_handler  cc3000lib.o
+    0x000048c8   0x000000be   Code   RO          476    i.hci_patch_send    cc3000lib.o
+    0x00004986   0x00000002   PAD
+    0x00004988   0x000001cc   Code   RO          477    i.hci_unsol_event_handler  cc3000lib.o
+    0x00004b54   0x00000080   Code   RO          478    i.hci_unsol_handle_patch_request  cc3000lib.o
+    0x00004bd4   0x0000002c   Code   RO          479    i.hci_unsolicited_event_handler  cc3000lib.o
+    0x00004c00   0x0000001c   Code   RO            7    i.initClk           board.o
+    0x00004c1c   0x00000110   Code   RO          215    i.initDriver        cc3000_basic_wifi_application.o
+    0x00004d2c   0x00000038   Code   RO            8    i.initLEDs          board.o
+    0x00004d64   0x00000016   Code   RO          480    i.init_spi          cc3000lib.o
+    0x00004d7a   0x00000002   PAD
+    0x00004d7c   0x00000154   Code   RO          216    i.main              cc3000_basic_wifi_application.o
+    0x00004ed0   0x0000006c   Code   RO         3548    i.malloc            mc_w.l(malloc.o)
+    0x00004f3c   0x0000005c   Code   RO          482    i.mdnsAdvertiser    cc3000lib.o
+    0x00004f98   0x0000007c   Code   RO          485    i.netapp_dhcp       cc3000lib.o
+    0x00005014   0x00000050   Code   RO          488    i.netapp_ping_send  cc3000lib.o
+    0x00005064   0x00000038   Code   RO          492    i.nvmem_create_entry  cc3000lib.o
+    0x0000509c   0x00000054   Code   RO          494    i.nvmem_read        cc3000lib.o
+    0x000050f0   0x00000058   Code   RO          497    i.nvmem_write       cc3000lib.o
+    0x00005148   0x000000c8   Code   RO            9    i.pio_init          board.o
+    0x00005210   0x00000014   Code   RO          499    i.recv              cc3000lib.o
+    0x00005224   0x00000012   Code   RO          502    i.send              cc3000lib.o
+    0x00005236   0x00000008   Code   RO          217    i.sendBootLoaderPatch  cc3000_basic_wifi_application.o
+    0x0000523e   0x00000008   Code   RO          218    i.sendDriverPatch   cc3000_basic_wifi_application.o
+    0x00005246   0x00000008   Code   RO          219    i.sendWLFWPatch     cc3000_basic_wifi_application.o
+    0x0000524e   0x00000012   Code   RO          503    i.sendto            cc3000lib.o
+    0x00005260   0x00000024   Code   RO          504    i.set_socket_active_status  cc3000lib.o
+    0x00005284   0x00000060   Code   RO          506    i.simple_link_recv  cc3000lib.o
+    0x000052e4   0x000000fc   Code   RO          507    i.simple_link_send  cc3000lib.o
+    0x000053e0   0x00000054   Code   RO          508    i.socket            cc3000lib.o
+    0x00005434   0x00000030   Code   RO           10    i.turnLedOff        board.o
+    0x00005464   0x00000030   Code   RO           11    i.turnLedOn         board.o
+    0x00005494   0x00000010   Code   RO         1209    i.ustrlen           ustdlib.o
+    0x000054a4   0x0000002e   Code   RO         1211    i.ustrncmp          ustdlib.o
+    0x000054d2   0x0000002a   Code   RO         1213    i.ustrstr           ustdlib.o
+    0x000054fc   0x0000009a   Code   RO         1215    i.ustrtoul          ustdlib.o
+    0x00005596   0x00000002   PAD
+    0x00005598   0x000001cc   Code   RO          509    i.wlan_add_profile  cc3000lib.o
+    0x00005764   0x000000c0   Code   RO          510    i.wlan_connect      cc3000lib.o
+    0x00005824   0x0000002c   Code   RO          511    i.wlan_disconnect   cc3000lib.o
+    0x00005850   0x00000028   Code   RO          512    i.wlan_init         cc3000lib.o
+    0x00005878   0x00000030   Code   RO          513    i.wlan_ioctl_del_profile  cc3000lib.o
+    0x000058a8   0x00000040   Code   RO          515    i.wlan_ioctl_set_connection_policy  cc3000lib.o
+    0x000058e8   0x00000058   Code   RO          518    i.wlan_set_event_mask  cc3000lib.o
+    0x00005940   0x000000d8   Code   RO          519    i.wlan_smart_config_process  cc3000lib.o
+    0x00005a18   0x00000048   Code   RO          520    i.wlan_smart_config_set_prefix  cc3000lib.o
+    0x00005a60   0x00000034   Code   RO          521    i.wlan_smart_config_start  cc3000lib.o
+    0x00005a94   0x00000094   Code   RO          523    i.wlan_start        cc3000lib.o
+    0x00005b28   0x00000028   Code   RO          524    i.wlan_stop         cc3000lib.o
+    0x00005b50   0x00000040   Data   RO           12    .constdata          board.o
+    0x00005b90   0x0000014b   Data   RO          221    .constdata          cc3000_basic_wifi_application.o
+    0x00005cdb   0x0000020b   Data   RO          527    .constdata          cc3000lib.o
+    0x00005ee6   0x00000002   PAD
+    0x00005ee8   0x00000028   Data   RO         1109    .constdata          uartstdio.o
+    0x00005f10   0x00000210   Data   RO         1805    .constdata          driverlib.lib(gpio.o)
+    0x00006120   0x0000010c   Data   RO         2076    .constdata          driverlib.lib(interrupt.o)
+    0x0000622c   0x000001c4   Data   RO         2612    .constdata          driverlib.lib(sysctl.o)
+    0x000063f0   0x00000140   Data   RO         3264    .constdata          m_wm.l(powf.o)
+    0x00006530   0x000003f1   Data   RO          222    .conststring        cc3000_basic_wifi_application.o
+    0x00006921   0x00000011   Data   RO         1110    .conststring        uartstdio.o
+    0x00006932   0x00000002   PAD
+    0x00006934   0x00000020   Data   RO         3642    Region$$Table       anon$$obj.o
 
 
     Execution Region RW_IRAM (Base: 0x20000000, Size: 0x00005aa8, Max: 0x00040000, ABSOLUTE, COMPRESSED[0x000000a4])
@@ -2215,21 +2291,21 @@ Memory Map of the image
     Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
     0x20000000   0x00000008   Data   RW           13    .data               board.o
-    0x20000008   0x000000ec   Data   RW          223    .data               cc3000_basic_wifi_application.o
-    0x200000f4   0x00000012   Data   RW          531    .data               cc3000lib.o
-    0x20000106   0x00000002   PAD
-    0x20000108   0x0000001c   Data   RW         1114    .data               uartstdio.o
-    0x20000124   0x00000004   Data   RW         3327    .data               mc_w.l(errno.o)
-    0x20000128   0x00000004   Data   RW         3370    .data               mc_w.l(mvars.o)
-    0x2000012c   0x00000004   Data   RW         3371    .data               mc_w.l(mvars.o)
-    0x20000130   0x00000123   Zero   RW          220    .bss                cc3000_basic_wifi_application.o
-    0x20000253   0x000001ad   PAD
-    0x20000400   0x00001200   Zero   RW          528    .bss                cc3000lib.o
-    0x20001600   0x00000024   Zero   RW         1067    .bss                cmdline.o
-    0x20001624   0x00000480   Zero   RW         1111    .bss                uartstdio.o
+    0x20000008   0x000000fc   Data   RW          223    .data               cc3000_basic_wifi_application.o
+    0x20000104   0x00000012   Data   RW          528    .data               cc3000lib.o
+    0x20000116   0x00000002   PAD
+    0x20000118   0x0000001c   Data   RW         1111    .data               uartstdio.o
+    0x20000134   0x00000004   Data   RW         3578    .data               mc_w.l(errno.o)
+    0x20000138   0x00000004   Data   RW         3621    .data               mc_w.l(mvars.o)
+    0x2000013c   0x00000004   Data   RW         3622    .data               mc_w.l(mvars.o)
+    0x20000140   0x00000123   Zero   RW          220    .bss                cc3000_basic_wifi_application.o
+    0x20000263   0x0000019d   PAD
+    0x20000400   0x00001200   Zero   RW          525    .bss                cc3000lib.o
+    0x20001600   0x00000024   Zero   RW         1064    .bss                cmdline.o
+    0x20001624   0x00000480   Zero   RW         1108    .bss                uartstdio.o
     0x20001aa4   0x00000004   PAD
-    0x20001aa8   0x00000000   Zero   RW         1088    HEAP                startup_rvmdk.o
-    0x20001aa8   0x00004000   Zero   RW         1087    STACK               startup_rvmdk.o
+    0x20001aa8   0x00000000   Zero   RW         1085    HEAP                startup_rvmdk.o
+    0x20001aa8   0x00004000   Zero   RW         1084    STACK               startup_rvmdk.o
 
 
 ==============================================================================
@@ -2240,7 +2316,7 @@ Image component sizes
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
        500         72         64          8          0      15813   board.o
-      6150       2722       1340        236        291      34022   cc3000_basic_wifi_application.o
+      6078       2728       1340        252        291      33990   cc3000_basic_wifi_application.o
       8006        410        523         18       4608      73129   cc3000lib.o
        100         10          0          0         36       2084   cmdline.o
        796         96          0          0          0       7744   pwm_10-30.o
@@ -2249,16 +2325,17 @@ Image component sizes
        258          0          0          0          0       4287   ustdlib.o
 
     ----------------------------------------------------------------------
-     17640       3896       2020        292      22904     146894   Object Totals
+     17568       3902       2020        308      22888     146862   Object Totals
          0          0         32          0          0          0   (incl. Generated)
-        18          0          4          2        433          0   (incl. Padding)
+        18          0          4          2        417          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Member Name
 
+       370          0          0          0          0       4562   adc.o
         32          8          0          0          0        784   fpu.o
-       630          8        528          0          0       6390   gpio.o
+       658          8        528          0          0       6863   gpio.o
        140         12        268          0          0       1797   interrupt.o
        114          0          0          0          0       2335   pwm.o
         22          0          0          0          0       1260   ssi.o
@@ -2300,20 +2377,20 @@ Image component sizes
        108          0          0          0          0        168   fepilogue.o
 
     ----------------------------------------------------------------------
-      5408        274       1568         12          0      21158   Library Totals
-        14          0          0          0          0          0   (incl. Padding)
+      5808        274       1568         12          0      26193   Library Totals
+        16          0          0          0          0          0   (incl. Padding)
 
     ----------------------------------------------------------------------
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Library Name
 
-      1746         72       1248          0          0      18650   driverlib.lib
+      2144         72       1248          0          0      23685   driverlib.lib
       1642        146        320          0          0        576   m_wm.l
       1008         56          0         12          0       1108   mc_w.l
        998          0          0          0          0        824   mf_w.l
 
     ----------------------------------------------------------------------
-      5408        274       1568         12          0      21158   Library Totals
+      5808        274       1568         12          0      26193   Library Totals
 
     ----------------------------------------------------------------------
 
@@ -2322,15 +2399,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     23048       4170       3588        304      22904     151016   Grand Totals
-     23048       4170       3588        164      22904     151016   ELF Image Totals (compressed)
-     23048       4170       3588        164          0          0   ROM Totals
+     23376       4176       3588        320      22888     155219   Grand Totals
+     23376       4176       3588        164      22888     155219   ELF Image Totals (compressed)
+     23376       4176       3588        164          0          0   ROM Totals
 
 ==============================================================================
 
-    Total RO  Size (Code + RO Data)                26636 (  26.01kB)
+    Total RO  Size (Code + RO Data)                26964 (  26.33kB)
     Total RW  Size (RW Data + ZI Data)             23208 (  22.66kB)
-    Total ROM Size (Code + RO Data + RW Data)      26800 (  26.17kB)
+    Total ROM Size (Code + RO Data + RW Data)      27128 (  26.49kB)
 
 ==============================================================================
 

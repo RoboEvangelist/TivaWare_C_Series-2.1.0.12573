@@ -215,115 +215,59 @@ compiling cc3000_basic_wifi_application.c...
   #define INT_USB0                INT_CONCAT(INT_USB0_, INT_DEVICE_CLASS)
 ..\..\..\..\inc/hw_ints.h(462): warning:  #47-D: incompatible redefinition of macro "INT_WATCHDOG" (declared at line 66 of "..\..\..\..\inc/tm4c1294ncpdt.h")
   #define INT_WATCHDOG            INT_CONCAT(INT_WATCHDOG_, INT_DEVICE_CLASS)
-<<<<<<< HEAD
-cc3000_basic_wifi_application.c(389): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-        return (1.0/(powf(7.0, -5)*result*1.0 - 0.0022));
-cc3000_basic_wifi_application.c(551): warning:  #68-D: integer conversion resulted in a change of sign
+cc3000_basic_wifi_application.c(401): warning:  #1035-D: single-precision operand implicitly converted to double-precision
+        return (1.0/(powf(7.0, -5)*ui32LeftSensor*1.0 - 0.0022));
+cc3000_basic_wifi_application.c(563): warning:  #68-D: integer conversion resulted in a change of sign
           if(psPingData->min_round_time == -1)
-cc3000_basic_wifi_application.c(1383): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1395): warning:  #223-D: function "STOP" declared implicitly
                                                                 STOP();    // stop the robot and center the wheels in the front
-cc3000_basic_wifi_application.c(1392): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1404): warning:  #223-D: function "STOP" declared implicitly
                                                                 STOP();
-cc3000_basic_wifi_application.c(1401): warning:  #223-D: function "LForward1" declared implicitly
+cc3000_basic_wifi_application.c(1413): warning:  #223-D: function "LForward1" declared implicitly
                                                                 LForward1();
-cc3000_basic_wifi_application.c(1407): warning:  #223-D: function "LForward2" declared implicitly
+cc3000_basic_wifi_application.c(1419): warning:  #223-D: function "LForward2" declared implicitly
                                                                 LForward2();
-cc3000_basic_wifi_application.c(1413): warning:  #223-D: function "LBackward1" declared implicitly
+cc3000_basic_wifi_application.c(1425): warning:  #223-D: function "LBackward1" declared implicitly
                                                                 LBackward1();
-cc3000_basic_wifi_application.c(1419): warning:  #223-D: function "LBackward2" declared implicitly
+cc3000_basic_wifi_application.c(1431): warning:  #223-D: function "LBackward2" declared implicitly
                                                                 LBackward2();
-cc3000_basic_wifi_application.c(1425): warning:  #223-D: function "RForward1" declared implicitly
+cc3000_basic_wifi_application.c(1437): warning:  #223-D: function "RForward1" declared implicitly
                                                                 RForward1();
-cc3000_basic_wifi_application.c(1431): warning:  #223-D: function "RForward2" declared implicitly
+cc3000_basic_wifi_application.c(1443): warning:  #223-D: function "RForward2" declared implicitly
                                                                 RForward2();
-cc3000_basic_wifi_application.c(1437): warning:  #223-D: function "RBackward1" declared implicitly
+cc3000_basic_wifi_application.c(1449): warning:  #223-D: function "RBackward1" declared implicitly
                                                                 RBackward1();
-cc3000_basic_wifi_application.c(1443): warning:  #223-D: function "RBackward2" declared implicitly
+cc3000_basic_wifi_application.c(1455): warning:  #223-D: function "RBackward2" declared implicitly
                                                                 RBackward2();
-cc3000_basic_wifi_application.c(1451): warning:  #223-D: function "Forward1" declared implicitly
+cc3000_basic_wifi_application.c(1463): warning:  #223-D: function "Forward1" declared implicitly
                                                                 Forward1();
-cc3000_basic_wifi_application.c(1457): warning:  #223-D: function "Forward2" declared implicitly
+cc3000_basic_wifi_application.c(1469): warning:  #223-D: function "Forward2" declared implicitly
                                                                 Forward2();
-cc3000_basic_wifi_application.c(1462): warning:  #223-D: function "Backward1" declared implicitly
+cc3000_basic_wifi_application.c(1474): warning:  #223-D: function "Backward1" declared implicitly
                                                                 Backward1();
-cc3000_basic_wifi_application.c(1467): warning:  #223-D: function "Backward2" declared implicitly
+cc3000_basic_wifi_application.c(1479): warning:  #223-D: function "Backward2" declared implicitly
                                                                 Backward2();
-cc3000_basic_wifi_application.c(1473): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1485): warning:  #223-D: function "STOP" declared implicitly
                                                         STOP(); 
-cc3000_basic_wifi_application.c(1533): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1545): warning:  #223-D: function "STOP" declared implicitly
                                                                         STOP();
-cc3000_basic_wifi_application.c(1536): warning:  #223-D: function "LForward1" declared implicitly
+cc3000_basic_wifi_application.c(1548): warning:  #223-D: function "LForward1" declared implicitly
                                                                 LForward1();
-cc3000_basic_wifi_application.c(1544): warning:  #223-D: function "STOP" declared implicitly
+cc3000_basic_wifi_application.c(1556): warning:  #223-D: function "STOP" declared implicitly
                                                                         STOP();
-cc3000_basic_wifi_application.c(1547): warning:  #223-D: function "Forward1" declared implicitly
+cc3000_basic_wifi_application.c(1559): warning:  #223-D: function "Forward1" declared implicitly
                                                                 Forward1();
-cc3000_basic_wifi_application.c(1331): warning:  #177-D: variable "tRxPacketLength" was declared but never referenced
+cc3000_basic_wifi_application.c(1343): warning:  #177-D: variable "tRxPacketLength" was declared but never referenced
       socklen_t tRxPacketLength;
-cc3000_basic_wifi_application.c(1332): warning:  #177-D: variable "ui32x" was declared but never referenced
+cc3000_basic_wifi_application.c(1344): warning:  #177-D: variable "ui32x" was declared but never referenced
       uint32_t ui32x = 0, ui32Count = 0;
-cc3000_basic_wifi_application.c(1332): warning:  #177-D: variable "ui32Count" was declared but never referenced
+cc3000_basic_wifi_application.c(1344): warning:  #177-D: variable "ui32Count" was declared but never referenced
       uint32_t ui32x = 0, ui32Count = 0;
-cc3000_basic_wifi_application.c(2085): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
+cc3000_basic_wifi_application.c(2097): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
         int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2117): warning:  #550-D: variable "i32CommandStatus" was set but never used
+cc3000_basic_wifi_application.c(2129): warning:  #550-D: variable "i32CommandStatus" was set but never used
       int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2128): warning:  #177-D: variable "sample" was declared but never referenced
-=======
-cc3000_basic_wifi_application.c(367): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-        return (1.0/(powf(7.0, -5)*result*1.0 - 0.0022));
-cc3000_basic_wifi_application.c(529): warning:  #68-D: integer conversion resulted in a change of sign
-          if(psPingData->min_round_time == -1)
-cc3000_basic_wifi_application.c(1361): warning:  #223-D: function "STOP" declared implicitly
-                                                                STOP();    // stop the robot and center the wheels in the front
-cc3000_basic_wifi_application.c(1370): warning:  #223-D: function "STOP" declared implicitly
-                                                                STOP();
-cc3000_basic_wifi_application.c(1379): warning:  #223-D: function "LForward1" declared implicitly
-                                                                LForward1();
-cc3000_basic_wifi_application.c(1385): warning:  #223-D: function "LForward2" declared implicitly
-                                                                LForward2();
-cc3000_basic_wifi_application.c(1391): warning:  #223-D: function "LBackward1" declared implicitly
-                                                                LBackward1();
-cc3000_basic_wifi_application.c(1397): warning:  #223-D: function "LBackward2" declared implicitly
-                                                                LBackward2();
-cc3000_basic_wifi_application.c(1403): warning:  #223-D: function "RForward1" declared implicitly
-                                                                RForward1();
-cc3000_basic_wifi_application.c(1409): warning:  #223-D: function "RForward2" declared implicitly
-                                                                RForward2();
-cc3000_basic_wifi_application.c(1415): warning:  #223-D: function "RBackward1" declared implicitly
-                                                                RBackward1();
-cc3000_basic_wifi_application.c(1421): warning:  #223-D: function "RBackward2" declared implicitly
-                                                                RBackward2();
-cc3000_basic_wifi_application.c(1429): warning:  #223-D: function "Forward1" declared implicitly
-                                                                Forward1();
-cc3000_basic_wifi_application.c(1435): warning:  #223-D: function "Forward2" declared implicitly
-                                                                Forward2();
-cc3000_basic_wifi_application.c(1440): warning:  #223-D: function "Backward1" declared implicitly
-                                                                Backward1();
-cc3000_basic_wifi_application.c(1445): warning:  #223-D: function "Backward2" declared implicitly
-                                                                Backward2();
-cc3000_basic_wifi_application.c(1451): warning:  #223-D: function "STOP" declared implicitly
-                                                        STOP(); 
-cc3000_basic_wifi_application.c(1511): warning:  #223-D: function "STOP" declared implicitly
-                                                                        STOP();
-cc3000_basic_wifi_application.c(1514): warning:  #223-D: function "LForward1" declared implicitly
-                                                                LForward1();
-cc3000_basic_wifi_application.c(1522): warning:  #223-D: function "STOP" declared implicitly
-                                                                        STOP();
-cc3000_basic_wifi_application.c(1525): warning:  #223-D: function "Forward1" declared implicitly
-                                                                Forward1();
-cc3000_basic_wifi_application.c(1309): warning:  #177-D: variable "tRxPacketLength" was declared but never referenced
-      socklen_t tRxPacketLength;
-cc3000_basic_wifi_application.c(1310): warning:  #177-D: variable "ui32x" was declared but never referenced
-      uint32_t ui32x = 0, ui32Count = 0;
-cc3000_basic_wifi_application.c(1310): warning:  #177-D: variable "ui32Count" was declared but never referenced
-      uint32_t ui32x = 0, ui32Count = 0;
-cc3000_basic_wifi_application.c(2063): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
-        int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2095): warning:  #550-D: variable "i32CommandStatus" was set but never used
-      int32_t i32CommandStatus;
-cc3000_basic_wifi_application.c(2106): warning:  #177-D: variable "sample" was declared but never referenced
->>>>>>> master
+cc3000_basic_wifi_application.c(2140): warning:  #177-D: variable "sample" was declared but never referenced
           int32_t sample[CC3000_APP_BUFFER_SIZE +
 cc3000_basic_wifi_application.c(260): warning:  #177-D: variable "g_cInput" was declared but never referenced
   static char g_cInput[MAX_COMMAND_SIZE];
@@ -343,28 +287,6 @@ compiling PWM_10-30.c...
   #define __PWM_10-30_H__
 ..\..\..\..\cc3000\src\PWM_10-30.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=23048 RO-data=3588 RW-data=304 ZI-data=22904  
+Program Size: Code=23376 RO-data=3588 RW-data=320 ZI-data=22888  
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
 ".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 133 Warning(s).
-<<<<<<< HEAD
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-</pre>
-</body>
-</html>
-0_basic_wifi_application.axf" - 0 Error(s), 135 Warning(s).
-=======
-3000\src\PWM_10-30.c: 2 warnings, 0 errors
-linking...
-Program Size: Code=23152 RO-data=3588 RW-data=304 ZI-data=22904  
-After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
-".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 135 Warning(s).
->>>>>>> master
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.

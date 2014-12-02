@@ -328,21 +328,23 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
                                   // allow time for clock to stabilize
   while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
-	/*	
+		
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // Enable ADC0
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // Enable PE ports
 	
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
-	// use ADC0, SS1 (4 samples max), processor trigger, priority 1
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH3);
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH2);
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
-	ADCSequenceEnable(ADC0_BASE, 1);
-	*/
 		
-  
+	// use ADC0, SS1 (4 samples max), processor trigger, priority 0
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
+		
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9
+	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8
+	ADCSequenceEnable(ADC0_BASE, 1);
+	
+		
+  /*
 	GPIO_PORTE_AHB_AFSEL_R |= 0x08;     // 2) enable alternate function on PE3
   GPIO_PORTE_AHB_DEN_R &= ~0x08;      // 3) disable digital I/O on PE3
   GPIO_PORTE_AHB_AMSEL_R |= 0x08;     // 4) enable analog functionality on PE3
@@ -372,21 +374,31 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
   ADC0_SSCTL3_R = 0x0006;         // 16) no TS0 D0, yes IE0 END0
   ADC0_IM_R &= ~ADC_IM_MASK3;     // 17) disable SS3 interrupts
   ADC0_ACTSS_R |= ADC_ACTSS_ASEN3;// 18) enable sample sequencer 3
-	
+	*/
 }
 
 unsigned long ADC0_InSeq3(void){  
+	/*
 	unsigned long result;
   ADC0_PSSI_R = 0x0008;            // 1) initiate SS3
   while((ADC0_RIS_R&0x08)==0){};   // 2) wait for conversion done
   result = ADC0_SSFIFO3_R&0xFFF;   // 3) read result
   ADC0_ISC_R = 0x0008;             // 4) acknowledge completion
+	*/
+	ADCIntClear(ADC0_BASE, 1);
+	ADCProcessorTrigger(ADC0_BASE, 1);
+	while(!ADCIntStatus(ADC0_BASE, 1, false))
+	{
+	}
+	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);
+	ui32LeftSensor = ui32IRValues[0];
+	ui32RightSensor = ui32IRValues[1];
 	//float res = 0.0;
 	// transform voltage to distance
 	//res = powf(8.0, -12.0)*powf(result,3.0) - powf(3.0, -8.0)*powf(result, 2.0) + powf(8.0, -5.0)*result - 0.0026;
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
-	return (1.0/(powf(7.0, -5)*result*1.0 - 0.0022));
+	return (1.0/(powf(7.0, -5)*ui32LeftSensor*1.0 - 0.0022));
 }
 
 
