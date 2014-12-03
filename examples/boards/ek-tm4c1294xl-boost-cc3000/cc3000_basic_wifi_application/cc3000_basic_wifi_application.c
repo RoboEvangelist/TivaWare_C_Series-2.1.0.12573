@@ -325,64 +325,32 @@ volatile uint32_t ui32RightSensor;     // PE4
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	//
-	//SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
+	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
                                   // allow time for clock to stabilize
-  //while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
+  while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
 		
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // Enable ADC0
-	SysCtlDelay(2);	//insert a few cycles after enabling the peripheral to allow the clock to be fully activated.
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // Enable PE ports
-	//SysCtlDelay(2);	//insert a few cycles after enabling the peripheral to allow the clock to be fully activated.
-
+	
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
-	
-	// 5) activate timer0
-	SYSCTL_RCGCTIMER_R |= SYSCTL_RCGCTIMER_R0;
-																						//    allow time for clock to stabilize
-	while((SYSCTL_PRTIMER_R&SYSCTL_PRTIMER_R0) == 0){};
-	TIMER0_CTL_R &= ~TIMER_CTL_TAEN;          // 6) disable timer0A during setup
-	TIMER0_CTL_R |= TIMER_CTL_TAOTE;          // 7) enable timer0A trigger to ADC
-	TIMER0_ADCEV_R |= TIMER_ADCEV_TATOADCEN;  //timer0A time-out event ADC trigger enabled
-	TIMER0_CFG_R = 0x00000000;					      // 8) configure for 32-bit timer mode
-	TIMER0_CC_R &= ~TIMER_CC_ALTCLK;          // 9) timer0 clocked from system clock
 		
-	// **** timer0A initialization ****
-																		// 10) configure for periodic mode, default down-count settings
-	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
-	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
-	TIMER0_TAILR_R = 400000;            // 12) start value for trigger
-	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
-	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
-
-			
-	// disable ADC to configure
-	ADCSequenceDisable(ADC0_BASE, 1);
-	
 	// use ADC0, SS1 (4 samples max), processor trigger, priority 0
-	//ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 0);
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
 		
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8
-		
-	// set up interrupt
-	IntPrioritySet(INT_ADC0SS1, 0x00);  	 // configure ADC0 SS1 interrupt priority as 0
-	IntEnable(INT_ADC0SS1);    				// enable interrupt 31 in NVIC (ADC0 SS1)
-	ADCIntEnableEx(ADC0_BASE, ADC_INT_SS1);      // arm interrupt of ADC0 SS1
-		
-	// enable ADC0
 	ADCSequenceEnable(ADC0_BASE, 1);
 }
 
 unsigned long ADC0_InSeq3(void){  
-	//ADCIntClear(ADC0_BASE, 1);
-	//ADCProcessorTrigger(ADC0_BASE, 1);
-	//while(!ADCIntStatus(ADC0_BASE, 1, false))
-	//{
-	//}
-	//ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
+	ADCIntClear(ADC0_BASE, 1);
+	ADCProcessorTrigger(ADC0_BASE, 1);
+	while(!ADCIntStatus(ADC0_BASE, 1, false))
+	{
+	}
+	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
 	ui32LeftSensor = ui32IRValues[0];
 	ui32RightSensor = ui32IRValues[1];
 	// resutl is given in voltage, and the formula gives (1/cm)
