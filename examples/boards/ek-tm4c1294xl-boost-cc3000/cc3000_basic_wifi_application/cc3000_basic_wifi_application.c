@@ -325,12 +325,15 @@ volatile uint32_t ui32RightSensor;     // PE4
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	//
-	SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
+	//SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
                                   // allow time for clock to stabilize
-  while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
+  //while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
 		
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // Enable ADC0
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // Enable PE ports
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
+	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
+		
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // activate the clock of E
+	while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
 	
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
