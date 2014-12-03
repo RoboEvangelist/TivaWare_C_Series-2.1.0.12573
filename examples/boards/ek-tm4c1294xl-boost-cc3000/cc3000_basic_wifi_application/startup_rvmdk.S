@@ -79,11 +79,11 @@ __heap_limit
 ;
 ;******************************************************************************
         EXTERN  IntSpiGPIOHandler
-		EXTERN  GPIOPortJ_Handler
         EXTERN  SpiIntHandler
         EXTERN  SpiIntHandler
         EXTERN  SysTickHandler
         EXTERN  UARTStdioIntHandler
+		EXTERN  ADC0_Handler
 
 ;******************************************************************************
 ;
@@ -122,7 +122,7 @@ __Vectors
         DCD     IntDefaultHandler           ; PWM Generator 1
         DCD     IntDefaultHandler           ; PWM Generator 2
         DCD     IntDefaultHandler           ; Quadrature Encoder 0
-        DCD     IntDefaultHandler           ; ADC Sequence 0
+        DCD     ADC0_Handler                ; ADC Sequence 0
         DCD     IntDefaultHandler           ; ADC Sequence 1
         DCD     IntDefaultHandler           ; ADC Sequence 2
         DCD     IntDefaultHandler           ; ADC Sequence 3
@@ -159,7 +159,7 @@ __Vectors
         DCD     IntDefaultHandler           ; ADC1 Sequence 2
         DCD     IntDefaultHandler           ; ADC1 Sequence 3
         DCD     IntDefaultHandler           ; External Bus Interface 0
-        DCD     GPIOPortJ_Handler           ; GPIO Port J
+        DCD     IntDefaultHandler           ; GPIO Port J
         DCD     IntDefaultHandler           ; GPIO Port K
         DCD     IntDefaultHandler           ; GPIO Port L
         DCD     SpiIntHandler               ; SSI2 Rx and Tx
