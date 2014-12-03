@@ -338,6 +338,8 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
 		
+	ADCSequenceDisable(ADC0_BASE, 1); //disable ADC0 before the configuration is complete
+		
 	// use ADC0, SS1 (4 samples max), processor trigger, priority 0
 	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
 		
