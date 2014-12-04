@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\rvmdk\cc3000_basic_wifi_application.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\rvmdk\cc3000_basic_wifi_application.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 04 13:39:02 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 04 14:06:56 2014
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -77,53 +77,53 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[22]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Reset_Handler
 </UL>
 
-<P><STRONG><a name="[d1]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
+<P><STRONG><a name="[d3]"></a>_main_stk</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry2.o(.ARM.Collect$$$$00000001))
 
 <P><STRONG><a name="[24]"></a>_main_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Calls]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[33]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
+<P><STRONG><a name="[35]"></a>__main_after_scatterload</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry5.o(.ARM.Collect$$$$00000004))
 <BR><BR>[Called By]<UL><LI><a href="#[25]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__scatterload
 </UL>
 
-<P><STRONG><a name="[d2]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
+<P><STRONG><a name="[d4]"></a>_main_clock</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry7b.o(.ARM.Collect$$$$00000008))
 
-<P><STRONG><a name="[d3]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
+<P><STRONG><a name="[d5]"></a>_main_cpp_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry8b.o(.ARM.Collect$$$$0000000A))
 
-<P><STRONG><a name="[d4]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
+<P><STRONG><a name="[d6]"></a>_main_init</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry9a.o(.ARM.Collect$$$$0000000B))
 
-<P><STRONG><a name="[d5]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
+<P><STRONG><a name="[d7]"></a>__rt_final_cpp</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry10a.o(.ARM.Collect$$$$0000000D))
 
-<P><STRONG><a name="[d6]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
+<P><STRONG><a name="[d8]"></a>__rt_final_exit</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, entry11a.o(.ARM.Collect$$$$0000000F))
 
 <P><STRONG><a name="[26]"></a>SysCtlDelay</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, sysctl.o(.emb_text))
 <BR><BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
 </UL>
 
-<P><STRONG><a name="[b4]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<P><STRONG><a name="[b6]"></a>__aeabi_memcpy</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, memcpya.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[d7]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[d9]"></a>__aeabi_memcpy4</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[d8]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
+<P><STRONG><a name="[da]"></a>__aeabi_memcpy8</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, memcpya.o(.text), UNUSED)
 
-<P><STRONG><a name="[4b]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
+<P><STRONG><a name="[4d]"></a>strlen</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, strlen.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
 <LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_connect
 </UL>
 
-<P><STRONG><a name="[6a]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
+<P><STRONG><a name="[6c]"></a>strcmp</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, strcmp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = strcmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
+<BR>[Called By]<UL><LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
 </UL>
 
 <P><STRONG><a name="[27]"></a>__aeabi_dadd</STRONG> (Thumb, 322 bytes, Stack size 48 bytes, dadd.o(.text))
@@ -143,39 +143,55 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 </UL>
 
 <P><STRONG><a name="[2d]"></a>__aeabi_drsub</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, dadd.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[2e]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
+<P><STRONG><a name="[2e]"></a>__aeabi_dmul</STRONG> (Thumb, 228 bytes, Stack size 48 bytes, dmul.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = __aeabi_dmul &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+</UL>
+
+<P><STRONG><a name="[2f]"></a>__aeabi_ddiv</STRONG> (Thumb, 222 bytes, Stack size 32 bytes, ddiv.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = __aeabi_ddiv &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 </UL>
 
-<P><STRONG><a name="[2f]"></a>__aeabi_d2uiz</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, dfixui.o(.text))
+<P><STRONG><a name="[30]"></a>__aeabi_ui2d</STRONG> (Thumb, 26 bytes, Stack size 16 bytes, dfltui.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = __aeabi_ui2d &rArr; _double_epilogue &rArr; _double_round
+</UL>
+<BR>[Calls]<UL><LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
+</UL>
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+</UL>
+
+<P><STRONG><a name="[31]"></a>__aeabi_d2uiz</STRONG> (Thumb, 50 bytes, Stack size 8 bytes, dfixui.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2uiz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
-</UL>
-
-<P><STRONG><a name="[3a]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 </UL>
 
-<P><STRONG><a name="[d9]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<P><STRONG><a name="[3c]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+</UL>
 
-<P><STRONG><a name="[a4]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
-<BR><BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[db]"></a>__aeabi_uidiv</STRONG> (Thumb, 0 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+
+<P><STRONG><a name="[a6]"></a>__aeabi_uidivmod</STRONG> (Thumb, 44 bytes, Stack size 12 bytes, uidiv.o(.text), UNUSED)
+<BR><BR>[Called By]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
 <P><STRONG><a name="[28]"></a>__aeabi_llsl</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, llshl.o(.text))
@@ -183,27 +199,27 @@ Global Symbols
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[da]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
+<P><STRONG><a name="[dc]"></a>_ll_shift_l</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llshl.o(.text), UNUSED)
 
-<P><STRONG><a name="[30]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<P><STRONG><a name="[32]"></a>__aeabi_llsr</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, llushr.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
 <LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
 
-<P><STRONG><a name="[db]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
+<P><STRONG><a name="[dd]"></a>_ll_ushift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llushr.o(.text), UNUSED)
 
 <P><STRONG><a name="[29]"></a>__aeabi_lasr</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, llsshr.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[dc]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
+<P><STRONG><a name="[de]"></a>_ll_sshift_r</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, llsshr.o(.text), UNUSED)
 
-<P><STRONG><a name="[dd]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
+<P><STRONG><a name="[df]"></a>__I$use$fp</STRONG> (Thumb, 0 bytes, Stack size 8 bytes, iusefp.o(.text), UNUSED)
 
 <P><STRONG><a name="[2b]"></a>_double_round</STRONG> (Thumb, 26 bytes, Stack size 8 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = _double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<BR>[Called By]<UL><LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
 <LI><a href="#[2a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 <LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
@@ -211,128 +227,132 @@ Global Symbols
 <P><STRONG><a name="[2a]"></a>_double_epilogue</STRONG> (Thumb, 164 bytes, Stack size 32 bytes, depilogue.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
+<BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 <LI><a href="#[28]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsl
 <LI><a href="#[2b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
+<BR>[Called By]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[27]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dadd
 </UL>
 
-<P><STRONG><a name="[31]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
+<P><STRONG><a name="[33]"></a>__aeabi_d2f</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, d2f.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = __aeabi_d2f
 </UL>
-<BR>[Calls]<UL><LI><a href="#[32]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
+<BR>[Calls]<UL><LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_float_round
 </UL>
-<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 </UL>
 
 <P><STRONG><a name="[25]"></a>__scatterload</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, init.o(.text))
-<BR><BR>[Calls]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
+<BR><BR>[Calls]<UL><LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__main_after_scatterload
 </UL>
 <BR>[Called By]<UL><LI><a href="#[24]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_main_scatterload
 </UL>
 
-<P><STRONG><a name="[de]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
+<P><STRONG><a name="[e0]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[32]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<P><STRONG><a name="[34]"></a>_float_round</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, fepilogue.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
 
-<P><STRONG><a name="[df]"></a>_float_epilogue</STRONG> (Thumb, 90 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
+<P><STRONG><a name="[e1]"></a>_float_epilogue</STRONG> (Thumb, 90 bytes, Stack size 4 bytes, fepilogue.o(.text), UNUSED)
 
-<P><STRONG><a name="[e0]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[e2]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[e1]"></a>__decompress1</STRONG> (Thumb, 92 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
+<P><STRONG><a name="[e3]"></a>__decompress1</STRONG> (Thumb, 92 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[14]"></a>ADC0_Handler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.ADC0_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC0_Handler
 </UL>
-<BR>[Calls]<UL><LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDataGet
-<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCProcessorTrigger
-<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntClear
+<BR>[Calls]<UL><LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDataGet
+<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCProcessorTrigger
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntClear
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[37]"></a>ADC0_InSeq3</STRONG> (Thumb, 216 bytes, Stack size 32 bytes, cc3000_basic_wifi_application.o(i.ADC0_InSeq3))
-<BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = ADC0_InSeq3 &rArr; __hardfp_powf &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[39]"></a>ADC0_InSeq3</STRONG> (Thumb, 206 bytes, Stack size 24 bytes, cc3000_basic_wifi_application.o(i.ADC0_InSeq3))
+<BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = ADC0_InSeq3 &rArr; __hardfp_powf &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
+<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
-<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
-<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDataGet
-<LI><a href="#[35]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCProcessorTrigger
-<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntStatus
-<LI><a href="#[34]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntClear
-<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<LI><a href="#[2e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dmul
+<LI><a href="#[2f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ddiv
+<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2uiz
+<LI><a href="#[38]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDataGet
+<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCProcessorTrigger
+<LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntStatus
+<LI><a href="#[36]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCIntClear
+<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[3b]"></a>ADC0_InitSWTriggerSeq3_Ch9</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9))
+<P><STRONG><a name="[3d]"></a>ADC0_InitSWTriggerSeq3_Ch9</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.ADC0_InitSWTriggerSeq3_Ch9))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = ADC0_InitSWTriggerSeq3_Ch9 &rArr; GPIOPinTypeADC &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
-<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceStepConfigure
-<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceEnable
-<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDisable
-<LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceConfigure
-<LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<BR>[Calls]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
+<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceStepConfigure
+<LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceEnable
+<LI><a href="#[40]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceDisable
+<LI><a href="#[41]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADCSequenceConfigure
+<LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[34]"></a>ADCIntClear</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, adc.o(i.ADCIntClear))
-<BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<P><STRONG><a name="[36]"></a>ADCIntClear</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, adc.o(i.ADCIntClear))
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_Handler
 </UL>
 
-<P><STRONG><a name="[38]"></a>ADCIntStatus</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, adc.o(i.ADCIntStatus))
-<BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<P><STRONG><a name="[3a]"></a>ADCIntStatus</STRONG> (Thumb, 52 bytes, Stack size 0 bytes, adc.o(i.ADCIntStatus))
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 </UL>
 
-<P><STRONG><a name="[35]"></a>ADCProcessorTrigger</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, adc.o(i.ADCProcessorTrigger))
-<BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<P><STRONG><a name="[37]"></a>ADCProcessorTrigger</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, adc.o(i.ADCProcessorTrigger))
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_Handler
 </UL>
 
-<P><STRONG><a name="[3f]"></a>ADCSequenceConfigure</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, adc.o(i.ADCSequenceConfigure))
+<P><STRONG><a name="[41]"></a>ADCSequenceConfigure</STRONG> (Thumb, 78 bytes, Stack size 8 bytes, adc.o(i.ADCSequenceConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADCSequenceConfigure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 
-<P><STRONG><a name="[36]"></a>ADCSequenceDataGet</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceDataGet))
-<BR><BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<P><STRONG><a name="[38]"></a>ADCSequenceDataGet</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceDataGet))
+<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 <LI><a href="#[14]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_Handler
 </UL>
 
-<P><STRONG><a name="[3e]"></a>ADCSequenceDisable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceDisable))
-<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<P><STRONG><a name="[40]"></a>ADCSequenceDisable</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceDisable))
+<BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 
-<P><STRONG><a name="[41]"></a>ADCSequenceEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<P><STRONG><a name="[43]"></a>ADCSequenceEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, adc.o(i.ADCSequenceEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 
-<P><STRONG><a name="[40]"></a>ADCSequenceStepConfigure</STRONG> (Thumb, 154 bytes, Stack size 4 bytes, adc.o(i.ADCSequenceStepConfigure))
+<P><STRONG><a name="[42]"></a>ADCSequenceStepConfigure</STRONG> (Thumb, 154 bytes, Stack size 4 bytes, adc.o(i.ADCSequenceStepConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = ADCSequenceStepConfigure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 
-<P><STRONG><a name="[42]"></a>Backward1</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, pwm_10-30.o(i.Backward1))
+<P><STRONG><a name="[44]"></a>Backward1</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, pwm_10-30.o(i.Backward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Backward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[44]"></a>Backward2</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pwm_10-30.o(i.Backward2))
+<P><STRONG><a name="[46]"></a>Backward2</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pwm_10-30.o(i.Backward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Backward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
@@ -340,544 +360,544 @@ Global Symbols
 <P><STRONG><a name="[20]"></a>CC3000_UsynchCallback</STRONG> (Thumb, 178 bytes, Stack size 32 bytes, cc3000_basic_wifi_application.o(i.CC3000_UsynchCallback))
 <BR><BR>[Stack]<UL><LI>Max Depth = 168<LI>Call Chain = CC3000_UsynchCallback &rArr; UARTprintf &rArr; UARTvprintf &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
 <P><STRONG><a name="[5]"></a>CMD_bind</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cc3000_basic_wifi_application.o(i.CMD_bind))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = CMD_bind &rArr; bind &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[9]"></a>CMD_cc3000reset</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_cc3000reset))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = CMD_cc3000reset &rArr; wlan_start &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
+<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[2]"></a>CMD_connect</STRONG> (Thumb, 134 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.CMD_connect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = CMD_connect &rArr; wlan_connect &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrlen
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrlen
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[c]"></a>CMD_deletePolicy</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_deletePolicy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = CMD_deletePolicy &rArr; wlan_ioctl_set_connection_policy &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[b]"></a>CMD_disconnect</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_disconnect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = CMD_disconnect &rArr; wlan_disconnect &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<BR>[Calls]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[0]"></a>CMD_help</STRONG> (Thumb, 56 bytes, Stack size 16 bytes, cc3000_basic_wifi_application.o(i.CMD_help))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = CMD_help &rArr; UARTprintf &rArr; UARTvprintf &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[3]"></a>CMD_ipConfig</STRONG> (Thumb, 290 bytes, Stack size 56 bytes, cc3000_basic_wifi_application.o(i.CMD_ipConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = CMD_ipConfig &rArr; netapp_dhcp &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
+<BR>[Calls]<UL><LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[8]"></a>CMD_mdnsadvertise</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_mdnsadvertise))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = CMD_mdnsadvertise &rArr; UARTprintf &rArr; UARTvprintf &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Calls]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[d]"></a>CMD_ping</STRONG> (Thumb, 194 bytes, Stack size 56 bytes, cc3000_basic_wifi_application.o(i.CMD_ping))
 <BR><BR>[Stack]<UL><LI>Max Depth = 280<LI>Call Chain = CMD_ping &rArr; netapp_ping_send &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
-<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 582 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
+<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 596 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = CMD_receiveData &rArr; recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward2
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward1
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward2
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward1
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward2
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward1
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward2
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward1
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward2
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward1
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward2
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward1
-<LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
-<LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
-<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
-<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
+<BR>[Calls]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward2
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward1
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward2
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward1
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward2
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward1
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward2
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward1
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward2
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward1
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward2
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward1
+<LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
+<LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
+<LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
+<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2snprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[6]"></a>CMD_sendData</STRONG> (Thumb, 264 bytes, Stack size 56 bytes, cc3000_basic_wifi_application.o(i.CMD_sendData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = CMD_sendData &rArr; sendto &rArr; simple_link_send &rArr; hci_data_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
-<LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
-<LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
+<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
+<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strlen
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[1]"></a>CMD_smartConfig</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_smartConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = CMD_smartConfig &rArr; StartSmartConfig &rArr; wlan_smart_config_process &rArr; wlan_add_profile &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[a]"></a>CMD_socketClose</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.CMD_socketClose))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = CMD_socketClose &rArr; closesocket &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
 <P><STRONG><a name="[4]"></a>CMD_socketOpen</STRONG> (Thumb, 182 bytes, Stack size 16 bytes, cc3000_basic_wifi_application.o(i.CMD_socketOpen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = CMD_socketOpen &rArr; socket &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Calls]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
-<P><STRONG><a name="[64]"></a>CmdLineProcess</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, cmdline.o(i.CmdLineProcess))
+<P><STRONG><a name="[66]"></a>CmdLineProcess</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, cmdline.o(i.CmdLineProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = CmdLineProcess &rArr; strcmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
+<BR>[Calls]<UL><LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strcmp
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 <LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[6b]"></a>DispatcherUARTConfigure</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, cc3000lib.o(i.DispatcherUARTConfigure))
+<P><STRONG><a name="[6d]"></a>DispatcherUARTConfigure</STRONG> (Thumb, 152 bytes, Stack size 24 bytes, cc3000lib.o(i.DispatcherUARTConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = DispatcherUARTConfigure &rArr; UARTStdioConfig &rArr; UARTFlushTx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
-<LI><a href="#[6c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFIFOLevelSet
-<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTClockSourceSet
+<BR>[Calls]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
+<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFIFOLevelSet
+<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTClockSourceSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
 </UL>
 
-<P><STRONG><a name="[51]"></a>DotDecimalDecoder</STRONG> (Thumb, 148 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.DotDecimalDecoder))
+<P><STRONG><a name="[53]"></a>DotDecimalDecoder</STRONG> (Thumb, 148 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.DotDecimalDecoder))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = DotDecimalDecoder &rArr; ustrstr &rArr; ustrncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
-<LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
+<BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrtoul
+<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_ping
 <LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_ipConfig
 </UL>
 
-<P><STRONG><a name="[c6]"></a>FPUEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, fpu.o(i.FPUEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[c8]"></a>FPUEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, fpu.o(i.FPUEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[c7]"></a>FPULazyStackingEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, fpu.o(i.FPULazyStackingEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[c9]"></a>FPULazyStackingEnable</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, fpu.o(i.FPULazyStackingEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[62]"></a>Forward1</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, pwm_10-30.o(i.Forward1))
+<P><STRONG><a name="[64]"></a>Forward1</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, pwm_10-30.o(i.Forward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Forward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[61]"></a>Forward2</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pwm_10-30.o(i.Forward2))
+<P><STRONG><a name="[63]"></a>Forward2</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, pwm_10-30.o(i.Forward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = Forward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[70]"></a>GPIODirModeSet</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(i.GPIODirModeSet))
-<BR><BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
+<P><STRONG><a name="[72]"></a>GPIODirModeSet</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, gpio.o(i.GPIODirModeSet))
+<BR><BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
 </UL>
 
-<P><STRONG><a name="[9c]"></a>GPIOIntDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntDisable))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[9e]"></a>GPIOIntDisable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntDisable))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 <LI><a href="#[1a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WlanInterruptDisable
 </UL>
 
-<P><STRONG><a name="[9d]"></a>GPIOIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[9f]"></a>GPIOIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 <LI><a href="#[1b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WlanInterruptEnable
 </UL>
 
-<P><STRONG><a name="[c8]"></a>GPIOIntTypeSet</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntTypeSet))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[ca]"></a>GPIOIntTypeSet</STRONG> (Thumb, 80 bytes, Stack size 0 bytes, gpio.o(i.GPIOIntTypeSet))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[71]"></a>GPIOPadConfigSet</STRONG> (Thumb, 314 bytes, Stack size 28 bytes, gpio.o(i.GPIOPadConfigSet))
+<P><STRONG><a name="[73]"></a>GPIOPadConfigSet</STRONG> (Thumb, 314 bytes, Stack size 28 bytes, gpio.o(i.GPIOPadConfigSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = GPIOPadConfigSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
+<BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeADC
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
 </UL>
 
-<P><STRONG><a name="[7d]"></a>GPIOPinConfigure</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinConfigure))
-<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigure
+<P><STRONG><a name="[7f]"></a>GPIOPinConfigure</STRONG> (Thumb, 64 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinConfigure))
+<BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigure
 </UL>
 
-<P><STRONG><a name="[7e]"></a>GPIOPinRead</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinRead))
+<P><STRONG><a name="[80]"></a>GPIOPinRead</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinRead))
 <BR><BR>[Called By]<UL><LI><a href="#[1c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ReadWlanInterruptPin
 </UL>
 
-<P><STRONG><a name="[3d]"></a>GPIOPinTypeADC</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeADC))
+<P><STRONG><a name="[3f]"></a>GPIOPinTypeADC</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeADC))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GPIOPinTypeADC &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<BR>[Called By]<UL><LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 
-<P><STRONG><a name="[72]"></a>GPIOPinTypeGPIOInput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOInput))
+<P><STRONG><a name="[74]"></a>GPIOPinTypeGPIOInput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOInput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GPIOPinTypeGPIOInput &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[73]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOOutput))
+<P><STRONG><a name="[75]"></a>GPIOPinTypeGPIOOutput</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypeGPIOOutput))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GPIOPinTypeGPIOOutput &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 </UL>
 
-<P><STRONG><a name="[74]"></a>GPIOPinTypePWM</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypePWM))
+<P><STRONG><a name="[76]"></a>GPIOPinTypePWM</STRONG> (Thumb, 28 bytes, Stack size 12 bytes, gpio.o(i.GPIOPinTypePWM))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = GPIOPinTypePWM &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
+<BR>[Calls]<UL><LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIODirModeSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
+<BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
 </UL>
 
-<P><STRONG><a name="[9e]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinWrite))
-<BR><BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<P><STRONG><a name="[a0]"></a>GPIOPinWrite</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, gpio.o(i.GPIOPinWrite))
+<BR><BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 <LI><a href="#[19]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;WriteWlanPin
 </UL>
 
-<P><STRONG><a name="[75]"></a>InitSysTick</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, board.o(i.InitSysTick))
+<P><STRONG><a name="[77]"></a>InitSysTick</STRONG> (Thumb, 28 bytes, Stack size 8 bytes, board.o(i.InitSysTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = InitSysTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickPeriodSet
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickIntEnable
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickEnable
+<BR>[Calls]<UL><LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickPeriodSet
+<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickIntEnable
+<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickEnable
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
 </UL>
 
-<P><STRONG><a name="[c9]"></a>IntEnable</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, interrupt.o(i.IntEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<P><STRONG><a name="[cb]"></a>IntEnable</STRONG> (Thumb, 92 bytes, Stack size 0 bytes, interrupt.o(i.IntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
 <P><STRONG><a name="[16]"></a>IntSpiGPIOHandler</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cc3000lib.o(i.IntSpiGPIOHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = IntSpiGPIOHandler &rArr; SpiReadData &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiCleanGPIOISR
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<BR>[Calls]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiCleanGPIOISR
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[5d]"></a>LBackward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LBackward1))
+<P><STRONG><a name="[5f]"></a>LBackward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LBackward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LBackward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[5a]"></a>LBackward2</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LBackward2))
+<P><STRONG><a name="[5c]"></a>LBackward2</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LBackward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LBackward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[5c]"></a>LForward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LForward1))
+<P><STRONG><a name="[5e]"></a>LForward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.LForward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LForward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[5b]"></a>LForward2</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, pwm_10-30.o(i.LForward2))
+<P><STRONG><a name="[5d]"></a>LForward2</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, pwm_10-30.o(i.LForward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = LForward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[c1]"></a>PWMGenConfigure</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, pwm.o(i.PWMGenConfigure))
+<P><STRONG><a name="[c3]"></a>PWMGenConfigure</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, pwm.o(i.PWMGenConfigure))
 <BR><BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c4]"></a>PWMGenEnable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwm.o(i.PWMGenEnable))
+<P><STRONG><a name="[c6]"></a>PWMGenEnable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, pwm.o(i.PWMGenEnable))
 <BR><BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c2]"></a>PWMGenPeriodSet</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, pwm.o(i.PWMGenPeriodSet))
+<P><STRONG><a name="[c4]"></a>PWMGenPeriodSet</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, pwm.o(i.PWMGenPeriodSet))
 <BR><BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[c3]"></a>PWMOutputState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pwm.o(i.PWMOutputState))
+<P><STRONG><a name="[c5]"></a>PWMOutputState</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, pwm.o(i.PWMOutputState))
 <BR><BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[43]"></a>PWMPulseWidthSet</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, pwm.o(i.PWMPulseWidthSet))
-<BR><BR>[Called By]<UL><LI><a href="#[58]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP
-<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward2
-<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward1
-<LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward2
-<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward1
-<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward2
-<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward1
-<LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward2
-<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward1
-<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward2
-<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward1
-<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward2
-<LI><a href="#[42]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward1
+<P><STRONG><a name="[45]"></a>PWMPulseWidthSet</STRONG> (Thumb, 32 bytes, Stack size 0 bytes, pwm.o(i.PWMPulseWidthSet))
+<BR><BR>[Called By]<UL><LI><a href="#[5a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STOP
+<LI><a href="#[60]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward2
+<LI><a href="#[61]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RForward1
+<LI><a href="#[5b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward2
+<LI><a href="#[62]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RBackward1
+<LI><a href="#[5d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward2
+<LI><a href="#[5e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LForward1
+<LI><a href="#[5c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward2
+<LI><a href="#[5f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LBackward1
+<LI><a href="#[63]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward2
+<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Forward1
+<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward2
+<LI><a href="#[44]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Backward1
 </UL>
 
-<P><STRONG><a name="[7c]"></a>PortFunctionInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, pwm_10-30.o(i.PortFunctionInit))
+<P><STRONG><a name="[7e]"></a>PortFunctionInit</STRONG> (Thumb, 88 bytes, Stack size 8 bytes, pwm_10-30.o(i.PortFunctionInit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = PortFunctionInit &rArr; GPIOPinTypePWM &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
-<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
-<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
+<BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypePWM
+<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[60]"></a>RBackward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RBackward1))
+<P><STRONG><a name="[62]"></a>RBackward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RBackward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RBackward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[59]"></a>RBackward2</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RBackward2))
+<P><STRONG><a name="[5b]"></a>RBackward2</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RBackward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RBackward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[5f]"></a>RForward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RForward1))
+<P><STRONG><a name="[61]"></a>RForward1</STRONG> (Thumb, 54 bytes, Stack size 8 bytes, pwm_10-30.o(i.RForward1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RForward1
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[5e]"></a>RForward2</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, pwm_10-30.o(i.RForward2))
+<P><STRONG><a name="[60]"></a>RForward2</STRONG> (Thumb, 56 bytes, Stack size 8 bytes, pwm_10-30.o(i.RForward2))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = RForward2
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
 <P><STRONG><a name="[1c]"></a>ReadWlanInterruptPin</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, board.o(i.ReadWlanInterruptPin))
-<BR><BR>[Calls]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
+<BR><BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinRead
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
-<P><STRONG><a name="[85]"></a>SSIBusy</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssi.o(i.SSIBusy))
-<BR><BR>[Called By]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiTriggerRxProcessing
-<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
+<P><STRONG><a name="[87]"></a>SSIBusy</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, ssi.o(i.SSIBusy))
+<BR><BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiTriggerRxProcessing
+<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
 </UL>
 
-<P><STRONG><a name="[86]"></a>SSIDMADisable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ssi.o(i.SSIDMADisable))
+<P><STRONG><a name="[88]"></a>SSIDMADisable</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, ssi.o(i.SSIDMADisable))
 <BR><BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 </UL>
 
-<P><STRONG><a name="[8b]"></a>SSIIntClear</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ssi.o(i.SSIIntClear))
-<BR><BR>[Called By]<UL><LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<P><STRONG><a name="[8d]"></a>SSIIntClear</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, ssi.o(i.SSIIntClear))
+<BR><BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 
-<P><STRONG><a name="[58]"></a>STOP</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, pwm_10-30.o(i.STOP))
+<P><STRONG><a name="[5a]"></a>STOP</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, pwm_10-30.o(i.STOP))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = STOP
 </UL>
-<BR>[Calls]<UL><LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
+<BR>[Calls]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMPulseWidthSet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[89]"></a>STREAM_TO_UINT16_f</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, cc3000lib.o(i.STREAM_TO_UINT16_f))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
+<P><STRONG><a name="[8b]"></a>STREAM_TO_UINT16_f</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, cc3000lib.o(i.STREAM_TO_UINT16_f))
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 </UL>
 
-<P><STRONG><a name="[b3]"></a>STREAM_TO_UINT32_f</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cc3000lib.o(i.STREAM_TO_UINT32_f))
-<BR><BR>[Called By]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<P><STRONG><a name="[b5]"></a>STREAM_TO_UINT32_f</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cc3000lib.o(i.STREAM_TO_UINT32_f))
+<BR><BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[7f]"></a>SimpleLinkWaitData</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cc3000lib.o(i.SimpleLinkWaitData))
+<P><STRONG><a name="[81]"></a>SimpleLinkWaitData</STRONG> (Thumb, 14 bytes, Stack size 8 bytes, cc3000lib.o(i.SimpleLinkWaitData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<BR>[Called By]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 
-<P><STRONG><a name="[81]"></a>SimpleLinkWaitEvent</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cc3000lib.o(i.SimpleLinkWaitEvent))
+<P><STRONG><a name="[83]"></a>SimpleLinkWaitEvent</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, cc3000lib.o(i.SimpleLinkWaitEvent))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Calls]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 
-<P><STRONG><a name="[79]"></a>SpiCleanGPIOISR</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiCleanGPIOISR))
+<P><STRONG><a name="[7b]"></a>SpiCleanGPIOISR</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiCleanGPIOISR))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiCleanGPIOISR
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntSpiGPIOHandler
 </UL>
 
-<P><STRONG><a name="[d0]"></a>SpiClose</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiClose))
+<P><STRONG><a name="[d2]"></a>SpiClose</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiClose))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiClose
 </UL>
-<BR>[Called By]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
+<BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
 </UL>
 
-<P><STRONG><a name="[c0]"></a>SpiConfigureHwMapping</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, cc3000lib.o(i.SpiConfigureHwMapping))
-<BR><BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
+<P><STRONG><a name="[c2]"></a>SpiConfigureHwMapping</STRONG> (Thumb, 56 bytes, Stack size 0 bytes, cc3000lib.o(i.SpiConfigureHwMapping))
+<BR><BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
 </UL>
 
-<P><STRONG><a name="[83]"></a>SpiFirstWrite</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiFirstWrite))
+<P><STRONG><a name="[85]"></a>SpiFirstWrite</STRONG> (Thumb, 108 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiFirstWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
 <BR>[Calls]<UL><LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
-<LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
+<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
+<BR>[Called By]<UL><LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
 </UL>
 
 <P><STRONG><a name="[15]"></a>SpiIntHandler</STRONG> (Thumb, 184 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiIntHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = SpiIntHandler &rArr; SpiReadDataCont &rArr; SpiReadData &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDMADisable
-<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiTriggerRxProcessing
-<LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<BR>[Calls]<UL><LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIDMADisable
+<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiTriggerRxProcessing
+<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[cf]"></a>SpiOpen</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiOpen))
+<P><STRONG><a name="[d1]"></a>SpiOpen</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiOpen))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiOpen
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
 </UL>
 
-<P><STRONG><a name="[87]"></a>SpiReadDataCont</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiReadDataCont))
+<P><STRONG><a name="[89]"></a>SpiReadDataCont</STRONG> (Thumb, 132 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiReadDataCont))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SpiReadDataCont &rArr; SpiReadData &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 </UL>
@@ -885,139 +905,139 @@ Global Symbols
 <P><STRONG><a name="[21]"></a>SpiReceiveHandler</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cc3000lib.o(i.SpiReceiveHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = SpiReceiveHandler &rArr; hci_unsolicited_event_handler &rArr; hci_unsol_event_handler &rArr; set_socket_active_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000lib.o(i.wlan_start)
 </UL>
-<P><STRONG><a name="[b5]"></a>SpiResumeSpi</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiResumeSpi))
+<P><STRONG><a name="[b7]"></a>SpiResumeSpi</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiResumeSpi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiResumeSpi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[88]"></a>SpiTriggerRxProcessing</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiTriggerRxProcessing))
+<P><STRONG><a name="[8a]"></a>SpiTriggerRxProcessing</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiTriggerRxProcessing))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = SpiTriggerRxProcessing
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 </UL>
 
-<P><STRONG><a name="[8e]"></a>SpiWrite</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, cc3000lib.o(i.SpiWrite))
+<P><STRONG><a name="[90]"></a>SpiWrite</STRONG> (Thumb, 98 bytes, Stack size 8 bytes, cc3000lib.o(i.SpiWrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
+<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<BR>[Called By]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
 </UL>
 
-<P><STRONG><a name="[67]"></a>StartSmartConfig</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, cc3000_basic_wifi_application.o(i.StartSmartConfig))
+<P><STRONG><a name="[69]"></a>StartSmartConfig</STRONG> (Thumb, 216 bytes, Stack size 16 bytes, cc3000_basic_wifi_application.o(i.StartSmartConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = StartSmartConfig &rArr; wlan_smart_config_process &rArr; wlan_add_profile &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
-<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
-<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
-<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_write_key
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
-<LI><a href="#[46]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
+<BR>[Calls]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_stop
+<LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
+<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_write_key
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOff
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_smartConfig
 </UL>
 
-<P><STRONG><a name="[ba]"></a>SysCtlClockFreqSet</STRONG> (Thumb, 672 bytes, Stack size 28 bytes, sysctl.o(i.SysCtlClockFreqSet))
+<P><STRONG><a name="[bc]"></a>SysCtlClockFreqSet</STRONG> (Thumb, 672 bytes, Stack size 28 bytes, sysctl.o(i.SysCtlClockFreqSet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = SysCtlClockFreqSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initClk
+<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initClk
 </UL>
 
-<P><STRONG><a name="[3c]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlPeripheralEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<P><STRONG><a name="[3e]"></a>SysCtlPeripheralEnable</STRONG> (Thumb, 36 bytes, Stack size 0 bytes, sysctl.o(i.SysCtlPeripheralEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
 </UL>
 
-<P><STRONG><a name="[78]"></a>SysTickEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, systick.o(i.SysTickEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
+<P><STRONG><a name="[7a]"></a>SysTickEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, systick.o(i.SysTickEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
 </UL>
 
 <P><STRONG><a name="[12]"></a>SysTickHandler</STRONG> (Thumb, 24 bytes, Stack size 8 bytes, board.o(i.SysTickHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = SysTickHandler &rArr; hci_unsolicited_event_handler &rArr; hci_unsol_event_handler &rArr; set_socket_active_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
+<BR>[Calls]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[77]"></a>SysTickIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, systick.o(i.SysTickIntEnable))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
+<P><STRONG><a name="[79]"></a>SysTickIntEnable</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, systick.o(i.SysTickIntEnable))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
 </UL>
 
-<P><STRONG><a name="[76]"></a>SysTickPeriodSet</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, systick.o(i.SysTickPeriodSet))
-<BR><BR>[Called By]<UL><LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
+<P><STRONG><a name="[78]"></a>SysTickPeriodSet</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, systick.o(i.SysTickPeriodSet))
+<BR><BR>[Called By]<UL><LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
 </UL>
 
-<P><STRONG><a name="[6d]"></a>UARTClockSourceSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, uart.o(i.UARTClockSourceSet))
-<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
+<P><STRONG><a name="[6f]"></a>UARTClockSourceSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, uart.o(i.UARTClockSourceSet))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
 </UL>
 
-<P><STRONG><a name="[6c]"></a>UARTFIFOLevelSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, uart.o(i.UARTFIFOLevelSet))
-<BR><BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
+<P><STRONG><a name="[6e]"></a>UARTFIFOLevelSet</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, uart.o(i.UARTFIFOLevelSet))
+<BR><BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
 </UL>
 
-<P><STRONG><a name="[98]"></a>UARTFlushRx</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, uartstdio.o(i.UARTFlushRx))
+<P><STRONG><a name="[9a]"></a>UARTFlushRx</STRONG> (Thumb, 36 bytes, Stack size 8 bytes, uartstdio.o(i.UARTFlushRx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UARTFlushRx
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
+<BR>[Called By]<UL><LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
 </UL>
 
-<P><STRONG><a name="[50]"></a>UARTFlushTx</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, uartstdio.o(i.UARTFlushTx))
+<P><STRONG><a name="[52]"></a>UARTFlushTx</STRONG> (Thumb, 52 bytes, Stack size 8 bytes, uartstdio.o(i.UARTFlushTx))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = UARTFlushTx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
 </UL>
 <BR>[Called By]<UL><LI><a href="#[0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_help
-<LI><a href="#[6e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
+<LI><a href="#[70]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioConfig
 </UL>
 
-<P><STRONG><a name="[6e]"></a>UARTStdioConfig</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, uartstdio.o(i.UARTStdioConfig))
+<P><STRONG><a name="[70]"></a>UARTStdioConfig</STRONG> (Thumb, 142 bytes, Stack size 32 bytes, uartstdio.o(i.UARTStdioConfig))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = UARTStdioConfig &rArr; UARTFlushTx
 </UL>
-<BR>[Calls]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
-<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushRx
+<BR>[Calls]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
+<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushRx
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
+<BR>[Called By]<UL><LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
 </UL>
 
 <P><STRONG><a name="[13]"></a>UARTStdioIntHandler</STRONG> (Thumb, 248 bytes, Stack size 24 bytes, uartstdio.o(i.UARTStdioIntHandler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = UARTStdioIntHandler &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferFull
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferFull
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[45]"></a>UARTprintf</STRONG> (Thumb, 18 bytes, Stack size 24 bytes, uartstdio.o(i.UARTprintf))
+<P><STRONG><a name="[47]"></a>UARTprintf</STRONG> (Thumb, 18 bytes, Stack size 24 bytes, uartstdio.o(i.UARTprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = UARTprintf &rArr; UARTvprintf &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTvprintf
+<BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTvprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_socketOpen
 <LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_socketClose
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
@@ -1033,447 +1053,447 @@ Global Symbols
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CC3000_UsynchCallback
 </UL>
 
-<P><STRONG><a name="[9b]"></a>UARTvprintf</STRONG> (Thumb, 420 bytes, Stack size 56 bytes, uartstdio.o(i.UARTvprintf))
+<P><STRONG><a name="[9d]"></a>UARTvprintf</STRONG> (Thumb, 420 bytes, Stack size 56 bytes, uartstdio.o(i.UARTvprintf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = UARTvprintf &rArr; UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+<BR>[Calls]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<BR>[Called By]<UL><LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
 </UL>
 
-<P><STRONG><a name="[99]"></a>UARTwrite</STRONG> (Thumb, 134 bytes, Stack size 32 bytes, uartstdio.o(i.UARTwrite))
+<P><STRONG><a name="[9b]"></a>UARTwrite</STRONG> (Thumb, 134 bytes, Stack size 32 bytes, uartstdio.o(i.UARTwrite))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = UARTwrite &rArr; UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
-<LI><a href="#[9a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferFull
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
+<BR>[Calls]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
+<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferFull
+<LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTvprintf
+<BR>[Called By]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTvprintf
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioIntHandler
 </UL>
 
-<P><STRONG><a name="[b0]"></a>UINT16_TO_STREAM_f</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, cc3000lib.o(i.UINT16_TO_STREAM_f))
-<BR><BR>[Called By]<UL><LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
-<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<P><STRONG><a name="[b2]"></a>UINT16_TO_STREAM_f</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, cc3000lib.o(i.UINT16_TO_STREAM_f))
+<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
+<LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
+<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
 </UL>
 
-<P><STRONG><a name="[ac]"></a>UINT32_TO_STREAM_f</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, cc3000lib.o(i.UINT32_TO_STREAM_f))
-<BR><BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
-<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<P><STRONG><a name="[ae]"></a>UINT32_TO_STREAM_f</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, cc3000lib.o(i.UINT32_TO_STREAM_f))
+<BR><BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
+<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 
 <P><STRONG><a name="[1a]"></a>WlanInterruptDisable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, board.o(i.WlanInterruptDisable))
-<BR><BR>[Calls]<UL><LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntDisable
+<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntDisable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
 <P><STRONG><a name="[1b]"></a>WlanInterruptEnable</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, board.o(i.WlanInterruptEnable))
-<BR><BR>[Calls]<UL><LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntEnable
+<BR><BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntEnable
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
 <P><STRONG><a name="[19]"></a>WriteWlanPin</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, board.o(i.WriteWlanPin))
-<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
-<P><STRONG><a name="[9f]"></a>__0snprintf$1</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
+<P><STRONG><a name="[a1]"></a>__0snprintf$1</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[e2]"></a>__1snprintf$1</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
+<P><STRONG><a name="[e4]"></a>__1snprintf$1</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
 
-<P><STRONG><a name="[63]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1))
+<P><STRONG><a name="[65]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __2snprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[a2]"></a>__ARM_fpclassifyf</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fpclassifyf.o(i.__ARM_fpclassifyf))
-<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<P><STRONG><a name="[a4]"></a>__ARM_fpclassifyf</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, fpclassifyf.o(i.__ARM_fpclassifyf))
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 </UL>
 
-<P><STRONG><a name="[ae]"></a>__aeabi_errno_addr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr))
-<BR><BR>[Called By]<UL><LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<P><STRONG><a name="[b0]"></a>__aeabi_errno_addr</STRONG> (Thumb, 4 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr))
+<BR><BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
+<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 
-<P><STRONG><a name="[e3]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
+<P><STRONG><a name="[e5]"></a>__rt_errno_addr</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, errno.o(i.__aeabi_errno_addr), UNUSED)
 
-<P><STRONG><a name="[39]"></a>__hardfp_powf</STRONG> (Thumb, 1550 bytes, Stack size 32 bytes, powf.o(i.__hardfp_powf))
+<P><STRONG><a name="[3b]"></a>__hardfp_powf</STRONG> (Thumb, 1550 bytes, Stack size 32 bytes, powf.o(i.__hardfp_powf))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = __hardfp_powf &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
+<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_f2d
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
-<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_underflow
-<LI><a href="#[a2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassifyf
-<LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
-<LI><a href="#[31]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
+<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__mathlib_flt_underflow
+<LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__ARM_fpclassifyf
+<LI><a href="#[a3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__set_errno
+<LI><a href="#[33]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_d2f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[37]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
-</UL>
-
-<P><STRONG><a name="[e4]"></a>__mathlib_powf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, powf.o(i.__hardfp_powf), UNUSED)
-
-<P><STRONG><a name="[a3]"></a>__mathlib_flt_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_underflow))
-<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InSeq3
 </UL>
 
-<P><STRONG><a name="[e5]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+<P><STRONG><a name="[e6]"></a>__mathlib_powf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, powf.o(i.__hardfp_powf), UNUSED)
 
-<P><STRONG><a name="[e6]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
-
-<P><STRONG><a name="[e7]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
-
-<P><STRONG><a name="[a1]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
-<BR><BR>[Called By]<UL><LI><a href="#[39]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+<P><STRONG><a name="[a5]"></a>__mathlib_flt_underflow</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, funder.o(i.__mathlib_flt_underflow))
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
 </UL>
 
-<P><STRONG><a name="[a7]"></a>aes_decrypt</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cc3000lib.o(i.aes_decrypt))
+<P><STRONG><a name="[e7]"></a>__scatterload_copy</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_copy), UNUSED)
+
+<P><STRONG><a name="[e8]"></a>__scatterload_null</STRONG> (Thumb, 2 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_null), UNUSED)
+
+<P><STRONG><a name="[e9]"></a>__scatterload_zeroinit</STRONG> (Thumb, 14 bytes, Stack size unknown bytes, handlers.o(i.__scatterload_zeroinit), UNUSED)
+
+<P><STRONG><a name="[a3]"></a>__set_errno</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, errno.o(i.__set_errno))
+<BR><BR>[Called By]<UL><LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__hardfp_powf
+</UL>
+
+<P><STRONG><a name="[a9]"></a>aes_decrypt</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cc3000lib.o(i.aes_decrypt))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = aes_decrypt &rArr; aes_decr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expandKey
-<LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decr
+<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;expandKey
+<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
 </UL>
 
-<P><STRONG><a name="[a9]"></a>aes_read_key</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cc3000lib.o(i.aes_read_key))
+<P><STRONG><a name="[ab]"></a>aes_read_key</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cc3000lib.o(i.aes_read_key))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = aes_read_key &rArr; nvmem_read &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<BR>[Calls]<UL><LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
 </UL>
 
-<P><STRONG><a name="[93]"></a>aes_write_key</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cc3000lib.o(i.aes_write_key))
+<P><STRONG><a name="[95]"></a>aes_write_key</STRONG> (Thumb, 12 bytes, Stack size 0 bytes, cc3000lib.o(i.aes_write_key))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = aes_write_key &rArr; nvmem_write &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
+<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[48]"></a>bind</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, cc3000lib.o(i.bind))
+<P><STRONG><a name="[4a]"></a>bind</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, cc3000lib.o(i.bind))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = bind &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_bind
 </UL>
 
-<P><STRONG><a name="[68]"></a>closesocket</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cc3000lib.o(i.closesocket))
+<P><STRONG><a name="[6a]"></a>closesocket</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cc3000lib.o(i.closesocket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = closesocket &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_socketClose
 </UL>
 
-<P><STRONG><a name="[56]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
+<P><STRONG><a name="[58]"></a>free</STRONG> (Thumb, 76 bytes, Stack size 8 bytes, malloc.o(i.free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[cc]"></a>get_socket_active_status</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cc3000lib.o(i.get_socket_active_status))
-<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<P><STRONG><a name="[ce]"></a>get_socket_active_status</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, cc3000lib.o(i.get_socket_active_status))
+<BR><BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
 </UL>
 
-<P><STRONG><a name="[ad]"></a>hci_command_send</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cc3000lib.o(i.hci_command_send))
+<P><STRONG><a name="[af]"></a>hci_command_send</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cc3000lib.o(i.hci_command_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 112<LI>Call Chain = hci_command_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
-<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
-<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
-<LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
-<LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
-<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
-<LI><a href="#[4d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
-<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
-<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
-<LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[48]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
-<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_start
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_set_prefix
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
+<LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_set_connection_policy
+<LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_ioctl_del_profile
+<LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_disconnect
+<LI><a href="#[4f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_connect
+<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_create_entry
+<LI><a href="#[56]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_ping_send
+<LI><a href="#[54]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;netapp_dhcp
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;bind
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 
-<P><STRONG><a name="[b1]"></a>hci_data_command_send</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_data_command_send))
+<P><STRONG><a name="[b3]"></a>hci_data_command_send</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_data_command_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = hci_data_command_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
+<BR>[Called By]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_write
 </UL>
 
-<P><STRONG><a name="[b2]"></a>hci_data_send</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_data_send))
+<P><STRONG><a name="[b4]"></a>hci_data_send</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_data_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 120<LI>Call Chain = hci_data_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<BR>[Called By]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
 </UL>
 
-<P><STRONG><a name="[80]"></a>hci_event_handler</STRONG> (Thumb, 782 bytes, Stack size 48 bytes, cc3000lib.o(i.hci_event_handler))
+<P><STRONG><a name="[82]"></a>hci_event_handler</STRONG> (Thumb, 782 bytes, Stack size 48 bytes, cc3000lib.o(i.hci_event_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 200<LI>Call Chain = hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
-<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_handle_patch_request
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiResumeSpi
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT32_f
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
+<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_handle_patch_request
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiResumeSpi
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT32_f
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
+<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
 </UL>
 
-<P><STRONG><a name="[b8]"></a>hci_patch_send</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, cc3000lib.o(i.hci_patch_send))
+<P><STRONG><a name="[ba]"></a>hci_patch_send</STRONG> (Thumb, 190 bytes, Stack size 32 bytes, cc3000lib.o(i.hci_patch_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[90]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWrite
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_handle_patch_request
+<BR>[Called By]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_handle_patch_request
 </UL>
 
-<P><STRONG><a name="[b6]"></a>hci_unsol_event_handler</STRONG> (Thumb, 454 bytes, Stack size 48 bytes, cc3000lib.o(i.hci_unsol_event_handler))
+<P><STRONG><a name="[b8]"></a>hci_unsol_event_handler</STRONG> (Thumb, 454 bytes, Stack size 48 bytes, cc3000lib.o(i.hci_unsol_event_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = hci_unsol_event_handler &rArr; set_socket_active_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
-<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT32_f
-<LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
+<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT32_f
+<LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;STREAM_TO_UINT16_f
 </UL>
-<BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Called By]<UL><LI><a href="#[8f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsolicited_event_handler
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[b7]"></a>hci_unsol_handle_patch_request</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_unsol_handle_patch_request))
+<P><STRONG><a name="[b9]"></a>hci_unsol_handle_patch_request</STRONG> (Thumb, 122 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_unsol_handle_patch_request))
 <BR><BR>[Stack]<UL><LI>Max Depth = 152<LI>Call Chain = hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_patch_send
 </UL>
-<BR>[Called By]<UL><LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Called By]<UL><LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[8d]"></a>hci_unsolicited_event_handler</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_unsolicited_event_handler))
+<P><STRONG><a name="[8f]"></a>hci_unsolicited_event_handler</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, cc3000lib.o(i.hci_unsolicited_event_handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = hci_unsolicited_event_handler &rArr; hci_unsol_event_handler &rArr; set_socket_active_status
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
-<LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiResumeSpi
+<BR>[Calls]<UL><LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
+<LI><a href="#[b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiResumeSpi
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[12]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysTickHandler
 <LI><a href="#[21]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReceiveHandler
 </UL>
 
-<P><STRONG><a name="[b9]"></a>initClk</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, board.o(i.initClk))
+<P><STRONG><a name="[bb]"></a>initClk</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, board.o(i.initClk))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = initClk &rArr; SysCtlClockFreqSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlClockFreqSet
+<BR>[Calls]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlClockFreqSet
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[bb]"></a>initDriver</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, cc3000_basic_wifi_application.o(i.initDriver))
+<P><STRONG><a name="[bd]"></a>initDriver</STRONG> (Thumb, 126 bytes, Stack size 32 bytes, cc3000_basic_wifi_application.o(i.initDriver))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = initDriver &rArr; wlan_start &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
-<LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
-<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_init
-<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
-<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
-<LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
-<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
+<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_start
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_set_event_mask
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_init
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[6d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DispatcherUARTConfigure
+<LI><a href="#[49]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;turnLedOn
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;InitSysTick
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[bf]"></a>initLEDs</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, board.o(i.initLEDs))
+<P><STRONG><a name="[c1]"></a>initLEDs</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, board.o(i.initLEDs))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = initLEDs &rArr; GPIOPinTypeGPIOOutput &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
+<BR>[Called By]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pio_init
 </UL>
 
-<P><STRONG><a name="[bd]"></a>init_spi</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cc3000lib.o(i.init_spi))
+<P><STRONG><a name="[bf]"></a>init_spi</STRONG> (Thumb, 22 bytes, Stack size 8 bytes, cc3000lib.o(i.init_spi))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = init_spi &rArr; SpiConfigure
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigureHwMapping
-<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigure
+<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigureHwMapping
+<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiConfigure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
 </UL>
 
 <P><STRONG><a name="[17]"></a>main</STRONG> (Thumb, 288 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.main))
 <BR><BR>[Stack]<UL><LI>Max Depth = 288<LI>Call Chain = main &rArr; initDriver &rArr; wlan_start &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
-<LI><a href="#[45]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
-<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMOutputState
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenPeriodSet
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenEnable
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenConfigure
-<LI><a href="#[64]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
-<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
-<LI><a href="#[3b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
+<BR>[Calls]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mdnsAdvertiser
+<LI><a href="#[47]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
+<LI><a href="#[7e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PortFunctionInit
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMOutputState
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenPeriodSet
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenEnable
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;PWMGenConfigure
+<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CmdLineProcess
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<LI><a href="#[3d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ADC0_InitSWTriggerSeq3_Ch9
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> entry9a.o(.ARM.Collect$$$$0000000B)
 </UL>
-<P><STRONG><a name="[55]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
+<P><STRONG><a name="[57]"></a>malloc</STRONG> (Thumb, 92 bytes, Stack size 20 bytes, malloc.o(i.malloc))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[c5]"></a>mdnsAdvertiser</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, cc3000lib.o(i.mdnsAdvertiser))
+<P><STRONG><a name="[c7]"></a>mdnsAdvertiser</STRONG> (Thumb, 88 bytes, Stack size 16 bytes, cc3000lib.o(i.mdnsAdvertiser))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = mdnsAdvertiser &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[17]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
 
-<P><STRONG><a name="[52]"></a>netapp_dhcp</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, cc3000lib.o(i.netapp_dhcp))
+<P><STRONG><a name="[54]"></a>netapp_dhcp</STRONG> (Thumb, 118 bytes, Stack size 24 bytes, cc3000lib.o(i.netapp_dhcp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = netapp_dhcp &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_ipConfig
 </UL>
 
-<P><STRONG><a name="[54]"></a>netapp_ping_send</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, cc3000lib.o(i.netapp_ping_send))
+<P><STRONG><a name="[56]"></a>netapp_ping_send</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, cc3000lib.o(i.netapp_ping_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = netapp_ping_send &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
 <BR>[Called By]<UL><LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_ping
 </UL>
 
-<P><STRONG><a name="[92]"></a>nvmem_create_entry</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, cc3000lib.o(i.nvmem_create_entry))
+<P><STRONG><a name="[94]"></a>nvmem_create_entry</STRONG> (Thumb, 52 bytes, Stack size 16 bytes, cc3000lib.o(i.nvmem_create_entry))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = nvmem_create_entry &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[aa]"></a>nvmem_read</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, cc3000lib.o(i.nvmem_read))
+<P><STRONG><a name="[ac]"></a>nvmem_read</STRONG> (Thumb, 78 bytes, Stack size 24 bytes, cc3000lib.o(i.nvmem_read))
 <BR><BR>[Stack]<UL><LI>Max Depth = 232<LI>Call Chain = nvmem_read &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_read_key
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_read_key
 </UL>
 
-<P><STRONG><a name="[ab]"></a>nvmem_write</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, cc3000lib.o(i.nvmem_write))
+<P><STRONG><a name="[ad]"></a>nvmem_write</STRONG> (Thumb, 82 bytes, Stack size 24 bytes, cc3000lib.o(i.nvmem_write))
 <BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = nvmem_write &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Called By]<UL><LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_write_key
+<BR>[Called By]<UL><LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_write_key
 </UL>
 
-<P><STRONG><a name="[bc]"></a>pio_init</STRONG> (Thumb, 180 bytes, Stack size 16 bytes, board.o(i.pio_init))
+<P><STRONG><a name="[be]"></a>pio_init</STRONG> (Thumb, 180 bytes, Stack size 16 bytes, board.o(i.pio_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 72<LI>Call Chain = pio_init &rArr; initLEDs &rArr; GPIOPinTypeGPIOOutput &rArr; GPIOPadConfigSet
 </UL>
-<BR>[Calls]<UL><LI><a href="#[3c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
+<BR>[Calls]<UL><LI><a href="#[3e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlPeripheralEnable
 <LI><a href="#[26]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SysCtlDelay
-<LI><a href="#[79]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiCleanGPIOISR
-<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntEnable
-<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
-<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
-<LI><a href="#[72]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
-<LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntTypeSet
-<LI><a href="#[9d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntEnable
-<LI><a href="#[9c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntDisable
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FPULazyStackingEnable
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FPUEnable
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
-<LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initClk
+<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiCleanGPIOISR
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntEnable
+<LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOOutput
+<LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinTypeGPIOInput
+<LI><a href="#[73]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPadConfigSet
+<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntTypeSet
+<LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntEnable
+<LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOIntDisable
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FPULazyStackingEnable
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;FPUEnable
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initLEDs
+<LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initClk
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
 </UL>
 
-<P><STRONG><a name="[57]"></a>recv</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, cc3000lib.o(i.recv))
+<P><STRONG><a name="[59]"></a>recv</STRONG> (Thumb, 20 bytes, Stack size 24 bytes, cc3000lib.o(i.recv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 272<LI>Call Chain = recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
+<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_recv
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
 </UL>
 
-<P><STRONG><a name="[66]"></a>send</STRONG> (Thumb, 18 bytes, Stack size 24 bytes, cc3000lib.o(i.send))
+<P><STRONG><a name="[68]"></a>send</STRONG> (Thumb, 18 bytes, Stack size 24 bytes, cc3000lib.o(i.send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = send &rArr; simple_link_send &rArr; hci_data_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
 </UL>
@@ -1487,302 +1507,302 @@ Global Symbols
 <P><STRONG><a name="[1f]"></a>sendWLFWPatch</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, cc3000_basic_wifi_application.o(i.sendWLFWPatch))
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
-<P><STRONG><a name="[65]"></a>sendto</STRONG> (Thumb, 18 bytes, Stack size 32 bytes, cc3000lib.o(i.sendto))
+<P><STRONG><a name="[67]"></a>sendto</STRONG> (Thumb, 18 bytes, Stack size 32 bytes, cc3000lib.o(i.sendto))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = sendto &rArr; simple_link_send &rArr; hci_data_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;simple_link_send
 </UL>
 <BR>[Called By]<UL><LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
 </UL>
 
-<P><STRONG><a name="[af]"></a>set_socket_active_status</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cc3000lib.o(i.set_socket_active_status))
+<P><STRONG><a name="[b1]"></a>set_socket_active_status</STRONG> (Thumb, 30 bytes, Stack size 8 bytes, cc3000lib.o(i.set_socket_active_status))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = set_socket_active_status
 </UL>
-<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
-<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
-<LI><a href="#[80]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
+<BR>[Called By]<UL><LI><a href="#[6b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;socket
+<LI><a href="#[6a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;closesocket
+<LI><a href="#[b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_unsol_event_handler
+<LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_event_handler
 </UL>
 
-<P><STRONG><a name="[69]"></a>socket</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cc3000lib.o(i.socket))
+<P><STRONG><a name="[6b]"></a>socket</STRONG> (Thumb, 80 bytes, Stack size 16 bytes, cc3000lib.o(i.socket))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = socket &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
-<LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;set_socket_active_status
+<LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_socketOpen
 </UL>
 
-<P><STRONG><a name="[46]"></a>turnLedOff</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, board.o(i.turnLedOff))
-<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<P><STRONG><a name="[48]"></a>turnLedOff</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, board.o(i.turnLedOff))
+<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_cc3000reset
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CC3000_UsynchCallback
 </UL>
 
-<P><STRONG><a name="[47]"></a>turnLedOn</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, board.o(i.turnLedOn))
-<BR><BR>[Calls]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
+<P><STRONG><a name="[49]"></a>turnLedOn</STRONG> (Thumb, 44 bytes, Stack size 0 bytes, board.o(i.turnLedOn))
+<BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinWrite
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_disconnect
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_cc3000reset
 <LI><a href="#[20]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CC3000_UsynchCallback
 </UL>
 
-<P><STRONG><a name="[4c]"></a>ustrlen</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ustdlib.o(i.ustrlen))
-<BR><BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
+<P><STRONG><a name="[4e]"></a>ustrlen</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, ustdlib.o(i.ustrlen))
+<BR><BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
 <LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_connect
 </UL>
 
-<P><STRONG><a name="[cd]"></a>ustrncmp</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, ustdlib.o(i.ustrncmp))
+<P><STRONG><a name="[cf]"></a>ustrncmp</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, ustdlib.o(i.ustrncmp))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ustrncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[6f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
+<BR>[Called By]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrstr
 </UL>
 
-<P><STRONG><a name="[6f]"></a>ustrstr</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ustdlib.o(i.ustrstr))
+<P><STRONG><a name="[71]"></a>ustrstr</STRONG> (Thumb, 42 bytes, Stack size 16 bytes, ustdlib.o(i.ustrstr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = ustrstr &rArr; ustrncmp
 </UL>
-<BR>[Calls]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrlen
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrncmp
+<BR>[Calls]<UL><LI><a href="#[4e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrlen
+<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;ustrncmp
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
 </UL>
 
-<P><STRONG><a name="[53]"></a>ustrtoul</STRONG> (Thumb, 154 bytes, Stack size 20 bytes, ustdlib.o(i.ustrtoul))
+<P><STRONG><a name="[55]"></a>ustrtoul</STRONG> (Thumb, 154 bytes, Stack size 20 bytes, ustdlib.o(i.ustrtoul))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = ustrtoul
 </UL>
-<BR>[Called By]<UL><LI><a href="#[51]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
+<BR>[Called By]<UL><LI><a href="#[53]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DotDecimalDecoder
 <LI><a href="#[6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_sendData
 <LI><a href="#[d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_ping
 </UL>
 
-<P><STRONG><a name="[ce]"></a>wlan_add_profile</STRONG> (Thumb, 456 bytes, Stack size 48 bytes, cc3000lib.o(i.wlan_add_profile))
+<P><STRONG><a name="[d0]"></a>wlan_add_profile</STRONG> (Thumb, 456 bytes, Stack size 48 bytes, cc3000lib.o(i.wlan_add_profile))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = wlan_add_profile &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_smart_config_process
 </UL>
 
-<P><STRONG><a name="[4d]"></a>wlan_connect</STRONG> (Thumb, 186 bytes, Stack size 40 bytes, cc3000lib.o(i.wlan_connect))
+<P><STRONG><a name="[4f]"></a>wlan_connect</STRONG> (Thumb, 186 bytes, Stack size 40 bytes, cc3000lib.o(i.wlan_connect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 240<LI>Call Chain = wlan_connect &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT16_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_connect
 </UL>
 
-<P><STRONG><a name="[4f]"></a>wlan_disconnect</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_disconnect))
+<P><STRONG><a name="[51]"></a>wlan_disconnect</STRONG> (Thumb, 40 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_disconnect))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = wlan_disconnect &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_disconnect
 </UL>
 
-<P><STRONG><a name="[be]"></a>wlan_init</STRONG> (Thumb, 36 bytes, Stack size 20 bytes, cc3000lib.o(i.wlan_init))
+<P><STRONG><a name="[c0]"></a>wlan_init</STRONG> (Thumb, 36 bytes, Stack size 20 bytes, cc3000lib.o(i.wlan_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = wlan_init
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
 </UL>
 
-<P><STRONG><a name="[8f]"></a>wlan_ioctl_del_profile</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_ioctl_del_profile))
+<P><STRONG><a name="[91]"></a>wlan_ioctl_del_profile</STRONG> (Thumb, 44 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_ioctl_del_profile))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = wlan_ioctl_del_profile &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[4e]"></a>wlan_ioctl_set_connection_policy</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_ioctl_set_connection_policy))
+<P><STRONG><a name="[50]"></a>wlan_ioctl_set_connection_policy</STRONG> (Thumb, 60 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_ioctl_set_connection_policy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = wlan_ioctl_set_connection_policy &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_deletePolicy
 </UL>
 
-<P><STRONG><a name="[95]"></a>wlan_set_event_mask</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_set_event_mask))
+<P><STRONG><a name="[97]"></a>wlan_set_event_mask</STRONG> (Thumb, 84 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_set_event_mask))
 <BR><BR>[Stack]<UL><LI>Max Depth = 208<LI>Call Chain = wlan_set_event_mask &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[94]"></a>wlan_smart_config_process</STRONG> (Thumb, 212 bytes, Stack size 48 bytes, cc3000lib.o(i.wlan_smart_config_process))
+<P><STRONG><a name="[96]"></a>wlan_smart_config_process</STRONG> (Thumb, 212 bytes, Stack size 48 bytes, cc3000lib.o(i.wlan_smart_config_process))
 <BR><BR>[Stack]<UL><LI>Max Depth = 296<LI>Call Chain = wlan_smart_config_process &rArr; wlan_add_profile &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
-<LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
-<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_read_key
-<LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
+<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wlan_add_profile
+<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;nvmem_read
+<LI><a href="#[ab]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_read_key
+<LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[90]"></a>wlan_smart_config_set_prefix</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_smart_config_set_prefix))
+<P><STRONG><a name="[92]"></a>wlan_smart_config_set_prefix</STRONG> (Thumb, 66 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_smart_config_set_prefix))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = wlan_smart_config_set_prefix &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[91]"></a>wlan_smart_config_start</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_smart_config_start))
+<P><STRONG><a name="[93]"></a>wlan_smart_config_start</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_smart_config_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = wlan_smart_config_start &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 </UL>
 
-<P><STRONG><a name="[4a]"></a>wlan_start</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_start))
+<P><STRONG><a name="[4c]"></a>wlan_start</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, cc3000lib.o(i.wlan_start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 216<LI>Call Chain = wlan_start &rArr; SimpleLinkWaitEvent &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiOpen
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiOpen
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
-<LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;initDriver
+<LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_cc3000reset
 </UL>
 
-<P><STRONG><a name="[49]"></a>wlan_stop</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_stop))
+<P><STRONG><a name="[4b]"></a>wlan_stop</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cc3000lib.o(i.wlan_stop))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = wlan_stop &rArr; SpiClose
 </UL>
-<BR>[Calls]<UL><LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiClose
+<BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiClose
 </UL>
-<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
+<BR>[Called By]<UL><LI><a href="#[69]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;StartSmartConfig
 <LI><a href="#[9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_cc3000reset
 </UL>
 <P>
 <H3>
 Local Symbols
 </H3>
-<P><STRONG><a name="[82]"></a>SpiConfigure</STRONG> (Thumb, 232 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiConfigure))
+<P><STRONG><a name="[84]"></a>SpiConfigure</STRONG> (Thumb, 232 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiConfigure))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = SpiConfigure
 </UL>
-<BR>[Calls]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
+<BR>[Calls]<UL><LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIOPinConfigure
 </UL>
-<BR>[Called By]<UL><LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
+<BR>[Called By]<UL><LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;init_spi
 </UL>
 
-<P><STRONG><a name="[8a]"></a>SpiDisableSSIDMAChannels</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiDisableSSIDMAChannels))
+<P><STRONG><a name="[8c]"></a>SpiDisableSSIDMAChannels</STRONG> (Thumb, 38 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiDisableSSIDMAChannels))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiDisableSSIDMAChannels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<BR>[Called By]<UL><LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 
-<P><STRONG><a name="[8c]"></a>SpiEnableSSIDMAChannels</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiEnableSSIDMAChannels))
+<P><STRONG><a name="[8e]"></a>SpiEnableSSIDMAChannels</STRONG> (Thumb, 48 bytes, Stack size 16 bytes, cc3000lib.o(i.SpiEnableSSIDMAChannels))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = SpiEnableSSIDMAChannels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
-<LI><a href="#[7b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
+<BR>[Called By]<UL><LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
+<LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadData
 </UL>
 
-<P><STRONG><a name="[7b]"></a>SpiReadData</STRONG> (Thumb, 114 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiReadData))
+<P><STRONG><a name="[7d]"></a>SpiReadData</STRONG> (Thumb, 114 bytes, Stack size 32 bytes, cc3000lib.o(i.SpiReadData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 48<LI>Call Chain = SpiReadData &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIIntClear
-<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiEnableSSIDMAChannels
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
+<BR>[Calls]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIIntClear
+<LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiEnableSSIDMAChannels
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
+<BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiReadDataCont
 <LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntSpiGPIOHandler
 </UL>
 
-<P><STRONG><a name="[7a]"></a>SpiWriteAsync</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiWriteAsync))
+<P><STRONG><a name="[7c]"></a>SpiWriteAsync</STRONG> (Thumb, 104 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiWriteAsync))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiEnableSSIDMAChannels
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
+<BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiEnableSSIDMAChannels
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
 </UL>
 <BR>[Called By]<UL><LI><a href="#[15]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiIntHandler
 <LI><a href="#[16]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IntSpiGPIOHandler
-<LI><a href="#[84]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
+<LI><a href="#[86]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteDataSynchronous
 </UL>
 
-<P><STRONG><a name="[84]"></a>SpiWriteDataSynchronous</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiWriteDataSynchronous))
+<P><STRONG><a name="[86]"></a>SpiWriteDataSynchronous</STRONG> (Thumb, 98 bytes, Stack size 24 bytes, cc3000lib.o(i.SpiWriteDataSynchronous))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
-<LI><a href="#[7a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
-<LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
+<BR>[Calls]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SSIBusy
+<LI><a href="#[7c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiWriteAsync
+<LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiDisableSSIDMAChannels
 </UL>
-<BR>[Called By]<UL><LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
+<BR>[Called By]<UL><LI><a href="#[85]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SpiFirstWrite
 </UL>
 
-<P><STRONG><a name="[a5]"></a>aes_decr</STRONG> (Thumb, 1240 bytes, Stack size 64 bytes, cc3000lib.o(i.aes_decr))
+<P><STRONG><a name="[a7]"></a>aes_decr</STRONG> (Thumb, 1240 bytes, Stack size 64 bytes, cc3000lib.o(i.aes_decr))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = aes_decr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;galois_mul2
+<BR>[Calls]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;galois_mul2
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
 </UL>
 
-<P><STRONG><a name="[a8]"></a>expandKey</STRONG> (Thumb, 210 bytes, Stack size 36 bytes, cc3000lib.o(i.expandKey))
+<P><STRONG><a name="[aa]"></a>expandKey</STRONG> (Thumb, 210 bytes, Stack size 36 bytes, cc3000lib.o(i.expandKey))
 <BR><BR>[Stack]<UL><LI>Max Depth = 36<LI>Call Chain = expandKey
 </UL>
-<BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
+<BR>[Called By]<UL><LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decrypt
 </UL>
 
-<P><STRONG><a name="[a6]"></a>galois_mul2</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, cc3000lib.o(i.galois_mul2))
-<BR><BR>[Called By]<UL><LI><a href="#[a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decr
+<P><STRONG><a name="[a8]"></a>galois_mul2</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, cc3000lib.o(i.galois_mul2))
+<BR><BR>[Called By]<UL><LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;aes_decr
 </UL>
 
-<P><STRONG><a name="[ca]"></a>simple_link_recv</STRONG> (Thumb, 90 bytes, Stack size 40 bytes, cc3000lib.o(i.simple_link_recv))
+<P><STRONG><a name="[cc]"></a>simple_link_recv</STRONG> (Thumb, 90 bytes, Stack size 40 bytes, cc3000lib.o(i.simple_link_recv))
 <BR><BR>[Stack]<UL><LI>Max Depth = 248<LI>Call Chain = simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
-<LI><a href="#[7f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_command_send
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[83]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitEvent
+<LI><a href="#[81]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SimpleLinkWaitData
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[57]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
+<BR>[Called By]<UL><LI><a href="#[59]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
 </UL>
 
-<P><STRONG><a name="[cb]"></a>simple_link_send</STRONG> (Thumb, 246 bytes, Stack size 64 bytes, cc3000lib.o(i.simple_link_send))
+<P><STRONG><a name="[cd]"></a>simple_link_send</STRONG> (Thumb, 246 bytes, Stack size 64 bytes, cc3000lib.o(i.simple_link_send))
 <BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = simple_link_send &rArr; hci_data_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
-<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_socket_active_status
-<LI><a href="#[ac]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
-<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
+<BR>[Calls]<UL><LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;hci_data_send
+<LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_socket_active_status
+<LI><a href="#[ae]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UINT32_TO_STREAM_f
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_errno_addr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[65]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
-<LI><a href="#[66]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
+<BR>[Called By]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;sendto
+<LI><a href="#[68]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;send
 </UL>
 
 <P><STRONG><a name="[f]"></a>NmiSR</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, startup_rvmdk.o(RESET))
@@ -1806,31 +1826,31 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[96]"></a>IsBufferEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uartstdio.o(i.IsBufferEmpty))
-<BR><BR>[Called By]<UL><LI><a href="#[50]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
-<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
+<P><STRONG><a name="[98]"></a>IsBufferEmpty</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, uartstdio.o(i.IsBufferEmpty))
+<BR><BR>[Called By]<UL><LI><a href="#[52]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTFlushTx
+<LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+<LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTPrimeTransmit
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioIntHandler
 </UL>
 
-<P><STRONG><a name="[9a]"></a>IsBufferFull</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, uartstdio.o(i.IsBufferFull))
-<BR><BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+<P><STRONG><a name="[9c]"></a>IsBufferFull</STRONG> (Thumb, 26 bytes, Stack size 0 bytes, uartstdio.o(i.IsBufferFull))
+<BR><BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioIntHandler
 </UL>
 
-<P><STRONG><a name="[97]"></a>UARTPrimeTransmit</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, uartstdio.o(i.UARTPrimeTransmit))
+<P><STRONG><a name="[99]"></a>UARTPrimeTransmit</STRONG> (Thumb, 108 bytes, Stack size 24 bytes, uartstdio.o(i.UARTPrimeTransmit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 24<LI>Call Chain = UARTPrimeTransmit
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
+<BR>[Calls]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsBufferEmpty
 </UL>
-<BR>[Called By]<UL><LI><a href="#[99]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
+<BR>[Called By]<UL><LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTwrite
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioIntHandler
 </UL>
 
-<P><STRONG><a name="[a0]"></a>_printf_core</STRONG> (Thumb, 334 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[a4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
+<P><STRONG><a name="[a2]"></a>_printf_core</STRONG> (Thumb, 334 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0snprintf$1
+<BR>[Called By]<UL><LI><a href="#[a1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0snprintf$1
 </UL>
 
 <P><STRONG><a name="[18]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printf1.o(i._snputc))

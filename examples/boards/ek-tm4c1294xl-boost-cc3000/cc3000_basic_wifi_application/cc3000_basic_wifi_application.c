@@ -363,10 +363,11 @@ void ADC0_InSeq3(void){
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
 	ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
-	ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
+	//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
+	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]-(67.0 - 6480.0));
 	
 	// get difference in reading between motors only when an object is close enough
-	if (ui32RightSensor <= 25 || ui32LeftSensor <= 25)  // if less than 60 cm
+	if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
 		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
 	else 
 		ui32SensorsDiff = 0;
@@ -1533,10 +1534,13 @@ CMD_receiveData(int argc, char **argv)
 								{
 //									obstacleInFront = true;
 									boolTurningRight = true;
-									ROM_SysCtlDelay(10000000);
+									boolTurningLeft = false;
+									boolMovingForward = false;
+									RForward1();
+									//ROM_SysCtlDelay(10000000);
 									//ROM_SysCtlDelay(20000000*0.2);
 								}
-								RForward1();
+								//RForward1();
 								
 								UARTprintf(" Turning right at speed 1\n\n");
  							}
@@ -1553,10 +1557,13 @@ CMD_receiveData(int argc, char **argv)
 								{
 //									obstacleInFront = true;
 									boolTurningLeft = true;
-									ROM_SysCtlDelay(10000000);
+									boolTurningRight = false;
+									boolMovingForward = false;
+									//ROM_SysCtlDelay(10000000);
 									//ROM_SysCtlDelay(20000000*0.2);
+									LForward1();
 								}	
-								LForward1();
+								//LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
 								//obstacleInFront = true;
  							}
@@ -1568,6 +1575,8 @@ CMD_receiveData(int argc, char **argv)
 									//ROM_SysCtlDelay(20000000*0.2);
 									STOP();
 									obstacleInFront = false;
+									boolTurningLeft = false;
+									boolTurningRight = false;
 								}
 								
 								// if already moving forward, don't send command again
@@ -1575,12 +1584,13 @@ CMD_receiveData(int argc, char **argv)
 								{
 									boolMovingForward = true;
 									//ROM_SysCtlDelay(20000000*0.2);
+									Forward1();
 								}
-								Forward1();
+								//Forward1();
 								
 							}
 							// append/convert sensor int data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32LeftSensor);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32RightSensor);
 							CmdLineProcess(send_data);
 							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
 							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
