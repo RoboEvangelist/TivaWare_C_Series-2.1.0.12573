@@ -366,7 +366,7 @@ void ADC0_InSeq3(void){
 	ui32RightSensor = 1.0/(powf(3.0, -5)*ui32IRValues[1]*1.0 - 0.0019);
 	
 	// get difference in reading between motors only when an object is close enough
-	if (ui32RightSensor <= 60 || ui32LeftSensor <= 60)  // if less than 60 cm
+	if (ui32RightSensor <= 25 || ui32LeftSensor <= 25)  // if less than 60 cm
 		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
 	else 
 		ui32SensorsDiff = 0;
@@ -1533,8 +1533,11 @@ CMD_receiveData(int argc, char **argv)
 								{
 //									obstacleInFront = true;
 									boolTurningRight = true;
-									RForward1();
+									ROM_SysCtlDelay(10000000);
+									//ROM_SysCtlDelay(20000000*0.2);
 								}
+								RForward1();
+								
 								UARTprintf(" Turning right at speed 1\n\n");
  							}
 							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
@@ -1550,16 +1553,19 @@ CMD_receiveData(int argc, char **argv)
 								{
 //									obstacleInFront = true;
 									boolTurningLeft = true;
-									LForward1();
-								}
+									ROM_SysCtlDelay(10000000);
+									//ROM_SysCtlDelay(20000000*0.2);
+								}	
+								LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
-								obstacleInFront = true;
+								//obstacleInFront = true;
  							}
 							else    // if difference is ~0 cm
 							{
 //								if (obstacleInFront)
 								if (boolTurningLeft || boolTurningRight)
 								{
+									//ROM_SysCtlDelay(20000000*0.2);
 									STOP();
 									obstacleInFront = false;
 								}
@@ -1568,14 +1574,17 @@ CMD_receiveData(int argc, char **argv)
 								if (!boolMovingForward)
 								{
 									boolMovingForward = true;
-									Forward1();
+									//ROM_SysCtlDelay(20000000*0.2);
 								}
-								UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
-								UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
+								Forward1();
+								
 							}
 							// append/convert sensor int data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32LeftSensor);
 							CmdLineProcess(send_data);
+							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
+							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
+							UARTprintf("\n\nSensor Difference: %d cm\n", ui32SensorsDiff);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
 						
@@ -2154,7 +2163,7 @@ main(void)
         //
         UARTgets(g_cInput,sizeof(g_cInput));
 */
-				ROM_SysCtlDelay(40000000);
+				ROM_SysCtlDelay(20000000);       // ~2 seconds = 40000000
         //
         // Pass the line from the user to the command processor.
         // It will be parsed and valid commands executed.
