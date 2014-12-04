@@ -355,8 +355,8 @@ void ADC0_InSeq3(void){
 	
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
-	ui32LeftSensor = 1.0/((37.0/648000.0)*ui32IRValues[0]*1.0 - (67.0/6480.0));
-	ui32RightSensor = 1.0/((37.0/648000.0)*ui32IRValues[1]*1.0 - (67.0/6480.0));
+	ui32LeftSensor = 1.0/(powf(3.0, -5)*ui32IRValues[0]*1.0 - 0.0019);
+	ui32RightSensor = 1.0/(powf(3.0, -5)*ui32IRValues[1]*1.0 - 0.0019);
 	
 	// get difference in reading between motors only when an object is close enough
 	if (ui32RightSensor <= 60 || ui32LeftSensor <= 60)  // if less than 60 cm
@@ -1536,7 +1536,7 @@ CMD_receiveData(int argc, char **argv)
 								UARTprintf(" Turning left at speed 1\n\n");
 								obstacleInFront = true;
  							}
-							else
+							else    // if difference is ~0 cm
 							{
 								if (obstacleInFront)
 								{
