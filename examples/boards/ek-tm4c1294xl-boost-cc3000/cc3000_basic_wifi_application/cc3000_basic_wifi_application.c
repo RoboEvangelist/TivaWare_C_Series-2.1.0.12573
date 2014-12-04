@@ -322,6 +322,7 @@ uint32_t ui32IRValues[2];              // each value represents a sensor data
 volatile uint32_t ui32LeftSensor;      // PE3
 volatile uint32_t ui32RightSensor;     // PE4
 //volatile uint32_t ui32FrontSensor;     // PE5
+volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	
@@ -1523,8 +1524,8 @@ CMD_receiveData(int argc, char **argv)
 									obstacleInFront = false;
 								}
 								Forward1();
-								UARTprintf("\n\nSensor Value: %d cm\n    '", ui32LeftSensor);
-								UARTprintf("\nSensor Value: %d cm\n\n    '", ui32RightSensor);
+								UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
+								UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
 							}
 							// append/convert sensor int data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32LeftSensor);
