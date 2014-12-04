@@ -4,7 +4,7 @@
 .\rvmdk\cc3000_basic_wifi_application.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
 .\rvmdk\cc3000_basic_wifi_application.o: C:\Keil\ARM\ARMCC\bin\..\include\math.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\cc3000\src\PWM_10-30.h
-.\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_types.h
+.\rvmdk\cc3000_basic_wifi_application.o: sensor.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/timer.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/rom.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/rom_map.h
@@ -18,6 +18,7 @@
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\utils/cmdline.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/uart.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/ssi.h
+.\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_types.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_memmap.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_gpio.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/sysctl.h

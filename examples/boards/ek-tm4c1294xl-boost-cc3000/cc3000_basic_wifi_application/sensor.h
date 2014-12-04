@@ -75,9 +75,10 @@ void ADC0_InSeq3(void){
 	
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
-	ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
+	//ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
+	ui32LeftSensor = 1.0/((37.0/648000)*ui32IRValues[0]*1.0-(67.0/6480.0));
 	//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]-(67.0 - 6480.0));
+	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]*1.0-(67.0/6480.0));
 	
 	// get difference in reading between motors only when an object is close enough
 	if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm

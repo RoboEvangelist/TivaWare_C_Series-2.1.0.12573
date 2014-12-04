@@ -26,6 +26,7 @@
 #include <stdbool.h>
 #include <math.h>
 #include "PWM_10-30.h"
+#include "sensor.h"
 #include "inc/hw_types.h"
 #include "driverlib/timer.h"
 #include "driverlib/rom.h"
@@ -316,74 +317,6 @@ __no_init uint8_t g_pui8CC3000_Rx_Buffer[CC3000_APP_BUFFER_SIZE +
 uint8_t g_pui8CC3000_Rx_Buffer[CC3000_APP_BUFFER_SIZE +
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 #endif
-
-// variables for the left and right IR sensors
-uint32_t ui32IRValues[2];              // each value represents a sensor data
-volatile uint32_t ui32LeftSensor;      // PE3
-volatile uint32_t ui32RightSensor;     // PE4
-//volatile uint32_t ui32FrontSensor;     // PE5
-volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
-
-// use these booleans to avoid sensing the same command over and over
-bool boolMovingForward = false;
-bool boolTurningLeft = false;
-bool boolTurningRight = false;
-bool boolMovingBack = false;
-bool boolStopped = false;
-
-void ADC0_InitSWTriggerSeq3_Ch9(void){ 
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
-	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
-		
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // activate the clock of E
-	while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
-	
-	// Enable PE3 PE4 PE5 as analog	
-	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
-		
-	ADCSequenceDisable(ADC0_BASE, 1); //disable ADC0 before the configuration is complete
-		
-	// use ADC0, SS1 (4 samples max), processor trigger, priority 0
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
-		
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0 - Left sensor
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
-	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8 - Middle sensor
-	ADCSequenceEnable(ADC0_BASE, 1);
-}
-
-void ADC0_InSeq3(void){  
-	ADCIntClear(ADC0_BASE, 1);
-	ADCProcessorTrigger(ADC0_BASE, 1);
-	while(!ADCIntStatus(ADC0_BASE, 1, false))
-	{
-	}
-	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
-	
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
-	//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]-(67.0 - 6480.0));
-	
-	// get difference in reading between motors only when an object is close enough
-	if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-	else 
-		ui32SensorsDiff = 0;
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	
-}
-
-//interrupt handler
-void ADC0_Handler(void)
-{
-		ADCIntClear(ADC0_BASE, 1);
-		ADCProcessorTrigger(ADC0_BASE, 1);
-		ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);
-}
-
 
 //*****************************************************************************
 //
@@ -1523,13 +1456,16 @@ CMD_receiveData(int argc, char **argv)
 							if (ui32SensorsDiff > 0)       // if right sensor > left sensor
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
-/*
-								if (!obstacleInFront)
+								if (!boolTurningRight)
 								{
 									STOP();
-									ROM_SysCtlDelay(100000);
+									ROM_SysCtlDelay(10000000);
 								}
-*/
+								RForward1();
+								UARTprintf(" Turning right at speed 1\n\n");
+								boolTurningRight = true;
+								boolMovingForward = false;
+								/*
 								if (!boolTurningRight)     // if previous state was not right turn
 								{
 //									obstacleInFront = true;
@@ -1540,54 +1476,47 @@ CMD_receiveData(int argc, char **argv)
 									//ROM_SysCtlDelay(10000000);
 									//ROM_SysCtlDelay(20000000*0.2);
 								}
+								*/
 								//RForward1();
-								
-								UARTprintf(" Turning right at speed 1\n\n");
  							}
 							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
-/*								if (!obstacleInFront)
+								if (!boolTurningLeft)
 								{
 									STOP();
-									ROM_SysCtlDelay(100000);
-								} 
-*/
-								if (!boolTurningLeft)    // if previous turn was left turn
+									ROM_SysCtlDelay(10000000);
+								}
+								LForward1();
+								UARTprintf(" Turning left at speed 1\n\n");
+								boolTurningLeft = true;
+								boolMovingForward = false;
+								/*
+								if (!boolTurningRight)     // if previous state was not right turn
 								{
 //									obstacleInFront = true;
-									boolTurningLeft = true;
-									boolTurningRight = false;
+									boolTurningRight = true;
+									boolTurningLeft = false;
 									boolMovingForward = false;
+									RForward1();
 									//ROM_SysCtlDelay(10000000);
 									//ROM_SysCtlDelay(20000000*0.2);
-									LForward1();
-								}	
-								//LForward1();
-								UARTprintf(" Turning left at speed 1\n\n");
-								//obstacleInFront = true;
+								}
+								*/
+								//RForward1();
  							}
 							else    // if difference is ~0 cm
 							{
 //								if (obstacleInFront)
-								if (boolTurningLeft || boolTurningRight)
+								if (obstacleInFront)
 								{
-									//ROM_SysCtlDelay(20000000*0.2);
 									STOP();
 									obstacleInFront = false;
-									boolTurningLeft = false;
 									boolTurningRight = false;
-								}
-								
-								// if already moving forward, don't send command again
-								if (!boolMovingForward)
-								{
+									boolTurningLeft = false;
 									boolMovingForward = true;
-									//ROM_SysCtlDelay(20000000*0.2);
-									Forward1();
 								}
-								//Forward1();
-								
+								Forward1();
 							}
 							// append/convert sensor int data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32RightSensor);
