@@ -1453,16 +1453,19 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							ADC0_InSeq3();     // update sensor readings
-							if (ui32SensorsDiff > 0)       // if right sensor > left sensor
+							//if (ui32SensorsDiff > 0)       // if right sensor > left sensor
+							if ((ui32LeftSensor < 10) && (ui32LeftSensor < ui32RightSensor))
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
 								if (!boolTurningRight)
 								{
 									STOP();
-									ROM_SysCtlDelay(10000000);
+									ROM_SysCtlDelay(1000000);
+									RForward1();
 								}
-								RForward1();
+								//RForward1();
 								UARTprintf(" Turning right at speed 1\n\n");
+								boolTurningLeft = false;
 								boolTurningRight = true;
 								boolMovingForward = false;
 								/*
@@ -1479,17 +1482,20 @@ CMD_receiveData(int argc, char **argv)
 								*/
 								//RForward1();
  							}
-							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
- 							{
+							//if (ui32SensorsDiff < 0)       // if right sensor < left sensor
+ 							else if ((ui32RightSensor < 10) && (ui32LeftSensor > ui32RightSensor))
+							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
 								if (!boolTurningLeft)
 								{
 									STOP();
-									ROM_SysCtlDelay(10000000);
+									ROM_SysCtlDelay(1000000);
+									LForward1();
 								}
-								LForward1();
+								//LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
 								boolTurningLeft = true;
+								boolTurningRight = false;
 								boolMovingForward = false;
 								/*
 								if (!boolTurningRight)     // if previous state was not right turn
@@ -1508,18 +1514,19 @@ CMD_receiveData(int argc, char **argv)
 							else    // if difference is ~0 cm
 							{
 //								if (obstacleInFront)
-								if (obstacleInFront)
+								if (!boolMovingForward)
 								{
 									STOP();
 									obstacleInFront = false;
 									boolTurningRight = false;
 									boolTurningLeft = false;
 									boolMovingForward = true;
+									Forward1();
 								}
-								Forward1();
+								//Forward1();
 							}
 							// append/convert sensor int data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32RightSensor);
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d_%d", ui32LeftSensor, ui32RightSensor);
 							CmdLineProcess(send_data);
 							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
 							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
