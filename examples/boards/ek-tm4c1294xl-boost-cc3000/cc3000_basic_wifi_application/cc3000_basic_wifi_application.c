@@ -339,25 +339,24 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 	// use ADC0, SS1 (4 samples max), processor trigger, priority 0
 	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
 		
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9
-	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0 - Left sensor
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
+	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8  Middle sensor
 	ADCSequenceEnable(ADC0_BASE, 1);
 }
 
-unsigned long ADC0_InSeq3(void){  
+void ADC0_InSeq3(void){  
 	ADCIntClear(ADC0_BASE, 1);
 	ADCProcessorTrigger(ADC0_BASE, 1);
 	while(!ADCIntStatus(ADC0_BASE, 1, false))
 	{
 	}
 	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
-	ui32LeftSensor = ui32IRValues[0];
-	ui32RightSensor = ui32IRValues[1];
+	ui32LeftSensor = 1.0/((37.0/648000.0)*ui32IRValues[0]*1.0 - (67.0/6480.0));
+	ui32RightSensor = 1.0/((37.0/648000.0)*ui32IRValues[1]*1.0 - (67.0/6480.0));
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
 	//return (1.0/(powf(7.0, -5)*ui32LeftSensor*1.0 - 0.0022));
-	return (1.0/((37.0/648000.0)*ui32LeftSensor*1.0 - (67.0/6480.0)));
 }
 
 //interrupt handler
@@ -1503,7 +1502,7 @@ CMD_receiveData(int argc, char **argv)
 						}
 						else   // autonomous mode on
 						{
-							sensor_reading = ADC0_InSeq3();
+							ADC0_InSeq3();     // update sensor readings
 							if (ui32LeftSensor < 25)       // if less than 24cm
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
@@ -1524,7 +1523,8 @@ CMD_receiveData(int argc, char **argv)
 									obstacleInFront = false;
 								}
 								Forward1();
-								UARTprintf("\n\nSensor Value: %d cm\n\n    '", ui32LeftSensor);
+								UARTprintf("\n\nSensor Value: %d cm\n    '", ui32LeftSensor);
+								UARTprintf("\nSensor Value: %d cm\n\n    '", ui32RightSensor);
 							}
 							// append/convert sensor int data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32LeftSensor);

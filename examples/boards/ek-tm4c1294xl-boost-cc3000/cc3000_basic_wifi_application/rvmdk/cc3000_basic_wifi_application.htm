@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\rvmdk\cc3000_basic_wifi_application.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\rvmdk\cc3000_basic_wifi_application.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Dec 03 16:14:31 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Wed Dec 03 16:34:58 2014
 <BR><P>
 <H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -251,8 +251,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_rvmdk.o(RESET)
 </UL>
-<P><STRONG><a name="[37]"></a>ADC0_InSeq3</STRONG> (Thumb, 116 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.ADC0_InSeq3))
-<BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = ADC0_InSeq3 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
+<P><STRONG><a name="[37]"></a>ADC0_InSeq3</STRONG> (Thumb, 160 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.ADC0_InSeq3))
+<BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = ADC0_InSeq3 &rArr; __aeabi_dsub &rArr; __aeabi_dadd &rArr; _double_epilogue &rArr; _double_round
 </UL>
 <BR>[Calls]<UL><LI><a href="#[30]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_ui2d
 <LI><a href="#[2c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_dsub
@@ -423,7 +423,7 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
-<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 584 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
+<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 592 bytes, Stack size 40 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
 <BR><BR>[Stack]<UL><LI>Max Depth = 312<LI>Call Chain = CMD_receiveData &rArr; recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
