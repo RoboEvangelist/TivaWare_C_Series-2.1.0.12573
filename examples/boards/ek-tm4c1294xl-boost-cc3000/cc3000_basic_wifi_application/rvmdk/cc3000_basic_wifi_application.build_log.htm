@@ -216,9 +216,9 @@ compiling cc3000_basic_wifi_application.c...
 ..\..\..\..\inc/hw_ints.h(462): warning:  #47-D: incompatible redefinition of macro "INT_WATCHDOG" (declared at line 66 of "..\..\..\..\inc/tm4c1294ncpdt.h")
   #define INT_WATCHDOG            INT_CONCAT(INT_WATCHDOG_, INT_DEVICE_CLASS)
 cc3000_basic_wifi_application.c(365): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-        ui32LeftSensor = 1.0/(powf(3.0, -5)*ui32IRValues[0]*1.0 - 0.0019);
+        ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
 cc3000_basic_wifi_application.c(366): warning:  #1035-D: single-precision operand implicitly converted to double-precision
-        ui32RightSensor = 1.0/(powf(3.0, -5)*ui32IRValues[1]*1.0 - 0.0019);
+        ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
 cc3000_basic_wifi_application.c(545): warning:  #68-D: integer conversion resulted in a change of sign
           if(psPingData->min_round_time == -1)
 cc3000_basic_wifi_application.c(1377): warning:  #223-D: function "STOP" declared implicitly
@@ -297,14 +297,6 @@ Program Size: Code=23320 RO-data=3588 RW-data=328 ZI-data=22880
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
 ".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 136 Warning(s).
 Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-</pre>
-</body>
-</html>
-ad "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.
 Programming Done.
