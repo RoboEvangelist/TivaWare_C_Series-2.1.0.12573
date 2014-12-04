@@ -324,6 +324,13 @@ volatile uint32_t ui32RightSensor;     // PE4
 //volatile uint32_t ui32FrontSensor;     // PE5
 volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
 
+// use these booleans to avoid sensing the same command over and over
+bool boolMovingForward = false;
+bool booltTurningLeft = false;
+bool boolTurningRight = false;
+bool boolMovingBack = false;
+bool boolStopped = false;
+
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
 	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
@@ -1515,11 +1522,13 @@ CMD_receiveData(int argc, char **argv)
 							if (ui32SensorsDiff > 0)       // if right sensor > left sensor
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
+/*
 								if (!obstacleInFront)
 								{
 									STOP();
 									ROM_SysCtlDelay(100000);
 								}
+*/
 								RForward1();
 								UARTprintf(" Turning right at speed 1\n\n");
 								obstacleInFront = true;
@@ -1527,11 +1536,12 @@ CMD_receiveData(int argc, char **argv)
 							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
-								if (!obstacleInFront)
+/*								if (!obstacleInFront)
 								{
 									STOP();
 									ROM_SysCtlDelay(100000);
-								}
+								} 
+*/
 								LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
 								obstacleInFront = true;
