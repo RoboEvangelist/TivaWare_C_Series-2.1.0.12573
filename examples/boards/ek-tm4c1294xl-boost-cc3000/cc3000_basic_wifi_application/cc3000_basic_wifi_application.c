@@ -326,7 +326,7 @@ volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sens
 
 // use these booleans to avoid sensing the same command over and over
 bool boolMovingForward = false;
-bool booltTurningLeft = false;
+bool boolTurningLeft = false;
 bool boolTurningRight = false;
 bool boolMovingBack = false;
 bool boolStopped = false;
@@ -1529,9 +1529,13 @@ CMD_receiveData(int argc, char **argv)
 									ROM_SysCtlDelay(100000);
 								}
 */
-								RForward1();
+								if (!boolTurningRight)     // if previous state was not right turn
+								{
+//									obstacleInFront = true;
+									boolTurningRight = true;
+									RForward1();
+								}
 								UARTprintf(" Turning right at speed 1\n\n");
-								obstacleInFront = true;
  							}
 							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
  							{
@@ -1542,18 +1546,30 @@ CMD_receiveData(int argc, char **argv)
 									ROM_SysCtlDelay(100000);
 								} 
 */
-								LForward1();
+								if (!boolTurningLeft)    // if previous turn was left turn
+								{
+//									obstacleInFront = true;
+									boolTurningLeft = true;
+									LForward1();
+								}
 								UARTprintf(" Turning left at speed 1\n\n");
 								obstacleInFront = true;
  							}
 							else    // if difference is ~0 cm
 							{
-								if (obstacleInFront)
+//								if (obstacleInFront)
+								if (boolTurningLeft || boolTurningRight)
 								{
 									STOP();
 									obstacleInFront = false;
 								}
-								Forward1();
+								
+								// if already moving forward, don't send command again
+								if (!boolMovingForward)
+								{
+									boolMovingForward = true;
+									Forward1();
+								}
 								UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
 								UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
 							}
