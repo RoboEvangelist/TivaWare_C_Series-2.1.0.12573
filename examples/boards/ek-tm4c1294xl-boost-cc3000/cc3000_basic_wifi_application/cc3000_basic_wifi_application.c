@@ -324,11 +324,7 @@ volatile uint32_t ui32RightSensor;     // PE4
 //volatile uint32_t ui32FrontSensor;     // PE5
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
-	//
-	//SYSCTL_RCGCGPIO_R |= SYSCTL_RCGCGPIO_R4;
-                                  // allow time for clock to stabilize
-  //while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
-		
+	
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
 	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
 		
