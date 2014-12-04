@@ -1512,9 +1512,21 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							ADC0_InSeq3();     // update sensor readings
-							if (ui32LeftSensor < 25)       // if less than 24cm
+							if (ui32SensorsDiff > 0)       // if right sensor > left sensor
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
+								if (!obstacleInFront)
+								{
+									STOP();
+									ROM_SysCtlDelay(10000000);
+								}
+								RForward1();
+								UARTprintf(" Turning right at speed 1\n\n");
+								obstacleInFront = true;
+ 							}
+							if (ui32SensorsDiff < 0)       // if right sensor < left sensor
+ 							{
+								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
 								if (!obstacleInFront)
 								{
 									STOP();
