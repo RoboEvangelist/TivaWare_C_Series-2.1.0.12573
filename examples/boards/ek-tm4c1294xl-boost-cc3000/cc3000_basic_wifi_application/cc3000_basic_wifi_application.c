@@ -1518,7 +1518,7 @@ CMD_receiveData(int argc, char **argv)
 								if (!obstacleInFront)
 								{
 									STOP();
-									ROM_SysCtlDelay(10000000);
+									ROM_SysCtlDelay(100000);
 								}
 								RForward1();
 								UARTprintf(" Turning right at speed 1\n\n");
@@ -1530,7 +1530,7 @@ CMD_receiveData(int argc, char **argv)
 								if (!obstacleInFront)
 								{
 									STOP();
-									ROM_SysCtlDelay(10000000);
+									ROM_SysCtlDelay(100000);
 								}
 								LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
