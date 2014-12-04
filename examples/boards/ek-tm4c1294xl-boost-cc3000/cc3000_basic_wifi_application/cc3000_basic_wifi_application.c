@@ -325,7 +325,6 @@ volatile uint32_t ui32RightSensor;     // PE4
 volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
 
 void ADC0_InitSWTriggerSeq3_Ch9(void){ 
-	
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
 	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
 		
@@ -342,7 +341,7 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 		
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0 - Left sensor
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
-	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8  Middle sensor
+	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8 - Middle sensor
 	ADCSequenceEnable(ADC0_BASE, 1);
 }
 
@@ -353,11 +352,20 @@ void ADC0_InSeq3(void){
 	{
 	}
 	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
-	ui32LeftSensor = 1.0/((37.0/648000.0)*ui32IRValues[0]*1.0 - (67.0/6480.0));
-	ui32RightSensor = 1.0/((37.0/648000.0)*ui32IRValues[1]*1.0 - (67.0/6480.0));
+	
 	// resutl is given in voltage, and the formula gives (1/cm)
 	// so we invert the result of the convertion to get (cm)
-	//return (1.0/(powf(7.0, -5)*ui32LeftSensor*1.0 - 0.0022));
+	ui32LeftSensor = 1.0/((37.0/648000.0)*ui32IRValues[0]*1.0 - (67.0/6480.0));
+	ui32RightSensor = 1.0/((37.0/648000.0)*ui32IRValues[1]*1.0 - (67.0/6480.0));
+	
+	// get difference in reading between motors only when an object is close enough
+	if (ui32RightSensor <= 60 || ui32LeftSensor <= 60)  // if less than 60 cm
+		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
+	else 
+		ui32SensorsDiff = 0;
+	// resutl is given in voltage, and the formula gives (1/cm)
+	// so we invert the result of the convertion to get (cm)
+	
 }
 
 //interrupt handler
