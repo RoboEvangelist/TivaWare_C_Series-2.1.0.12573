@@ -1504,9 +1504,9 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							sensor_reading = ADC0_InSeq3();
-							if (sensor_reading < 25)       // if less than 24cm
+							if (ui32LeftSensor < 25)       // if less than 24cm
  							{
-								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", sensor_reading);
+								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
 								if (!obstacleInFront)
 								{
 									STOP();
@@ -1524,10 +1524,10 @@ CMD_receiveData(int argc, char **argv)
 									obstacleInFront = false;
 								}
 								Forward1();
-								UARTprintf("\n\nSensor Value: %d cm\n\n    '", sensor_reading);
+								UARTprintf("\n\nSensor Value: %d cm\n\n    '", ui32LeftSensor);
 							}
-							// append/convert sensor in data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", sensor_reading);
+							// append/convert sensor int data to char
+							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d", ui32LeftSensor);
 							CmdLineProcess(send_data);
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;

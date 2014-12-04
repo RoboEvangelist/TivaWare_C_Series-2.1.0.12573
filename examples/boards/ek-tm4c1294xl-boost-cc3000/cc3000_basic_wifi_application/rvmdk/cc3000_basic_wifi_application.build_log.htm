@@ -261,13 +261,15 @@ cc3000_basic_wifi_application.c(1311): warning:  #177-D: variable "ui32x" was de
       uint32_t ui32x = 0, ui32Count = 0;
 cc3000_basic_wifi_application.c(1311): warning:  #177-D: variable "ui32Count" was declared but never referenced
       uint32_t ui32x = 0, ui32Count = 0;
+cc3000_basic_wifi_application.c(1315): warning:  #550-D: variable "sensor_reading" was set but never used
+                unsigned long sensor_reading = 0;
 cc3000_basic_wifi_application.c(2036): warning:  #550-D: variable "i32CommandStatus" was set but never used
       int32_t i32CommandStatus;
 cc3000_basic_wifi_application.c(2047): warning:  #177-D: variable "sample" was declared but never referenced
           int32_t sample[CC3000_APP_BUFFER_SIZE +
 cc3000_basic_wifi_application.c(260): warning:  #177-D: variable "g_cInput" was declared but never referenced
   static char g_cInput[MAX_COMMAND_SIZE];
-cc3000_basic_wifi_application.c: 125 warnings, 0 errors
+cc3000_basic_wifi_application.c: 126 warnings, 0 errors
 compiling cc3000lib.c...
 ..\..\..\..\cc3000/src/host_driver/core_driver/socket.c(1021): warning:  #177-D: variable "tSocketSendEvent" was declared but never referenced
       tBsdReadReturnParams tSocketSendEvent;
@@ -285,12 +287,4 @@ compiling PWM_10-30.c...
 linking...
 Program Size: Code=21564 RO-data=3268 RW-data=320 ZI-data=22888  
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
-".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 131 Warning(s).
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-</pre>
-</body>
-</html>
+".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 132 Warning(s).
