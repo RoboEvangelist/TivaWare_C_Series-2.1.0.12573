@@ -1454,7 +1454,7 @@ CMD_receiveData(int argc, char **argv)
 						{
 							ADC0_InSeq3();     // update sensor readings
 							//if (ui32SensorsDiff > 0)       // if right sensor > left sensor
-							if ((ui32LeftSensor < 40) && (ui32LeftSensor < ui32RightSensor))
+							if ((ui32LeftSensor <= 30) && (ui32LeftSensor < ui32RightSensor))
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
 								if (!boolTurningRight)
@@ -1483,7 +1483,7 @@ CMD_receiveData(int argc, char **argv)
 								//RForward1();
  							}
 							//if (ui32SensorsDiff < 0)       // if right sensor < left sensor
- 							else if ((ui32RightSensor < 40) && (ui32LeftSensor > ui32RightSensor))
+ 							else if ((ui32RightSensor <= 30) && (ui32LeftSensor > ui32RightSensor))
 							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
 								if (!boolTurningLeft)
