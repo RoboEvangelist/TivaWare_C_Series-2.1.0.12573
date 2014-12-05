@@ -1453,67 +1453,38 @@ CMD_receiveData(int argc, char **argv)
 						else   // autonomous mode on
 						{
 							ADC0_InSeq3();     // update sensor readings
-							//if (ui32SensorsDiff > 0)       // if right sensor > left sensor
-							if ((ui32LeftSensor <= 30) && (ui32LeftSensor < ui32RightSensor))
+							if ((ui32LeftSensor <= ui8ObstacleDistance) 
+								&& (ui32LeftSensor < ui32RightSensor))
  							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32LeftSensor);
 								if (!boolTurningRight)
 								{
 									STOP();
-									ROM_SysCtlDelay(1000000);
+									ROM_SysCtlDelay(ui32TimeDelay);
 									RForward1();
 								}
-								//RForward1();
 								UARTprintf(" Turning right at speed 1\n\n");
 								boolTurningLeft = false;
 								boolTurningRight = true;
 								boolMovingForward = false;
-								/*
-								if (!boolTurningRight)     // if previous state was not right turn
-								{
-//									obstacleInFront = true;
-									boolTurningRight = true;
-									boolTurningLeft = false;
-									boolMovingForward = false;
-									RForward1();
-									//ROM_SysCtlDelay(10000000);
-									//ROM_SysCtlDelay(20000000*0.2);
-								}
-								*/
-								//RForward1();
  							}
-							//if (ui32SensorsDiff < 0)       // if right sensor < left sensor
- 							else if ((ui32RightSensor <= 30) && (ui32LeftSensor > ui32RightSensor))
+ 							else if ((ui32RightSensor <= ui8ObstacleDistance) 
+								&& (ui32LeftSensor > ui32RightSensor))
 							{
 								UARTprintf("\n\n Object too close to robot. Sensor Value: %d cm\n    ", ui32RightSensor);
 								if (!boolTurningLeft)
 								{
 									STOP();
-									ROM_SysCtlDelay(1000000);
+									ROM_SysCtlDelay(ui32TimeDelay);
 									LForward1();
 								}
-								//LForward1();
 								UARTprintf(" Turning left at speed 1\n\n");
 								boolTurningLeft = true;
 								boolTurningRight = false;
 								boolMovingForward = false;
-								/*
-								if (!boolTurningRight)     // if previous state was not right turn
-								{
-//									obstacleInFront = true;
-									boolTurningRight = true;
-									boolTurningLeft = false;
-									boolMovingForward = false;
-									RForward1();
-									//ROM_SysCtlDelay(10000000);
-									//ROM_SysCtlDelay(20000000*0.2);
-								}
-								*/
-								//RForward1();
  							}
 							else    // if difference is ~0 cm
 							{
-//								if (obstacleInFront)
 								if (!boolMovingForward)
 								{
 									STOP();
@@ -1523,7 +1494,6 @@ CMD_receiveData(int argc, char **argv)
 									boolMovingForward = true;
 									Forward1();
 								}
-								//Forward1();
 							}
 							// append/convert sensor int data to char
 							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d_%d", ui32LeftSensor, ui32RightSensor);
