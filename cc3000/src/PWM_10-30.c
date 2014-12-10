@@ -34,6 +34,7 @@ PortFunctionInit(void)
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_PWM0);
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOG);
+    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
 
     //
     // Enable pin PG0 for PWM0 M0PWM4
@@ -58,6 +59,12 @@ PortFunctionInit(void)
     //
     MAP_GPIOPinConfigure(GPIO_PF2_M0PWM2);
     MAP_GPIOPinTypePWM(GPIO_PORTF_BASE, GPIO_PIN_2);
+    
+    //
+    // Enable pin PA7 for GPIOOutput
+    //
+    GPIOPinTypeGPIOOutput(GPIO_PORTA_AHB_BASE, GPIO_PIN_7);
+    GPIO_PORTA_AHB_PUR_R |= 0x07; 
 }
 
 
@@ -183,4 +190,7 @@ void RBackward2(void)
 	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//100% duty cycle PF 1
 	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);				//10% duty cycle	PF 0
 }
-
+void Reset(void)
+{
+	GPIOPinWrite(GPIO_PORTA_AHB_BASE, GPIO_PIN_7, 0x00);	 	//intialize prta 7 to reset entire system 
+}
