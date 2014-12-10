@@ -38,7 +38,7 @@ volatile uint32_t ui32RightSensor;     // PE4
 volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
 
 // minimum obstacle avoidance threshold in cm
-volatile const uint8_t ui8ObstacleDistance = 50;
+volatile const uint8_t ui8ObstacleDistance = 30;
 // time delay
 volatile const uint32_t ui32TimeDelay = 1000000;
 
