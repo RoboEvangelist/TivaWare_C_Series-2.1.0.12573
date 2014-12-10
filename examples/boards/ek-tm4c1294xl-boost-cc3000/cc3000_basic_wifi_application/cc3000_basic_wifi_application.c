@@ -2048,6 +2048,10 @@ main(void)
 		ROM_SysCtlDelay((g_ui32SysClock /2));
     //ADCProcessorTrigger(ADC0_BASE, 1);		
 		i32CommandStatus = CmdLineProcess(receive_data);  // get data immediately
+		
+		// in case of socket timeout, then reset board
+		Reset();
+		
 		//i32CommandStatus = CmdLineProcess("smartconfig");  
     //
     // Loop forever waiting  for commands from PC...
