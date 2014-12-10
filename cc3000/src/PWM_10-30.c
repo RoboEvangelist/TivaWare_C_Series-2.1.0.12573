@@ -71,7 +71,7 @@ void PWMINIT(void)
 		PWMGenConfigure(PWM0_BASE, PWM_GEN_2, PWM_GEN_MODE_DOWN);
 		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2,8000);
 	
-		//for 500 Khz 1/500KHz which is 2000 micro seconds for 40MHz clock cycle it is 800 cycles
+		//for 5 Khz 1/5KHz which is 200 micro seconds for 40MHz clock cycle it is 8000 cycles
 		PWMGenConfigure(PWM0_BASE, PWM_GEN_1, PWM_GEN_MODE_DOWN);
 		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_1,8000);
 		PWMOutputState(PWM0_BASE, PWM_OUT_4_BIT, true);
@@ -89,67 +89,67 @@ void Forward1(void)
 	//UARTprintf(" F1 checked\n");
 	//PWMPulseWidthSet (PWM0_BASE, PWM_OUT_4, 4000);	// set the pwm duty cycle to .%
 	//PWMPulseWidthSet (PWM0_BASE, PWM_OUT_5, 400);	// set the PWM duty cycle to 50%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 2000);	// set the pwm duty cycle to .%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 200);	// set the PWM duty cycle to 50%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 2000);	// set the pwm duty cycle to 25%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 200);	// set the PWM duty cycle to 2.5%
 }
 void Forward2(void)
 {
 	//UARTprintf(" F2 checked\n");
 	//PWMPulseWidthSet (PWM0_BASE, PWM_OUT_4, 4000);	// set the pwm duty cycle to .%
 	//PWMPulseWidthSet (PWM0_BASE, PWM_OUT_5, 400);	// set the PWM duty cycle to 50%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 3000);	// set the pwm duty cycle to .%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 300);	// set the PWM duty cycle to 50%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 3000);	// set the pwm duty cycle to 37.5%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 300);	// set the PWM duty cycle to 3.75%
 }
 void Backward2(void)
 {
 	//UARTprintf(" B2 checked\n");
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 300);	// set the pwm duty cycle to .%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 3000);	// set the PWM duty cycle to 50%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 300);	// set the pwm duty cycle to 3.75%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 3000);	// set the PWM duty cycle to 37.5%
 }
 void Backward1(void)
 {
 	//UARTprintf(" B1 checked\n");
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 200);	// set the pwm duty cycle to .%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 2000);	// set the PWM duty cycle to 50%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 200);	// set the pwm duty cycle to 2.5%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 2000);	// set the PWM duty cycle to 25%
 }
 void STOP(void)
 {
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_4, 4000);	// set the pwm duty cycle to .%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_4, 4000);	// set the pwm duty cycle to 50%
 	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_5, 4000);	// set the PWM duty cycle to 50%
-	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 4000);	// set the pwm duty cycle to .%
+	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_3, 4000);	// set the pwm duty cycle to 50%
 	PWMPulseWidthSet (PWM0_BASE, PWM_OUT_2, 4000);	// set the PWM duty cycle to 50%
 }
 void LForward1(void)
 {
 	//UARTprintf(" LF1 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 2000);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 200);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 2000);			//25% duty cycle  PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 200);			//2.5% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//50% duty cycle  PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);			//5% duty cycle	  PG 1
 }
 void LForward2(void)
 {
 	//UARTprintf(" LF1 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 3000);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 300);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 3000);			//37.5% duty cycle PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 300);			//3.75% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//50% duty cycle PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);			//5% duty cycle	PG 1
 }
 void LBackward1(void)
 {
 	//UARTprintf(" LB1 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//2.5% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);			//25% duty cycle PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//50% duty cycle PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);			//5% duty cycle	PG 1
 }
 void LBackward2(void)
 {
 	//UARTprintf(" LB2 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//2.5% duty cycle PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);			//25% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 4000);			//50% duty cycle PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 400);			//5% duty cycle PG 1
 }
 void RForward1(void)
 {
@@ -162,18 +162,18 @@ void RForward1(void)
 void RForward2(void)
 {
 	//UARTprintf(" RF2 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 3000);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 300);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 3000);			//37.5% duty cycle PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 300);			//3.75% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//5% duty cycle PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);			//50% duty cycle PG 1
 }
 void RBackward1(void)
 {
 	//UARTprintf(" RB1 checked\n");
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//100% duty cycle PF 2
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);				//10% duty cycle	PF 3
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//100% duty cycle PF 1
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);				//10% duty cycle	PF 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_3, 200);			//2.5% duty cycle PF 3
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_2, 2000);			//25% duty cycle PF 2
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//5% duty cycle PG 0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);			//50% duty cycle PG 1
 }
 void RBackward2(void)
 {
