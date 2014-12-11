@@ -1375,9 +1375,9 @@
       </Doc>
       <Doc>
         <Name>.\cc3000_basic_wifi_application.c</Name>
-        <ColumnNumber>64</ColumnNumber>
+        <ColumnNumber>15</ColumnNumber>
         <TopLine>1493</TopLine>
-        <CurrentLine>1501</CurrentLine>
+        <CurrentLine>1502</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
