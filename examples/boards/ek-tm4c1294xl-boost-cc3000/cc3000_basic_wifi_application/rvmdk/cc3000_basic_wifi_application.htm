@@ -3,9 +3,9 @@
 <title>Static Call Graph - [.\rvmdk\cc3000_basic_wifi_application.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\rvmdk\cc3000_basic_wifi_application.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 11 10:20:58 2014
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Thu Dec 11 11:02:23 2014
 <BR><P>
-<H3>Maximum Stack Usage =        320 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        344 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
 CMD_receiveData &rArr; recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 <P>
@@ -59,7 +59,7 @@ Function Pointers
  <LI><a href="#[1a]">WlanInterruptDisable</a> from board.o(i.WlanInterruptDisable) referenced from cc3000_basic_wifi_application.o(i.initDriver)
  <LI><a href="#[1b]">WlanInterruptEnable</a> from board.o(i.WlanInterruptEnable) referenced from cc3000_basic_wifi_application.o(i.initDriver)
  <LI><a href="#[19]">WriteWlanPin</a> from board.o(i.WriteWlanPin) referenced from cc3000_basic_wifi_application.o(i.initDriver)
- <LI><a href="#[18]">_snputc</a> from printf1.o(i._snputc) referenced from printf1.o(i.__0snprintf$1)
+ <LI><a href="#[18]">_snputc</a> from printf3.o(i._snputc) referenced from printf3.o(i.__0snprintf$3)
  <LI><a href="#[17]">main</a> from cc3000_basic_wifi_application.o(i.main) referenced from entry9a.o(.ARM.Collect$$$$0000000B)
  <LI><a href="#[1d]">sendBootLoaderPatch</a> from cc3000_basic_wifi_application.o(i.sendBootLoaderPatch) referenced from cc3000_basic_wifi_application.o(i.initDriver)
  <LI><a href="#[1e]">sendDriverPatch</a> from cc3000_basic_wifi_application.o(i.sendDriverPatch) referenced from cc3000_basic_wifi_application.o(i.initDriver)
@@ -238,9 +238,9 @@ Global Symbols
 
 <P><STRONG><a name="[da]"></a>__scatterload_rt2</STRONG> (Thumb, 0 bytes, Stack size 0 bytes, init.o(.text), UNUSED)
 
-<P><STRONG><a name="[db]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
+<P><STRONG><a name="[db]"></a>__decompress</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
-<P><STRONG><a name="[dc]"></a>__decompress0</STRONG> (Thumb, 58 bytes, Stack size unknown bytes, __dczerorl.o(.text), UNUSED)
+<P><STRONG><a name="[dc]"></a>__decompress1</STRONG> (Thumb, 92 bytes, Stack size unknown bytes, __dczerorl2.o(.text), UNUSED)
 
 <P><STRONG><a name="[14]"></a>ADC0_Handler</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, cc3000_basic_wifi_application.o(i.ADC0_Handler))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = ADC0_Handler
@@ -423,8 +423,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(.data)
 </UL>
-<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 686 bytes, Stack size 48 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
-<BR><BR>[Stack]<UL><LI>Max Depth = 320<LI>Call Chain = CMD_receiveData &rArr; recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
+<P><STRONG><a name="[7]"></a>CMD_receiveData</STRONG> (Thumb, 720 bytes, Stack size 72 bytes, cc3000_basic_wifi_application.o(i.CMD_receiveData))
+<BR><BR>[Stack]<UL><LI>Max Depth = 344<LI>Call Chain = CMD_receiveData &rArr; recv &rArr; simple_link_recv &rArr; SimpleLinkWaitData &rArr; hci_event_handler &rArr; hci_unsol_handle_patch_request &rArr; hci_patch_send &rArr; SpiWrite &rArr; SpiFirstWrite &rArr; SpiWriteDataSynchronous &rArr; SpiWriteAsync &rArr; SpiEnableSSIDMAChannels
 </UL>
 <BR>[Calls]<UL><LI><a href="#[55]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;recv
 <LI><a href="#[43]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTprintf
@@ -1104,13 +1104,13 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> cc3000_basic_wifi_application.o(i.initDriver)
 </UL>
-<P><STRONG><a name="[9e]"></a>__0snprintf$1</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
+<P><STRONG><a name="[9e]"></a>__0snprintf$3</STRONG> (Thumb, 36 bytes, Stack size 32 bytes, printf3.o(i.__0snprintf$3), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_core
 </UL>
 
-<P><STRONG><a name="[dd]"></a>__1snprintf$1</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1), UNUSED)
+<P><STRONG><a name="[dd]"></a>__1snprintf$3</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf3.o(i.__0snprintf$3), UNUSED)
 
-<P><STRONG><a name="[61]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf1.o(i.__0snprintf$1))
+<P><STRONG><a name="[61]"></a>__2snprintf</STRONG> (Thumb, 0 bytes, Stack size 32 bytes, printf3.o(i.__0snprintf$3))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = __2snprintf
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;CMD_receiveData
@@ -1808,14 +1808,14 @@ Local Symbols
 <LI><a href="#[13]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UARTStdioIntHandler
 </UL>
 
-<P><STRONG><a name="[9f]"></a>_printf_core</STRONG> (Thumb, 334 bytes, Stack size 88 bytes, printf1.o(i._printf_core), UNUSED)
+<P><STRONG><a name="[9f]"></a>_printf_core</STRONG> (Thumb, 436 bytes, Stack size 96 bytes, printf3.o(i._printf_core), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_uidivmod
 </UL>
-<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0snprintf$1
+<BR>[Called By]<UL><LI><a href="#[9e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__0snprintf$3
 </UL>
 
-<P><STRONG><a name="[18]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printf1.o(i._snputc))
-<BR>[Address Reference Count : 1]<UL><LI> printf1.o(i.__0snprintf$1)
+<P><STRONG><a name="[18]"></a>_snputc</STRONG> (Thumb, 22 bytes, Stack size 0 bytes, printf3.o(i._snputc))
+<BR>[Address Reference Count : 1]<UL><LI> printf3.o(i.__0snprintf$3)
 </UL><P>
 <H3>
 Undefined Global Symbols

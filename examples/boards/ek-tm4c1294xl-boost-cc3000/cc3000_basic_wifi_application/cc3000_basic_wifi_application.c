@@ -1261,6 +1261,7 @@ CMD_receiveData(int argc, char **argv)
     bool bRunOnce = true;
 		int BUFFER_SIZE = 100;
 		char send_data[BUFFER_SIZE];
+	  char ipAddress[16];
 		unsigned long sensor_reading = 0;
 		bool obstacleInFront = false;
 
@@ -1306,7 +1307,7 @@ CMD_receiveData(int argc, char **argv)
 							}
 							else
 							{
-								UARTprintf(" \n autonomous mode of...\n");
+								UARTprintf(" \n autonomous mode off...\n");
 								autonomousMode = false;
 								STOP();    // stop the robot and center the wheels in the front
 							}
@@ -1495,9 +1496,18 @@ CMD_receiveData(int argc, char **argv)
 									Forward1();
 								}
 							}
+
+							//
+							// Send data to client (GUI
+							//
+							// get destination IP address (server's IP address, or microcontroller's in this case).
+							snprintf(ipAddress, sizeof(ipAddress), "%c.%c.%c.%c", g_tSocketAddr.sa_data[2], g_tSocketAddr.sa_data[3],
+								g_tSocketAddr.sa_data[4], g_tSocketAddr.sa_data[5]);							
 							// append/convert sensor int data to char
-							snprintf(send_data, sizeof(send_data), "senddata 192.168.1.134 5005 %d_%d", ui32LeftSensor, ui32RightSensor);
-							CmdLineProcess(send_data);
+							snprintf(send_data, sizeof(send_data), "senddata %c 5005 %d_%d", ipAddress, ui32LeftSensor, ui32RightSensor);							
+							//send data to client (GUI)
+							CmdLineProcess(send_data);        
+							
 							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
 							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
 							UARTprintf("\n\nSensor Difference: %d cm\n", ui32SensorsDiff);
