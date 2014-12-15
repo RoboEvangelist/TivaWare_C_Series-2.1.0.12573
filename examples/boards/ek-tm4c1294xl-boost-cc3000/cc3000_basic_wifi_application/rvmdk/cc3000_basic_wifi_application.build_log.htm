@@ -271,15 +271,19 @@ cc3000_basic_wifi_application.c(1265): warning:  #177-D: variable "sensor_readin
                 unsigned long sensor_reading = 0;
 cc3000_basic_wifi_application.c(1266): warning:  #550-D: variable "obstacleInFront" was set but never used
                 bool obstacleInFront = false;
-cc3000_basic_wifi_application.c(2063): warning:  #223-D: function "Reset" declared implicitly
-                Reset();
-cc3000_basic_wifi_application.c(2018): warning:  #550-D: variable "i32CommandStatus" was set but never used
+cc3000_basic_wifi_application.c(2018): warning:  #177-D: variable "i32CommandStatus" was declared but never referenced
       int32_t i32CommandStatus;
+cc3000_basic_wifi_application.c(2026): warning:  #177-D: variable "tcp_char" was declared but never referenced
+                char tcp_char[] = "socketopen TCP";
+cc3000_basic_wifi_application.c(2027): warning:  #177-D: variable "bind_char" was declared but never referenced
+          char bind_char[] = "bind 5005";
+cc3000_basic_wifi_application.c(2028): warning:  #177-D: variable "receive_data" was declared but never referenced
+                char receive_data[] = "receivedata";
 cc3000_basic_wifi_application.c(2029): warning:  #177-D: variable "sample" was declared but never referenced
           int32_t sample[CC3000_APP_BUFFER_SIZE +
 cc3000_basic_wifi_application.c(261): warning:  #177-D: variable "g_cInput" was declared but never referenced
   static char g_cInput[MAX_COMMAND_SIZE];
-cc3000_basic_wifi_application.c: 131 warnings, 0 errors
+cc3000_basic_wifi_application.c: 133 warnings, 0 errors
 compiling cc3000lib.c...
 ..\..\..\..\cc3000/src/host_driver/core_driver/socket.c(1021): warning:  #177-D: variable "tSocketSendEvent" was declared but never referenced
       tBsdReadReturnParams tSocketSendEvent;
@@ -295,19 +299,6 @@ compiling PWM_10-30.c...
   #define __PWM_10-30_H__
 ..\..\..\..\cc3000\src\PWM_10-30.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=22004 RO-data=3268 RW-data=332 ZI-data=22876  
+Program Size: Code=19068 RO-data=2548 RW-data=332 ZI-data=22876  
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
-".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 137 Warning(s).
-</pre>
-</body>
-</html>
-eries-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
+".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 139 Warning(s).

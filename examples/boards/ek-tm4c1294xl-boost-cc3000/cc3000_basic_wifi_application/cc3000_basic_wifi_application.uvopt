@@ -182,10 +182,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>15</ColumnNumber>
+      <ColumnNumber>4</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>1493</TopLine>
-      <CurrentLine>1502</CurrentLine>
+      <TopLine>2042</TopLine>
+      <CurrentLine>2056</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\cc3000_basic_wifi_application.c</PathWithFileName>
       <FilenameWithoutPath>cc3000_basic_wifi_application.c</FilenameWithoutPath>
@@ -278,10 +278,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>0</ColumnNumber>
+      <ColumnNumber>1</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>170</TopLine>
-      <CurrentLine>193</CurrentLine>
+      <TopLine>137</TopLine>
+      <CurrentLine>209</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\cc3000\src\PWM_10-30.c</PathWithFileName>
       <FilenameWithoutPath>PWM_10-30.c</FilenameWithoutPath>

@@ -190,6 +190,24 @@ void RBackward2(void)
 	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_4, 400);			//100% duty cycle PF 1
 	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_5, 4000);				//10% duty cycle	PF 0
 }
+
+void servotest1(void)
+	//pulse width is 50% which keeps the motor in postion 0(0degree)
+{
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 40);	//50% duty cycle PF0
+}
+void servotest2(void)
+	//pulse width is 50% which keeps the motor in postion 1(90degree)
+{
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 60);	//50% duty cycle PF0
+}
+
+void servotest3(void)
+	//pulse width is 50% which keeps the motor in postion 1(90degree)
+{
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 80);	//50% duty cycle PF0
+}
+
 void Reset(void)
 {
 	GPIOPinWrite(GPIO_PORTA_AHB_BASE, GPIO_PIN_7, 0x00);	 	//intialize prta 7 to reset entire system 

@@ -2046,21 +2046,21 @@ main(void)
     //
     // Initialize all board specific components and allow board to connect to the internet.
     //
-    initDriver();
+    //initDriver();
 		ROM_SysCtlDelay((g_ui32SysClock /2)); // give board some time to load
 		//ADCProcessorTrigger(ADC0_BASE, 1);
 		//ROM_SysCtlDelay(1000000);
 		
 	
 		// initialize socket and start receiving data
-		i32CommandStatus = CmdLineProcess(tcp_char);      // open a TCP socket
-		i32CommandStatus = CmdLineProcess(bind_char);     // bind to port 5005
+	//	i32CommandStatus = CmdLineProcess(tcp_char);      // open a TCP socket
+		//i32CommandStatus = CmdLineProcess(bind_char);     // bind to port 5005
 		ROM_SysCtlDelay((g_ui32SysClock /2));
     //ADCProcessorTrigger(ADC0_BASE, 1);		
-		i32CommandStatus = CmdLineProcess(receive_data);  // get data immediately
+		//i32CommandStatus = CmdLineProcess(receive_data);  // get data immediately
 		
 		// in case of socket timeout, then reset board
-		Reset();
+		//Reset();
 		
 		//i32CommandStatus = CmdLineProcess("smartconfig");  
     //
