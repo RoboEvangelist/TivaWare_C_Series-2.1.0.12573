@@ -11,3 +11,4 @@
 .\toggle_timer_interrupt_tivaware.o: ..\..\..\..\driverlib/interrupt.h
 .\toggle_timer_interrupt_tivaware.o: ..\..\..\..\driverlib/timer.h
 .\toggle_timer_interrupt_tivaware.o: ..\..\..\..\inc/tm4c1294ncpdt.h
+.\toggle_timer_interrupt_tivaware.o: ..\..\..\..\driverlib/pwm.h

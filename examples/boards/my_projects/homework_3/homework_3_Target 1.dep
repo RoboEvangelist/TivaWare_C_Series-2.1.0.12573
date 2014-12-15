@@ -1,0 +1,20 @@
+Dependencies for Project 'homework_3', Target 'Target 1': (DO NOT MODIFY !)
+F (.\homework_3.c)(0x548E6C71)(-c --cpu Cortex-M4.fp -D__EVAL -g -O0 --apcs=interwork -I..\..\..\.. --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C129-Drvmdk -DPART_TM4C1294NCPDT -DTM4C1294NCPDT-o .\homework_3.o --omf_browse .\homework_3.crf --depend .\homework_3.d)
+I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
+I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
+I (homework_3.h)(0x54401424)
+I (..\..\..\..\inc/hw_types.h)(0x5471A2AA)
+I (..\..\..\..\inc/hw_memmap.h)(0x5471A2A9)
+I (..\..\..\..\inc/hw_gpio.h)(0x5471A2A9)
+I (..\..\..\..\driverlib/sysctl.h)(0x5471A1D8)
+I (..\..\..\..\driverlib/pin_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/gpio.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/interrupt.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/timer.h)(0x5471A1D8)
+I (..\..\..\..\inc/tm4c1294ncpdt.h)(0x5471A2B3)
+I (..\..\..\..\driverlib/pwm.h)(0x5471A1D6)
+I (..\..\..\..\driverlib/fpu.h)(0x5471A1D6)
+F (.\homework_3.h)(0x54401424)()
+F (..\..\..\..\driverlib\rvmdk\driverlib.lib)(0x5489DEF7)()
+F (.\startup_rvmdk.S)(0x54402BFF)(--cpu Cortex-M4.fp --pd "__EVAL SETA 1" -g --apcs=interwork -I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\TI\TM4C129--list .\startup_rvmdk.lst --xref -o .\startup_rvmdk.o --depend .\startup_rvmdk.d)

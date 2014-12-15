@@ -1,0 +1,16 @@
+.\homework_3.o: homework_3.c
+.\homework_3.o: C:\Keil\ARM\ARMCC\bin\..\include\stdint.h
+.\homework_3.o: C:\Keil\ARM\ARMCC\bin\..\include\stdbool.h
+.\homework_3.o: homework_3.h
+.\homework_3.o: ..\..\..\..\inc/hw_types.h
+.\homework_3.o: ..\..\..\..\inc/hw_memmap.h
+.\homework_3.o: ..\..\..\..\inc/hw_gpio.h
+.\homework_3.o: ..\..\..\..\driverlib/sysctl.h
+.\homework_3.o: ..\..\..\..\driverlib/pin_map.h
+.\homework_3.o: ..\..\..\..\driverlib/rom_map.h
+.\homework_3.o: ..\..\..\..\driverlib/gpio.h
+.\homework_3.o: ..\..\..\..\driverlib/interrupt.h
+.\homework_3.o: ..\..\..\..\driverlib/timer.h
+.\homework_3.o: ..\..\..\..\inc/tm4c1294ncpdt.h
+.\homework_3.o: ..\..\..\..\driverlib/pwm.h
+.\homework_3.o: ..\..\..\..\driverlib/fpu.h
