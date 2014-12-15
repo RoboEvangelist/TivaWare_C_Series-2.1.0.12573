@@ -34,7 +34,7 @@ PortFunctionInit(void)
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_PWM0);
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
     MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOG);
-    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+    MAP_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOK);
 
     //
     // Enable pin PG0 for PWM0 M0PWM4
@@ -65,6 +65,11 @@ PortFunctionInit(void)
     //
     GPIOPinTypeGPIOOutput(GPIO_PORTA_AHB_BASE, GPIO_PIN_7);
     GPIO_PORTA_AHB_PUR_R |= 0x07; 
+		//
+		//Enable pin pk4 as pwm GPIOoutput
+		//
+		MAP_GPIOPinConfigure(GPIO_PK4_M0PWM6);
+    MAP_GPIOPinTypePWM(GPIO_PORTK_BASE, GPIO_PIN_4);
 }
 
 
@@ -75,9 +80,9 @@ void PWMINIT(void)
 		//int ui32SysClkFreq;
 		//ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480), 40000000); // configure the system clock to be 40MHz
 		PortFunctionInit();
-		PWMGenConfigure(PWM0_BASE, PWM_GEN_2, PWM_GEN_MODE_DOWN);
-		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2,8000);
-	
+		PWMGenConfigure(PWM0_BASE, PWM_GEN_2|PWM_GEN_3, PWM_GEN_MODE_DOWN);
+		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2|PWM_GEN_3,8000);
+		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_3,800);
 		//for 5 Khz 1/5KHz which is 200 micro seconds for 40MHz clock cycle it is 8000 cycles
 		PWMGenConfigure(PWM0_BASE, PWM_GEN_1, PWM_GEN_MODE_DOWN);
 		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_1,8000);
@@ -85,7 +90,8 @@ void PWMINIT(void)
 		PWMOutputState(PWM0_BASE, PWM_OUT_5_BIT, true);
 		PWMOutputState(PWM0_BASE, PWM_OUT_2_BIT, true);
 		PWMOutputState(PWM0_BASE, PWM_OUT_3_BIT, true);
-		PWMGenEnable(PWM0_BASE, PWM_GEN_2);
+		PWMOutputState(PWM0_BASE, PWM_OUT_6_BIT, true);
+		PWMGenEnable(PWM0_BASE, PWM_GEN_2|PWM_GEN_3); //PK4
 		PWMGenEnable(PWM0_BASE, PWM_GEN_1);
 	//PWMClockSet( PWM0_BASE,PWM_SYSCLK_DIV_1);     //set the PWM clk to 31250 HZ
 	
@@ -194,18 +200,18 @@ void RBackward2(void)
 void servotest1(void)
 	//pulse width is 50% which keeps the motor in postion 0(0degree)
 {
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 40);	//50% duty cycle PF0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 40);	//50% duty cycle PF0 PK4
 }
 void servotest2(void)
 	//pulse width is 50% which keeps the motor in postion 1(90degree)
 {
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 60);	//50% duty cycle PF0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 60);	//50% duty cycle PF0 PK4
 }
 
 void servotest3(void)
 	//pulse width is 50% which keeps the motor in postion 1(90degree)
 {
-	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_0, 80);	//50% duty cycle PF0
+	PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);	//50% duty cycle PF0 PK4
 }
 
 void Reset(void)
