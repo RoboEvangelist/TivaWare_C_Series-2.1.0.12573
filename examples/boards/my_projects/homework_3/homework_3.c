@@ -153,40 +153,40 @@ void Timer0A_Handler(void)
 				{
 					GPIO_PORTN_DATA_R =0x02;
 					//LED D1 on,D2 off
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 740);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 780);
 				}
 				else if(count==2)
 				{
 					GPIO_PORTN_DATA_R =0x01;
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 800);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);
 				}else if(count==3)
 				{
 					GPIO_PORTN_DATA_R =0x03;
 					//LED D1,D2 on
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 60);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 780);
 				}else if(count==4)
-				{
-					GPIO_PORTN_DATA_R =0x02;
-					//LED D1 on,D2 off
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 800);
-				}
-				else if(count==5)
 				{
 					GPIO_PORTN_DATA_R =0x02;
 					//LED D1 on,D2 off
 					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);
 				}
+				else if(count==5)
+				{
+					GPIO_PORTN_DATA_R =0x02;
+					//LED D1 on,D2 off
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 780);
+				}
 				else if(count==6)
 				{
 					GPIO_PORTN_DATA_R =0x02;
 					//LED D1 on,D2 off
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 800);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);
 				}
 				else
 				{
 					count=0;
 					GPIO_PORTN_DATA_R= 0x00;
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 40);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 780);
 					//LED D1,D2 off
 				}
 					
@@ -243,7 +243,7 @@ void GPIOPortJ_Handler(void)
 }	
 int main(void)
 	{			
-			unsigned long period = 64000000; //reload value to Timer0A to generate a second delay
+			unsigned long period = 14000000; //reload value to Timer0A to generate a second delay
 			PortFunctionInit();
 			//intialize ports
 			Timer0A_Init(period);
