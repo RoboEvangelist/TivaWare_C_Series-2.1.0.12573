@@ -28,6 +28,8 @@
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/tm4c1294ncpdt.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/interrupt.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/adc.h
+.\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/udma.h
+.\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_adc.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\cc3000\src\host_driver\core_driver\wlan.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\cc3000\src\host_driver\include\cc3000_common.h
 .\rvmdk\cc3000_basic_wifi_application.o: C:\Keil\ARM\ARMCC\bin\..\include\stdlib.h
@@ -43,7 +45,6 @@
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_ints.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_nvic.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\inc/hw_uart.h
-.\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\driverlib/udma.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\cc3000\src\spi\spi_version.h
 .\rvmdk\cc3000_basic_wifi_application.o: ..\..\..\..\cc3000\drivers\ek-tm4c129\board.h
 .\rvmdk\cc3000_basic_wifi_application.o: application_version.h

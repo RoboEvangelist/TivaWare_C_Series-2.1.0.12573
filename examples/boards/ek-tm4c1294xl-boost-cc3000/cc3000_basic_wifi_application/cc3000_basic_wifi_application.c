@@ -522,6 +522,8 @@ initDriver(void)
     // Initialize SPI
     //
     init_spi(1000000,g_ui32SysClock);
+	
+		ADC0_InitSWTriggerSeq3_Ch9();
 
     //
     // Enable processor interrupts.
@@ -1453,7 +1455,7 @@ CMD_receiveData(int argc, char **argv)
 						}
 						else   // autonomous mode on
 						{
-							ADC0_InSeq3();     // update sensor readings
+							//ADC0_InSeq3();     // update sensor readings
 							if ((ui32LeftSensor <= ui8ObstacleDistance) 
 								&& (ui32LeftSensor < ui32RightSensor))
  							{
@@ -2030,7 +2032,12 @@ main(void)
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 		
 		// initialize ports
-	  ADC0_InitSWTriggerSeq3_Ch9();
+	  //ADC0_InitSWTriggerSeq3_Ch9();
+		// ADC Interrupt initiation
+		//IntMasterEnable(); 
+		//ADCProcessorTrigger(ADC0_BASE, 1);
+	
+	
 		PortFunctionInit();
 		PWMGenConfigure(PWM0_BASE, PWM_GEN_2, PWM_GEN_MODE_DOWN);
 		PWMGenPeriodSet(PWM0_BASE, PWM_GEN_2, 4000);
@@ -2048,6 +2055,9 @@ main(void)
     //
     initDriver();
 		ROM_SysCtlDelay((g_ui32SysClock /2)); // give board some time to load
+		
+		// ADC Interrupt initiation
+		//IntMasterEnable(); 
 		//ADCProcessorTrigger(ADC0_BASE, 1);
 		//ROM_SysCtlDelay(1000000);
 		
