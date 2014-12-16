@@ -21,10 +21,8 @@ compiling cc3000_basic_wifi_application.c...
   #ifndef __PWM_10-30_H__
 ..\..\..\..\cc3000\src\PWM_10-30.h(39): warning:  #2775-D: white space is required between the macro name "__PWM_10" and its replacement text
   #define __PWM_10-30_H__
-sensor.h(370): warning:  #1-D: last line of file ends without a newline
-  }
-sensor.h(269): warning:  #550-D: variable "ui32Status" was set but never used
-                uint32_t ui32Status;    
+sensor.h(397): warning:  #1-D: last line of file ends without a newline
+  */
 ..\..\..\..\inc/hw_ints.h(352): warning:  #47-D: incompatible redefinition of macro "INT_ADC0SS0" (declared at line 62 of "..\..\..\..\inc/tm4c1294ncpdt.h")
   #define INT_ADC0SS0             INT_CONCAT(INT_ADC0SS0_, INT_DEVICE_CLASS)
 ..\..\..\..\inc/hw_ints.h(353): warning:  #47-D: incompatible redefinition of macro "INT_ADC0SS1" (declared at line 63 of "..\..\..\..\inc/tm4c1294ncpdt.h")
@@ -281,7 +279,7 @@ cc3000_basic_wifi_application.c(2039): warning:  #177-D: variable "sample" was d
           int32_t sample[CC3000_APP_BUFFER_SIZE +
 cc3000_basic_wifi_application.c(261): warning:  #177-D: variable "g_cInput" was declared but never referenced
   static char g_cInput[MAX_COMMAND_SIZE];
-cc3000_basic_wifi_application.c: 132 warnings, 0 errors
+cc3000_basic_wifi_application.c: 131 warnings, 0 errors
 compiling cc3000lib.c...
 ..\..\..\..\cc3000/src/host_driver/core_driver/socket.c(1021): warning:  #177-D: variable "tSocketSendEvent" was declared but never referenced
       tBsdReadReturnParams tSocketSendEvent;
@@ -297,14 +295,9 @@ compiling PWM_10-30.c...
   #define __PWM_10-30_H__
 ..\..\..\..\cc3000\src\PWM_10-30.c: 2 warnings, 0 errors
 linking...
-Program Size: Code=22824 RO-data=3268 RW-data=332 ZI-data=25948  
+Program Size: Code=22132 RO-data=3268 RW-data=348 ZI-data=24908  
 After Build - User command #1: fromelf --bin --output .\rvmdk\cc3000_basic_wifi_application.bin .\rvmdk\cc3000_basic_wifi_application.axf
-".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 138 Warning(s).
-Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
-Connecting: Mode=JTAG, Speed=1000000Hz
-Erase Done.
-Programming Done.
-Verify OK.
+".\rvmdk\cc3000_basic_wifi_application.axf" - 0 Error(s), 137 Warning(s).
 Load "C:\\ti\\TivaWare_C_Series-2.1.0.12573\\examples\\boards\\ek-tm4c1294xl-boost-cc3000\\cc3000_basic_wifi_application\\rvmdk\\cc3000_basic_wifi_application.axf" 
 Connecting: Mode=JTAG, Speed=1000000Hz
 Erase Done.

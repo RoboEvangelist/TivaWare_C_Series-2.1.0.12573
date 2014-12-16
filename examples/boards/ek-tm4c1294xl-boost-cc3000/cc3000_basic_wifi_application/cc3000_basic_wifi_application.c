@@ -1510,16 +1510,9 @@ CMD_receiveData(int argc, char **argv)
 							//send data to client (GUI)
 							CmdLineProcess(send_data);        
 							
-							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32BufA[1]);//ui32LeftSensor);
-							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32BufA[0]);//ui32RightSensor);
+							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
+							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
 							//UARTprintf("\n\nSensor Difference: %d cm\n", ui32SensorsDiff);
-							
-							if (handler_called)
-							{
-								UARTprintf("\n\nHandler Called\n\n", ui32LeftSensor);
-								//ROM_SysCtlDelay((g_ui32SysClock/3)*2);
-								handler_called = false;
-							}
 								
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
@@ -2040,7 +2033,7 @@ main(void)
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 		
 		// initialize ports
-		DMA_Init();
+		//DMA_Init();
 	  ADC0_Init();
 		// ADC Interrupt initiation
 		//IntMasterEnable(); 
@@ -2066,8 +2059,8 @@ main(void)
 		ROM_SysCtlDelay(g_ui32SysClock /2); // give board some time to load
 		
 		// ADC Interrupt initiation
-		//IntMasterEnable(); 
-		ADCProcessorTrigger(ADC0_BASE, 1);
+		IntMasterEnable(); 
+		ADCProcessorTrigger(ADC0_BASE, 0);
 		//ROM_SysCtlDelay(1000000);
 		
 	

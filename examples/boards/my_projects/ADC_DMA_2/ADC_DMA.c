@@ -1,35 +1,33 @@
-#include "PWM_10-30.h"
 #include <stdint.h>
-#include <stdio.h>
 #include <stdbool.h>
-#include <math.h>
-
+#include "inc/hw_memmap.h"
+#include "inc/hw_types.h"
+#include "driverlib/debug.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/adc.h"
+#include "inc/hw_adc.h"
+#include "driverlib/interrupt.h"
 #include "driverlib/timer.h"
-#include "driverlib/rom.h"
-#include "driverlib/rom_map.h"
-#include "driverlib/systick.h"
-#include "driverlib/fpu.h"
+#include "driverlib/udma.h"
+#include "inc/tm4c1294ncpdt.h"
+#include "driverlib/uart.h"
 #include "driverlib/debug.h"
 #include "utils/ustdlib.h"
 #include "utils/uartstdio.h"
-#include "utils/cmdline.h"
-#include "driverlib/uart.h"
-#include "driverlib/ssi.h"
-#include "inc/hw_types.h"
-#include	"driverlib/fpu.h"
-#include "inc/hw_memmap.h"
-#include "inc/hw_gpio.h"
-#include "driverlib/sysctl.h"
-#include "driverlib/pin_map.h"
-#include "driverlib/gpio.h"
-#include "driverlib/debug.h"
-#include "driverlib/pwm.h"
-#include "driverlib/pin_map.h"
-#include "inc/tm4c1294ncpdt.h"     // registers mapping file
-#include "driverlib/interrupt.h"
-#include "driverlib/adc.h"
-#include "driverlib/udma.h"
-#include "inc/hw_adc.h"
+
+//*****************************************************************************
+//
+//!
+//! In this project we use ADC0, SS0 to measure the data from the on-chip 
+//! temperature sensor. The ADC sampling is triggered by software whenever 
+//! four samples have been collected. Both the Celsius and the Fahreheit 
+//! temperatures are calcuated.
+//
+//*****************************************************************************
+
+volatile uint32_t ui32TempAvg;
+volatile uint32_t ui32TempValueC;
+volatile uint32_t ui32TempValueF;
 
 //*****************************************************************************
 //
@@ -52,9 +50,9 @@ uint8_t ui8ControlTable[1024] __attribute__ ((aligned(1024)));
 // The pair of ping-pong buffers for the converted results from ADC0 SS0.
 //
 //*****************************************************************************
-// we'll get 2 samples over 100 milli-seconds, since we are only using 4 SS samples per
+// we'll get 200 samples over 5 seconds, since we are only using 4 SS samples per
 // 100 ms
-#define ADC_BUF_SIZE	2
+#define ADC_BUF_SIZE	200
 static uint32_t ui32BufA[ADC_BUF_SIZE];
 static uint32_t ui32BufB[ADC_BUF_SIZE];
 
@@ -66,71 +64,64 @@ static uint32_t ui32BufB[ADC_BUF_SIZE];
 static uint32_t ui32BufACount = 0;
 static uint32_t ui32BufBCount = 0;
 
-// variables for the left and right IR sensors
-static uint32_t ui32IRValues[ADC_BUF_SIZE];              // each value represents a sensor data
-volatile uint32_t ui32LeftSensor;      // PE3
-volatile uint32_t ui32RightSensor;     // PE4
-//volatile uint32_t ui32FrontSensor;     // PE5
-volatile uint32_t ui32SensorsDiff;     // difference between Left and Right sensor
-
-// minimum obstacle avoidance threshold in cm
-volatile const uint8_t ui8ObstacleDistance = 30;
-// time delay
-volatile const uint32_t ui32TimeDelay = 1000000;
-
-// use these booleans to avoid sensing the same command over and over
-bool boolMovingForward = false;
-bool boolTurningLeft = false;
-bool boolTurningRight = false;
-bool boolMovingBack = false;
-bool boolStopped = false;
-bool handler_called = false;
-
-void ADC0_Init(void){ 
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
-	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
-		
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // activate the clock of E
-	while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
-		
-	// 5) activate timer0
-	SYSCTL_RCGCTIMER_R |= SYSCTL_RCGCTIMER_R0;
-																						//    allow time for clock to stabilize
-	while((SYSCTL_PRTIMER_R&SYSCTL_PRTIMER_R0) == 0){};
-	TIMER0_CTL_R &= ~TIMER_CTL_TAEN;          // 6) disable timer0A during setup
-	TIMER0_CTL_R |= TIMER_CTL_TAOTE;          // 7) enable timer0A trigger to ADC
-	TIMER0_ADCEV_R |= TIMER_ADCEV_TATOADCEN;  //timer0A time-out event ADC trigger enabled
-	TIMER0_CFG_R = 0x00000000;					      // 8) configure for 32-bit timer mode
-	TIMER0_CC_R &= ~TIMER_CC_ALTCLK;          // 9) timer0 clocked from system clock
-		
-	// **** timer0A initialization ****
-																		// 10) configure for periodic mode, default down-count settings
-	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
-	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
-	TIMER0_TAILR_R = 40000000;            // 12) start value for trigger
-	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
-	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
-
-	// Enable PE3 PE4 PE5 as analog	
-	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
-		
-	// **** ADC initialization ****
-	ADCSequenceDisable(ADC0_BASE, 0); //disable ADC0 before the configuration is complete
-		
-	// use ADC0, SS1 (4 samples max), timer trigger, priority 3
-	ADCSequenceConfigure(ADC0_BASE, 0, ADC_TRIGGER_TIMER, 0);
-		
-	ADCSequenceStepConfigure(ADC0_BASE, 0, 0, ADC_CTL_CH0|ADC_CTL_IE); // PE3/analog Input 0 - Left sensor
-	//ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
-	ADCSequenceStepConfigure(ADC0_BASE, 0, 1, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8 - Middle sensor
-	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // P	`E5/analog Input 8 - Middle sensor
-		
-	IntPrioritySet(INT_ADC0SS0, 0x00);  	 // configure ADC0 SS0interrupt priority as 1
-	IntEnable(INT_ADC0SS0);    				// enable interrupt 31 in NVIC (ADC0 SS1)
-	ADCIntEnableEx(ADC0_BASE, ADC_INT_SS0);      // arm interrupt of ADC0 SS1
+//ADC0 initializaiton
+void ADC0_Init(unsigned char prescale, unsigned int period)
+{
+		int ui32SysClkFreq;
+		ui32SysClkFreq = SysCtlClockFreqSet((SYSCTL_XTAL_25MHZ | SYSCTL_OSC_MAIN | SYSCTL_USE_PLL | SYSCTL_CFG_VCO_480), 40000000); // configure the system clock to be 40MHz
+	  
+	  SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);	//activate the clock of ADC0
+		SysCtlDelay(2);	//insert a few cycles after enabling the peripheral to allow the clock to be fully activated.
 	
-	//ADCSequenceDMAEnable(ADC0_BASE, 0);     		 //enable DMA for ADC0 SS0
-	ADCSequenceEnable(ADC0_BASE, 0);
+		// 5) activate timer0
+		SYSCTL_RCGCTIMER_R |= SYSCTL_RCGCTIMER_R0;
+                                              //    allow time for clock to stabilize
+		while((SYSCTL_PRTIMER_R&SYSCTL_PRTIMER_R0) == 0){};
+		TIMER0_CTL_R &= ~TIMER_CTL_TAEN;          // 6) disable timer0A during setup
+		TIMER0_CTL_R |= TIMER_CTL_TAOTE;          // 7) enable timer0A trigger to ADC
+		TIMER0_ADCEV_R |= TIMER_ADCEV_TATOADCEN;  //timer0A time-out event ADC trigger enabled
+		TIMER0_CFG_R = 0x00000000;					      // 8) configure for 32-bit timer mode
+		TIMER0_CC_R &= ~TIMER_CC_ALTCLK;          // 9) timer0 clocked from system clock
+			
+		// **** timer0A initialization ****
+                                      // 10) configure for periodic mode, default down-count settings
+		TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
+		TIMER0_TAPR_R = prescale;           // 11) prescale value for trigger
+		TIMER0_TAILR_R = period;            // 12) start value for trigger
+		TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
+		TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
+
+		// **** ADC initialization ****
+		ADCSequenceDisable(ADC0_BASE, 0); 	//disable ADC0 before the configuration is complete
+		ADCSequenceConfigure(ADC0_BASE, 0, ADC_TRIGGER_TIMER, 0); // will use ADC0, SS0, timer sampling, priority 0
+	
+		// We'll use only four steps, and all of them sample from the temperature sensor
+		// This 4 steps gives us 4 samples / 100 ms = 200 samples  / 5 seconds
+		ADCSequenceStepConfigure(ADC0_BASE, 0, 0, ADC_CTL_TS);            //ADC0 SS0 Step 0, sample from internal temperature sensor
+		ADCSequenceStepConfigure(ADC0_BASE, 0, 1, ADC_CTL_TS|ADC_CTL_IE); //ADC0 SS0 Step 1, sample from internal temperature sensor, completion of this step will set RIS
+		ADCSequenceStepConfigure(ADC0_BASE, 0, 2, ADC_CTL_TS);            //ADC0 SS0 Step 2, sample from internal temperature sensor
+		//ADC0 SS0 Step 3, sample from internal temperature sensor, completion of this step will set RIS, last sample of the sequence
+		ADCSequenceStepConfigure(ADC0_BASE, 0, 3, ADC_CTL_TS|ADC_CTL_IE|ADC_CTL_END); 
+	
+		IntPrioritySet(INT_ADC0SS0, 0x00);  	 			 // configure ADC0 SS0 interrupt priority as 0
+		IntEnable(INT_ADC0SS0);    				     			 // enable interrupt 31 in NVIC (ADC0 SS1)
+		ADCIntEnableEx(ADC0_BASE, ADC_INT_SS0);      // arm interrupt of ADC0 SS0
+		
+		ADCSequenceDMAEnable(ADC0_BASE, 0);     		 //enable DMA for ADC0 SS0
+		ADCSequenceEnable(ADC0_BASE, 0);        		 //enable ADC0
+		
+		// Use the LED for timer and interrupt debugging
+	
+		// initiate ports
+		volatile uint32_t ui32Loop;
+		// Enable the clock of the GPIO port N that is used for the on-board LED D1 and GPIO Port J that is used for SW1.
+    SYSCTL_RCGCGPIO_R = SYSCTL_RCGCGPIO_R12;
+    ui32Loop = SYSCTL_RCGCGPIO_R;
+
+		// Set the direction of PN1 (LED D1) and PN0 (LED D0) as output
+    GPIO_PORTN_DIR_R |= 0x03;
+		// Enable PN1 and PN0 for digital function.
+    GPIO_PORTN_DEN_R |= 0x03;
 }
 
 //DMA initializaiton
@@ -234,67 +225,22 @@ void DMA_Init(void)
     uDMAChannelEnable(UDMA_CHANNEL_ADC0);
 		//----- 5. End -----//													 
 }
-
-/*
-void ADC0_InSeq3(void){  
-	ADCIntClear(ADC0_BASE, 1);
-	ADCProcessorTrigger(ADC0_BASE, 1);
-	while(!ADCIntStatus(ADC0_BASE, 1, false))
-	{
-	}
-	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
-	
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	//ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
-	ui32LeftSensor = 1.0/((37.0/648000)*ui32IRValues[0]*1.0-(67.0/6480.0));
-	//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]*1.0-(67.0/6480.0));
-	
-	// get difference in reading between motors only when an object is close enough
-	if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-	else 
-		ui32SensorsDiff = 0;
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	
-}
-*/
-
-void ADC0_Handler(void)
-{
-		ADCIntClear(ADC0_BASE, 0);
-		//ADCProcessorTrigger(ADC0_BASE, 0);
-		ADCSequenceDataGet(ADC0_BASE, 0, ui32IRValues);
-	
-		// resutl is given in voltage, and the formula gives (1/cm)
-		// so we invert the result of the convertion to get (cm)
-		//ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
-		ui32LeftSensor = 1.0/((37.0/648000)*ui32IRValues[0]*1.0-(67.0/6480.0));
-		//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-		ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]*1.0-(67.0/6480.0));
 		
-		// get difference in reading between motors only when an object is close enough
-		if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-			ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-		else 
-			ui32SensorsDiff = 0;
-		// resutl is given in voltage, and the formula gives (1/cm)
-		// so we invert the result of the convertion to get (cm)
-}
-
-/*
+//*****************************************************************************
+//
+// The interrupt handler for ADC0 SS0.  This interrupt will occur when a DMA
+// transfer is complete using the ADC0 SS0 uDMA channel.  It will also be
+// triggered if the peripheral signals an error.  This interrupt handler will
+// switch between receive ping-pong buffers A and B. This will keep the ADC
+// running continuously.
+//
+//*****************************************************************************
 void ADC0_Handler(void)
 {
-		//handler_called = true;
 		uint32_t ui32Status;	
 		uint32_t ui32Mode;
 
     ui32Status = ADCIntStatus(ADC0_BASE, 0, false);
-//		while(!ADCIntStatus(ADC0_BASE, 1, false))
-//		{
-//		}
 		ADCIntClear(ADC0_BASE, 0);
 	
 	    //
@@ -317,16 +263,21 @@ void ADC0_Handler(void)
         // data was received so the main thread can process the data.
         //
         ui32BufACount++;
+
+				ui32TempAvg = 0;         // clear the previous value
+				// get the average temperature for buffer A
+				for (int i = 0; i < ADC_BUF_SIZE; i++)
+				{
+					ui32TempAvg = ui32TempAvg + ui32BufA[i];
+				}
+				// take the average of ADC_BUF_SIZE samples over the 5 seconds
+				ui32TempAvg = ui32TempAvg / ADC_BUF_SIZE;
+				ui32TempValueC = (1475 - ((2475 * ui32TempAvg)) / 4096)/10;
+				ui32TempValueF = ((ui32TempValueC * 9) + 160) / 5;
 				
-				ui32LeftSensor = 1.0/((37.0/648000)*ui32BufA[0]*1.0-(67.0/6480.0));
-				ui32RightSensor = 1.0/((37.0/648000)*ui32BufA[1]*1.0-(67.0/6480.0));
-				
-				// get difference in reading between motors only when an object is close enough
-				if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-					ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-				else 
-					ui32SensorsDiff = 0;
-						
+				// Toggle the LED by doing circular addition (e.g., 0, 1, 2, 3, 0, 1...)
+				GPIO_PORTN_DATA_R = (++GPIO_PORTN_DATA_R)%4;
+			
         //
         // Set up the next transfer for the "A" buffer, using the primary
         // control structure.  When the ongoing receive into the "B" buffer is
@@ -342,7 +293,6 @@ void ADC0_Handler(void)
                                ui32BufA, ADC_BUF_SIZE);
 				//Re-enable the uDMA channel											 
 				uDMAChannelEnable(UDMA_CHANNEL_ADC0);
-				handler_called = true;
     }
 
     //
@@ -366,15 +316,20 @@ void ADC0_Handler(void)
         //
         ui32BufBCount++;
 				
-				ui32LeftSensor = 1.0/((37.0/648000)*ui32BufB[0]*1.0-(67.0/6480.0));
-				//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-				ui32RightSensor = 1.0/((37.0/648000)*ui32BufB[1]*1.0-(67.0/6480.0));
-				
-				// get difference in reading between motors only when an object is close enough
-				if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-					ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-				else 
-					ui32SensorsDiff = 0;
+				ui32TempAvg = 0;         // clear the previous value
+				// calculate the average temperature with buffer B
+				// process all the DMA data
+				for (int i = 0; i < ADC_BUF_SIZE; i++)
+				{
+					ui32TempAvg = ui32TempAvg + ui32BufB[i];
+				}
+				// take the average of ADC_BUF_SIZE samples over the 5 seconds
+				ui32TempAvg = ui32TempAvg / ADC_BUF_SIZE;
+				ui32TempValueC = (1475 - ((2475 * ui32TempAvg)) / 4096)/10;
+				ui32TempValueF = ((ui32TempValueC * 9) + 160) / 5;
+
+				// Toggle the LED by doing circular addition (e.g., 0, 1, 2, 3, 0, 1...)
+				GPIO_PORTN_DATA_R = (++GPIO_PORTN_DATA_R)%4;
 				
         //
         // Set up the next transfer for the "B" buffer, using the alternate
@@ -391,7 +346,22 @@ void ADC0_Handler(void)
                                ui32BufB, ADC_BUF_SIZE);
 				//Re-enable the uDMA channel											 
 				uDMAChannelEnable(UDMA_CHANNEL_ADC0);
-				handler_called = true;
 		}
 }
-*/
+
+int main(void)
+{	
+		unsigned int period = 4000000;
+		// Turn on the LED.
+	
+		DMA_Init();
+		ADC0_Init(199, period);
+		GPIO_PORTN_DATA_R |= 0x03;
+		IntMasterEnable();       		// globally enable interrupt
+		ADCProcessorTrigger(ADC0_BASE, 0);
+	
+		while(1)
+		{
+			
+		}
+}

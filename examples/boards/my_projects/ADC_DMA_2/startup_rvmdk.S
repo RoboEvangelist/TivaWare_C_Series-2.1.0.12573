@@ -3,7 +3,7 @@
 ;
 ; startup_rvmdk.S - Startup code for use with Keil's uVision.
 ;
-; Copyright (c) 2014 Texas Instruments Incorporated.  All rights reserved.
+; Copyright (c) 2013-2014 Texas Instruments Incorporated.  All rights reserved.
 ; Software License Agreement
 ; 
 ; Texas Instruments (TI) is supplying this software for use solely and
@@ -28,7 +28,7 @@
 ; <o> Stack Size (in Bytes) <0x0-0xFFFFFFFF:8>
 ;
 ;******************************************************************************
-Stack   EQU     0x00004000
+Stack   EQU     0x00000100
 
 ;******************************************************************************
 ;
@@ -72,19 +72,12 @@ __heap_limit
 ;******************************************************************************
         AREA    RESET, CODE, READONLY
         THUMB
-
 ;******************************************************************************
 ;
 ; External declarations for the interrupt handlers used by the application.
 ;
 ;******************************************************************************
-        EXTERN  IntSpiGPIOHandler
-        EXTERN  SpiIntHandler
-        EXTERN  SpiIntHandler
-        EXTERN  SysTickHandler
-        EXTERN  UARTStdioIntHandler
-		EXTERN  ADC0_Handler
-
+        EXTERN  ADC0_Handler
 ;******************************************************************************
 ;
 ; The vector table.
@@ -107,13 +100,13 @@ __Vectors
         DCD     IntDefaultHandler           ; Debug monitor handler
         DCD     0                           ; Reserved
         DCD     IntDefaultHandler           ; The PendSV handler
-        DCD     SysTickHandler              ; The SysTick handler
+        DCD     IntDefaultHandler           ; The SysTick handler
         DCD     IntDefaultHandler           ; GPIO Port A
         DCD     IntDefaultHandler           ; GPIO Port B
         DCD     IntDefaultHandler           ; GPIO Port C
         DCD     IntDefaultHandler           ; GPIO Port D
         DCD     IntDefaultHandler           ; GPIO Port E
-        DCD     UARTStdioIntHandler         ; UART0 Rx and Tx
+        DCD     IntDefaultHandler           ; UART0 Rx and Tx
         DCD     IntDefaultHandler           ; UART1 Rx and Tx
         DCD     IntDefaultHandler           ; SSI0 Rx and Tx
         DCD     IntDefaultHandler           ; I2C0 Master and Slave
@@ -123,7 +116,7 @@ __Vectors
         DCD     IntDefaultHandler           ; PWM Generator 2
         DCD     IntDefaultHandler           ; Quadrature Encoder 0
         DCD     ADC0_Handler                ; ADC Sequence 0
-        DCD     IntDefaultHandler           ; ADC Sequence 1
+        DCD     IntDefaultHandler      		; ADC Sequence 1
         DCD     IntDefaultHandler           ; ADC Sequence 2
         DCD     IntDefaultHandler           ; ADC Sequence 3
         DCD     IntDefaultHandler           ; Watchdog timer
@@ -162,8 +155,8 @@ __Vectors
         DCD     IntDefaultHandler           ; GPIO Port J
         DCD     IntDefaultHandler           ; GPIO Port K
         DCD     IntDefaultHandler           ; GPIO Port L
-        DCD     SpiIntHandler               ; SSI2 Rx and Tx
-        DCD     SpiIntHandler               ; SSI3 Rx and Tx
+        DCD     IntDefaultHandler           ; SSI2 Rx and Tx
+        DCD     IntDefaultHandler           ; SSI3 Rx and Tx
         DCD     IntDefaultHandler           ; UART3 Rx and Tx
         DCD     IntDefaultHandler           ; UART4 Rx and Tx
         DCD     IntDefaultHandler           ; UART5 Rx and Tx
@@ -180,7 +173,7 @@ __Vectors
         DCD     0                           ; Reserved
         DCD     IntDefaultHandler           ; I2C4 Master and Slave
         DCD     IntDefaultHandler           ; I2C5 Master and Slave
-        DCD     IntSpiGPIOHandler           ; GPIO Port M
+        DCD     IntDefaultHandler           ; GPIO Port M
         DCD     IntDefaultHandler           ; GPIO Port N
         DCD     0                           ; Reserved
         DCD     IntDefaultHandler           ; Tamper
