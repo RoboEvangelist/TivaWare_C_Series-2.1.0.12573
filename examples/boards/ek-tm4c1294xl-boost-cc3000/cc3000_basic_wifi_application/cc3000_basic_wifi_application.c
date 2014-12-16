@@ -1496,6 +1496,7 @@ CMD_receiveData(int argc, char **argv)
 									boolMovingForward = true;
 									Forward1();
 								}
+								ROM_SysCtlDelay(ui32TimeDelay/2);
 							}
 
 							//

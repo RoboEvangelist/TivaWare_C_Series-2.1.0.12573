@@ -106,7 +106,7 @@ void ADC0_Init(void){
 																		// 10) configure for periodic mode, default down-count settings
 	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
 	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
-	TIMER0_TAILR_R = 4000000;            // 12) start value for trigger
+	TIMER0_TAILR_R = 40000000;            // 12) start value for trigger
 	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
 	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
 
