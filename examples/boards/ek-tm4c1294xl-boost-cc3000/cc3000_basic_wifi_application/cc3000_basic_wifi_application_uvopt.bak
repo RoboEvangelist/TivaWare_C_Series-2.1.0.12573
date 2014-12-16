@@ -182,10 +182,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>13</ColumnNumber>
+      <ColumnNumber>2</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2031</TopLine>
-      <CurrentLine>2035</CurrentLine>
+      <TopLine>524</TopLine>
+      <CurrentLine>525</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\cc3000_basic_wifi_application.c</PathWithFileName>
       <FilenameWithoutPath>cc3000_basic_wifi_application.c</FilenameWithoutPath>
@@ -230,10 +230,10 @@
       <FileType>2</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>19</ColumnNumber>
+      <ColumnNumber>44</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
       <TopLine>109</TopLine>
-      <CurrentLine>86</CurrentLine>
+      <CurrentLine>125</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_rvmdk.S</PathWithFileName>
       <FilenameWithoutPath>startup_rvmdk.S</FilenameWithoutPath>

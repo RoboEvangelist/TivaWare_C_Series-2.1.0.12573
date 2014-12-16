@@ -117,14 +117,14 @@ void ADC0_Init(void){
 	ADCSequenceDisable(ADC0_BASE, 1); //disable ADC0 before the configuration is complete
 		
 	// use ADC0, SS1 (4 samples max), timer trigger, priority 3
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 3);
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 1);
 		
-	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0|ADC_CTL_IE); // PE3/analog Input 0 - Left sensor
+	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0 - Left sensor
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8 - Middle sensor
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // P	`E5/analog Input 8 - Middle sensor
 		
-	IntPrioritySet(INT_ADC0SS1, 0x03);  	 // configure ADC0 SS1 interrupt priority as 1
+	IntPrioritySet(INT_ADC0SS1, 0x01);  	 // configure ADC0 SS1 interrupt priority as 1
 	IntEnable(INT_ADC0SS1);    				// enable interrupt 31 in NVIC (ADC0 SS1)
 	ADCIntEnableEx(ADC0_BASE, ADC_INT_SS1);      // arm interrupt of ADC0 SS1
 	

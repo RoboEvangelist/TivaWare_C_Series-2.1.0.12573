@@ -2031,6 +2031,7 @@ main(void)
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 		
 		// initialize ports
+		DMA_Init();
 	  ADC0_Init();
 		// ADC Interrupt initiation
 		//IntMasterEnable(); 
@@ -2057,7 +2058,7 @@ main(void)
 		
 		// ADC Interrupt initiation
 		//IntMasterEnable(); 
-		//ADCProcessorTrigger(ADC0_BASE, 1);
+		ADCProcessorTrigger(ADC0_BASE, 1);
 		//ROM_SysCtlDelay(1000000);
 		
 	
