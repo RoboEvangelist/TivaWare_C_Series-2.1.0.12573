@@ -2582,8 +2582,8 @@
     <Doc>
       <Name>C:\ti\TivaWare_C_Series-2.1.0.12573\examples\boards\ek-tm4c1294xl-boost-cc3000\cc3000_basic_wifi_application\sensor.h</Name>
       <ColumnNumber>0</ColumnNumber>
-      <TopLine>261</TopLine>
-      <CurrentLine>281</CurrentLine>
+      <TopLine>243</TopLine>
+      <CurrentLine>239</CurrentLine>
     </Doc>
   </AlienFiles>
 
@@ -2613,9 +2613,9 @@
       </Doc>
       <Doc>
         <Name>sensor.h</Name>
-        <ColumnNumber>11</ColumnNumber>
-        <TopLine>261</TopLine>
-        <CurrentLine>281</CurrentLine>
+        <ColumnNumber>0</ColumnNumber>
+        <TopLine>243</TopLine>
+        <CurrentLine>239</CurrentLine>
         <Folding>1</Folding>
         <ContractedFolders></ContractedFolders>
         <PaneID>0</PaneID>
