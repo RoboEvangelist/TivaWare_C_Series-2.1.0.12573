@@ -237,33 +237,6 @@ void DMA_Init(void)
 }
 */
 
-/*
-void ADC0_InSeq3(void){  
-	ADCIntClear(ADC0_BASE, 1);
-	ADCProcessorTrigger(ADC0_BASE, 1);
-	while(!ADCIntStatus(ADC0_BASE, 1, false))
-	{
-	}
-	ADCSequenceDataGet(ADC0_BASE, 1, ui32IRValues);   // get data from FIFO
-	
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	//ui32LeftSensor = 1.0/(powf(7.0, -5)*ui32IRValues[0]*1.0 - 0.0022);
-	ui32LeftSensor = 1.0/((37.0/648000)*ui32IRValues[0]*1.0-(67.0/6480.0));
-	//ui32RightSensor = 1.0/(powf(7.0, -5)*ui32IRValues[1]*1.0 - 0.0022);
-	ui32RightSensor = 1.0/((37.0/648000)*ui32IRValues[1]*1.0-(67.0/6480.0));
-	
-	// get difference in reading between motors only when an object is close enough
-	if (ui32RightSensor <= 50 || ui32LeftSensor <= 50)  // if less than 60 cm
-		ui32SensorsDiff = ui32RightSensor - ui32LeftSensor;
-	else 
-		ui32SensorsDiff = 0;
-	// resutl is given in voltage, and the formula gives (1/cm)
-	// so we invert the result of the convertion to get (cm)
-	
-}
-*/
-
 void ADC0_Handler(void)
 {
 		uint32_t ui32Status;	
@@ -271,7 +244,6 @@ void ADC0_Handler(void)
     ui32Status = ADCIntStatus(ADC0_BASE, 0, false);
 	
 		ADCIntClear(ADC0_BASE, 0);
-		//ADCProcessorTrigger(ADC0_BASE, 0);
 		ADCSequenceDataGet(ADC0_BASE, 0, ui32IRValues);
 	
 		// resutl is given in voltage, and the formula gives (1/cm)
