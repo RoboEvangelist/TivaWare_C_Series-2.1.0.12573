@@ -168,7 +168,7 @@
       <Focus>0</Focus>
       <ColumnNumber>19</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>47</TopLine>
+      <TopLine>48</TopLine>
       <CurrentLine>56</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\cc3000\drivers\ek-tm4c129\board.c</PathWithFileName>
@@ -182,10 +182,10 @@
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <Focus>0</Focus>
-      <ColumnNumber>4</ColumnNumber>
+      <ColumnNumber>8</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>2058</TopLine>
-      <CurrentLine>2069</CurrentLine>
+      <TopLine>2038</TopLine>
+      <CurrentLine>2043</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\cc3000_basic_wifi_application.c</PathWithFileName>
       <FilenameWithoutPath>cc3000_basic_wifi_application.c</FilenameWithoutPath>
@@ -232,7 +232,7 @@
       <Focus>0</Focus>
       <ColumnNumber>44</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>114</TopLine>
+      <TopLine>115</TopLine>
       <CurrentLine>126</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>.\startup_rvmdk.S</PathWithFileName>
@@ -280,7 +280,7 @@
       <Focus>0</Focus>
       <ColumnNumber>0</ColumnNumber>
       <tvExpOptDlg>0</tvExpOptDlg>
-      <TopLine>146</TopLine>
+      <TopLine>170</TopLine>
       <CurrentLine>193</CurrentLine>
       <bDave2>0</bDave2>
       <PathWithFileName>..\..\..\..\cc3000\src\PWM_10-30.c</PathWithFileName>

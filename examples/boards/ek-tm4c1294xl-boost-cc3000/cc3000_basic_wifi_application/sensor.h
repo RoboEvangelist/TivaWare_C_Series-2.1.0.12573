@@ -37,6 +37,7 @@
 // to a 1024 byte boundary.
 //
 //*****************************************************************************
+/*
 #if defined(ewarm)
 #pragma data_alignment=1024
 uint8_t ui8ControlTable[1024];
@@ -46,7 +47,7 @@ uint8_t ui8ControlTable[1024];
 #else
 uint8_t ui8ControlTable[1024] __attribute__ ((aligned(1024)));
 #endif
-
+*/
 //*****************************************************************************
 //
 // The pair of ping-pong buffers for the converted results from ADC0 SS0.
@@ -55,16 +56,16 @@ uint8_t ui8ControlTable[1024] __attribute__ ((aligned(1024)));
 // we'll get 2 samples over 100 milli-seconds, since we are only using 4 SS samples per
 // 100 ms
 #define ADC_BUF_SIZE	2
-static uint32_t ui32BufA[ADC_BUF_SIZE];
-static uint32_t ui32BufB[ADC_BUF_SIZE];
+//static uint32_t ui32BufA[ADC_BUF_SIZE];
+//static uint32_t ui32BufB[ADC_BUF_SIZE];
 
 //*****************************************************************************
 //
 // The count of ADC buffers filled, one for each ping-pong buffer.
 //
 //*****************************************************************************
-static uint32_t ui32BufACount = 0;
-static uint32_t ui32BufBCount = 0;
+//static uint32_t ui32BufACount = 0;
+//static uint32_t ui32BufBCount = 0;
 
 // variables for the left and right IR sensors
 static uint32_t ui32IRValues[ADC_BUF_SIZE];              // each value represents a sensor data
@@ -104,12 +105,12 @@ void ADC0_Init(void){
 	TIMER0_CC_R &= ~TIMER_CC_ALTCLK;          // 9) timer0 clocked from system clock
 		
 	// **** timer0A initialization ****
-																		// 10) configure for periodic mode, default down-count settings
+																		   // 10) configure for periodic mode, default down-count settings
 	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
-	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
-	TIMER0_TAILR_R = 40000000;            // 12) start value for trigger
-	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
-	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
+	TIMER0_TAPR_R = 199;                 // 11) prescale value for trigger
+	TIMER0_TAILR_R = 4000000;            // 12) start value for trigger every 100 ms
+	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;   // 13) disable timeout (rollover) interrupt
+	TIMER0_CTL_R |= TIMER_CTL_TAEN;      // 14) enable timer0A 32-b, periodic, no interrupts
 
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
@@ -132,7 +133,7 @@ void ADC0_Init(void){
 	//ADCSequenceDMAEnable(ADC0_BASE, 0);     		 //enable DMA for ADC0 SS0
 	ADCSequenceEnable(ADC0_BASE, 0);
 }
-
+/*
 //DMA initializaiton
 void DMA_Init(void)
 {
@@ -234,6 +235,7 @@ void DMA_Init(void)
     uDMAChannelEnable(UDMA_CHANNEL_ADC0);
 		//----- 5. End -----//													 
 }
+*/
 
 /*
 void ADC0_InSeq3(void){  
