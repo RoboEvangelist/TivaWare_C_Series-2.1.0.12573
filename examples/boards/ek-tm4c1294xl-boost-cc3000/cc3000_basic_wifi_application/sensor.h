@@ -85,20 +85,39 @@ bool boolTurningRight = false;
 bool boolMovingBack = false;
 bool boolStopped = false;
 
-void ADC0_InitSWTriggerSeq3_Ch9(void){ 
+void ADC0_Init(void){ 
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
 	while((SYSCTL_PRADC_R&SYSCTL_PRADC_R0) == 0){};
 		
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);  // activate the clock of E
 	while((SYSCTL_PRGPIO_R&SYSCTL_PRGPIO_R4) == 0){};
+		
+	// 5) activate timer0
+	SYSCTL_RCGCTIMER_R |= SYSCTL_RCGCTIMER_R0;
+																						//    allow time for clock to stabilize
+	while((SYSCTL_PRTIMER_R&SYSCTL_PRTIMER_R0) == 0){};
+	TIMER0_CTL_R &= ~TIMER_CTL_TAEN;          // 6) disable timer0A during setup
+	TIMER0_CTL_R |= TIMER_CTL_TAOTE;          // 7) enable timer0A trigger to ADC
+	TIMER0_ADCEV_R |= TIMER_ADCEV_TATOADCEN;  //timer0A time-out event ADC trigger enabled
+	TIMER0_CFG_R = 0x00000000;					      // 8) configure for 32-bit timer mode
+	TIMER0_CC_R &= ~TIMER_CC_ALTCLK;          // 9) timer0 clocked from system clock
+		
+	// **** timer0A initialization ****
+																		// 10) configure for periodic mode, default down-count settings
+	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
+	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
+	TIMER0_TAILR_R = 4000000;            // 12) start value for trigger
+	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
+	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
+
 	
 	// Enable PE3 PE4 PE5 as analog	
 	GPIOPinTypeADC(GPIO_PORTE_BASE, GPIO_PIN_3 | GPIO_PIN_4 | GPIO_PIN_5 );
 		
 	ADCSequenceDisable(ADC0_BASE, 1); //disable ADC0 before the configuration is complete
 		
-	// use ADC0, SS1 (4 samples max), processor trigger, priority 1
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 3);
+	// use ADC0, SS1 (4 samples max), timer trigger, priority 3
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 3);
 		
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0|ADC_CTL_IE); // PE3/analog Input 0 - Left sensor
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
@@ -109,6 +128,7 @@ void ADC0_InitSWTriggerSeq3_Ch9(void){
 	IntEnable(INT_ADC0SS1);    				// enable interrupt 31 in NVIC (ADC0 SS1)
 	ADCIntEnableEx(ADC0_BASE, ADC_INT_SS1);      // arm interrupt of ADC0 SS1
 	
+	ADCSequenceDMAEnable(ADC0_BASE, 1);     		 //enable DMA for ADC0 SS1
 	ADCSequenceEnable(ADC0_BASE, 1);
 }
 

@@ -37,13 +37,13 @@ I (..\..\..\..\driverlib/udma.h)(0x5471A1D9)
 I (..\..\..\..\cc3000\src\spi\spi_version.h)(0x5471A1D5)
 I (..\..\..\..\cc3000\drivers\ek-tm4c129\board.h)(0x5487A29E)
 I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x5471A1D5)
-F (.\cc3000_basic_wifi_application.c)(0x548F8204)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000_basic_wifi_application.o --omf_browse .\rvmdk\cc3000_basic_wifi_application.crf --depend .\rvmdk\cc3000_basic_wifi_application.d)
+F (.\cc3000_basic_wifi_application.c)(0x548F8DF5)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O2 --apcs=interwork --split_sections -I.. -I..\..\..\.. -I..\..\..\..\cc3000 -I..\..\..\..\cc3000\src\host_driver\core_driver -I..\..\..\..\cc3000\drivers\ek-tm4c129 -I..\..\..\..\cc3000\src\host_driver -I..\..\..\..\cc3000\src\host_driver\include -I..\..\..\..\cc3000\src\spi -I..\..\..\..\cc3000\src\ -I..\..\..\..\cc3000\src\uart --c99-I C:\Keil\ARM\RV31\INC-I C:\Keil\ARM\CMSIS\Include-I C:\Keil\ARM\Inc\Luminary-Drvmdk -DPART_TM4C1294NCPDT -DCC3000_USE_BOOSTERPACK2 -D_POSIX_SOURCE -DTARGET_IS_TM4C129_RA0 -DCC3000_TM4C129_SPI -DUART_BUFFERED-o .\rvmdk\cc3000_basic_wifi_application.o --omf_browse .\rvmdk\cc3000_basic_wifi_application.crf --depend .\rvmdk\cc3000_basic_wifi_application.d)
 I (C:\Keil\ARM\ARMCC\include\stdint.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdio.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\stdbool.h)(0x51C88A34)
 I (C:\Keil\ARM\ARMCC\include\math.h)(0x51C88A34)
 I (..\..\..\..\cc3000\src\PWM_10-30.h)(0x5471A1D5)
-I (sensor.h)(0x548F84E5)
+I (sensor.h)(0x548F8DDF)
 I (..\..\..\..\driverlib/timer.h)(0x5471A1D8)
 I (..\..\..\..\driverlib/rom.h)(0x5471A1D6)
 I (..\..\..\..\driverlib/rom_map.h)(0x5471A1D6)

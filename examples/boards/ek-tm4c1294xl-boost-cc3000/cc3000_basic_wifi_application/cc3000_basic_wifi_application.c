@@ -523,7 +523,6 @@ initDriver(void)
     //
     init_spi(1000000,g_ui32SysClock);
 	
-		ADC0_InitSWTriggerSeq3_Ch9();
 
     //
     // Enable processor interrupts.
@@ -2032,7 +2031,7 @@ main(void)
                                             CC3000_RX_BUFFER_OVERHEAD_SIZE];
 		
 		// initialize ports
-	  //ADC0_InitSWTriggerSeq3_Ch9();
+	  ADC0_Init();
 		// ADC Interrupt initiation
 		//IntMasterEnable(); 
 		//ADCProcessorTrigger(ADC0_BASE, 1);
