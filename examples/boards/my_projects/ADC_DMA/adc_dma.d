@@ -8,11 +8,5 @@
 .\adc_dma.o: ..\..\..\..\driverlib/adc.h
 .\adc_dma.o: ..\..\..\..\inc/hw_adc.h
 .\adc_dma.o: ..\..\..\..\driverlib/interrupt.h
-.\adc_dma.o: ..\..\..\..\driverlib/timer.h
 .\adc_dma.o: ..\..\..\..\driverlib/udma.h
 .\adc_dma.o: ..\..\..\..\inc/tm4c1294ncpdt.h
-.\adc_dma.o: ..\..\..\..\driverlib/uart.h
-.\adc_dma.o: ..\..\..\..\utils/ustdlib.h
-.\adc_dma.o: C:\Keil\ARM\ARMCC\bin\..\include\stdarg.h
-.\adc_dma.o: C:\Keil\ARM\ARMCC\bin\..\include\time.h
-.\adc_dma.o: ..\..\..\..\utils/uartstdio.h

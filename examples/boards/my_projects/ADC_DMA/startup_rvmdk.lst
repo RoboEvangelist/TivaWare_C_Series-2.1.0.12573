@@ -191,15 +191,15 @@ ARM Macro Assembler    Page 3
                                                             ; PWM Generator 2
   117 00000074 00000000        DCD              IntDefaultHandler ; Quadrature 
                                                             Encoder 0
-  118 00000078 00000000        DCD              ADC0_Handler ; ADC Sequence 0
-  119 0000007C 00000000        DCD              IntDefaultHandler 
+  118 00000078 00000000        DCD              IntDefaultHandler 
+                                                            ; ADC Sequence 0
 
 
 
 ARM Macro Assembler    Page 4 
 
 
-                                                            ; ADC Sequence 1
+  119 0000007C 00000000        DCD              ADC0_Handler ; ADC Sequence 1
   120 00000080 00000000        DCD              IntDefaultHandler 
                                                             ; ADC Sequence 2
   121 00000084 00000000        DCD              IntDefaultHandler 
@@ -676,7 +676,7 @@ Symbol: IntDefaultHandler
       At line 115 in file startup_rvmdk.S
       At line 116 in file startup_rvmdk.S
       At line 117 in file startup_rvmdk.S
-      At line 119 in file startup_rvmdk.S
+      At line 118 in file startup_rvmdk.S
       At line 120 in file startup_rvmdk.S
       At line 121 in file startup_rvmdk.S
       At line 122 in file startup_rvmdk.S
@@ -880,7 +880,7 @@ Symbol: ADC0_Handler
    Definitions
       At line 80 in file startup_rvmdk.S
    Uses
-      At line 118 in file startup_rvmdk.S
+      At line 119 in file startup_rvmdk.S
 Comment: ADC0_Handler used once
 __main 00000000
 

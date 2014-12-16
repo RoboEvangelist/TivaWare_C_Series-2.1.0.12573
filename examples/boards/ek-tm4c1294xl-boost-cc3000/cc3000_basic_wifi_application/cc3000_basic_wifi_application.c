@@ -1496,7 +1496,7 @@ CMD_receiveData(int argc, char **argv)
 									boolMovingForward = true;
 									Forward1();
 								}
-								ROM_SysCtlDelay(ui32TimeDelay/2);
+								//ROM_SysCtlDelay(ui32TimeDelay/2);
 							}
 
 							//
@@ -1510,9 +1510,17 @@ CMD_receiveData(int argc, char **argv)
 							//send data to client (GUI)
 							CmdLineProcess(send_data);        
 							
-							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32LeftSensor);
-							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32RightSensor);
-							UARTprintf("\n\nSensor Difference: %d cm\n", ui32SensorsDiff);
+							UARTprintf("\n\nLeft Sensor Value: %d cm\n", ui32BufA[1]);//ui32LeftSensor);
+							UARTprintf("\nRight Sensor Value: %d cm\n\n", ui32BufA[0]);//ui32RightSensor);
+							//UARTprintf("\n\nSensor Difference: %d cm\n", ui32SensorsDiff);
+							
+							if (handler_called)
+							{
+								UARTprintf("\n\nHandler Called\n\n", ui32LeftSensor);
+								//ROM_SysCtlDelay((g_ui32SysClock/3)*2);
+								handler_called = false;
+							}
+								
 						}
 						i32ReturnValue = CC3000_APP_BUFFER_SIZE;
 						
@@ -2055,7 +2063,7 @@ main(void)
     // Initialize all board specific components and allow board to connect to the internet.
     //
     initDriver();
-		ROM_SysCtlDelay((g_ui32SysClock /2)); // give board some time to load
+		ROM_SysCtlDelay(g_ui32SysClock /2); // give board some time to load
 		
 		// ADC Interrupt initiation
 		//IntMasterEnable(); 

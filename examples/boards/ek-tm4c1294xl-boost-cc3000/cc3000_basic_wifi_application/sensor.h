@@ -54,7 +54,7 @@ uint8_t ui8ControlTable[1024] __attribute__ ((aligned(1024)));
 //*****************************************************************************
 // we'll get 2 samples over 100 milli-seconds, since we are only using 4 SS samples per
 // 100 ms
-#define ADC_BUF_SIZE	2
+#define ADC_BUF_SIZE	200
 static uint32_t ui32BufA[ADC_BUF_SIZE];
 static uint32_t ui32BufB[ADC_BUF_SIZE];
 
@@ -84,6 +84,7 @@ bool boolTurningLeft = false;
 bool boolTurningRight = false;
 bool boolMovingBack = false;
 bool boolStopped = false;
+bool handler_called = false;
 
 void ADC0_Init(void){ 
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);   // activate the clock of ADC0
@@ -106,7 +107,7 @@ void ADC0_Init(void){
 																		// 10) configure for periodic mode, default down-count settings
 	TIMER0_TAMR_R = TIMER_TAMR_TAMR_PERIOD;
 	TIMER0_TAPR_R = 199;           // 11) prescale value for trigger
-	TIMER0_TAILR_R = 40000000;            // 12) start value for trigger
+	TIMER0_TAILR_R = 40000000*4;            // 12) start value for trigger
 	TIMER0_IMR_R &= ~TIMER_IMR_TATOIM;  // 13) disable timeout (rollover) interrupt
 	TIMER0_CTL_R |= TIMER_CTL_TAEN;     // 14) enable timer0A 32-b, periodic, no interrupts
 
@@ -117,14 +118,14 @@ void ADC0_Init(void){
 	ADCSequenceDisable(ADC0_BASE, 1); //disable ADC0 before the configuration is complete
 		
 	// use ADC0, SS1 (4 samples max), timer trigger, priority 3
-	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 1);
+	ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_TIMER, 0);
 		
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH0); // PE3/analog Input 0 - Left sensor
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH9|ADC_CTL_IE|ADC_CTL_END); // PE4/analog Input 9  - Right sensor
 	ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // PE5/analog Input 8 - Middle sensor
 	//ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH8|ADC_CTL_IE|ADC_CTL_END);  // P	`E5/analog Input 8 - Middle sensor
 		
-	IntPrioritySet(INT_ADC0SS1, 0x01);  	 // configure ADC0 SS1 interrupt priority as 1
+	IntPrioritySet(INT_ADC0SS1, 0x00);  	 // configure ADC0 SS1 interrupt priority as 1
 	IntEnable(INT_ADC0SS1);    				// enable interrupt 31 in NVIC (ADC0 SS1)
 	ADCIntEnableEx(ADC0_BASE, ADC_INT_SS1);      // arm interrupt of ADC0 SS1
 	
@@ -264,6 +265,7 @@ void ADC0_InSeq3(void){
 
 void ADC0_Handler(void)
 {
+		handler_called = true;
 		uint32_t ui32Status;	
 		uint32_t ui32Mode;
 
