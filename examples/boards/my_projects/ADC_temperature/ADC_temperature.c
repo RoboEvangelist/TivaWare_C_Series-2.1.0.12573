@@ -50,6 +50,9 @@ void ADC0_Init(void)
 //interrupt handler
 void ADC0_Handler(void)
 {
+		uint32_t ui32Status;	
+
+    ui32Status = ADCIntStatus(ADC0_BASE, 0, false);
 	
 		ADCIntClear(ADC0_BASE, 1);
 		ADCProcessorTrigger(ADC0_BASE, 1);

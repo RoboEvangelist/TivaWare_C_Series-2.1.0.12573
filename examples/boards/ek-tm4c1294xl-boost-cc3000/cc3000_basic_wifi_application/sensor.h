@@ -266,6 +266,10 @@ void ADC0_InSeq3(void){
 
 void ADC0_Handler(void)
 {
+		uint32_t ui32Status;	
+	
+    ui32Status = ADCIntStatus(ADC0_BASE, 0, false);
+	
 		ADCIntClear(ADC0_BASE, 0);
 		//ADCProcessorTrigger(ADC0_BASE, 0);
 		ADCSequenceDataGet(ADC0_BASE, 0, ui32IRValues);
