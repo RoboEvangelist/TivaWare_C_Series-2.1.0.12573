@@ -153,7 +153,7 @@ void Timer0A_Handler(void)
 				{
 					GPIO_PORTN_DATA_R =0x02;
 					//LED D1 on,D2 off
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 740);
 				}
 				else if(count==2)
 				{
@@ -174,7 +174,7 @@ void Timer0A_Handler(void)
 				{
 					GPIO_PORTN_DATA_R =0x02;
 					//LED D1 on,D2 off
-					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 4);
+					PWMPulseWidthSet(PWM0_BASE, PWM_OUT_6, 80);
 				}
 				else if(count==6)
 				{
